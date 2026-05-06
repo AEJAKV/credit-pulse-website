@@ -763,16 +763,44 @@ footer {
   .compare-table th, .compare-table td { padding: 12px 14px; }
   .form-row { grid-template-columns: 1fr; }
   .footer-disclaimer { text-align: left; max-width: 100%; }
-  .hero-ctas { flex-direction: column; }
+  .hero-ctas { flex-direction: column; align-items: flex-start; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
   .btn-lg { padding: 15px 28px; }
   .trust-cert-grid { grid-template-columns: 1fr 1fr; }
+  /* Reduce oversized padding on mobile */
+  .page-header { padding: 108px 0 56px; }
+  .calc-wrap { padding: 28px; }
+  .calc-result { padding: 28px; }
+  .trust-stack { padding: 36px 28px; }
+  .trust-strip-inner { gap: 24px; }
+  .value-panel { padding: 24px 20px; max-width: 100%; }
+  .hero-content { gap: 32px; }
+  /* Collapse inline 1fr 1fr grids */
+  .two-col-info-grid { grid-template-columns: 1fr !important; }
 }
 @media (max-width: 480px) {
-  h1 { font-size: 2.4rem; }
+  h1 { font-size: 2.2rem; line-height: 1.1; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .proof-stats { grid-template-columns: 1fr; }
   .trust-cert-grid { grid-template-columns: 1fr; }
-  .modal-box { padding: 32px 24px; }
+  .modal-box { padding: 32px 20px; }
+  .container { padding: 0 16px; }
+  /* Further reduce padding on very small screens */
+  .page-header { padding: 96px 0 44px; }
+  .calc-wrap { padding: 20px 16px; }
+  .calc-result { padding: 20px 16px; }
+  .trust-stack { padding: 24px 16px; }
+  .value-panel { padding: 20px 16px; }
+  .value-metrics { grid-template-columns: 1fr 1fr; }
+  .value-panel-amount { font-size: 2.4rem; }
+  .mini-feature-grid { grid-template-columns: 1fr !important; }
+  .card { padding: 24px 20px; }
+  .faq-q { padding: 18px 20px; }
+  .faq-a-inner { padding: 0 20px 20px; }
+  .calc-result-val { font-size: 2.6rem; }
+  section { padding: 56px 0; }
+  .cta-banner { padding: 36px 20px; }
+  .hero-ctas .btn { font-size: 0.95rem; }
 }
 </style>
 </head>
@@ -1488,7 +1516,7 @@ footer {
 
   <section>
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+      <div class="two-col-info-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
         <div class="reveal">
           <div class="section-label">No Guesswork</div>
           <h2>Everything is explained.<br>Nothing is hidden.</h2>
@@ -1502,7 +1530,7 @@ footer {
           <button class="btn btn-primary" onclick="navigate('checkout')">Start Now →</button>
         </div>
         <div class="reveal reveal-delay-1">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="mini-feature-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
             <div class="card" style="padding:28px;">
               <div style="font-size:1.8rem;margin-bottom:12px;">🔒</div>
               <h4>Secure Checkout</h4>
