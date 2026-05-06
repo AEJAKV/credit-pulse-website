@@ -363,7 +363,7 @@ section { padding: 100px 0; }
 .trust-strip-icon {
   width: 44px; height: 44px; border-radius: 12px;
   background: rgba(0,200,83,0.10); display: flex; align-items: center; justify-content: center;
-  color: var(--g1);
+  color: var(--g1); flex-shrink: 0;
 }
 
 /* ===== PLAN TEASER CARDS ===== */
@@ -773,6 +773,21 @@ footer {
   .calc-result { padding: 28px; }
   .trust-stack { padding: 36px 28px; }
   .trust-strip-inner { gap: 24px; }
+  /* Trust strip: 2-column grid on mobile */
+  .trust-strip { padding: 32px 0; }
+  .trust-strip-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    justify-items: start;
+  }
+  .trust-strip-item { width: 100%; }
+  /* Centre the 5th item spanning full width */
+  .trust-strip-item:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: auto;
+  }
   .value-panel { padding: 24px 20px; max-width: 100%; }
   .hero-content { gap: 32px; }
   /* Stat cards */
