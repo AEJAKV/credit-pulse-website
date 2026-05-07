@@ -258,7 +258,7 @@ section { padding: 100px 0; }
 }
 .hero-content {
   position: relative; z-index: 2;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: flex-start;
 }
 .hero-label {
   display: inline-flex; align-items: center; gap: 8px;
@@ -302,6 +302,7 @@ section { padding: 100px 0; }
   border-radius: 24px; padding: 32px;
   backdrop-filter: blur(20px);
   position: relative; overflow: hidden;
+  margin-top: 48px;
 }
 .value-panel::before {
   content: ''; position: absolute; top: -1px; left: 24px; right: 24px; height: 2px;
