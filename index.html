@@ -302,7 +302,6 @@ section { padding: 100px 0; }
   border-radius: 24px; padding: 32px;
   backdrop-filter: blur(20px);
   position: relative; overflow: hidden;
-  margin-top: 48px;
 }
 .value-panel::before {
   content: ''; position: absolute; top: -1px; left: 24px; right: 24px; height: 2px;
@@ -754,10 +753,14 @@ footer {
 .page-header h1 { color: #fff; position: relative; }
 .page-header p { color: rgba(255,255,255,0.5); max-width: 520px; margin: 16px auto 0; position: relative; font-size: 1.05rem; }
 
+@media (min-width: 1025px) {
+  .value-panel { margin-top: 48px; }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .hero-content { grid-template-columns: 1fr; gap: 48px; }
-  .value-panel { max-width: 480px; }
+  .value-panel { max-width: 480px; margin-top: 0; }
   .plan-cards-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid { grid-template-columns: repeat(2,1fr); }
   .testimonials-grid { grid-template-columns: 1fr 1fr; }
