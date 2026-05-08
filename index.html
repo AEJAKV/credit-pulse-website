@@ -293,7 +293,7 @@ section { padding: 100px 0; }
   display: flex; align-items: center; gap: 8px;
   color: rgba(255,255,255,0.5); font-size: 0.85rem; font-weight: 500;
 }
-.hero-trust-item svg { color: var(--g1); }
+.hero-trust-item svg { color: var(--g1); flex-shrink: 0; }
 
 /* Value Panel */
 .value-panel {
@@ -797,6 +797,20 @@ footer {
   .footer-disclaimer { text-align: left; max-width: 100%; }
   .hero-ctas { flex-direction: column; align-items: flex-start; }
   .hero-ctas .btn { width: 100%; justify-content: center; }
+  /* Trust badges: 3-column grid so all fit in one row */
+  .hero-trust {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+  }
+  .hero-trust-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.72rem;
+    gap: 6px;
+  }
   .btn-lg { padding: 15px 28px; }
   .trust-cert-grid { grid-template-columns: 1fr 1fr; }
   /* Reduce oversized padding on mobile */
