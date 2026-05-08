@@ -166,6 +166,16 @@ p { line-height: 1.7; color: var(--muted); }
   box-shadow: 0 4px 24px rgba(204,255,0,0.3);
 }
 .btn-accent:hover { background: #b8f000; box-shadow: 0 8px 32px rgba(204,255,0,0.4); }
+@keyframes throb {
+  0%, 100% { transform: scale(1);    box-shadow: 0 4px 24px rgba(204,255,0,0.35); }
+  50%       { transform: scale(1.05); box-shadow: 0 8px 40px rgba(204,255,0,0.65); }
+}
+.btn-throb {
+  animation: throb 1.6s ease-in-out infinite;
+}
+.btn-throb:hover {
+  animation-play-state: paused;
+}
 .btn-outline {
   background: transparent; color: var(--g1);
   border: 2px solid var(--g1);
@@ -936,7 +946,7 @@ footer {
           <h1>Get Up to<br><span class="highlight" style="font-style:italic; padding: 0 4px;">$1,500 Cashback</span><br>With Credit-Building Support</h1>
           <p class="hero-sub">Earn $300–$1,500 in cashback, build credit and manage money smarter.</p>
           <div class="hero-ctas">
-            <button class="btn btn-accent btn-lg" onclick="navigate('programs')">GET INSTANT CASHBACK NOW →</button>
+            <button class="btn btn-accent btn-lg btn-throb" onclick="navigate('programs')">GET INSTANT CASHBACK NOW →</button>
             <button class="btn btn-outline btn-lg" onclick="navigate('how-it-works')" style="color:#fff;border-color:rgba(255,255,255,0.25);">How It Works</button>
           </div>
           <div class="hero-trust">
