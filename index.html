@@ -563,7 +563,7 @@ input[type="range"]::-webkit-slider-thumb {
   flex: 1; border-radius: 10px 10px 0 0;
   display: flex; flex-direction: column; align-items: center; justify-content: flex-start;
   padding-top: 10px; position: relative; cursor: default;
-  transition: filter 0.2s;
+  transition: filter 0.2s; min-height: 48px;
 }
 .vl-bar:hover { filter: brightness(1.1); }
 .vl-bar-1 { height: 50%; background: linear-gradient(180deg, #c8f7d8, #a0e6bb); }
@@ -788,7 +788,9 @@ footer {
   .proof-stats { grid-template-columns: 1fr 1fr; }
   .learn-grid { grid-template-columns: 1fr; }
   .cta-banner { padding: 48px 28px; }
-  .value-ladder { height: 70px; }
+  .value-ladder { height: 110px; }
+  .vl-label { font-size: 0.72rem; }
+  .vl-bar { padding-top: 8px; }
   .compare-table { font-size: 0.82rem; }
   .compare-table th, .compare-table td { padding: 12px 14px; }
   .form-row { grid-template-columns: 1fr; }
