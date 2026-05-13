@@ -77,9 +77,15 @@ p { line-height: 1.7; color: var(--muted); }
   display: flex; align-items: center; justify-content: space-between;
 }
 .nav-logo {
-  font-family: 'Roboto', sans-serif; font-weight: 900; font-size: 1.35rem;
-  color: var(--dark); cursor: pointer; display: flex; align-items: center; gap: 8px;
+  cursor: pointer; display: flex; align-items: center;
   text-decoration: none;
+}
+.nav-logo img {
+  height: 36px; width: auto; display: block;
+}
+.footer-brand .nav-logo img {
+  height: 40px;
+  filter: brightness(0) invert(1);
 }
 .nav-logo span.pulse-dot {
   width: 10px; height: 10px; border-radius: 50%;
@@ -889,7 +895,7 @@ footer {
 <nav id="navbar">
   <div class="nav-inner">
     <a class="nav-logo" onclick="navigate('home')">
-      <span class="pulse-dot"></span> Credit Pulse
+      <img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse">
     </a>
     <div class="nav-links">
       <a onclick="navigate('home')" data-page="home">Home</a>
@@ -1317,7 +1323,7 @@ footer {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a class="nav-logo" onclick="navigate('home')"><span class="pulse-dot"></span> Credit Pulse</a>
+          <a class="nav-logo" onclick="navigate('home')"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a>
           <p style="margin-top:14px;">A premium financial education platform built to help you understand credit, master money, and create lasting financial clarity.</p>
         </div>
         <div class="footer-col">
