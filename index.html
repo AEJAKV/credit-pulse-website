@@ -378,11 +378,12 @@
       cursor:default;flex-shrink:0;
     }
     .bank-card:hover{transform:translateY(-3px);opacity:1;filter:grayscale(0);box-shadow:0 10px 28px rgba(20,55,30,.11);}
-    .bank-icon{
-      width:30px;height:30px;border-radius:7px;
-      display:flex;align-items:center;justify-content:center;
-      font-size:.62rem;font-weight:900;color:#fff;
-      flex-shrink:0;letter-spacing:-.01em;line-height:1;
+    .bank-logo{
+      height:28px;
+      width:auto;
+      max-width:80px;
+      object-fit:contain;
+      flex-shrink:0;
     }
     .bank-name{font-size:clamp(.7rem,.85vw,.78rem);font-weight:600;color:#1a2b1a;white-space:nowrap;line-height:1.2;}
     .bank-disc{
@@ -803,39 +804,45 @@
     <div class="bank-marquee">
       <div class="bank-track">
         <!-- Set 1 -->
-        <div class="bank-card"><div class="bank-icon" style="background:#007B40;">TD</div><span class="bank-name">TD Bank</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#003168;">RBC</div><span class="bank-name">RBC Royal Bank</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#CC0000;">BNS</div><span class="bank-name">Scotiabank</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#0079C1;">BMO</div><span class="bank-name">BMO</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#C41230;">CM</div><span class="bank-name">CIBC</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#006937;">DJ</div><span class="bank-name">Desjardins</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#B22222;">NA</div><span class="bank-name">National Bank</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#00843D;">MR</div><span class="bank-name">Meridian</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#FF6200;">TN</div><span class="bank-name">Tangerine</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#E8111A;">SC</div><span class="bank-name">Simplii Financial</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#6B2F98;">EQ</div><span class="bank-name">EQ Bank</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#00704A;">VC</div><span class="bank-name">Vancity</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#00A758;">ML</div><span class="bank-name">Manulife Bank</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#00843D;">CC</div><span class="bank-name">Coast Capital</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#007B40;">ATB</div><span class="bank-name">ATB Financial</span></div>
-        <div class="bank-card"><div class="bank-icon" style="background:#005FAD;">CWB</div><span class="bank-name">Canadian Western Bank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/TD-bank-logo.svg" alt="TD Bank" loading="lazy"><span class="bank-name">TD Bank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/RBC-logo.svg" alt="RBC" loading="lazy"><span class="bank-name">RBC Royal Bank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/scotiabank-logo.svg" alt="Scotiabank" loading="lazy"><span class="bank-name">Scotiabank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/bmo-bank-logo.svg" alt="BMO" loading="lazy"><span class="bank-name">BMO</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/cibc-bank-logo.svg" alt="CIBC" loading="lazy"><span class="bank-name">CIBC</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/desjardins-logo.svg" alt="Desjardins" loading="lazy"><span class="bank-name">Desjardins</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/national-bank-logo.svg" alt="National Bank" loading="lazy"><span class="bank-name">National Bank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/meridian-bank-logo.svg" alt="Meridian" loading="lazy"><span class="bank-name">Meridian</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/tangerine-bank-logo.svg" alt="Tangerine" loading="lazy"><span class="bank-name">Tangerine</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/simplii-financial-bank-logo.svg" alt="Simplii Financial" loading="lazy"><span class="bank-name">Simplii Financial</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/eq-bank-logo.svg" alt="EQ Bank" loading="lazy"><span class="bank-name">EQ Bank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/vancity-bank-logo.svg" alt="Vancity" loading="lazy"><span class="bank-name">Vancity</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/manulife-bank-logo.svg" alt="Manulife Bank" loading="lazy"><span class="bank-name">Manulife Bank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/coast-capital-logo.svg" alt="Coast Capital" loading="lazy"><span class="bank-name">Coast Capital</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/ATB-logo.svg" alt="ATB Financial" loading="lazy"><span class="bank-name">ATB Financial</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/canadian-western-bank.svg" alt="Canadian Western Bank" loading="lazy"><span class="bank-name">Canadian Western Bank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/hsbc-bank-logo.svg" alt="HSBC" loading="lazy"><span class="bank-name">HSBC</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/banque-laurentiene-bank.svg" alt="Banque Laurentienne" loading="lazy"><span class="bank-name">Banque Laurentienne</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/pc-financial.svg" alt="PC Financial" loading="lazy"><span class="bank-name">PC Financial</span></div>
         <!-- Set 2 — duplicate for seamless loop -->
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#007B40;">TD</div><span class="bank-name">TD Bank</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#003168;">RBC</div><span class="bank-name">RBC Royal Bank</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#CC0000;">BNS</div><span class="bank-name">Scotiabank</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#0079C1;">BMO</div><span class="bank-name">BMO</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#C41230;">CM</div><span class="bank-name">CIBC</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#006937;">DJ</div><span class="bank-name">Desjardins</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#B22222;">NA</div><span class="bank-name">National Bank</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#00843D;">MR</div><span class="bank-name">Meridian</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#FF6200;">TN</div><span class="bank-name">Tangerine</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#E8111A;">SC</div><span class="bank-name">Simplii Financial</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#6B2F98;">EQ</div><span class="bank-name">EQ Bank</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#00704A;">VC</div><span class="bank-name">Vancity</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#00A758;">ML</div><span class="bank-name">Manulife Bank</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#00843D;">CC</div><span class="bank-name">Coast Capital</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#007B40;">ATB</div><span class="bank-name">ATB Financial</span></div>
-        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#005FAD;">CWB</div><span class="bank-name">Canadian Western Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/TD-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">TD Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/RBC-logo.svg" alt="" loading="lazy"><span class="bank-name">RBC Royal Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/scotiabank-logo.svg" alt="" loading="lazy"><span class="bank-name">Scotiabank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/bmo-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">BMO</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/cibc-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">CIBC</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/desjardins-logo.svg" alt="" loading="lazy"><span class="bank-name">Desjardins</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/national-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">National Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/meridian-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">Meridian</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/tangerine-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">Tangerine</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/simplii-financial-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">Simplii Financial</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/eq-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">EQ Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/vancity-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">Vancity</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/manulife-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">Manulife Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/coast-capital-logo.svg" alt="" loading="lazy"><span class="bank-name">Coast Capital</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/ATB-logo.svg" alt="" loading="lazy"><span class="bank-name">ATB Financial</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/canadian-western-bank.svg" alt="" loading="lazy"><span class="bank-name">Canadian Western Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/hsbc-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">HSBC</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/banque-laurentiene-bank.svg" alt="" loading="lazy"><span class="bank-name">Banque Laurentienne</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/pc-financial.svg" alt="" loading="lazy"><span class="bank-name">PC Financial</span></div>
       </div>
     </div>
     <p class="bank-disc">Bank logos are shown for compatibility and recognition purposes only. Credit Pulse is not affiliated with or endorsed by any of these financial institutions.</p>
@@ -918,7 +925,7 @@
   </section>
 
   <!-- BENEFITS -->
-  <section class="section hiw-bg">
+  <section class="section hiw-bg" style="padding-bottom:clamp(28px,3.5vw,40px);">
     <div class="container">
       <div class="sec-hd reveal">
         <span class="sec-label">Platform Benefits</span>
@@ -937,7 +944,7 @@
   </section>
 
   <!-- FAQ PREVIEW -->
-  <section class="section faq-bg">
+  <section class="section faq-bg" style="padding-top:clamp(16px,2vw,24px);padding-bottom:clamp(32px,4vw,48px);">
     <div class="container">
       <div class="sec-hd reveal">
         <span class="sec-label">Quick Answers</span>
@@ -949,8 +956,23 @@
         <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">Why does the package show biweekly payments?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-in">The total package price may be split into biweekly payments to make the membership easier to manage. You will always see the full package price and payment breakdown clearly before joining.</div></div></div>
         <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">Are there hidden fees?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-in">The package price and payment breakdown are shown clearly before you join. Please review all terms during the membership process to ensure you understand what is included.</div></div></div>
       </div>
-      <div style="text-align:center;margin-top:32px;" class="reveal">
+      <div style="text-align:center;margin-top:18px;" class="reveal">
         <button class="btn btn-outline" onclick="navigate('faq')">See All FAQs &#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="pkg-cta-wrap">
+    <div class="container">
+      <div class="pkg-cta reveal">
+        <div class="pkg-cta-inner">
+          <h2>Ready to get started?</h2>
+          <p>Our members already building stronger financial futures with Credit Pulse. Join Now!</p>
+          <div class="pkg-cta-btns">
+            <button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')">Claim Your Cashback &rarr;</button>
+            <button class="btn-ghost-white" onclick="navigate('hiw')">How It Works</button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -1149,7 +1171,7 @@
       <div class="pkg-cta reveal">
         <div class="pkg-cta-inner">
           <h2>Ready to pick your plan?</h2>
-          <p>Join 4,200+ members already building stronger financial futures with Credit Pulse.</p>
+          <p>Our members already building stronger financial futures with Credit Pulse. Join Now!</p>
           <div class="pkg-cta-btns">
             <button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')">Go to Checkout &rarr;</button>
             <button class="btn-ghost-white" onclick="navigate('hiw')">How It Works</button>
