@@ -78,6 +78,7 @@
     .nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1);}
     .nav-links a.active{color:#1A2B1A;}
     .nav-cta{display:flex;align-items:center;flex-shrink:0;}
+    .nav-mobile-cta{display:none;}
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;}
     .hamburger span{display:block;width:22px;height:2px;background:#1A2B1A;border-radius:2px;transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .25s ease;}
     .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
@@ -600,6 +601,21 @@
       .nav-links,.nav-cta{display:none;}
       .hamburger{display:flex;}
       .mobile-menu{display:block;}
+      .nav-mobile-cta{
+        display:flex;
+        margin-left:auto;
+        margin-right:8px;
+        flex-shrink:0;
+      }
+      .nav-mobile-cta .btn{
+        font-size:.72rem;
+        padding:7px 14px;
+        letter-spacing:.04em;
+        background:linear-gradient(135deg,#d7ff00,#8cff5f);
+        color:#0d3320;
+        box-shadow:0 3px 12px rgba(190,255,0,.35);
+        border-radius:9px;
+      }
       /* Hero: single column, center-aligned */
       .hero-inner{grid-template-columns:1fr;gap:clamp(28px,5vw,44px);}
       .hero-left{
@@ -667,6 +683,7 @@
     <div class="nav-cta">
       <button class="btn btn-primary btn-sm" onclick="navigate('checkout')">Claim Cashback</button>
     </div>
+    <button class="nav-mobile-cta btn" onclick="navigate('checkout')">CLAIM CASHBACK</button>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
