@@ -561,7 +561,7 @@
     .co-agree input[type=checkbox]{width:18px;height:18px;accent-color:var(--green);flex-shrink:0;margin-top:2px;cursor:pointer;}
     .co-agree label{font-size:clamp(.76rem,.97vw,.83rem);color:var(--tm);line-height:1.62;cursor:pointer;}
     .co-disc-note{font-size:clamp(.67rem,.84vw,.73rem);color:#64748B;line-height:1.6;margin-top:11px;text-align:center;}
-    @keyframes throb{0%,100%{box-shadow:0 4px 22px rgba(204,255,0,.3);}50%{box-shadow:0 10px 40px rgba(204,255,0,.6);transform:translateY(-1px);}}
+    @keyframes throb{0%,100%{box-shadow:0 4px 22px rgba(190,255,0,.36);}50%{box-shadow:0 12px 44px rgba(190,255,0,.62);transform:translateY(-2px);}}
     .btn-throb{animation:throb 1.9s ease-in-out infinite;}
     .btn-throb:hover{animation-play-state:paused;}
 
@@ -615,7 +615,9 @@
         color:#0d3320;
         box-shadow:0 3px 12px rgba(190,255,0,.35);
         border-radius:9px;
+        animation:throb 1.9s ease-in-out infinite;
       }
+      .nav-mobile-cta .btn:hover{animation-play-state:paused;transform:translateY(-2px);box-shadow:0 10px 32px rgba(190,255,0,.55);}
       /* Hero: single column, center-aligned */
       .hero-inner{grid-template-columns:1fr;gap:clamp(28px,5vw,44px);}
       .hero-left{
