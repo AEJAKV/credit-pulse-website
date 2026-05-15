@@ -307,6 +307,18 @@
       .hero-badge::before{animation:none;}
     }
 
+    /* ===== PACKAGES CTA BANNER ===== */
+    .pkg-cta-wrap{padding:clamp(32px,4vw,52px) 0;background:var(--bg2);}
+    .pkg-cta{background:linear-gradient(148deg,#0d3320 0%,#174d34 50%,#1f6b49 100%);border-radius:clamp(18px,2.5vw,28px);padding:clamp(52px,7vw,88px) clamp(28px,6vw,72px);text-align:center;position:relative;overflow:hidden;}
+    .pkg-cta::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:34px 34px;opacity:.4;pointer-events:none;}
+    .pkg-cta-inner{position:relative;z-index:1;}
+    .pkg-cta h2{color:#fff;font-size:clamp(1.75rem,3.5vw,2.8rem);font-weight:900;letter-spacing:-.03em;margin-bottom:clamp(10px,1.5vw,16px);line-height:1.1;}
+    .pkg-cta p{color:rgba(255,255,255,.7);font-size:clamp(.9rem,1.2vw,1.05rem);max-width:480px;margin:0 auto clamp(28px,3.5vw,40px);line-height:1.7;}
+    .pkg-cta-btns{display:flex;gap:clamp(10px,1.5vw,16px);justify-content:center;flex-wrap:wrap;}
+    .pkg-cta .btn-ghost-white{background:transparent;border:2px solid rgba(255,255,255,.38);color:#fff;border-radius:999px;padding:0 clamp(22px,3vw,36px);height:52px;font-size:clamp(.88rem,1.1vw,.98rem);font-weight:600;transition:background var(--tr),border-color var(--tr);cursor:pointer;}
+    .pkg-cta .btn-ghost-white:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7);}
+    @media(max-width:560px){.pkg-cta-btns .btn{width:100%;max-width:300px;}}
+
     /* ===== LEGAL PAGES ===== */
     .legal-hero{padding:clamp(100px,14vw,136px) 0 clamp(36px,4.5vw,52px);background:linear-gradient(148deg,#0d3320 0%,#174d34 32%,#1f6b49 60%,#246e4a 100%);position:relative;overflow:hidden;text-align:center;}
     .legal-hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.042) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.042) 1px,transparent 1px);background-size:34px 34px;opacity:.3;pointer-events:none;}
@@ -1131,6 +1143,22 @@
       </div>
     </div>
   </section>
+
+  <section class="pkg-cta-wrap">
+    <div class="container">
+      <div class="pkg-cta reveal">
+        <div class="pkg-cta-inner">
+          <h2>Ready to pick your plan?</h2>
+          <p>Join 4,200+ members already building stronger financial futures with Credit Pulse.</p>
+          <div class="pkg-cta-btns">
+            <button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')">Go to Checkout &rarr;</button>
+            <button class="btn-ghost-white" onclick="navigate('hiw')">How It Works</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','bronze')">Bronze</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-packages -->
 
