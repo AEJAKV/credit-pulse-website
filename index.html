@@ -97,30 +97,188 @@
     .page-hdr p{font-size:clamp(.9rem,1.4vw,1.07rem);color:var(--tm);max-width:600px;margin:0 auto;}
 
     /* ===== HERO ===== */
-    .hero{padding:clamp(110px,15vw,152px) 0 clamp(64px,9vw,100px);background:var(--gh);position:relative;overflow:hidden;}
-    .hero::before{content:'';position:absolute;top:-200px;right:-200px;width:clamp(350px,50vw,650px);height:clamp(350px,50vw,650px);background:radial-gradient(circle,rgba(100,165,73,.22) 0%,transparent 68%);pointer-events:none;}
-    .hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:clamp(240px,35vw,420px);height:clamp(240px,35vw,420px);background:radial-gradient(circle,rgba(100,165,73,.12) 0%,transparent 68%);pointer-events:none;}
-    .hero-inner{display:grid;grid-template-columns:1fr minmax(300px,45%);gap:clamp(32px,6vw,72px);align-items:center;position:relative;z-index:1;}
-    .hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:clamp(.68rem,.9vw,.76rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);background:rgba(100,165,73,.1);border:1px solid rgba(100,165,73,.3);padding:5px 14px;border-radius:100px;margin-bottom:clamp(14px,2vw,22px);}
-    .hero-badge::before{content:'';width:6px;height:6px;background:var(--green);border-radius:50%;flex-shrink:0;animation:pdot 2s infinite;}
-    @keyframes pdot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.45;transform:scale(.75);}}
-    .hero-headline{font-size:clamp(1.85rem,4.5vw,3.6rem);font-weight:900;line-height:1.16;letter-spacing:-.025em;margin-bottom:clamp(12px,1.8vw,20px);}
-    .hl-green{background:linear-gradient(135deg,#64A549,#7EC959);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-    .hero-sub{font-size:clamp(.9rem,1.4vw,1.06rem);color:var(--tm);line-height:1.78;max-width:500px;margin-bottom:clamp(18px,3vw,30px);}
-    .hero-ctas{display:flex;gap:clamp(8px,1.5vw,14px);flex-wrap:wrap;margin-bottom:clamp(18px,3vw,30px);}
-    .hero-trust{display:flex;flex-wrap:wrap;gap:clamp(8px,1.5vw,16px);margin-bottom:clamp(14px,2vw,22px);}
-    .ht-item{display:flex;align-items:center;gap:6px;font-size:clamp(.73rem,.9vw,.82rem);font-weight:500;color:var(--tm);}
-    .ht-item svg{flex-shrink:0;color:var(--green);}
-    .hero-disc{font-size:clamp(.68rem,.85vw,.74rem);color:#64748B;line-height:1.65;max-width:480px;}
-    .hero-card{background:#FFF;border:1px solid #D5E8CE;border-radius:var(--rl);padding:clamp(24px,4vw,38px) clamp(20px,3vw,34px);box-shadow:0 12px 48px rgba(0,0,0,.1),0 4px 16px rgba(100,165,73,.1);position:relative;overflow:hidden;}
-    .hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gg);}
-    .hc-label{font-size:clamp(.67rem,.82vw,.73rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tm);margin-bottom:5px;}
-    .hc-amount{font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;color:var(--green);line-height:1;margin-bottom:4px;}
-    .hc-desc{font-size:clamp(.78rem,1vw,.86rem);color:var(--tm);margin-bottom:clamp(16px,2.5vw,26px);}
-    .hc-tiers{display:flex;flex-direction:column;gap:7px;margin-bottom:clamp(16px,2.5vw,26px);}
-    .hc-tier{display:flex;align-items:center;justify-content:space-between;padding:9px 13px;background:#F4F9F2;border-radius:8px;border:1px solid #D5E8CE;transition:border-color var(--tr);}
-    .hc-tname{font-size:clamp(.78rem,1vw,.84rem);font-weight:500;color:var(--tm);}
-    .hc-tamt{font-size:clamp(.82rem,1.1vw,.9rem);font-weight:700;color:var(--green);}
+    /* ===== HERO ===== */
+    .hero{
+      padding:clamp(110px,15vw,152px) 0 clamp(72px,10vw,112px);
+      background:linear-gradient(148deg,#ebfae6 0%,#f4fef1 30%,#fafffe 60%,#eef9e9 100%);
+      position:relative;overflow:hidden;
+    }
+    /* Top-right lime-green glow */
+    .hero::before{
+      content:'';position:absolute;
+      top:-160px;right:-100px;
+      width:clamp(440px,60vw,800px);height:clamp(440px,60vw,800px);
+      background:radial-gradient(ellipse at 62% 38%,rgba(204,255,0,.14) 0%,rgba(100,165,73,.2) 28%,rgba(126,201,89,.05) 56%,transparent 72%);
+      pointer-events:none;
+    }
+    /* Bottom-left mint haze */
+    .hero::after{
+      content:'';position:absolute;
+      bottom:-100px;left:-80px;
+      width:clamp(320px,44vw,580px);height:clamp(320px,44vw,580px);
+      background:radial-gradient(ellipse at 38% 62%,rgba(100,165,73,.17) 0%,rgba(165,230,140,.07) 45%,transparent 70%);
+      pointer-events:none;
+    }
+    .hero-inner{
+      display:grid;
+      grid-template-columns:1fr minmax(310px,44%);
+      gap:clamp(44px,7vw,96px);
+      align-items:center;
+      position:relative;z-index:1;
+    }
+    /* --- Badge --- */
+    .hero-badge{
+      display:inline-flex;align-items:center;gap:8px;
+      font-size:clamp(.67rem,.87vw,.74rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+      color:var(--green-d);
+      background:rgba(255,255,255,.75);
+      border:1px solid rgba(100,165,73,.3);
+      backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+      padding:6px 15px 6px 10px;border-radius:100px;
+      margin-bottom:clamp(16px,2.2vw,24px);
+      box-shadow:0 2px 14px rgba(100,165,73,.1);
+    }
+    .hero-badge::before{
+      content:'';width:7px;height:7px;background:var(--green);border-radius:50%;flex-shrink:0;
+      animation:pdot 2s ease-in-out infinite;
+    }
+    @keyframes pdot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.38;transform:scale(.68);}}
+    /* --- Headline --- */
+    .hero-headline{
+      font-size:clamp(1.9rem,4.6vw,3.7rem);font-weight:900;
+      line-height:1.1;letter-spacing:-.028em;
+      color:#152013;
+      margin-bottom:clamp(14px,2.2vw,22px);
+    }
+    /* Shimmer gradient accent on "$1,500 Cashback" */
+    .hl-accent{
+      display:inline;
+      background:linear-gradient(90deg,#2e7d1a 0%,#4cad28 22%,#79c750 44%,#b6ef38 62%,#CCFF00 78%,#79c750 92%,#2e7d1a 100%);
+      background-size:220% auto;
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+      animation:hlShimmer 5s ease-in-out infinite;
+    }
+    @keyframes hlShimmer{0%,100%{background-position:0% center;}50%{background-position:100% center;}}
+    /* --- Body text --- */
+    .hero-sub{
+      font-size:clamp(.9rem,1.4vw,1.07rem);
+      color:#4a6645;line-height:1.8;
+      max-width:490px;
+      margin-bottom:clamp(24px,3.8vw,36px);
+    }
+    .hero-ctas{
+      display:flex;gap:clamp(10px,1.6vw,16px);flex-wrap:wrap;
+      align-items:center;
+      margin-bottom:clamp(22px,3.5vw,32px);
+    }
+    /* --- Trust pill badges --- */
+    .hero-trust{display:flex;flex-wrap:wrap;gap:clamp(6px,1vw,10px);margin-bottom:clamp(16px,2.2vw,22px);}
+    .ht-pill{
+      display:inline-flex;align-items:center;gap:6px;
+      font-size:clamp(.67rem,.84vw,.75rem);font-weight:600;color:#2a3e29;
+      background:rgba(255,255,255,.7);
+      border:1px solid rgba(100,165,73,.2);
+      backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+      padding:4px 10px 4px 5px;border-radius:100px;
+      box-shadow:0 1px 6px rgba(0,0,0,.05);
+      transition:border-color var(--tr),background var(--tr),box-shadow var(--tr);
+      cursor:default;
+    }
+    .ht-pill:hover{border-color:rgba(100,165,73,.4);background:rgba(255,255,255,.9);box-shadow:0 2px 10px rgba(100,165,73,.1);}
+    .ht-pill-icon{
+      width:19px;height:19px;border-radius:50%;
+      background:rgba(100,165,73,.13);
+      display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;
+    }
+    .ht-pill-icon svg{color:var(--green);display:block;}
+    .hero-disc{font-size:clamp(.67rem,.84vw,.73rem);color:#7c9477;line-height:1.68;max-width:480px;}
+    /* --- Right column glow --- */
+    .hero-right{position:relative;}
+    .hero-right::before{
+      content:'';position:absolute;
+      inset:-55px -35px;
+      background:radial-gradient(ellipse at 54% 48%,rgba(100,165,73,.22) 0%,rgba(204,255,0,.11) 40%,transparent 68%);
+      filter:blur(30px);
+      pointer-events:none;border-radius:50%;z-index:0;
+    }
+    /* --- Hero card --- */
+    .hero-card{
+      position:relative;z-index:1;
+      border-radius:clamp(18px,2.5vw,26px);
+      padding:clamp(28px,4.5vw,42px) clamp(24px,3.5vw,36px);
+      background:#fff;
+      box-shadow:
+        0 2px 4px rgba(0,0,0,.04),
+        0 14px 40px rgba(0,0,0,.1),
+        0 34px 80px rgba(0,0,0,.07),
+        0 4px 28px rgba(100,165,73,.12);
+      animation:heroFloat 5.5s ease-in-out infinite;
+    }
+    /* Animated gradient border ring on card */
+    .hero-card::before{
+      content:'';position:absolute;inset:0;
+      padding:1.5px;border-radius:inherit;
+      background:linear-gradient(120deg,#4D8A37,#64A549,#7EC959,#aaff5a,#CCFF00,#aaff5a,#7EC959,#64A549,#4D8A37);
+      background-size:300% 300%;
+      animation:pkgBorderMove 6s ease infinite;
+      -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+      -webkit-mask-composite:xor;
+      mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+      mask-composite:exclude;
+      pointer-events:none;opacity:.82;
+    }
+    @keyframes heroFloat{
+      0%,100%{transform:translateY(0) rotate(0deg);}
+      33%{transform:translateY(-11px) rotate(-.22deg);}
+      66%{transform:translateY(-5px) rotate(.18deg);}
+    }
+    .hc-label{
+      font-size:clamp(.64rem,.8vw,.71rem);font-weight:700;letter-spacing:.13em;text-transform:uppercase;
+      color:var(--green-d);margin-bottom:5px;opacity:.78;
+    }
+    .hc-amount{
+      font-size:clamp(2.6rem,5.5vw,4.2rem);font-weight:900;line-height:1;margin-bottom:4px;
+      background:linear-gradient(130deg,#236815,#4ea02a,#7DC956);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    }
+    .hc-desc{font-size:clamp(.78rem,1vw,.87rem);color:var(--tm);margin-bottom:clamp(18px,3vw,28px);line-height:1.55;}
+    .hc-tiers{display:flex;flex-direction:column;gap:8px;margin-bottom:clamp(18px,3vw,28px);}
+    .hc-tier{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:11px 14px;
+      background:rgba(246,253,243,.75);
+      border-radius:11px;
+      border:1px solid rgba(100,165,73,.16);
+      cursor:pointer;
+      transition:all var(--tr);
+      position:relative;overflow:hidden;
+    }
+    .hc-tier:hover{
+      background:rgba(100,165,73,.09);
+      border-color:rgba(100,165,73,.38);
+      transform:translateX(4px);
+    }
+    .hc-tier.active{
+      background:rgba(100,165,73,.1);
+      border-color:rgba(100,165,73,.7);
+      animation:activePulse 2.8s ease-in-out infinite;
+    }
+    .hc-tier.active::before{
+      content:'';position:absolute;left:0;top:0;bottom:0;
+      width:3px;background:var(--gg);border-radius:2px 0 0 2px;
+    }
+    @keyframes activePulse{
+      0%,100%{box-shadow:0 0 0 2px rgba(100,165,73,.14),0 3px 12px rgba(100,165,73,.16);}
+      50%{box-shadow:0 0 0 4px rgba(100,165,73,.2),0 6px 22px rgba(100,165,73,.26);}
+    }
+    .hc-tname{font-size:clamp(.78rem,1vw,.85rem);font-weight:500;color:var(--tm);transition:color var(--tr);}
+    .hc-tier.active .hc-tname{color:var(--green-d);font-weight:700;}
+    .hc-tamt{font-size:clamp(.82rem,1.1vw,.91rem);font-weight:700;color:var(--green);transition:color var(--tr);}
+    .hc-tier.active .hc-tamt{color:var(--green-d);}
+    @media(prefers-reduced-motion:reduce){
+      .hero-card,.hl-accent,.hc-tier.active,.hero-card::before{animation:none;}
+      .hero-badge::before{animation:none;}
+    }
 
     /* ===== TRUST STRIP ===== */
     .trust-strip{background:#EBF5E7;border-top:1px solid #C8DECE;border-bottom:1px solid #C8DECE;padding:clamp(14px,2vw,20px) 0;}
@@ -430,40 +588,50 @@
   <section class="hero">
     <div class="container">
       <div class="hero-inner">
+
+        <!-- LEFT: copy -->
         <div class="hero-left">
           <div class="hero-badge">Education-Based Cashback Platform</div>
-          <h1 class="hero-headline">Get Up to <span class="hl-green">$1,500 Cashback</span> With Financial Education Support</h1>
+          <h1 class="hero-headline">Get Up to <span class="hl-accent">$1,500&nbsp;Cashback</span> With Financial Education Support</h1>
           <p class="hero-sub">Choose a Credit Pulse membership package, access practical financial education tools, and receive eligible cashback based on your selected tier.</p>
           <div class="hero-ctas">
             <button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')">Claim Your Cashback &#8594;</button>
             <button class="btn btn-outline btn-lg" onclick="navigate('hiw')">See How It Works</button>
           </div>
           <div class="hero-trust">
-            <span class="ht-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Financial education platform</span>
-            <span class="ht-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Secure verification</span>
-            <span class="ht-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>Biweekly payment options</span>
-            <span class="ht-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Cashback eligibility</span>
-            <span class="ht-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Not a loan</span>
+            <span class="ht-pill"><span class="ht-pill-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Education platform</span>
+            <span class="ht-pill"><span class="ht-pill-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>Secure verification</span>
+            <span class="ht-pill"><span class="ht-pill-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></span>Biweekly payments</span>
+            <span class="ht-pill"><span class="ht-pill-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Cashback eligibility</span>
+            <span class="ht-pill"><span class="ht-pill-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></span>Not a loan</span>
           </div>
           <p class="hero-disc">Credit Pulse is not a loan, credit card, credit repair service, or financial product. Cashback eligibility, timing, and results may vary.</p>
         </div>
+
+        <!-- RIGHT: floating card -->
         <div class="hero-right">
           <div class="hero-card">
             <div class="hc-label">Maximum Available Cashback</div>
             <div class="hc-amount">$1,500</div>
             <div class="hc-desc">Platinum Package &mdash; 4 biweekly payments of ~$144.25</div>
             <div class="hc-tiers">
-              <div class="hc-tier"><span class="hc-tname">Starter Package</span><span class="hc-tamt">$250 cashback</span></div>
-              <div class="hc-tier"><span class="hc-tname">Bronze Package</span><span class="hc-tamt">$500 cashback</span></div>
-              <div class="hc-tier"><span class="hc-tname">Gold Package</span><span class="hc-tamt">$1,000 cashback</span></div>
-              <div class="hc-tier" style="border-color:rgba(100,165,73,.4);background:rgba(100,165,73,.06);">
-                <span class="hc-tname" style="color:var(--green-d);">Platinum Package</span>
-                <span class="hc-tamt">$1,500 cashback</span>
+              <div class="hc-tier" onclick="navigate('checkout','starter')">
+                <span class="hc-tname">Starter Package</span><span class="hc-tamt">$250 cashback</span>
+              </div>
+              <div class="hc-tier" onclick="navigate('checkout','bronze')">
+                <span class="hc-tname">Bronze Package</span><span class="hc-tamt">$500 cashback</span>
+              </div>
+              <div class="hc-tier" onclick="navigate('checkout','gold')">
+                <span class="hc-tname">Gold Package</span><span class="hc-tamt">$1,000 cashback</span>
+              </div>
+              <div class="hc-tier active" onclick="navigate('checkout','platinum')">
+                <span class="hc-tname">Platinum Package</span><span class="hc-tamt">$1,500 cashback</span>
               </div>
             </div>
-            <button class="btn btn-primary btn-full" onclick="navigate('packages')">See All Packages</button>
+            <button class="btn btn-primary btn-full" onclick="navigate('packages')">See All Packages &#8594;</button>
           </div>
         </div>
+
       </div>
     </div>
   </section>
