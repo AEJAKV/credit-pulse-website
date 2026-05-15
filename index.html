@@ -280,6 +280,62 @@
       .hero-badge::before{animation:none;}
     }
 
+    /* ===== BANK CAROUSEL ===== */
+    .bank-section{padding:clamp(44px,6vw,72px) 0;background:var(--bg2);border-top:1px solid rgba(100,165,73,.1);border-bottom:1px solid rgba(100,165,73,.1);overflow:hidden;}
+    .bank-hd{text-align:center;max-width:660px;margin:0 auto clamp(28px,4vw,44px);padding:0 clamp(16px,4vw,32px);}
+    .bank-hd h2{font-size:clamp(1.25rem,2.4vw,1.9rem);font-weight:700;margin-bottom:clamp(8px,1.2vw,12px);color:var(--t);}
+    .bank-hd p{font-size:clamp(.85rem,1.1vw,.95rem);color:var(--tm);line-height:1.72;}
+    .bank-marquee{
+      overflow:hidden;
+      position:relative;
+      -webkit-mask-image:linear-gradient(to right,transparent 0%,#000 9%,#000 91%,transparent 100%);
+      mask-image:linear-gradient(to right,transparent 0%,#000 9%,#000 91%,transparent 100%);
+    }
+    .bank-track{
+      display:flex;
+      gap:clamp(12px,1.6vw,18px);
+      width:max-content;
+      animation:bankScroll 38s linear infinite;
+      padding:6px 0;
+    }
+    .bank-marquee:hover .bank-track{animation-play-state:paused;}
+    @keyframes bankScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+    .bank-card{
+      min-width:clamp(148px,16vw,192px);
+      height:clamp(58px,6.5vw,72px);
+      border-radius:14px;
+      background:#fff;
+      border:1px solid rgba(76,120,75,.14);
+      box-shadow:0 3px 14px rgba(20,55,30,.06),0 1px 4px rgba(0,0,0,.04);
+      display:flex;align-items:center;justify-content:flex-start;
+      gap:10px;
+      padding:0 clamp(12px,1.5vw,18px);
+      filter:grayscale(1);opacity:.62;
+      transition:transform .28s ease,opacity .28s ease,filter .28s ease,box-shadow .28s ease;
+      cursor:default;flex-shrink:0;
+    }
+    .bank-card:hover{transform:translateY(-3px);opacity:1;filter:grayscale(0);box-shadow:0 10px 28px rgba(20,55,30,.11);}
+    .bank-icon{
+      width:30px;height:30px;border-radius:7px;
+      display:flex;align-items:center;justify-content:center;
+      font-size:.62rem;font-weight:900;color:#fff;
+      flex-shrink:0;letter-spacing:-.01em;line-height:1;
+    }
+    .bank-name{font-size:clamp(.7rem,.85vw,.78rem);font-weight:600;color:#1a2b1a;white-space:nowrap;line-height:1.2;}
+    .bank-disc{
+      text-align:center;
+      font-size:clamp(.63rem,.78vw,.69rem);
+      color:#94a3b8;
+      margin-top:clamp(16px,2.2vw,24px);
+      padding:0 clamp(16px,4vw,32px);
+      max-width:680px;
+      margin-left:auto;margin-right:auto;
+      line-height:1.65;
+    }
+    @media(prefers-reduced-motion:reduce){
+      .bank-track{animation:none;flex-wrap:wrap;justify-content:center;width:auto;padding:0 clamp(16px,4vw,32px);}
+    }
+
     /* ===== TRUST STRIP ===== */
     .trust-strip{background:#EBF5E7;border-top:1px solid #C8DECE;border-bottom:1px solid #C8DECE;padding:clamp(14px,2vw,20px) 0;}
     .ts-inner{display:flex;align-items:center;justify-content:center;gap:clamp(16px,3.5vw,40px);flex-wrap:wrap;}
@@ -648,6 +704,54 @@
       </div>
     </div>
   </div>
+
+  <!-- BANK CAROUSEL -->
+  <section class="bank-section">
+    <div class="bank-hd">
+      <span class="sec-label">Secure Canadian Banking Verification</span>
+      <h2>Designed to work with major Canadian banks</h2>
+      <p>Credit Pulse uses a secure verification flow to support membership and cashback eligibility review.</p>
+    </div>
+    <div class="bank-marquee">
+      <div class="bank-track">
+        <!-- Set 1 -->
+        <div class="bank-card"><div class="bank-icon" style="background:#007B40;">TD</div><span class="bank-name">TD Bank</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#003168;">RBC</div><span class="bank-name">RBC Royal Bank</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#CC0000;">BNS</div><span class="bank-name">Scotiabank</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#0079C1;">BMO</div><span class="bank-name">BMO</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#C41230;">CM</div><span class="bank-name">CIBC</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#006937;">DJ</div><span class="bank-name">Desjardins</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#B22222;">NA</div><span class="bank-name">National Bank</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#00843D;">MR</div><span class="bank-name">Meridian</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#FF6200;">TN</div><span class="bank-name">Tangerine</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#E8111A;">SC</div><span class="bank-name">Simplii Financial</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#6B2F98;">EQ</div><span class="bank-name">EQ Bank</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#00704A;">VC</div><span class="bank-name">Vancity</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#00A758;">ML</div><span class="bank-name">Manulife Bank</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#00843D;">CC</div><span class="bank-name">Coast Capital</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#007B40;">ATB</div><span class="bank-name">ATB Financial</span></div>
+        <div class="bank-card"><div class="bank-icon" style="background:#005FAD;">CWB</div><span class="bank-name">Canadian Western Bank</span></div>
+        <!-- Set 2 — duplicate for seamless loop -->
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#007B40;">TD</div><span class="bank-name">TD Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#003168;">RBC</div><span class="bank-name">RBC Royal Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#CC0000;">BNS</div><span class="bank-name">Scotiabank</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#0079C1;">BMO</div><span class="bank-name">BMO</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#C41230;">CM</div><span class="bank-name">CIBC</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#006937;">DJ</div><span class="bank-name">Desjardins</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#B22222;">NA</div><span class="bank-name">National Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#00843D;">MR</div><span class="bank-name">Meridian</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#FF6200;">TN</div><span class="bank-name">Tangerine</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#E8111A;">SC</div><span class="bank-name">Simplii Financial</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#6B2F98;">EQ</div><span class="bank-name">EQ Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#00704A;">VC</div><span class="bank-name">Vancity</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#00A758;">ML</div><span class="bank-name">Manulife Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#00843D;">CC</div><span class="bank-name">Coast Capital</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#007B40;">ATB</div><span class="bank-name">ATB Financial</span></div>
+        <div class="bank-card" aria-hidden="true"><div class="bank-icon" style="background:#005FAD;">CWB</div><span class="bank-name">Canadian Western Bank</span></div>
+      </div>
+    </div>
+    <p class="bank-disc">Bank logos are shown for compatibility and recognition purposes only. Credit Pulse is not affiliated with or endorsed by any of these financial institutions.</p>
+  </section>
 
   <!-- PACKAGES PREVIEW -->
   <section class="section" id="home-pkgs">
