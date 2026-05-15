@@ -100,24 +100,30 @@
     /* ===== HERO ===== */
     .hero{
       padding:clamp(110px,15vw,152px) 0 clamp(72px,10vw,112px);
-      background:linear-gradient(148deg,#ebfae6 0%,#f4fef1 30%,#fafffe 60%,#eef9e9 100%);
+      background:
+        radial-gradient(ellipse at 76% 16%, rgba(120,255,185,.2) 0%, transparent 38%),
+        radial-gradient(ellipse at 16% 84%, rgba(190,255,0,.12) 0%, transparent 32%),
+        radial-gradient(ellipse at 50% 108%, rgba(0,160,80,.26) 0%, transparent 52%),
+        linear-gradient(148deg,#0d3320 0%,#174d34 32%,#1f6b49 60%,#246e4a 100%);
       position:relative;overflow:hidden;
     }
-    /* Top-right lime-green glow */
+    /* Subtle crosshatch texture */
     .hero::before{
-      content:'';position:absolute;
-      top:-160px;right:-100px;
-      width:clamp(440px,60vw,800px);height:clamp(440px,60vw,800px);
-      background:radial-gradient(ellipse at 62% 38%,rgba(204,255,0,.14) 0%,rgba(100,165,73,.2) 28%,rgba(126,201,89,.05) 56%,transparent 72%);
-      pointer-events:none;
+      content:'';position:absolute;inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.042) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.042) 1px,transparent 1px);
+      background-size:34px 34px;
+      opacity:.4;
+      pointer-events:none;z-index:0;
     }
-    /* Bottom-left mint haze */
+    /* Top-right vivid lime glow orb */
     .hero::after{
       content:'';position:absolute;
-      bottom:-100px;left:-80px;
-      width:clamp(320px,44vw,580px);height:clamp(320px,44vw,580px);
-      background:radial-gradient(ellipse at 38% 62%,rgba(100,165,73,.17) 0%,rgba(165,230,140,.07) 45%,transparent 70%);
-      pointer-events:none;
+      top:-90px;right:-70px;
+      width:clamp(380px,54vw,720px);height:clamp(380px,54vw,720px);
+      background:radial-gradient(ellipse at 58% 38%,rgba(190,255,0,.17) 0%,rgba(100,220,120,.12) 34%,transparent 64%);
+      pointer-events:none;z-index:0;
     }
     .hero-inner{
       display:grid;
@@ -130,16 +136,16 @@
     .hero-badge{
       display:inline-flex;align-items:center;gap:8px;
       font-size:clamp(.67rem,.87vw,.74rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;
-      color:var(--green-d);
-      background:rgba(255,255,255,.75);
-      border:1px solid rgba(100,165,73,.3);
+      color:#c8ffb8;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.22);
       backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
       padding:6px 15px 6px 10px;border-radius:100px;
       margin-bottom:clamp(16px,2.2vw,24px);
-      box-shadow:0 2px 14px rgba(100,165,73,.1);
+      box-shadow:0 2px 16px rgba(0,0,0,.2);
     }
     .hero-badge::before{
-      content:'';width:7px;height:7px;background:var(--green);border-radius:50%;flex-shrink:0;
+      content:'';width:7px;height:7px;background:#7dffaa;border-radius:50%;flex-shrink:0;
       animation:pdot 2s ease-in-out infinite;
     }
     @keyframes pdot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.38;transform:scale(.68);}}
@@ -147,13 +153,13 @@
     .hero-headline{
       font-size:clamp(1.9rem,4.6vw,3.7rem);font-weight:900;
       line-height:1.1;letter-spacing:-.028em;
-      color:#152013;
+      color:#ffffff;
       margin-bottom:clamp(14px,2.2vw,22px);
     }
     /* Shimmer gradient accent on "$1,500 Cashback" */
     .hl-accent{
       display:inline;
-      background:linear-gradient(90deg,#2e7d1a 0%,#4cad28 22%,#79c750 44%,#b6ef38 62%,#CCFF00 78%,#79c750 92%,#2e7d1a 100%);
+      background:linear-gradient(90deg,#d7ff00 0%,#aaffb0 18%,#ffffff 42%,#d7ff5a 64%,#d7ff00 86%,#aaffb0 100%);
       background-size:220% auto;
       -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
       animation:hlShimmer 5s ease-in-out infinite;
@@ -162,7 +168,7 @@
     /* --- Body text --- */
     .hero-sub{
       font-size:clamp(.9rem,1.4vw,1.07rem);
-      color:#4a6645;line-height:1.8;
+      color:rgba(255,255,255,.82);line-height:1.8;
       max-width:490px;
       margin-bottom:clamp(24px,3.8vw,36px);
     }
@@ -175,30 +181,48 @@
     .hero-trust{display:flex;flex-wrap:wrap;gap:clamp(6px,1vw,10px);margin-bottom:clamp(16px,2.2vw,22px);}
     .ht-pill{
       display:inline-flex;align-items:center;gap:6px;
-      font-size:clamp(.67rem,.84vw,.75rem);font-weight:600;color:#2a3e29;
-      background:rgba(255,255,255,.7);
-      border:1px solid rgba(100,165,73,.2);
+      font-size:clamp(.67rem,.84vw,.75rem);font-weight:600;color:rgba(255,255,255,.9);
+      background:rgba(255,255,255,.1);
+      border:1px solid rgba(255,255,255,.18);
       backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
       padding:4px 10px 4px 5px;border-radius:100px;
-      box-shadow:0 1px 6px rgba(0,0,0,.05);
+      box-shadow:0 1px 8px rgba(0,0,0,.14);
       transition:border-color var(--tr),background var(--tr),box-shadow var(--tr);
       cursor:default;
     }
-    .ht-pill:hover{border-color:rgba(100,165,73,.4);background:rgba(255,255,255,.9);box-shadow:0 2px 10px rgba(100,165,73,.1);}
+    .ht-pill:hover{border-color:rgba(255,255,255,.36);background:rgba(255,255,255,.18);box-shadow:0 2px 14px rgba(0,0,0,.18);}
     .ht-pill-icon{
       width:19px;height:19px;border-radius:50%;
-      background:rgba(100,165,73,.13);
+      background:rgba(190,255,0,.2);
       display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;
     }
-    .ht-pill-icon svg{color:var(--green);display:block;}
-    .hero-disc{font-size:clamp(.67rem,.84vw,.73rem);color:#7c9477;line-height:1.68;max-width:480px;}
+    .ht-pill-icon svg{color:#b8ffb0;display:block;}
+    .hero-disc{font-size:clamp(.67rem,.84vw,.73rem);color:rgba(255,255,255,.58);line-height:1.68;max-width:480px;}
+    /* Hero dark-bg button overrides */
+    .hero .btn-outline{
+      color:#fff;
+      border-color:rgba(255,255,255,.3);
+      background:rgba(255,255,255,.08);
+    }
+    .hero .btn-outline:hover{
+      color:#fff;
+      background:rgba(255,255,255,.16);
+      border-color:rgba(255,255,255,.5);
+      transform:translateY(-2px);
+    }
+    .hero .btn-accent{
+      background:linear-gradient(135deg,#d7ff00,#8cff5f);
+      color:#0d3320;
+      box-shadow:0 6px 28px rgba(190,255,0,.38);
+    }
+    .hero .btn-accent:hover{box-shadow:0 12px 40px rgba(190,255,0,.52);transform:translateY(-3px) scale(1.01);}
     /* --- Right column glow --- */
     .hero-right{position:relative;}
     .hero-right::before{
       content:'';position:absolute;
-      inset:-55px -35px;
-      background:radial-gradient(ellipse at 54% 48%,rgba(100,165,73,.22) 0%,rgba(204,255,0,.11) 40%,transparent 68%);
-      filter:blur(30px);
+      inset:-68px -44px;
+      background:radial-gradient(ellipse at 52% 48%,rgba(190,255,0,.3) 0%,rgba(100,220,120,.22) 36%,transparent 66%);
+      filter:blur(42px);
       pointer-events:none;border-radius:50%;z-index:0;
     }
     /* --- Hero card --- */
@@ -206,12 +230,14 @@
       position:relative;z-index:1;
       border-radius:clamp(18px,2.5vw,26px);
       padding:clamp(28px,4.5vw,42px) clamp(24px,3.5vw,36px);
-      background:#fff;
+      background:rgba(255,255,255,.97);
+      border:1px solid rgba(190,255,140,.3);
       box-shadow:
-        0 2px 4px rgba(0,0,0,.04),
-        0 14px 40px rgba(0,0,0,.1),
-        0 34px 80px rgba(0,0,0,.07),
-        0 4px 28px rgba(100,165,73,.12);
+        0 4px 8px rgba(0,0,0,.1),
+        0 18px 48px rgba(0,0,0,.28),
+        0 38px 90px rgba(0,0,0,.22),
+        0 8px 44px rgba(120,255,160,.16);
+      backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
       animation:heroFloat 5.5s ease-in-out infinite;
     }
     /* Animated gradient border ring on card */
