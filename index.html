@@ -600,8 +600,32 @@
       .nav-links,.nav-cta{display:none;}
       .hamburger{display:flex;}
       .mobile-menu{display:block;}
-      .hero-inner{grid-template-columns:1fr;gap:clamp(24px,5vw,40px);}
-      .hero-card{order:-1;}
+      /* Hero: single column, center-aligned */
+      .hero-inner{grid-template-columns:1fr;gap:clamp(28px,5vw,44px);}
+      .hero-left{
+        display:flex;flex-direction:column;
+        align-items:center;text-align:center;
+      }
+      .hero-badge{align-self:center;}
+      .hero-headline{
+        text-align:center;
+        font-size:clamp(2.25rem,10vw,3.25rem);
+        line-height:1.05;
+        letter-spacing:-.04em;
+      }
+      .hero-sub{text-align:center;max-width:100%;}
+      .hero-ctas{
+        flex-direction:column;
+        align-items:center;
+        width:100%;
+      }
+      .hero-ctas .btn{width:100%;max-width:320px;justify-content:center;}
+      .hero-hiw-btn{display:none;}
+      .hero-trust{justify-content:center;}
+      .hero-disc{text-align:center;max-width:100%;}
+      .hero-right{width:100%;}
+      .hero-card{margin-top:8px;width:100%;}
+      /* Other layout */
       .ts-inner{gap:clamp(10px,2vw,18px);}
       .ben-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));}
       .sec-inner{grid-template-columns:1fr;gap:clamp(24px,4vw,36px);}
@@ -617,8 +641,6 @@
     }
     /* 420px — small phone */
     @media(max-width:420px){
-      .hero-ctas{flex-direction:column;}
-      .hero-ctas .btn{width:100%;justify-content:center;}
       .ts-inner{display:grid;grid-template-columns:1fr 1fr;justify-items:start;}
       .ben-grid{grid-template-columns:1fr;}
       .co-pkg-grid{grid-template-columns:repeat(2,1fr);}
@@ -678,7 +700,7 @@
           <p class="hero-sub">Choose a Credit Pulse membership package, access practical financial education tools, and receive eligible cashback based on your selected tier.</p>
           <div class="hero-ctas">
             <button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')">Claim Your Cashback &#8594;</button>
-            <button class="btn btn-outline btn-lg" onclick="navigate('hiw')">See How It Works</button>
+            <button class="btn btn-outline btn-lg hero-hiw-btn" onclick="navigate('hiw')">See How It Works</button>
           </div>
           <div class="hero-trust">
             <span class="ht-pill"><span class="ht-pill-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>Education platform</span>
