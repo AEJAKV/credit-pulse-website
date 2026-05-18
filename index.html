@@ -437,94 +437,65 @@
     .ben-desc{font-size:clamp(.78rem,1vw,.85rem);color:var(--tm);line-height:1.62;}
 
     /* ===== PACKAGE CARDS ===== */
-    .pkg-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,240px),1fr));gap:clamp(20px,2.8vw,34px);align-items:stretch;}
-    .pkg{background:var(--card);border-radius:var(--rl);padding:clamp(22px,3.5vw,32px) clamp(18px,2.5vw,26px);position:relative;display:flex;flex-direction:column;transition:transform var(--tr),box-shadow var(--tr);box-shadow:0 2px 14px rgba(100,165,73,.07);}
+    /* ===== PRICING CARDS (6-TIER) ===== */
+    .pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.2vw,28px);align-items:stretch;}
+    .pkg{background:var(--card);border:1px solid var(--card-b);border-radius:clamp(16px,1.8vw,22px);padding:clamp(24px,3vw,36px) clamp(20px,2.5vw,30px) clamp(20px,2.5vw,28px);position:relative;display:flex;flex-direction:column;transition:transform .28s cubic-bezier(.4,0,.2,1),box-shadow .28s cubic-bezier(.4,0,.2,1);box-shadow:0 2px 12px rgba(0,0,0,.05),0 1px 3px rgba(0,0,0,.04);}
     .pkg::before{content:none;}
-    .pkg:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.09),0 4px 12px rgba(100,165,73,.15);}
-    .pkg:hover::before{content:none;}
-    .pkg.feat{background:linear-gradient(155deg,#F3FBF0 0%,#EDFAE8 100%);}
-
-    .pkg.feat:hover{box-shadow:0 20px 52px rgba(100,165,73,.22),0 4px 16px rgba(100,165,73,.18);}
-    .pkg.feat .pkg-badge,.pkg.top .pkg-badge{position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-size:clamp(.6rem,.8vw,.66rem);font-weight:800;letter-spacing:.1em;padding:5px 16px;border-radius:20px;white-space:nowrap;box-shadow:0 2px 10px rgba(0,0,0,.14);}
-    .pkg.feat .pkg-badge{background:var(--gg);color:#1A2B1A;}
-
-
-    .pkg.top .pkg-badge{background:linear-gradient(135deg,#CCFF00,#b8e000);color:#1A2B1A;}
-    .pkg-name{font-size:clamp(.67rem,.88vw,.73rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tm);margin-bottom:clamp(8px,1.2vw,12px);}
-    .pkg-cash{font-size:clamp(2rem,3.5vw,2.9rem);font-weight:900;color:var(--green);line-height:1;margin-bottom:2px;}
-    .pkg-cash-lbl{font-size:clamp(.7rem,.88vw,.77rem);color:var(--tm);margin-bottom:clamp(10px,1.5vw,16px);}
-    .pkg-biw{font-size:clamp(.84rem,1.1vw,.92rem);font-weight:700;color:var(--t);margin-bottom:2px;}
-    .pkg-total{font-size:clamp(.72rem,.9vw,.8rem);color:var(--tm);margin-bottom:clamp(14px,2vw,20px);padding-bottom:clamp(12px,1.8vw,18px);border-bottom:1px solid var(--card-b);}
-    .pkg-for{font-size:clamp(.72rem,.9vw,.78rem);color:var(--tm);font-style:italic;margin-bottom:clamp(10px,1.5vw,16px);}
-    .pkg-feats{list-style:none;display:flex;flex-direction:column;gap:clamp(5px,.8vw,8px);margin-bottom:clamp(16px,2.5vw,24px);flex:1;}
-    .pkg-feats li{display:flex;align-items:flex-start;gap:8px;font-size:clamp(.77rem,1vw,.83rem);color:var(--tm);line-height:1.52;}
-    .pkg-feats li::before{content:'';width:16px;height:16px;border-radius:50%;flex-shrink:0;margin-top:1px;background:rgba(100,165,73,.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 8l3 3 6-6' stroke='%2364A549' stroke-width='1.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat;border:1px solid rgba(100,165,73,.28);}
-
-    /* ===== PER-CARD ANIMATED BORDERS ===== */
-    @keyframes pkgBorderMove{
-      0%{background-position:0% 50%;}
-      50%{background-position:100% 50%;}
-      100%{background-position:0% 50%;}
-    }
-    /* Mask-technique animated gradient border ring on every card */
-    .pkg::after{
-      content:'';
-      position:absolute;inset:0;
-      padding:1.5px;border-radius:inherit;
-      background:linear-gradient(120deg,#8fd47e,#c2f0b4,#8fd47e);
-      background-size:260% 260%;
-      animation:pkgBorderMove 9s ease infinite;
-      -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
-      -webkit-mask-composite:xor;
-      mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
-      mask-composite:exclude;
-      pointer-events:none;
-      opacity:.35;
-    }
-    /* Starter – very subtle soft green outline */
-    .pkg--starter::after{opacity:.35;animation-duration:10s;}
-    /* Bronze – slightly more present */
-    .pkg--bronze::after{
-      background:linear-gradient(120deg,#64A549,#9de88a,#b6f080,#64A549);
-      background-size:280% 280%;
-      animation-duration:8s;
-      opacity:.58;
-    }
-    /* Gold – solid premium green border with animated shimmer */
-    .pkg--gold{
-      background:linear-gradient(155deg,#F3FBF0 0%,#EDFAE8 100%)!important;
-      box-shadow:0 4px 22px rgba(92,161,73,.14),0 14px 44px rgba(100,165,73,.09);
-      padding-top:clamp(30px,4.5vw,42px);
-    }
-    .pkg--gold::after{
-      padding:2px;
-      background:linear-gradient(120deg,#4D8A37,#64A549,#7EC959,#95d96a,#7EC959,#64A549,#4D8A37);
-      background-size:300% 300%;
-      animation-duration:6s;
-      opacity:1;
-    }
-    .pkg--gold:hover{box-shadow:0 22px 56px rgba(100,165,73,.24),0 4px 16px rgba(100,165,73,.18)!important;}
-    /* Platinum – vivid lime/yellow-green border, strongest emphasis */
-    .pkg--platinum{
-      background:linear-gradient(155deg,#FDFFF4 0%,#F8FFE2 100%)!important;
-      box-shadow:0 4px 26px rgba(180,224,0,.15),0 16px 48px rgba(204,255,0,.09);
-      padding-top:clamp(30px,4.5vw,42px);
-    }
-    .pkg--platinum::after{
-      padding:2px;
-      background:linear-gradient(120deg,#9aad00,#CCFF00,#e8ff74,#d5f500,#CCFF00,#9aad00);
-      background-size:300% 300%;
-      animation-duration:5s;
-      opacity:1;
-    }
-    .pkg--platinum:hover{box-shadow:0 24px 60px rgba(204,255,0,.28),0 4px 18px rgba(204,255,0,.18)!important;}
-    /* Ensure badges always render above the border overlay */
-    .pkg-badge{z-index:2;}
-    @media(prefers-reduced-motion:reduce){.pkg::after{animation:none;}}
+    .pkg::after{content:none;}
+    .pkg:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.09),0 4px 12px rgba(100,165,73,.12);}
+    .pkg-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);font-size:.62rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:5px 16px;border-radius:20px;white-space:nowrap;z-index:2;box-shadow:0 2px 10px rgba(0,0,0,.14);}
+    .pkg-name{font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--tm);margin-bottom:clamp(10px,1.5vw,16px);}
+    .pkg-cash{font-size:clamp(2.1rem,3.2vw,2.9rem);font-weight:900;color:var(--green);line-height:1;margin-bottom:2px;letter-spacing:-.03em;}
+    .pkg-cash-lbl{font-size:.72rem;color:var(--tm);letter-spacing:.04em;margin-bottom:0;}
+    .pkg-divider{height:1px;background:var(--card-b);margin:clamp(12px,1.8vw,18px) 0;}
+    .pkg-biw{font-size:clamp(.86rem,1.1vw,.95rem);font-weight:700;color:var(--t);margin-bottom:4px;}
+    .pkg-total{font-size:.78rem;color:var(--tm);margin-bottom:clamp(12px,1.8vw,18px);}
+    .pkg-details{border:none;background:none;padding:0;margin-bottom:clamp(14px,2vw,22px);}
+    .pkg-details summary{font-size:.75rem;font-weight:600;color:var(--green);cursor:pointer;list-style:none;display:flex;align-items:center;gap:4px;user-select:none;transition:opacity .2s;}
+    .pkg-details summary::-webkit-details-marker{display:none;}
+    .pkg-details summary::after{content:'▾';font-size:.7rem;transition:transform .22s;}
+    .pkg-details[open] summary::after{transform:rotate(-180deg);}
+    .pkg-details-inner{display:grid;grid-template-columns:1fr 1fr;gap:6px 18px;margin-top:10px;padding:12px 14px;background:var(--bg2);border-radius:10px;border:1px solid var(--card-b);}
+    .pkg-detail-item{display:flex;flex-direction:column;gap:2px;}
+    .pkg-detail-lbl{font-size:.63rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--tm);opacity:.65;}
+    .pkg-detail-val{font-size:.82rem;font-weight:600;color:var(--t);}
+    .pkg-spacer{flex:1;min-height:8px;}
+    @keyframes pkgBorderMove{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+    /* Gold — Best Value */
+    .pkg--gold{background:linear-gradient(155deg,#F3FBF0 0%,#EBF9E5 100%);border-color:rgba(100,165,73,.3);box-shadow:0 4px 20px rgba(100,165,73,.13),0 1px 4px rgba(0,0,0,.06);padding-top:clamp(30px,4.2vw,44px);}
+    .pkg--gold:hover{box-shadow:0 22px 52px rgba(100,165,73,.22),0 4px 16px rgba(100,165,73,.16);}
+    .pkg--gold .pkg-badge{background:linear-gradient(135deg,#4D8A37,#64A549,#7EC959);color:#fff;}
+    .pkg--gold .pkg-cash{color:var(--green-d);}
+    .pkg--gold::after{content:'';position:absolute;inset:-1.5px;border-radius:calc(clamp(16px,1.8vw,22px) + 2px);padding:2px;background:linear-gradient(120deg,#4D8A37,#64A549,#7EC959,#95d96a,#7EC959,#64A549);background-size:300% 300%;animation:pkgBorderMove 6s ease infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;pointer-events:none;opacity:.55;transition:opacity .3s;}
+    .pkg--gold:hover::after{opacity:1;}
+    /* Platinum — upper tier */
+    .pkg--platinum{background:linear-gradient(155deg,#FDFFF4 0%,#F6FFE0 100%);border-color:rgba(175,215,0,.28);box-shadow:0 4px 22px rgba(160,205,0,.11),0 1px 4px rgba(0,0,0,.05);}
+    .pkg--platinum:hover{box-shadow:0 22px 52px rgba(185,225,0,.2),0 4px 16px rgba(160,205,0,.16);}
+    .pkg--platinum .pkg-cash{color:#7a9b00;}
+    .pkg--platinum::after{content:'';position:absolute;inset:-1.5px;border-radius:calc(clamp(16px,1.8vw,22px) + 2px);padding:2px;background:linear-gradient(120deg,#9aad00,#CCFF00,#e8ff74,#d5f500,#CCFF00,#9aad00);background-size:300% 300%;animation:pkgBorderMove 5s ease infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;pointer-events:none;opacity:.45;transition:opacity .3s;}
+    .pkg--platinum:hover::after{opacity:1;}
+    /* Elite — dark premium card */
+    .pkg--elite{background:linear-gradient(148deg,#0d3320 0%,#174d34 55%,#1f6b49 100%);border:1px solid rgba(204,255,0,.18);color:#fff;padding-top:clamp(30px,4.2vw,44px);box-shadow:0 6px 30px rgba(10,40,20,.3),0 2px 8px rgba(0,0,0,.2);}
+    .pkg--elite:hover{transform:translateY(-8px);box-shadow:0 24px 64px rgba(10,40,20,.38),0 4px 20px rgba(204,255,0,.16);}
+    .pkg--elite .pkg-badge{background:linear-gradient(135deg,#CCFF00,#d8ff55);color:#0d3320;box-shadow:0 2px 14px rgba(204,255,0,.45);}
+    .pkg--elite .pkg-name{color:rgba(255,255,255,.55);}
+    .pkg--elite .pkg-cash{color:#d7ff00;text-shadow:0 0 28px rgba(200,255,0,.3);}
+    .pkg--elite .pkg-cash-lbl{color:rgba(255,255,255,.52);}
+    .pkg--elite .pkg-divider{background:rgba(255,255,255,.12);}
+    .pkg--elite .pkg-biw{color:#fff;}
+    .pkg--elite .pkg-total{color:rgba(255,255,255,.6);}
+    .pkg--elite .pkg-details summary{color:#c8ffb8;}
+    .pkg--elite .pkg-details-inner{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.12);}
+    .pkg--elite .pkg-detail-lbl{color:rgba(255,255,255,.45);opacity:1;}
+    .pkg--elite .pkg-detail-val{color:rgba(255,255,255,.88);}
+    .pkg--elite::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:26px 26px;pointer-events:none;border-radius:inherit;}
+    .pkg--elite::after{content:'';position:absolute;inset:-2px;border-radius:calc(clamp(16px,1.8vw,22px) + 2px);padding:2px;background:linear-gradient(120deg,#8fff5f,#d7ff00,#ffffff,#d7ff00,#8fff5f);background-size:300% 300%;animation:pkgBorderMove 4.5s ease infinite;-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;pointer-events:none;opacity:.65;transition:opacity .3s;}
+    .pkg--elite:hover::after{opacity:1;}
+    @media(prefers-reduced-motion:reduce){.pkg--gold::after,.pkg--platinum::after,.pkg--elite::after{animation:none;}}
 
     /* ===== COMPARISON TABLE ===== */
     .cmp-wrap{overflow-x:auto;border-radius:var(--rl);border:1px solid var(--card-b);}
-    .cmp-tbl{width:100%;border-collapse:collapse;min-width:580px;}
+    .cmp-tbl{width:100%;border-collapse:collapse;min-width:760px;}
     .cmp-tbl th{padding:clamp(10px,1.5vw,14px) clamp(12px,1.8vw,18px);text-align:center;font-size:clamp(.72rem,.9vw,.8rem);font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--tm);background:var(--bg2);border-bottom:2px solid var(--card-b);}
     .cmp-tbl th:first-child{text-align:left;}
     .cmp-tbl th.fc{color:var(--green-d);background:rgba(100,165,73,.1);}
@@ -574,7 +545,7 @@
     .co-pkg-section{margin-bottom:clamp(32px,5vw,52px);}
     .co-pkg-section h3,.checkout-form-section h3{font-size:clamp(.97rem,1.4vw,1.12rem);font-weight:700;margin-bottom:clamp(14px,2vw,22px);color:var(--t);display:flex;align-items:center;gap:10px;}
     .co-pkg-section h3 span,.checkout-form-section h3 span{width:28px;height:28px;border-radius:50%;background:var(--gg);display:inline-flex;align-items:center;justify-content:center;font-size:.84rem;font-weight:900;color:#1A2B1A;flex-shrink:0;}
-    .co-pkg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,1.5vw,14px);}
+    .co-pkg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.5vw,14px);}
     .co-pkg-card{background:var(--card);border:2px solid var(--card-b);border-radius:var(--r);padding:clamp(14px,2vw,20px) clamp(10px,1.5vw,16px);cursor:pointer;text-align:center;transition:border-color var(--tr),transform var(--tr),background var(--tr),box-shadow var(--tr);}
     .co-pkg-card:hover{border-color:rgba(100,165,73,.55);transform:translateY(-3px);box-shadow:0 8px 24px rgba(100,165,73,.15);}
     .co-pkg-card.selected{border-color:var(--green);background:rgba(100,165,73,.07);box-shadow:0 4px 16px rgba(100,165,73,.18);}
@@ -771,7 +742,7 @@
           <div class="hero-card">
             <div class="hc-label">Maximum Available Cashback</div>
             <div class="hc-amount">$1,500</div>
-            <div class="hc-desc">Platinum Package &mdash; 4 biweekly payments of ~$144.25</div>
+            <div class="hc-desc">Elite Package &mdash; 8 biweekly payments of $318.75</div>
             <div class="hc-tiers">
               <div class="hc-tier" onclick="navigate('checkout','starter')">
                 <span class="hc-tname">Starter Package</span><span class="hc-tamt">$250 cashback</span>
@@ -779,11 +750,17 @@
               <div class="hc-tier" onclick="navigate('checkout','bronze')">
                 <span class="hc-tname">Bronze Package</span><span class="hc-tamt">$500 cashback</span>
               </div>
+              <div class="hc-tier" onclick="navigate('checkout','silver')">
+                <span class="hc-tname">Silver Package</span><span class="hc-tamt">$750 cashback</span>
+              </div>
               <div class="hc-tier" onclick="navigate('checkout','gold')">
                 <span class="hc-tname">Gold Package</span><span class="hc-tamt">$1,000 cashback</span>
               </div>
-              <div class="hc-tier active" onclick="navigate('checkout','platinum')">
-                <span class="hc-tname">Platinum Package</span><span class="hc-tamt">$1,500 cashback</span>
+              <div class="hc-tier" onclick="navigate('checkout','platinum')">
+                <span class="hc-tname">Platinum Package</span><span class="hc-tamt">$1,250 cashback</span>
+              </div>
+              <div class="hc-tier active" onclick="navigate('checkout','elite')">
+                <span class="hc-tname">Elite Package</span><span class="hc-tamt">$1,500 cashback</span>
               </div>
             </div>
             <button class="btn btn-primary btn-full" onclick="navigate('packages')">See All Packages &#8594;</button>
@@ -859,63 +836,119 @@
       <div class="pkg-grid">
         <div class="pkg pkg--starter reveal">
           <div class="pkg-name">Starter Package</div>
-              <div class="pkg-cash">$250</div>
-              <div class="pkg-cash-lbl">Eligible Cashback</div>
-              <div class="pkg-biw">3 payments of $49.99 biweekly</div>
-              <div class="pkg-total">Total price: $149.99</div>
-              <ul class="pkg-feats" style="flex:1;">
-                <li>Credit basics education</li>
-                <li>Budgeting starter guide</li>
-                <li>Financial wellness checklist</li>
-                <li>Platform access</li>
-              </ul>
+          <div class="pkg-cash">$250</div>
+          <div class="pkg-cash-lbl">Eligible Cashback</div>
+          <div class="pkg-divider"></div>
+          <div class="pkg-biw">4 payments of $106.25 biweekly</div>
+          <div class="pkg-total">Total price: $425.00</div>
+          <details class="pkg-details">
+            <summary>Payment details</summary>
+            <div class="pkg-details-inner">
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$212.50</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$7.08</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">2 months</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">4</span></div>
+            </div>
+          </details>
+          <div class="pkg-spacer"></div>
           <button class="btn btn-ghost btn-full" onclick="navigate('checkout','starter')">Claim Starter Cashback</button>
         </div>
         <div class="pkg pkg--bronze reveal">
           <div class="pkg-name">Bronze Package</div>
-              <div class="pkg-cash">$500</div>
-              <div class="pkg-cash-lbl">Eligible Cashback</div>
-              <div class="pkg-biw">3 payments of ~$94.66 biweekly</div>
-              <div class="pkg-total">Total price: $283.99</div>
-              <ul class="pkg-feats" style="flex:1;">
-                <li>Everything in Starter</li>
-                <li>Credit-building lessons</li>
-                <li>Budget planning resources</li>
-                <li>Debt organization tools</li>
-              </ul>
+          <div class="pkg-cash">$500</div>
+          <div class="pkg-cash-lbl">Eligible Cashback</div>
+          <div class="pkg-divider"></div>
+          <div class="pkg-biw">6 payments of $141.67 biweekly</div>
+          <div class="pkg-total">Total price: $850.00</div>
+          <details class="pkg-details">
+            <summary>Payment details</summary>
+            <div class="pkg-details-inner">
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$283.33</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$9.44</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div>
+            </div>
+          </details>
+          <div class="pkg-spacer"></div>
           <button class="btn btn-ghost btn-full" onclick="navigate('checkout','bronze')">Claim Bronze Cashback</button>
         </div>
-        <div class="pkg feat pkg--gold reveal">
+        <div class="pkg pkg--silver reveal">
+          <div class="pkg-name">Silver Package</div>
+          <div class="pkg-cash">$750</div>
+          <div class="pkg-cash-lbl">Eligible Cashback</div>
+          <div class="pkg-divider"></div>
+          <div class="pkg-biw">6 payments of $212.50 biweekly</div>
+          <div class="pkg-total">Total price: $1,275.00</div>
+          <details class="pkg-details">
+            <summary>Payment details</summary>
+            <div class="pkg-details-inner">
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$425.00</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$14.17</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div>
+            </div>
+          </details>
+          <div class="pkg-spacer"></div>
+          <button class="btn btn-ghost btn-full" onclick="navigate('checkout','silver')">Claim Silver Cashback</button>
+        </div>
+        <div class="pkg pkg--gold reveal">
           <span class="pkg-badge">BEST VALUE</span>
           <div class="pkg-name">Gold Package</div>
-              <div class="pkg-cash">$1,000</div>
-              <div class="pkg-cash-lbl">Eligible Cashback</div>
-              <div class="pkg-biw">3 payments of ~$179.66 biweekly</div>
-              <div class="pkg-total">Total price: $538.99</div>
-              <ul class="pkg-feats" style="flex:1;">
-                <li>Everything in Bronze</li>
-                <li>Advanced credit education</li>
-                <li>Debt payoff planner</li>
-                <li>Financial goal-setting tools</li>
-                <li>Priority support</li>
-              </ul>
+          <div class="pkg-cash">$1,000</div>
+          <div class="pkg-cash-lbl">Eligible Cashback</div>
+          <div class="pkg-divider"></div>
+          <div class="pkg-biw">6 payments of $283.33 biweekly</div>
+          <div class="pkg-total">Total price: $1,700.00</div>
+          <details class="pkg-details">
+            <summary>Payment details</summary>
+            <div class="pkg-details-inner">
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$566.67</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$18.89</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div>
+            </div>
+          </details>
+          <div class="pkg-spacer"></div>
           <button class="btn btn-primary btn-full" onclick="navigate('checkout','gold')">Claim Gold Cashback</button>
         </div>
-        <div class="pkg top pkg--platinum reveal">
-          <span class="pkg-badge">MAXIMUM CASHBACK</span>
+        <div class="pkg pkg--platinum reveal">
           <div class="pkg-name">Platinum Package</div>
-              <div class="pkg-cash">$1,500</div>
-              <div class="pkg-cash-lbl">Eligible Cashback</div>
-              <div class="pkg-biw">4 payments of ~$144.25 biweekly</div>
-              <div class="pkg-total">Total price: $576.99</div>
-              <ul class="pkg-feats" style="flex:1;">
-                <li>Everything in Gold</li>
-                <li>Full education library</li>
-                <li>Premium planning resources</li>
-                <li>Custom financial roadmap</li>
-                <li>VIP support (if available)</li>
-              </ul>
-          <button class="btn btn-accent btn-full" onclick="navigate('checkout','platinum')">Claim Platinum Cashback</button>
+          <div class="pkg-cash">$1,250</div>
+          <div class="pkg-cash-lbl">Eligible Cashback</div>
+          <div class="pkg-divider"></div>
+          <div class="pkg-biw">8 payments of $265.63 biweekly</div>
+          <div class="pkg-total">Total price: $2,125.00</div>
+          <details class="pkg-details">
+            <summary>Payment details</summary>
+            <div class="pkg-details-inner">
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$531.25</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$17.71</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4 months</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div>
+            </div>
+          </details>
+          <div class="pkg-spacer"></div>
+          <button class="btn btn-ghost btn-full" onclick="navigate('checkout','platinum')">Claim Platinum Cashback</button>
+        </div>
+        <div class="pkg pkg--elite reveal">
+          <span class="pkg-badge">MAXIMUM CASHBACK</span>
+          <div class="pkg-name">Elite Package</div>
+          <div class="pkg-cash">$1,500</div>
+          <div class="pkg-cash-lbl">Eligible Cashback</div>
+          <div class="pkg-divider"></div>
+          <div class="pkg-biw">8 payments of $318.75 biweekly</div>
+          <div class="pkg-total">Total price: $2,550.00</div>
+          <details class="pkg-details">
+            <summary>Payment details</summary>
+            <div class="pkg-details-inner">
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$637.50</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$21.25</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4 months</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div>
+            </div>
+          </details>
+          <div class="pkg-spacer"></div>
+          <button class="btn btn-accent btn-full" onclick="navigate('checkout','elite')">Claim Elite Cashback</button>
         </div>
       </div>
       <div style="text-align:center;margin-top:clamp(24px,3.5vw,36px);" class="reveal">
@@ -986,7 +1019,7 @@
           <p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p>
         </div>
         <div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div>
-        <div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','bronze')">Bronze &ndash; $500</a><a onclick="navigate('checkout','gold')">Gold &ndash; $1,000</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,500</a></div>
+        <div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','bronze')">Bronze &ndash; $500</a><a onclick="navigate('checkout','silver')">Silver &ndash; $750</a><a onclick="navigate('checkout','gold')">Gold &ndash; $1,000</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div>
         <div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div>
       </div>
       <div class="ft-bot">
@@ -1116,7 +1149,7 @@
       <div class="ft-top">
         <div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div>
         <div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div>
-        <div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','bronze')">Bronze &ndash; $500</a><a onclick="navigate('checkout','gold')">Gold &ndash; $1,000</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,500</a></div>
+        <div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','bronze')">Bronze &ndash; $500</a><a onclick="navigate('checkout','silver')">Silver &ndash; $750</a><a onclick="navigate('checkout','gold')">Gold &ndash; $1,000</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div>
         <div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div>
       </div>
       <div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div>
@@ -1136,10 +1169,12 @@
   <section class="section">
     <div class="container">
       <div class="pkg-grid">
-        <div class="pkg pkg--starter reveal"><div class="pkg-name">Starter Package</div><div class="pkg-cash">$250</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-biw">3 payments of $49.99 biweekly</div><div class="pkg-total">Total package price: $149.99</div><p class="pkg-for">Best for users who want a simple entry-level package.</p><ul class="pkg-feats"><li>Credit basics education</li><li>Budgeting starter guide</li><li>Financial wellness checklist</li><li>Platform access</li></ul><button class="btn btn-ghost btn-full" onclick="navigate('checkout','starter')">Claim Starter Cashback</button></div>
-        <div class="pkg pkg--bronze reveal"><div class="pkg-name">Bronze Package</div><div class="pkg-cash">$500</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-biw">3 payments of ~$94.66 biweekly</div><div class="pkg-total">Total package price: $283.99</div><p class="pkg-for">Best for users who want more guidance and a higher cashback amount.</p><ul class="pkg-feats"><li>Everything in Starter</li><li>Credit-building lessons</li><li>Budget planning resources</li><li>Debt organization tools</li><li>Cashback eligibility support</li></ul><button class="btn btn-ghost btn-full" onclick="navigate('checkout','bronze')">Claim Bronze Cashback</button></div>
-        <div class="pkg feat pkg--gold reveal"><span class="pkg-badge">BEST VALUE</span><div class="pkg-name">Gold Package</div><div class="pkg-cash">$1,000</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-biw">3 payments of ~$179.66 biweekly</div><div class="pkg-total">Total package price: $538.99</div><p class="pkg-for">Best for users who want stronger education tools and higher cashback.</p><ul class="pkg-feats"><li>Everything in Bronze</li><li>Advanced credit education</li><li>Debt payoff planner</li><li>Financial goal-setting tools</li><li>Priority support</li></ul><button class="btn btn-primary btn-full" onclick="navigate('checkout','gold')">Claim Gold Cashback</button></div>
-        <div class="pkg top pkg--platinum reveal"><span class="pkg-badge">MAXIMUM CASHBACK</span><div class="pkg-name">Platinum Package</div><div class="pkg-cash">$1,500</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-biw">4 payments of ~$144.25 biweekly</div><div class="pkg-total">Total package price: $576.99</div><p class="pkg-for">Best for users who want maximum Credit Pulse cashback access.</p><ul class="pkg-feats"><li>Everything in Gold</li><li>Full education library</li><li>Premium planning resources</li><li>Custom financial roadmap (if available)</li><li>VIP support (if available)</li></ul><button class="btn btn-accent btn-full" onclick="navigate('checkout','platinum')">Claim Platinum Cashback</button></div>
+        <div class="pkg pkg--starter reveal"><div class="pkg-name">Starter Package</div><div class="pkg-cash">$250</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-divider"></div><div class="pkg-biw">4 payments of $106.25 biweekly</div><div class="pkg-total">Total price: $425.00</div><details class="pkg-details"><summary>Payment details</summary><div class="pkg-details-inner"><div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$212.50</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$7.08</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">2 months</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">4</span></div></div></details><div class="pkg-spacer"></div><button class="btn btn-ghost btn-full" onclick="navigate('checkout','starter')">Claim Starter Cashback</button></div>
+        <div class="pkg pkg--bronze reveal"><div class="pkg-name">Bronze Package</div><div class="pkg-cash">$500</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-divider"></div><div class="pkg-biw">6 payments of $141.67 biweekly</div><div class="pkg-total">Total price: $850.00</div><details class="pkg-details"><summary>Payment details</summary><div class="pkg-details-inner"><div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$283.33</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$9.44</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div></div></details><div class="pkg-spacer"></div><button class="btn btn-ghost btn-full" onclick="navigate('checkout','bronze')">Claim Bronze Cashback</button></div>
+        <div class="pkg pkg--silver reveal"><div class="pkg-name">Silver Package</div><div class="pkg-cash">$750</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-divider"></div><div class="pkg-biw">6 payments of $212.50 biweekly</div><div class="pkg-total">Total price: $1,275.00</div><details class="pkg-details"><summary>Payment details</summary><div class="pkg-details-inner"><div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$425.00</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$14.17</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div></div></details><div class="pkg-spacer"></div><button class="btn btn-ghost btn-full" onclick="navigate('checkout','silver')">Claim Silver Cashback</button></div>
+        <div class="pkg pkg--gold reveal"><span class="pkg-badge">BEST VALUE</span><div class="pkg-name">Gold Package</div><div class="pkg-cash">$1,000</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-divider"></div><div class="pkg-biw">6 payments of $283.33 biweekly</div><div class="pkg-total">Total price: $1,700.00</div><details class="pkg-details"><summary>Payment details</summary><div class="pkg-details-inner"><div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$566.67</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$18.89</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div></div></details><div class="pkg-spacer"></div><button class="btn btn-primary btn-full" onclick="navigate('checkout','gold')">Claim Gold Cashback</button></div>
+        <div class="pkg pkg--platinum reveal"><div class="pkg-name">Platinum Package</div><div class="pkg-cash">$1,250</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-divider"></div><div class="pkg-biw">8 payments of $265.63 biweekly</div><div class="pkg-total">Total price: $2,125.00</div><details class="pkg-details"><summary>Payment details</summary><div class="pkg-details-inner"><div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$531.25</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$17.71</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4 months</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div></div></details><div class="pkg-spacer"></div><button class="btn btn-ghost btn-full" onclick="navigate('checkout','platinum')">Claim Platinum Cashback</button></div>
+        <div class="pkg pkg--elite reveal"><span class="pkg-badge">MAXIMUM CASHBACK</span><div class="pkg-name">Elite Package</div><div class="pkg-cash">$1,500</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-divider"></div><div class="pkg-biw">8 payments of $318.75 biweekly</div><div class="pkg-total">Total price: $2,550.00</div><details class="pkg-details"><summary>Payment details</summary><div class="pkg-details-inner"><div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$637.50</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$21.25</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4 months</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div></div></details><div class="pkg-spacer"></div><button class="btn btn-accent btn-full" onclick="navigate('checkout','elite')">Claim Elite Cashback</button></div>
       </div>
     </div>
   </section>
@@ -1148,18 +1183,19 @@
       <div class="sec-hd reveal"><span class="sec-label">Side by Side</span><h2>Compare Credit Pulse Packages</h2></div>
       <div class="cmp-wrap">
         <table class="cmp-tbl">
-          <thead><tr><th style="min-width:160px;"></th><th>Starter</th><th>Bronze</th><th class="fc">Gold &#9733;</th><th>Platinum</th></tr></thead>
+          <thead><tr><th style="min-width:160px;"></th><th>Starter</th><th>Bronze</th><th>Silver</th><th class="fc">Gold &#9733;</th><th>Platinum</th><th>Elite</th></tr></thead>
           <tbody>
-            <tr><td>Cashback amount</td><td>$250</td><td>$500</td><td class="fc hv">$1,000</td><td class="hv">$1,500</td></tr>
-            <tr><td>Total package price</td><td>$149.99</td><td>$283.99</td><td class="fc">$538.99</td><td>$576.99</td></tr>
-            <tr><td>Biweekly payment</td><td>$49.99</td><td>~$94.66</td><td class="fc">~$179.66</td><td>~$144.25</td></tr>
-            <tr><td>Number of payments</td><td>3</td><td>3</td><td class="fc">3</td><td>4</td></tr>
-            <tr><td>Education resources</td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td class="fc"><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
-            <tr><td>Budgeting tools</td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td class="fc"><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
-            <tr><td>Debt tools</td><td><span class="da">&#8212;</span></td><td><span class="ck">&#10003;</span></td><td class="fc"><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
-            <tr><td>Priority support</td><td><span class="da">&#8212;</span></td><td><span class="da">&#8212;</span></td><td class="fc"><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
-            <tr><td>Premium resources</td><td><span class="da">&#8212;</span></td><td><span class="da">&#8212;</span></td><td class="fc"><span class="da">&#8212;</span></td><td><span class="ck">&#10003;</span></td></tr>
-            <tr><td></td><td><button class="btn btn-ghost btn-sm btn-full" onclick="navigate('checkout','starter')">Starter</button></td><td><button class="btn btn-ghost btn-sm btn-full" onclick="navigate('checkout','bronze')">Bronze</button></td><td class="fc"><button class="btn btn-primary btn-sm btn-full" onclick="navigate('checkout','gold')">Gold &#9733;</button></td><td><button class="btn btn-accent btn-sm btn-full" onclick="navigate('checkout','platinum')">Platinum</button></td></tr>
+            <tr><td>Cashback amount</td><td>$250</td><td>$500</td><td>$750</td><td class="fc hv">$1,000</td><td class="hv">$1,250</td><td class="hv">$1,500</td></tr>
+            <tr><td>Total package price</td><td>$425.00</td><td>$850.00</td><td>$1,275.00</td><td class="fc">$1,700.00</td><td>$2,125.00</td><td>$2,550.00</td></tr>
+            <tr><td>Biweekly payment</td><td>$106.25</td><td>$141.67</td><td>$212.50</td><td class="fc">$283.33</td><td>$265.63</td><td>$318.75</td></tr>
+            <tr><td>Number of payments</td><td>4</td><td>6</td><td>6</td><td class="fc">6</td><td>8</td><td>8</td></tr>
+            <tr><td>Term</td><td>2 mo</td><td>3 mo</td><td>3 mo</td><td class="fc">3 mo</td><td>4 mo</td><td>4 mo</td></tr>
+            <tr><td>Education resources</td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td class="fc"><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
+            <tr><td>Budgeting tools</td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td class="fc"><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
+            <tr><td>Debt tools</td><td><span class="da">&#8212;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td class="fc"><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
+            <tr><td>Priority support</td><td><span class="da">&#8212;</span></td><td><span class="da">&#8212;</span></td><td><span class="da">&#8212;</span></td><td class="fc"><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
+            <tr><td>Premium resources</td><td><span class="da">&#8212;</span></td><td><span class="da">&#8212;</span></td><td><span class="da">&#8212;</span></td><td class="fc"><span class="da">&#8212;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
+            <tr><td></td><td><button class="btn btn-ghost btn-sm btn-full" onclick="navigate('checkout','starter')">Starter</button></td><td><button class="btn btn-ghost btn-sm btn-full" onclick="navigate('checkout','bronze')">Bronze</button></td><td><button class="btn btn-ghost btn-sm btn-full" onclick="navigate('checkout','silver')">Silver</button></td><td class="fc"><button class="btn btn-primary btn-sm btn-full" onclick="navigate('checkout','gold')">Gold &#9733;</button></td><td><button class="btn btn-ghost btn-sm btn-full" onclick="navigate('checkout','platinum')">Platinum</button></td><td><button class="btn btn-accent btn-sm btn-full" onclick="navigate('checkout','elite')">Elite</button></td></tr>
           </tbody>
         </table>
       </div>
@@ -1181,7 +1217,7 @@
     </div>
   </section>
 
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','bronze')">Bronze</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','bronze')">Bronze</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-packages -->
 
 <!-- ==================== PAGE: FAQ ==================== -->
@@ -1205,7 +1241,7 @@
       <div style="text-align:center;margin-top:44px;" class="reveal"><button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')">Claim Your Cashback &#8594;</button></div>
     </div>
   </section>
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','bronze')">Bronze</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','bronze')">Bronze</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-faq -->
 
 <!-- ==================== PAGE: CONTACT ==================== -->
@@ -1226,7 +1262,7 @@
       </div>
     </div>
   </section>
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','bronze')">Bronze</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','bronze')">Bronze</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-contact -->
 
 <!-- ==================== PAGE: CHECKOUT ==================== -->
@@ -1248,22 +1284,32 @@
           <div class="co-pkg-card" id="co-pkg-starter" onclick="selectPackage('starter')">
             <div class="co-pkg-lbl">Starter</div>
             <div class="co-pkg-amt">$250</div>
-            <div class="co-pkg-sub">3 &times; $49.99 biweekly</div>
+            <div class="co-pkg-sub">4 &times; $106.25 biweekly</div>
           </div>
           <div class="co-pkg-card" id="co-pkg-bronze" onclick="selectPackage('bronze')">
             <div class="co-pkg-lbl">Bronze</div>
             <div class="co-pkg-amt">$500</div>
-            <div class="co-pkg-sub">3 &times; ~$94.66 biweekly</div>
+            <div class="co-pkg-sub">6 &times; $141.67 biweekly</div>
+          </div>
+          <div class="co-pkg-card" id="co-pkg-silver" onclick="selectPackage('silver')">
+            <div class="co-pkg-lbl">Silver</div>
+            <div class="co-pkg-amt">$750</div>
+            <div class="co-pkg-sub">6 &times; $212.50 biweekly</div>
           </div>
           <div class="co-pkg-card selected" id="co-pkg-gold" onclick="selectPackage('gold')">
             <div class="co-pkg-lbl">Gold &#9733; Best Value</div>
             <div class="co-pkg-amt">$1,000</div>
-            <div class="co-pkg-sub">3 &times; ~$179.66 biweekly</div>
+            <div class="co-pkg-sub">6 &times; $283.33 biweekly</div>
           </div>
           <div class="co-pkg-card" id="co-pkg-platinum" onclick="selectPackage('platinum')">
             <div class="co-pkg-lbl">Platinum</div>
+            <div class="co-pkg-amt">$1,250</div>
+            <div class="co-pkg-sub">8 &times; $265.63 biweekly</div>
+          </div>
+          <div class="co-pkg-card" id="co-pkg-elite" onclick="selectPackage('elite')">
+            <div class="co-pkg-lbl">Elite</div>
             <div class="co-pkg-amt">$1,500</div>
-            <div class="co-pkg-sub">4 &times; ~$144.25 biweekly</div>
+            <div class="co-pkg-sub">8 &times; $318.75 biweekly</div>
           </div>
         </div>
       </div>
@@ -1298,8 +1344,8 @@
             <div id="co-sum-inner">
               <div class="co-sum-pkg">Gold Package</div>
               <div class="co-sum-cash">$1,000</div>
-              <div class="co-sum-pay">3 biweekly payments of ~$179.66</div>
-              <div class="co-sum-total">Total package price: $538.99</div>
+              <div class="co-sum-pay">6 biweekly payments of $283.33</div>
+              <div class="co-sum-total">Total package price: $1,700.00</div>
             </div>
             <div class="co-agree">
               <input type="checkbox" id="co-agree-check">
@@ -1314,7 +1360,7 @@
       </div>
     </div>
   </section>
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','bronze')">Bronze</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','bronze')">Bronze</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-checkout -->
 
 <!-- ==================== PAGE: PRIVACY POLICY ==================== -->
@@ -1491,7 +1537,7 @@
       <button class="btn btn-outline" onclick="navigate('home')">&larr; Back to Home</button>
     </div>
   </div>
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','bronze')">Bronze &ndash; $500</a><a onclick="navigate('checkout','gold')">Gold &ndash; $1,000</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,500</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','bronze')">Bronze &ndash; $500</a><a onclick="navigate('checkout','silver')">Silver &ndash; $750</a><a onclick="navigate('checkout','gold')">Gold &ndash; $1,000</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-privacy -->
 
 <!-- ==================== PAGE: TERMS OF SERVICE ==================== -->
@@ -1555,10 +1601,12 @@
       <h2>4. Membership Packages</h2>
       <p>Credit Pulse offers tiered membership packages, each with a defined membership fee and an associated cashback benefit. Packages available as of the date of these terms include:</p>
       <ul>
-        <li><strong>Starter Package:</strong> Membership fee of $149.99 | Cashback benefit of $250</li>
-        <li><strong>Bronze Package:</strong> Membership fee of $283.99 | Cashback benefit of $500</li>
-        <li><strong>Gold Package:</strong> Membership fee of $538.99 | Cashback benefit of $1,000</li>
-        <li><strong>Platinum Package:</strong> Membership fee of $576.99 | Cashback benefit of $1,500</li>
+        <li><strong>Starter Package:</strong> Membership fee of $425.00 | Cashback benefit of $250</li>
+        <li><strong>Bronze Package:</strong> Membership fee of $850.00 | Cashback benefit of $500</li>
+        <li><strong>Silver Package:</strong> Membership fee of $1,275.00 | Cashback benefit of $750</li>
+        <li><strong>Gold Package:</strong> Membership fee of $1,700.00 | Cashback benefit of $1,000</li>
+        <li><strong>Platinum Package:</strong> Membership fee of $2,125.00 | Cashback benefit of $1,250</li>
+        <li><strong>Elite Package:</strong> Membership fee of $2,550.00 | Cashback benefit of $1,500</li>
       </ul>
       <p>Package pricing and cashback amounts are subject to change. The terms applicable to your purchase are those in effect at the time of your transaction. Membership benefits are personal and non-transferable.</p>
     </div>
@@ -1670,15 +1718,17 @@
       <button class="btn btn-outline" onclick="navigate('home')">&larr; Back to Home</button>
     </div>
   </div>
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','bronze')">Bronze &ndash; $500</a><a onclick="navigate('checkout','gold')">Gold &ndash; $1,000</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,500</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','bronze')">Bronze &ndash; $500</a><a onclick="navigate('checkout','silver')">Silver &ndash; $750</a><a onclick="navigate('checkout','gold')">Gold &ndash; $1,000</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-tos -->
 
 <script>
   var pkgData = {
-    starter:  { name:'Starter Package',  cash:'$250',   pay:'3 biweekly payments of $49.99',   total:'$149.99' },
-    bronze:   { name:'Bronze Package',   cash:'$500',   pay:'3 biweekly payments of ~$94.66',  total:'$283.99' },
-    gold:     { name:'Gold Package',     cash:'$1,000', pay:'3 biweekly payments of ~$179.66', total:'$538.99' },
-    platinum: { name:'Platinum Package', cash:'$1,500', pay:'4 biweekly payments of ~$144.25', total:'$576.99' }
+    starter:  { name:'Starter Package',  cash:'$250',   pay:'4 biweekly payments of $106.25',  total:'$425.00' },
+    bronze:   { name:'Bronze Package',   cash:'$500',   pay:'6 biweekly payments of $141.67',  total:'$850.00' },
+    silver:   { name:'Silver Package',   cash:'$750',   pay:'6 biweekly payments of $212.50',  total:'$1,275.00' },
+    gold:     { name:'Gold Package',     cash:'$1,000', pay:'6 biweekly payments of $283.33',  total:'$1,700.00' },
+    platinum: { name:'Platinum Package', cash:'$1,250', pay:'8 biweekly payments of $265.63',  total:'$2,125.00' },
+    elite:    { name:'Elite Package',    cash:'$1,500', pay:'8 biweekly payments of $318.75',  total:'$2,550.00' }
   };
   var selectedPkg = 'gold';
 
