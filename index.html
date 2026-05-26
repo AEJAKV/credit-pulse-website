@@ -8,10 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <style>
-    /* ===== RESET & ROOT ===== */
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    :root{
+  <link rel="stylesheet" href="style.css">
       --green:#64A549;--green-l:#7EC959;--green-d:#4D8A37;
       --bg:#FFFFFF;--bg2:#F4F9F2;--card:#FFFFFF;--card-b:#D5E8CE;
       --t:#1A2B1A;--tm:#5A7A55;--td:#374F34;
@@ -1721,6 +1718,7 @@
   <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','bronze')">Bronze &ndash; $500</a><a onclick="navigate('checkout','silver')">Silver &ndash; $750</a><a onclick="navigate('checkout','gold')">Gold &ndash; $1,000</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-tos -->
 
+<script src="script.js"></script>
 <script>
   var pkgData = {
     starter:  { name:'Starter Package',  cash:'$250',   pay:'4 biweekly payments of $106.25',  total:'$425.00' },
