@@ -65,6 +65,16 @@ function toggleFaq(btn) {
   if (!isOpen) item.classList.add('open');
 }
 
+function filterFaq(cat, tabEl) {
+  document.querySelectorAll('.faq-tab').forEach(function(t){ t.classList.remove('active'); });
+  tabEl.classList.add('active');
+  document.querySelectorAll('.faq-card .faq-item').forEach(function(item) {
+    var show = cat === 'all' || item.getAttribute('data-cat') === cat;
+    item.style.display = show ? '' : 'none';
+    if (!show && item.classList.contains('open')) item.classList.remove('open');
+  });
+}
+
 function initReveal() {
   var els = document.querySelectorAll('.page.active .reveal:not(.visible)');
   var obs = new IntersectionObserver(function(entries) {
