@@ -26,9 +26,9 @@
       <li><a id="nl-contact" onclick="navigate('contact')">Contact</a></li>
     </ul>
     <div class="nav-cta">
-      <button class="btn btn-primary btn-sm" onclick="navigate('checkout')">Claim Cashback</button>
+      <button class="btn btn-accent btn-sm" onclick="navigate('checkout')" style="display:inline-flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Get Benefits Now</button>
     </div>
-    <button class="nav-mobile-cta btn" onclick="navigate('checkout')">CLAIM CASHBACK</button>
+    <button class="nav-mobile-cta btn" onclick="navigate('checkout')">GET BENEFITS NOW</button>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -61,13 +61,24 @@
           <h1 class="hero-headline">Get Up to <span class="hl-accent">$1,500&nbsp;Cashback</span> With Financial Education Support</h1>
           <p class="hero-sub">Choose a Credit Pulse membership package, access practical financial education tools, and receive eligible cashback based on your selected tier.</p>
           <div class="hero-ctas">
-            <button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')">Claim Your Cashback &#8594;</button>
-            <button class="btn btn-outline btn-lg hero-hiw-btn" onclick="navigate('hiw')">See How It Works</button>
+            <button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-right:4px"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Get Benefits Now &#8594;</button>
+            <button class="btn btn-outline btn-lg hero-hiw-btn" onclick="navigate('packages')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-right:4px"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>View Packages &#8594;</button>
           </div>
-          <div class="hero-trust">
-            <span class="ht-pill"><span class="ht-pill-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>Secure Verification</span>
-            <span class="ht-pill"><span class="ht-pill-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>Cashback Guaranteed</span>
-            <span class="ht-pill"><span class="ht-pill-icon"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 12h18M12 3c-4 4-4 14 0 18M12 3c4 4 4 14 0 18M3 12c0-5 9-9 9-9s9 4 9 9"/></svg></span>Proud Canadian</span>
+          <div class="trust-bar">
+            <div class="trust-bar-item">
+              <div class="trust-bar-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+              <div class="trust-bar-text"><span class="trust-bar-l1">Secure</span><span class="trust-bar-l2">Online Process</span></div>
+            </div>
+            <div class="trust-bar-sep"></div>
+            <div class="trust-bar-item">
+              <div class="trust-bar-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+              <div class="trust-bar-text"><span class="trust-bar-l1">Education</span><span class="trust-bar-l2">Access Included</span></div>
+            </div>
+            <div class="trust-bar-sep"></div>
+            <div class="trust-bar-item">
+              <div class="trust-bar-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
+              <div class="trust-bar-text"><span class="trust-bar-l1">Cashback Earned</span><span class="trust-bar-l2">Upon Sign-Up</span></div>
+            </div>
           </div>
           <p class="hero-disc" style="display:none;">Credit Pulse is not a loan, credit card, credit repair service, or financial product. Cashback eligibility, timing, and results may vary.</p>
         </div>
@@ -109,7 +120,7 @@
   <!-- BANK CAROUSEL -->
   <section class="bank-section">
     <div class="bank-hd">
-      <span class="sec-label">Secure Canadian Banking Verification</span>
+      <span class="sec-label bank-sec-label"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:inline-block;vertical-align:middle;margin-right:5px;margin-top:-1px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Secure Canadian Banking Verification</span>
       <h2>Designed to work with major Canadian banks</h2>
       <p>Credit Pulse uses a secure verification flow to support membership and cashback eligibility review.</p>
     </div>
@@ -157,6 +168,27 @@
         <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/pc-financial.svg" alt="" loading="lazy"><span class="bank-name">PC Financial</span></div>
       </div>
     </div>
+    <div class="bank-trust-bar">
+      <div class="bank-trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        <span>Secure Verification</span>
+      </div>
+      <div class="bank-trust-sep"></div>
+      <div class="bank-trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span>Privacy Protected</span>
+      </div>
+      <div class="bank-trust-sep"></div>
+      <div class="bank-trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22c5.52 0 10-4.48 10-10S17.52 2 12 2 2 6.48 2 12"/><path d="M12 6v6l-3 3"/><path d="M2 12h2"/></svg>
+        <span>No Credit Score Impact</span>
+      </div>
+      <div class="bank-trust-sep"></div>
+      <div class="bank-trust-item">
+        <svg width="20" height="20" viewBox="0 0 100 90" fill="currentColor" stroke="none"><path d="M50 4 L44 24 L25 21 L36 35 L18 45 L38 45 L36 63 L50 55 L64 63 L62 45 L82 45 L64 35 L75 21 L56 24 Z"/><rect x="46" y="63" width="8" height="20" rx="1"/></svg>
+        <span>Canadian Banks Supported</span>
+      </div>
+    </div>
     <p class="bank-disc">Bank logos are shown for compatibility and recognition purposes only. Credit Pulse is not affiliated with or endorsed by any of these financial institutions.</p>
   </section>
 
@@ -169,12 +201,25 @@
         <p class="sec-sub">Select your Credit Pulse membership tier. See your cashback amount and biweekly payment breakdown clearly before joining.</p>
       </div>
       <div class="pkg-grid">
+        <!-- STARTER -->
         <div class="pkg pkg--starter reveal">
-          <div class="pkg-name">Starter Package</div>
-          <div class="pkg-cash">$250</div>
-          <div class="pkg-cash-lbl">Eligible Cashback</div>
+          <div class="pkg-header-row">
+            <div class="pkg-icon-wrap pkg-icon--starter">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.5-1.5 4.5 1.5 4.5 0-3 3-4.5 3-4.5z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+          </div>
+            <div class="pkg-header-info">
+              <div class="pkg-name">Starter</div>
+              <div class="pkg-cash">$250</div>
+              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
+            </div>
+          </div>
           <div class="pkg-divider"></div>
-          <div class="pkg-biw">4 payments of $106.25 biweekly</div>
+          <ul class="pkg-features">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>4 payments of $106.25 biweekly</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Access to Course 1</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$1,000-valued coupon book</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
+          </ul>
           <div class="pkg-total">Total price: $425.00</div>
           <details class="pkg-details">
             <summary>Payment details</summary>
@@ -186,14 +231,27 @@
             </div>
           </details>
           <div class="pkg-spacer"></div>
-          <button class="btn btn-ghost btn-full" onclick="navigate('checkout','starter')">Claim Starter Cashback</button>
+          <button class="btn btn-outline btn-full" onclick="navigate('checkout','starter')">Choose Starter</button>
         </div>
+        <!-- BRONZE -->
         <div class="pkg pkg--bronze reveal">
-          <div class="pkg-name">Bronze Package</div>
-          <div class="pkg-cash">$500</div>
-          <div class="pkg-cash-lbl">Eligible Cashback</div>
+          <div class="pkg-header-row">
+            <div class="pkg-icon-wrap pkg-icon--bronze">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polygon points="12 8 13.09 11.26 16.5 11.27 13.8 13.14 14.83 16.4 12 14.58 9.17 16.4 10.2 13.14 7.5 11.27 10.91 11.26"/></svg>
+          </div>
+            <div class="pkg-header-info">
+              <div class="pkg-name">Bronze</div>
+              <div class="pkg-cash">$500</div>
+              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
+            </div>
+          </div>
           <div class="pkg-divider"></div>
-          <div class="pkg-biw">6 payments of $141.67 biweekly</div>
+          <ul class="pkg-features">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>6 payments of $141.67 biweekly</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Access to Course 1 and 2</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$2,000-valued coupon book</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
+          </ul>
           <div class="pkg-total">Total price: $850.00</div>
           <details class="pkg-details">
             <summary>Payment details</summary>
@@ -205,14 +263,27 @@
             </div>
           </details>
           <div class="pkg-spacer"></div>
-          <button class="btn btn-ghost btn-full" onclick="navigate('checkout','bronze')">Claim Bronze Cashback</button>
+          <button class="btn btn-outline btn-full" onclick="navigate('checkout','bronze')">Choose Bronze</button>
         </div>
+        <!-- SILVER -->
         <div class="pkg pkg--silver reveal">
-          <div class="pkg-name">Silver Package</div>
-          <div class="pkg-cash">$750</div>
-          <div class="pkg-cash-lbl">Eligible Cashback</div>
+          <div class="pkg-header-row">
+            <div class="pkg-icon-wrap pkg-icon--silver">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polygon points="12 8 13.09 11.26 16.5 11.27 13.8 13.14 14.83 16.4 12 14.58 9.17 16.4 10.2 13.14 7.5 11.27 10.91 11.26"/></svg>
+          </div>
+            <div class="pkg-header-info">
+              <div class="pkg-name">Silver</div>
+              <div class="pkg-cash">$750</div>
+              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
+            </div>
+          </div>
           <div class="pkg-divider"></div>
-          <div class="pkg-biw">6 payments of $212.50 biweekly</div>
+          <ul class="pkg-features">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>6 payments of $212.50 biweekly</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Access to Course 1 to 3</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$3,000-valued coupon book</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
+          </ul>
           <div class="pkg-total">Total price: $1,275.00</div>
           <details class="pkg-details">
             <summary>Payment details</summary>
@@ -224,15 +295,28 @@
             </div>
           </details>
           <div class="pkg-spacer"></div>
-          <button class="btn btn-ghost btn-full" onclick="navigate('checkout','silver')">Claim Silver Cashback</button>
+          <button class="btn btn-outline btn-full" onclick="navigate('checkout','silver')">Choose Silver</button>
         </div>
+        <!-- GOLD -->
         <div class="pkg pkg--gold reveal">
-          <span class="pkg-badge">BEST VALUE</span>
-          <div class="pkg-name">Gold Package</div>
-          <div class="pkg-cash">$1,000</div>
-          <div class="pkg-cash-lbl">Eligible Cashback</div>
+          <span class="pkg-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>BEST VALUE</span>
+          <div class="pkg-header-row">
+            <div class="pkg-icon-wrap pkg-icon--gold">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+            <div class="pkg-header-info">
+              <div class="pkg-name">Gold</div>
+              <div class="pkg-cash">$1,000</div>
+              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
+            </div>
+          </div>
           <div class="pkg-divider"></div>
-          <div class="pkg-biw">6 payments of $283.33 biweekly</div>
+          <ul class="pkg-features">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>6 payments of $283.33 biweekly</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Access to Course 1 to 4</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$4,000-valued coupon book</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
+          </ul>
           <div class="pkg-total">Total price: $1,700.00</div>
           <details class="pkg-details">
             <summary>Payment details</summary>
@@ -244,14 +328,27 @@
             </div>
           </details>
           <div class="pkg-spacer"></div>
-          <button class="btn btn-primary btn-full" onclick="navigate('checkout','gold')">Claim Gold Cashback</button>
+          <button class="btn btn-gold btn-full" onclick="navigate('checkout','gold')">Choose Gold</button>
         </div>
+        <!-- PLATINUM -->
         <div class="pkg pkg--platinum reveal">
-          <div class="pkg-name">Platinum Package</div>
-          <div class="pkg-cash">$1,250</div>
-          <div class="pkg-cash-lbl">Eligible Cashback</div>
+          <div class="pkg-header-row">
+            <div class="pkg-icon-wrap pkg-icon--platinum">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9 6 3z"/><path d="M11 3l-3 6 4 13M13 3l3 6-4 13M2 9h20"/></svg>
+          </div>
+            <div class="pkg-header-info">
+              <div class="pkg-name">Platinum</div>
+              <div class="pkg-cash">$1,250</div>
+              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
+            </div>
+          </div>
           <div class="pkg-divider"></div>
-          <div class="pkg-biw">8 payments of $265.63 biweekly</div>
+          <ul class="pkg-features">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>8 payments of $265.63 biweekly</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Access to Course 1 to 5</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$5,000-valued coupon book</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
+          </ul>
           <div class="pkg-total">Total price: $2,125.00</div>
           <details class="pkg-details">
             <summary>Payment details</summary>
@@ -263,15 +360,28 @@
             </div>
           </details>
           <div class="pkg-spacer"></div>
-          <button class="btn btn-ghost btn-full" onclick="navigate('checkout','platinum')">Claim Platinum Cashback</button>
+          <button class="btn btn-outline btn-full" onclick="navigate('checkout','platinum')">Choose Platinum</button>
         </div>
+        <!-- ELITE -->
         <div class="pkg pkg--elite reveal">
-          <span class="pkg-badge">MAXIMUM CASHBACK</span>
-          <div class="pkg-name">Elite Package</div>
-          <div class="pkg-cash">$1,500</div>
-          <div class="pkg-cash-lbl">Eligible Cashback</div>
+          <span class="pkg-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><path d="M2 17L5 6l5 5 2-8 2 8 5-5 3 11z"/><path d="M2 17h20"/></svg>MAXIMUM CASHBACK</span>
+          <div class="pkg-header-row">
+            <div class="pkg-icon-wrap pkg-icon--elite">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17L5 6l5 5 2-8 2 8 5-5 3 11z"/><path d="M2 17h20"/></svg>
+          </div>
+            <div class="pkg-header-info">
+              <div class="pkg-name">Elite</div>
+              <div class="pkg-cash">$1,500</div>
+              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
+            </div>
+          </div>
           <div class="pkg-divider"></div>
-          <div class="pkg-biw">8 payments of $318.75 biweekly</div>
+          <ul class="pkg-features">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>8 payments of $318.75 biweekly</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Access to Course 1 to 6</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$6,000-valued coupon book</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
+          </ul>
           <div class="pkg-total">Total price: $2,550.00</div>
           <details class="pkg-details">
             <summary>Payment details</summary>
@@ -283,7 +393,7 @@
             </div>
           </details>
           <div class="pkg-spacer"></div>
-          <button class="btn btn-accent btn-full" onclick="navigate('checkout','elite')">Claim Elite Cashback</button>
+          <button class="btn btn-accent btn-full" onclick="navigate('checkout','elite')">Choose Elite</button>
         </div>
       </div>
       <div style="text-align:center;margin-top:clamp(24px,3.5vw,36px);" class="reveal">
@@ -296,7 +406,7 @@
   <section class="section hiw-bg" style="padding-bottom:clamp(28px,3.5vw,40px);">
     <div class="container">
       <div class="sec-hd reveal">
-        <span class="sec-label">Platform Benefits</span>
+        <span class="sec-label benefits-sec-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:inline-block;vertical-align:middle;margin-right:5px;margin-top:-1px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>Platform Benefits</span>
         <h2>Tools to Help You Take Control of Your Financial Future</h2>
       </div>
       <p class="ben-intro reveal">Credit Pulse gives members access to practical education resources designed to support better money habits, stronger credit awareness, and more confident financial decisions.</p>
@@ -308,6 +418,33 @@
         <div class="ben-card reveal"><div class="ben-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><h4 class="ben-title">Cashback Package Access</h4><p class="ben-desc">Access the cashback tier connected to your selected membership package.</p></div>
         <div class="ben-card reveal"><div class="ben-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4 class="ben-title">Secure Membership Experience</h4><p class="ben-desc">A secure verification process to protect your information and confirm eligibility.</p></div>
       </div>
+      <!-- TRUST CALLOUT -->
+      <div class="ben-trust-callout reveal">
+        <div class="ben-trust-left">
+          <div class="ben-trust-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <div>
+            <div class="ben-trust-title">Built for Your Financial Success</div>
+            <p class="ben-trust-desc">Practical tools, trusted education, and secure access — all in one platform to help you build a stronger financial future.</p>
+          </div>
+        </div>
+        <div class="ben-trust-v-sep"></div>
+        <div class="ben-trust-right">
+          <div class="ben-trust-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <span>Education<br>That Empowers</span>
+          </div>
+          <div class="ben-trust-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span>Security You<br>Can Trust</span>
+          </div>
+          <div class="ben-trust-item">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>Support Every<br>Step of the Way</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -315,8 +452,9 @@
   <section class="section faq-bg" style="padding-top:clamp(16px,2vw,24px);padding-bottom:clamp(32px,4vw,48px);">
     <div class="container">
       <div class="sec-hd reveal">
-        <span class="sec-label">Quick Answers</span>
+        <span class="sec-label benefits-sec-label"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:inline-block;vertical-align:middle;margin-right:5px;margin-top:-1px"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Quick Answers</span>
         <h2>Common Questions</h2>
+        <p class="sec-sub">Find quick answers to the most common questions about Credit Pulse, our cashback packages and how everything works.</p>
       </div>
       <div class="faq-list">
         <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">Is Credit Pulse a loan?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-in">No. Credit Pulse is not a loan, credit card, line of credit, or borrowing product. It is an education-based membership platform with eligible cashback benefits.</div></div></div>
@@ -326,6 +464,7 @@
       </div>
       <div style="text-align:center;margin-top:18px;" class="reveal">
         <button class="btn btn-outline" onclick="navigate('faq')">See All FAQs &#8594;</button>
+        <p style="margin-top:14px;font-size:clamp(.8rem,.95vw,.88rem);color:var(--green-d);display:flex;align-items:center;justify-content:center;gap:7px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10" fill="none" stroke="#fff" stroke-width="2"/></svg>Still have questions? Our support team is <a href="mailto:support@creditpulse.ca" style="color:var(--green-d);font-weight:700;text-decoration:underline;text-underline-offset:3px;">here to help.</a></p>
       </div>
     </div>
   </section>
@@ -337,8 +476,14 @@
           <h2>Ready to get started?</h2>
           <p>Our members already building stronger financial futures with Credit Pulse. Join Now!</p>
           <div class="pkg-cta-btns">
-            <button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')">Claim Your Cashback &rarr;</button>
-            <button class="btn-ghost-white" onclick="navigate('hiw')">How It Works</button>
+            <button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg> Get Benefits Now &rarr;</button>
+            <button class="btn-ghost-white" onclick="navigate('hiw')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg> How It Works</button>
+          </div>
+          <div class="pkg-cta-trust">
+            <span class="pkg-cta-trust-line"></span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+            <span>Secure. Transparent. Trusted by thousands.</span>
+            <span class="pkg-cta-trust-line"></span>
           </div>
         </div>
       </div>
@@ -504,12 +649,200 @@
   <section class="section">
     <div class="container">
       <div class="pkg-grid">
-        <div class="pkg pkg--starter reveal"><div class="pkg-name">Starter Package</div><div class="pkg-cash">$250</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-divider"></div><div class="pkg-biw">4 payments of $106.25 biweekly</div><div class="pkg-total">Total price: $425.00</div><details class="pkg-details"><summary>Payment details</summary><div class="pkg-details-inner"><div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$212.50</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$7.08</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">2 months</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">4</span></div></div></details><div class="pkg-spacer"></div><button class="btn btn-ghost btn-full" onclick="navigate('checkout','starter')">Claim Starter Cashback</button></div>
-        <div class="pkg pkg--bronze reveal"><div class="pkg-name">Bronze Package</div><div class="pkg-cash">$500</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-divider"></div><div class="pkg-biw">6 payments of $141.67 biweekly</div><div class="pkg-total">Total price: $850.00</div><details class="pkg-details"><summary>Payment details</summary><div class="pkg-details-inner"><div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$283.33</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$9.44</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div></div></details><div class="pkg-spacer"></div><button class="btn btn-ghost btn-full" onclick="navigate('checkout','bronze')">Claim Bronze Cashback</button></div>
-        <div class="pkg pkg--silver reveal"><div class="pkg-name">Silver Package</div><div class="pkg-cash">$750</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-divider"></div><div class="pkg-biw">6 payments of $212.50 biweekly</div><div class="pkg-total">Total price: $1,275.00</div><details class="pkg-details"><summary>Payment details</summary><div class="pkg-details-inner"><div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$425.00</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$14.17</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div></div></details><div class="pkg-spacer"></div><button class="btn btn-ghost btn-full" onclick="navigate('checkout','silver')">Claim Silver Cashback</button></div>
-        <div class="pkg pkg--gold reveal"><span class="pkg-badge">BEST VALUE</span><div class="pkg-name">Gold Package</div><div class="pkg-cash">$1,000</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-divider"></div><div class="pkg-biw">6 payments of $283.33 biweekly</div><div class="pkg-total">Total price: $1,700.00</div><details class="pkg-details"><summary>Payment details</summary><div class="pkg-details-inner"><div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$566.67</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$18.89</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div></div></details><div class="pkg-spacer"></div><button class="btn btn-primary btn-full" onclick="navigate('checkout','gold')">Claim Gold Cashback</button></div>
-        <div class="pkg pkg--platinum reveal"><div class="pkg-name">Platinum Package</div><div class="pkg-cash">$1,250</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-divider"></div><div class="pkg-biw">8 payments of $265.63 biweekly</div><div class="pkg-total">Total price: $2,125.00</div><details class="pkg-details"><summary>Payment details</summary><div class="pkg-details-inner"><div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$531.25</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$17.71</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4 months</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div></div></details><div class="pkg-spacer"></div><button class="btn btn-ghost btn-full" onclick="navigate('checkout','platinum')">Claim Platinum Cashback</button></div>
-        <div class="pkg pkg--elite reveal"><span class="pkg-badge">MAXIMUM CASHBACK</span><div class="pkg-name">Elite Package</div><div class="pkg-cash">$1,500</div><div class="pkg-cash-lbl">Eligible Cashback</div><div class="pkg-divider"></div><div class="pkg-biw">8 payments of $318.75 biweekly</div><div class="pkg-total">Total price: $2,550.00</div><details class="pkg-details"><summary>Payment details</summary><div class="pkg-details-inner"><div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$637.50</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$21.25</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4 months</span></div><div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div></div></details><div class="pkg-spacer"></div><button class="btn btn-accent btn-full" onclick="navigate('checkout','elite')">Claim Elite Cashback</button></div>
+        <!-- STARTER -->
+        <div class="pkg pkg--starter reveal">
+          <div class="pkg-header-row">
+            <div class="pkg-icon-wrap pkg-icon--starter">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.5-1.5 4.5 1.5 4.5 0-3 3-4.5 3-4.5z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+          </div>
+            <div class="pkg-header-info">
+              <div class="pkg-name">Starter</div>
+              <div class="pkg-cash">$250</div>
+              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
+            </div>
+          </div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>4 payments of $106.25 biweekly</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Access to Course 1</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$1,000-valued coupon book</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
+          </ul>
+          <div class="pkg-total">Total price: $425.00</div>
+          <details class="pkg-details">
+            <summary>Payment details</summary>
+            <div class="pkg-details-inner">
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$212.50</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$7.08</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">2 months</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">4</span></div>
+            </div>
+          </details>
+          <div class="pkg-spacer"></div>
+          <button class="btn btn-outline btn-full" onclick="navigate('checkout','starter')">Choose Starter</button>
+        </div>
+        <!-- BRONZE -->
+        <div class="pkg pkg--bronze reveal">
+          <div class="pkg-header-row">
+            <div class="pkg-icon-wrap pkg-icon--bronze">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polygon points="12 8 13.09 11.26 16.5 11.27 13.8 13.14 14.83 16.4 12 14.58 9.17 16.4 10.2 13.14 7.5 11.27 10.91 11.26"/></svg>
+          </div>
+            <div class="pkg-header-info">
+              <div class="pkg-name">Bronze</div>
+              <div class="pkg-cash">$500</div>
+              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
+            </div>
+          </div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>6 payments of $141.67 biweekly</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Access to Course 1 and 2</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$2,000-valued coupon book</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
+          </ul>
+          <div class="pkg-total">Total price: $850.00</div>
+          <details class="pkg-details">
+            <summary>Payment details</summary>
+            <div class="pkg-details-inner">
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$283.33</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$9.44</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div>
+            </div>
+          </details>
+          <div class="pkg-spacer"></div>
+          <button class="btn btn-outline btn-full" onclick="navigate('checkout','bronze')">Choose Bronze</button>
+        </div>
+        <!-- SILVER -->
+        <div class="pkg pkg--silver reveal">
+          <div class="pkg-header-row">
+            <div class="pkg-icon-wrap pkg-icon--silver">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polygon points="12 8 13.09 11.26 16.5 11.27 13.8 13.14 14.83 16.4 12 14.58 9.17 16.4 10.2 13.14 7.5 11.27 10.91 11.26"/></svg>
+          </div>
+            <div class="pkg-header-info">
+              <div class="pkg-name">Silver</div>
+              <div class="pkg-cash">$750</div>
+              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
+            </div>
+          </div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>6 payments of $212.50 biweekly</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Access to Course 1 to 3</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$3,000-valued coupon book</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
+          </ul>
+          <div class="pkg-total">Total price: $1,275.00</div>
+          <details class="pkg-details">
+            <summary>Payment details</summary>
+            <div class="pkg-details-inner">
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$425.00</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$14.17</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div>
+            </div>
+          </details>
+          <div class="pkg-spacer"></div>
+          <button class="btn btn-outline btn-full" onclick="navigate('checkout','silver')">Choose Silver</button>
+        </div>
+        <!-- GOLD -->
+        <div class="pkg pkg--gold reveal">
+          <span class="pkg-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>BEST VALUE</span>
+          <div class="pkg-header-row">
+            <div class="pkg-icon-wrap pkg-icon--gold">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+            <div class="pkg-header-info">
+              <div class="pkg-name">Gold</div>
+              <div class="pkg-cash">$1,000</div>
+              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
+            </div>
+          </div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>6 payments of $283.33 biweekly</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Access to Course 1 to 4</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$4,000-valued coupon book</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
+          </ul>
+          <div class="pkg-total">Total price: $1,700.00</div>
+          <details class="pkg-details">
+            <summary>Payment details</summary>
+            <div class="pkg-details-inner">
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$566.67</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$18.89</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div>
+            </div>
+          </details>
+          <div class="pkg-spacer"></div>
+          <button class="btn btn-gold btn-full" onclick="navigate('checkout','gold')">Choose Gold</button>
+        </div>
+        <!-- PLATINUM -->
+        <div class="pkg pkg--platinum reveal">
+          <div class="pkg-header-row">
+            <div class="pkg-icon-wrap pkg-icon--platinum">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9 6 3z"/><path d="M11 3l-3 6 4 13M13 3l3 6-4 13M2 9h20"/></svg>
+          </div>
+            <div class="pkg-header-info">
+              <div class="pkg-name">Platinum</div>
+              <div class="pkg-cash">$1,250</div>
+              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
+            </div>
+          </div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>8 payments of $265.63 biweekly</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Access to Course 1 to 5</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$5,000-valued coupon book</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
+          </ul>
+          <div class="pkg-total">Total price: $2,125.00</div>
+          <details class="pkg-details">
+            <summary>Payment details</summary>
+            <div class="pkg-details-inner">
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$531.25</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$17.71</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4 months</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div>
+            </div>
+          </details>
+          <div class="pkg-spacer"></div>
+          <button class="btn btn-outline btn-full" onclick="navigate('checkout','platinum')">Choose Platinum</button>
+        </div>
+        <!-- ELITE -->
+        <div class="pkg pkg--elite reveal">
+          <span class="pkg-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><path d="M2 17L5 6l5 5 2-8 2 8 5-5 3 11z"/><path d="M2 17h20"/></svg>MAXIMUM CASHBACK</span>
+          <div class="pkg-header-row">
+            <div class="pkg-icon-wrap pkg-icon--elite">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17L5 6l5 5 2-8 2 8 5-5 3 11z"/><path d="M2 17h20"/></svg>
+          </div>
+            <div class="pkg-header-info">
+              <div class="pkg-name">Elite</div>
+              <div class="pkg-cash">$1,500</div>
+              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
+            </div>
+          </div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>8 payments of $318.75 biweekly</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Access to Course 1 to 6</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$6,000-valued coupon book</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
+          </ul>
+          <div class="pkg-total">Total price: $2,550.00</div>
+          <details class="pkg-details">
+            <summary>Payment details</summary>
+            <div class="pkg-details-inner">
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$637.50</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$21.25</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4 months</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div>
+            </div>
+          </details>
+          <div class="pkg-spacer"></div>
+          <button class="btn btn-accent btn-full" onclick="navigate('checkout','elite')">Choose Elite</button>
+        </div>
       </div>
     </div>
   </section>
@@ -573,7 +906,7 @@
         <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">Do I keep access to the education platform?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-in">Platform access duration is based on your selected package. Please review the terms associated with your package for specific access details. Contact Credit Pulse directly for questions about your membership access period.</div></div></div>
         <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)">Can I cancel anytime?<span class="faq-icon">+</span></button><div class="faq-a"><div class="faq-a-in">Cancellation and refund terms depend on your selected package and any steps already completed. Please review the full membership terms before joining. Contact Credit Pulse directly for specific cancellation inquiries.</div></div></div>
       </div>
-      <div style="text-align:center;margin-top:44px;" class="reveal"><button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')">Claim Your Cashback &#8594;</button></div>
+      <div style="text-align:center;margin-top:44px;" class="reveal"><button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')">Get Benefits Now &#8594;</button></div>
     </div>
   </section>
   <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','bronze')">Bronze</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
