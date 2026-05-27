@@ -437,6 +437,7 @@ img{max-width:100%;display:block;}
   flex-shrink:0;
   color:var(--green-d,#4D8A37);
 }
+.bt-short{display:none;}
 .bank-trust-sep{
   width:1px;
   height:18px;
@@ -922,6 +923,15 @@ img{max-width:100%;display:block;}
   .ft-top{grid-template-columns:1fr 1fr;}
   .sd-card-top{flex-direction:column;align-items:center;text-align:center;}
   .step-detail-grid::before{display:none;}
+}
+/* 640px — single-line bank trust bar */
+@media(max-width:640px){
+  .bank-trust-bar{flex-wrap:nowrap;padding:7px 12px;gap:0;}
+  .bank-trust-item{padding:2px 7px;gap:4px;font-size:.64rem;}
+  .bank-trust-item svg{width:13px;height:13px;}
+  .bank-trust-sep{height:14px;}
+  .bt-full{display:none;}
+  .bt-short{display:inline;}
 }
 /* 560px — narrow tablet */
 @media(max-width:560px){
