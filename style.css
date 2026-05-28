@@ -645,6 +645,10 @@ img{max-width:100%;display:block;}
 .cmp-tbl td.hv{color:var(--green-d);font-weight:700;}
 .cmp-tbl tr:last-child td{border-bottom:none;}
 .cmp-tbl tr:hover td{background:rgba(100,165,73,.04);}
+.cmp-tbl th.has-badge{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding-top:10px;padding-bottom:10px;}
+.cmp-badge{display:inline-block;font-size:.56rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;padding:2px 8px;border-radius:999px;line-height:1.5;white-space:nowrap;}
+.cmp-badge--gold{background:linear-gradient(135deg,#D97706,#F59E0B);color:#fff;box-shadow:0 2px 8px rgba(217,119,6,.38);}
+.cmp-badge--elite{background:linear-gradient(135deg,#CCFF00,#d8ff55);color:#0d3320;box-shadow:0 2px 8px rgba(204,255,0,.38);}
 .ck{color:var(--green);}
 .da{color:var(--tm);opacity:.3;}
 
