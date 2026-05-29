@@ -37,6 +37,7 @@ img{max-width:100%;display:block;}
 #home-pkgs{padding:clamp(36px,5vw,60px) 0;}
 .sec-label{display:inline-block;font-size:clamp(.68rem,.9vw,.76rem);font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--green);margin-bottom:clamp(10px,1.5vw,14px);padding:4px 13px;background:rgba(100,165,73,.1);border-radius:100px;border:1px solid rgba(100,165,73,.28);}
 .sec-hd{text-align:center;max-width:700px;margin:0 auto clamp(36px,5vw,56px);}
+.sec-hd--pkg{max-width:min(1160px,100%);}
 .sec-sub{font-size:clamp(.9rem,1.3vw,1rem);color:var(--tm);margin-top:clamp(8px,1.2vw,12px);line-height:1.72;}
 
 /* ===== PAGE SYSTEM ===== */
@@ -94,6 +95,21 @@ img{max-width:100%;display:block;}
 .page-hdr h1{margin-bottom:clamp(8px,1.5vw,14px);color:#fff;}
 .page-hdr p{font-size:clamp(.9rem,1.4vw,1.07rem);color:rgba(255,255,255,.78);max-width:600px;margin:0 auto;}
 .page-hdr .sec-label{color:#b8f0a0;border-color:rgba(255,255,255,.22);background:rgba(255,255,255,.1);}
+.pkg-hdr-badges{display:flex;align-items:center;justify-content:center;gap:0;margin-top:clamp(28px,4vw,40px);background:rgba(255,255,255,.1);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:14px 24px;width:fit-content;max-width:100%;margin-left:auto;margin-right:auto;flex-wrap:nowrap;}
+.pkg-hdr-badge span{white-space:nowrap;}
+.pkg-hdr-badge{display:flex;align-items:center;gap:11px;padding:6px 22px;}
+.pkg-hdr-badge-icon{width:42px;height:42px;border-radius:10px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.pkg-hdr-badge-icon svg{color:#CCFF00;}
+.pkg-hdr-badge span{font-size:clamp(.76rem,.9vw,.82rem);font-weight:600;line-height:1.35;text-align:left;color:#fff;white-space:nowrap;}
+.pkg-hdr-badge-sep{width:1px;height:34px;background:rgba(255,255,255,.2);flex-shrink:0;}
+.pkg-hdr-badges--light{background:#f3faf0;border-color:rgba(100,165,73,.22);backdrop-filter:none;-webkit-backdrop-filter:none;}
+.pkg-hdr-badges--light .pkg-hdr-badge-icon{background:rgba(100,165,73,.1);border-color:rgba(100,165,73,.28);}
+.pkg-hdr-badges--light .pkg-hdr-badge-icon svg{color:var(--green-d);}
+.pkg-hdr-badges--light .pkg-hdr-badge span{color:var(--t);}
+.pkg-hdr-badges--light .pkg-hdr-badge-sep{background:rgba(100,165,73,.22);}
+@media(max-width:1100px){.sec-hd--pkg{max-width:min(980px,100%);}.pkg-hdr-badges{padding:14px 20px;}.pkg-hdr-badge{padding:6px 16px;gap:10px;}.pkg-hdr-badge span{font-size:.78rem;}}
+@media(max-width:900px){.sec-hd--pkg{max-width:min(760px,100%);}.pkg-hdr-badges{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 12px;width:100%;padding:14px;}.pkg-hdr-badge{padding:8px 10px;min-width:0;}.pkg-hdr-badge span{white-space:normal;}.pkg-hdr-badge-sep{display:none;}}
+@media(max-width:700px){.sec-hd--pkg{max-width:100%;}.pkg-hdr-badges{grid-template-columns:1fr;gap:8px;padding:12px 16px;}.pkg-hdr-badge{padding:6px 12px;justify-content:flex-start;}}
 
 /* ===== HERO ===== */
 .hero{
@@ -838,6 +854,11 @@ img{max-width:100%;display:block;}
 .ft-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:clamp(24px,4vw,48px);margin-bottom:clamp(28px,4vw,48px);}
 .ft-brand .nav-logo img{height:44px;filter:brightness(0) invert(1);opacity:.78;display:block;margin-bottom:clamp(10px,1.5vw,16px);}
 .ft-brand-desc{font-size:clamp(.76rem,.96vw,.84rem);color:var(--tm);line-height:1.72;max-width:260px;}
+.ft-contact-list{display:flex;flex-direction:column;align-items:flex-start;gap:10px;margin-top:18px;max-width:320px;}
+.ft-contact-item{display:inline-flex;align-items:center;gap:10px;font-size:clamp(.76rem,.96vw,.84rem);color:#C7D2E0;line-height:1.45;transition:color var(--tr);}
+.ft-contact-item:hover{color:#EFF3FB;}
+.ft-contact-item svg{width:16px;height:16px;color:var(--green-l);flex-shrink:0;}
+.ft-contact-item span{overflow-wrap:anywhere;}
 .ft-col h5{font-size:clamp(.68rem,.85vw,.76rem);font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--tm);margin-bottom:clamp(10px,1.5vw,16px);}
 .ft-col a{display:block;font-size:clamp(.78rem,1vw,.86rem);color:#64748B;margin-bottom:8px;cursor:pointer;transition:color var(--tr);}
 .ft-col a:hover{color:#94A3B8;}
