@@ -1,0 +1,16 @@
+# Editor settings
+.vscode/
+
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Environment & secrets
+.env
+.env.local
+.env*.local
+
+# Build output & dependencies (future Vite/Vercel)
+node_modules/
+dist/
