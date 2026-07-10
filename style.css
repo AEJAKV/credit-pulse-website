@@ -398,7 +398,7 @@ img{max-width:100%;display:block;}
   display:flex;
   gap:clamp(12px,1.6vw,18px);
   width:max-content;
-  animation:bankScroll 38s linear infinite;
+  animation:bankScroll 60s linear infinite;
   padding:6px 0;
 }
 .bank-marquee:hover .bank-track{animation-play-state:paused;}
@@ -588,6 +588,8 @@ img{max-width:100%;display:block;}
 .pkg-icon--silver{background:rgba(107,114,128,.12);color:#6B7280;}
 .pkg-icon--gold{background:rgba(202,138,4,.13);color:#B45309;}
 .pkg-icon--platinum{background:rgba(100,116,139,.12);color:#64748B;}
+.pkg-icon-col{display:flex;flex-direction:column;align-items:center;gap:5px;}
+.pkg-icon-stars{display:flex;gap:4px;align-items:center;justify-content:center;color:#64748B;}
 .pkg-icon--elite{background:rgba(255,255,255,.14);color:#d7ff00;}
 /* Pkg tier name colors */
 .pkg--starter .pkg-name{color:#4D8A37;}
@@ -612,6 +614,7 @@ img{max-width:100%;display:block;}
 .pkg-divider{height:1px;background:var(--card-b);margin:clamp(12px,1.8vw,18px) 0;}
 .pkg-biw{font-size:clamp(.86rem,1.1vw,.95rem);font-weight:700;color:var(--t);margin-bottom:4px;}
 .pkg-total{font-size:.78rem;color:var(--tm);margin-bottom:clamp(12px,1.8vw,18px);}
+.pkg-gst{color:var(--primary);font-weight:700;margin-left:4px;}
 .pkg-details{border:none;background:none;padding:0;margin-bottom:clamp(14px,2vw,22px);}
 .pkg-details summary{font-size:.75rem;font-weight:600;color:var(--green);cursor:pointer;list-style:none;display:flex;align-items:center;gap:4px;user-select:none;transition:opacity .2s;}
 .pkg-details summary::-webkit-details-marker{display:none;}

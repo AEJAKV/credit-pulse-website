@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Credit Pulse – Education-Based Cashback Memberships</title>
+  <title>Credit Pulse ï¿½ Education-Based Cashback Memberships</title>
   <meta name="description" content="Credit Pulse is an education-based cashback membership platform. Choose a tier, access financial education tools, and receive eligible cashback up to $1,500.">
   <link rel="apple-touch-icon" sizes="180x180" href="img-assets/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="img-assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img-assets/favicon/favicon-16x16.png">
   <link rel="manifest" href="img-assets/favicon/site.webmanifest">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -28,6 +29,7 @@
       <li><a id="nl-packages" onclick="navigate('packages')">Packages</a></li>
       <li><a id="nl-faq" onclick="navigate('faq')">FAQ</a></li>
       <li><a id="nl-contact" onclick="navigate('contact')">Contact</a></li>
+      <li><a href="blog/" id="nl-blog">Blog</a></li>
     </ul>
     <div class="nav-cta">
       <button class="btn btn-accent" onclick="navigate('checkout')" style="display:inline-flex;align-items:center;gap:7px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Get Benefits Now &rarr;</button>
@@ -46,6 +48,7 @@
   <a onclick="navigate('packages');closeMenu()">Packages</a>
   <a onclick="navigate('faq');closeMenu()">FAQ</a>
   <a onclick="navigate('contact');closeMenu()">Contact</a>
+  <a href="blog/">Blog</a>
   <div class="mobile-cta">
     <button class="btn btn-primary btn-full" onclick="navigate('checkout');closeMenu()">Claim Cashback</button>
   </div>
@@ -164,7 +167,7 @@
         <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/hsbc-bank-logo.svg" alt="HSBC" loading="lazy"><span class="bank-name">HSBC</span></div>
         <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/banque-laurentiene-bank.svg" alt="Banque Laurentienne" loading="lazy"><span class="bank-name">Banque Laurentienne</span></div>
         <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/pc-financial.svg" alt="PC Financial" loading="lazy"><span class="bank-name">PC Financial</span></div>
-        <!-- Set 2 — duplicate for seamless loop -->
+        <!-- Set 2 ï¿½ duplicate for seamless loop -->
         <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/TD-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">TD Bank</span></div>
         <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/RBC-logo.svg" alt="" loading="lazy"><span class="bank-name">RBC Royal Bank</span></div>
         <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/scotiabank-logo.svg" alt="" loading="lazy"><span class="bank-name">Scotiabank</span></div>
@@ -258,11 +261,11 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$1,000-valued savings book</span></li>
           </ul>
-          <div class="pkg-total">Total price: $425.00</div>
+          <div class="pkg-total">Total price: $425.00 <span class="pkg-gst">+GST</span></div>
           <details class="pkg-details">
             <summary>Payment details</summary>
             <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$212.50</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$106.25</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$7.08</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">2 months</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">4</span></div>
@@ -274,11 +277,11 @@
         <!-- BRONZE -->
         <div class="pkg pkg--bronze reveal">
           <div class="pkg-header-row">
-            <div class="pkg-icon-wrap pkg-icon--bronze">
+            <div class="pkg-icon-wrap pkg-icon--silver">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polygon points="12 8 13.09 11.26 16.5 11.27 13.8 13.14 14.83 16.4 12 14.58 9.17 16.4 10.2 13.14 7.5 11.27 10.91 11.26"/></svg>
           </div>
             <div class="pkg-header-info">
-              <div class="pkg-name">Bronze</div>
+              <div class="pkg-name">Silver</div>
               <div class="pkg-cash">$500</div>
               <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
             </div>
@@ -290,11 +293,11 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$2,000-valued savings book</span></li>
           </ul>
-          <div class="pkg-total">Total price: $850.00</div>
+          <div class="pkg-total">Total price: $850.00 <span class="pkg-gst">+GST</span></div>
           <details class="pkg-details">
             <summary>Payment details</summary>
             <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$283.33</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$141.67</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$9.44</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div>
@@ -306,11 +309,11 @@
         <!-- SILVER -->
         <div class="pkg pkg--silver reveal">
           <div class="pkg-header-row">
-            <div class="pkg-icon-wrap pkg-icon--silver">
+            <div class="pkg-icon-wrap pkg-icon--bronze">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polygon points="12 8 13.09 11.26 16.5 11.27 13.8 13.14 14.83 16.4 12 14.58 9.17 16.4 10.2 13.14 7.5 11.27 10.91 11.26"/></svg>
           </div>
             <div class="pkg-header-info">
-              <div class="pkg-name">Silver</div>
+              <div class="pkg-name">Bronze</div>
               <div class="pkg-cash">$750</div>
               <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
             </div>
@@ -322,11 +325,11 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$3,000-valued savings book</span></li>
           </ul>
-          <div class="pkg-total">Total price: $1,275.00</div>
+          <div class="pkg-total">Total price: $1,275.00 <span class="pkg-gst">+GST</span></div>
           <details class="pkg-details">
             <summary>Payment details</summary>
             <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$425.00</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$212.50</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$14.17</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div>
@@ -355,11 +358,11 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$4,000-valued savings book</span></li>
           </ul>
-          <div class="pkg-total">Total price: $1,700.00</div>
+          <div class="pkg-total">Total price: $1,700.00 <span class="pkg-gst">+GST</span></div>
           <details class="pkg-details">
             <summary>Payment details</summary>
             <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$566.67</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$283.33</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$18.89</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div>
@@ -371,9 +374,13 @@
         <!-- PLATINUM -->
         <div class="pkg pkg--platinum reveal">
           <div class="pkg-header-row">
+            <div class="pkg-icon-col">
             <div class="pkg-icon-wrap pkg-icon--platinum">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9 6 3z"/><path d="M11 3l-3 6 4 13M13 3l3 6-4 13M2 9h20"/></svg>
+
           </div>
+            <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            </div>
             <div class="pkg-header-info">
               <div class="pkg-name">Platinum</div>
               <div class="pkg-cash">$1,250</div>
@@ -387,11 +394,11 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$5,000-valued savings book</span></li>
           </ul>
-          <div class="pkg-total">Total price: $2,125.00</div>
+          <div class="pkg-total">Total price: $2,125.00 <span class="pkg-gst">+GST</span></div>
           <details class="pkg-details">
             <summary>Payment details</summary>
             <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$531.25</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$265.63</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$17.71</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4 months</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div>
@@ -420,11 +427,11 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$6,000-valued savings book</span></li>
           </ul>
-          <div class="pkg-total">Total price: $2,550.00</div>
+          <div class="pkg-total">Total price: $2,550.00 <span class="pkg-gst">+GST</span></div>
           <details class="pkg-details">
             <summary>Payment details</summary>
             <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$637.50</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$318.75</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$21.25</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4 months</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div>
@@ -464,7 +471,7 @@
           </div>
           <div>
             <div class="ben-trust-title">Built for Your Financial Success</div>
-            <p class="ben-trust-desc">Practical tools, trusted education, and secure access — all in one platform to help you build a stronger financial future.</p>
+            <p class="ben-trust-desc">Practical tools, trusted education, and secure access ï¿½ all in one platform to help you build a stronger financial future.</p>
           </div>
         </div>
         <div class="ben-trust-v-sep"></div>
@@ -757,7 +764,7 @@
               </div>
               <div class="sd-content">
                 <h3>Receive Eligible Cashback</h3>
-                <p>After completing all required steps — membership form, verification, and cashback confirmation — eligible cashback may be processed based on your selected tier and payment schedule.</p>
+                <p>After completing all required steps ï¿½ membership form, verification, and cashback confirmation ï¿½ eligible cashback may be processed based on your selected tier and payment schedule.</p>
                 <p>Processing times may vary depending on your verification status, package selection, and payment provider. Credit Pulse will keep you informed throughout the process.</p>
               </div>
             </div>
@@ -941,11 +948,11 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$1,000-valued savings book</span></li>
           </ul>
-          <div class="pkg-total">Total price: $425.00</div>
+          <div class="pkg-total">Total price: $425.00 <span class="pkg-gst">+GST</span></div>
           <details class="pkg-details">
             <summary>Payment details</summary>
             <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$212.50</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$106.25</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$7.08</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">2 months</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">4</span></div>
@@ -973,11 +980,11 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$2,000-valued savings book</span></li>
           </ul>
-          <div class="pkg-total">Total price: $850.00</div>
+          <div class="pkg-total">Total price: $850.00 <span class="pkg-gst">+GST</span></div>
           <details class="pkg-details">
             <summary>Payment details</summary>
             <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$283.33</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$141.67</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$9.44</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div>
@@ -1005,11 +1012,11 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$3,000-valued savings book</span></li>
           </ul>
-          <div class="pkg-total">Total price: $1,275.00</div>
+          <div class="pkg-total">Total price: $1,275.00 <span class="pkg-gst">+GST</span></div>
           <details class="pkg-details">
             <summary>Payment details</summary>
             <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$425.00</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$212.50</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$14.17</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div>
@@ -1038,11 +1045,11 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$4,000-valued savings book</span></li>
           </ul>
-          <div class="pkg-total">Total price: $1,700.00</div>
+          <div class="pkg-total">Total price: $1,700.00 <span class="pkg-gst">+GST</span></div>
           <details class="pkg-details">
             <summary>Payment details</summary>
             <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$566.67</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$283.33</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$18.89</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">3 months</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div>
@@ -1054,9 +1061,13 @@
         <!-- PLATINUM -->
         <div class="pkg pkg--platinum reveal">
           <div class="pkg-header-row">
+            <div class="pkg-icon-col">
             <div class="pkg-icon-wrap pkg-icon--platinum">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9 6 3z"/><path d="M11 3l-3 6 4 13M13 3l3 6-4 13M2 9h20"/></svg>
+
           </div>
+            <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            </div>
             <div class="pkg-header-info">
               <div class="pkg-name">Platinum</div>
               <div class="pkg-cash">$1,250</div>
@@ -1070,11 +1081,11 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$5,000-valued savings book</span></li>
           </ul>
-          <div class="pkg-total">Total price: $2,125.00</div>
+          <div class="pkg-total">Total price: $2,125.00 <span class="pkg-gst">+GST</span></div>
           <details class="pkg-details">
             <summary>Payment details</summary>
             <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$531.25</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$265.63</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$17.71</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4 months</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div>
@@ -1103,11 +1114,11 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$6,000-valued savings book</span></li>
           </ul>
-          <div class="pkg-total">Total price: $2,550.00</div>
+          <div class="pkg-total">Total price: $2,550.00 <span class="pkg-gst">+GST</span></div>
           <details class="pkg-details">
             <summary>Payment details</summary>
             <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Monthly</span><span class="pkg-detail-val">$637.50</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$318.75</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$21.25</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4 months</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div>
