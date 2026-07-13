@@ -1,10 +1,10 @@
 var pkgData = {
-  starter:  { name:'Starter Package',  cash:'$250',   pay:'4 biweekly payments of $106.25',  total:'$425.00' },
-  bronze:   { name:'Bronze Package',   cash:'$500',   pay:'6 biweekly payments of $141.67',  total:'$850.00' },
-  silver:   { name:'Silver Package',   cash:'$750',   pay:'6 biweekly payments of $212.50',  total:'$1,275.00' },
-  gold:     { name:'Gold Package',     cash:'$1,000', pay:'6 biweekly payments of $283.33',  total:'$1,700.00' },
-  platinum: { name:'Platinum Package', cash:'$1,250', pay:'8 biweekly payments of $265.63',  total:'$2,125.00' },
-  elite:    { name:'Elite Package',    cash:'$1,500', pay:'8 biweekly payments of $318.75',  total:'$2,550.00' }
+  starter:  { name:'Starter Package',  cash:'$250',   pay:'4 biweekly payments of $111.56',  total:'$446.25' },
+  bronze:   { name:'Silver Package',   cash:'$500',   pay:'6 biweekly payments of $148.75',  total:'$892.50' },
+  silver:   { name:'Bronze Package',   cash:'$750',   pay:'8 biweekly payments of $167.34',  total:'$1,338.75' },
+  gold:     { name:'Gold Package',     cash:'$1,000', pay:'9 biweekly payments of $198.33',  total:'$1,785.00' },
+  platinum: { name:'Platinum Package', cash:'$1,250', pay:'10 biweekly payments of $223.13', total:'$2,231.25' },
+  elite:    { name:'Elite Package',    cash:'$1,500', pay:'11 biweekly payments of $243.41', total:'$2,677.50' }
 };
 var selectedPkg = 'gold';
 
@@ -23,6 +23,18 @@ function navigate(page, pkg) {
   initReveal();
 }
 
+function navigateToPackagesGrid() {
+  navigate('packages');
+  window.requestAnimationFrame(function() {
+    window.requestAnimationFrame(function() {
+      var grid = document.querySelector('#page-packages .pkg-grid');
+      if (!grid) return;
+      var top = grid.getBoundingClientRect().top + window.pageYOffset - 28;
+      window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+    });
+  });
+}
+
 function selectPackage(pkg) {
   selectedPkg = pkg;
   document.querySelectorAll('.co-pkg-card').forEach(function(c){ c.classList.remove('selected'); });
@@ -35,7 +47,7 @@ function selectPackage(pkg) {
     el.innerHTML = '<div class="co-sum-pkg">' + d.name + '</div>' +
       '<div class="co-sum-cash">' + d.cash + '</div>' +
       '<div class="co-sum-pay">' + d.pay + '</div>' +
-      '<div class="co-sum-total">Total package price: ' + d.total + '</div>';
+      '<div class="co-sum-total">Total Price with GST: ' + d.total + '</div>';
   }
 }
 
