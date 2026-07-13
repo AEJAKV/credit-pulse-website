@@ -593,8 +593,8 @@ img{max-width:100%;display:block;}
 .pkg-icon--elite{background:rgba(255,255,255,.14);color:#d7ff00;}
 /* Pkg tier name colors */
 .pkg--starter .pkg-name{color:#4D8A37;}
-.pkg--bronze .pkg-name{color:#B45309;}
-.pkg--silver .pkg-name{color:#6B7280;}
+.pkg--bronze .pkg-name{color:#6B7280;}
+.pkg--silver .pkg-name{color:#B45309;}
 .pkg--gold .pkg-name{color:#B45309;}
 .pkg--platinum .pkg-name{color:#64748B;}
 /* Pkg feature list */
