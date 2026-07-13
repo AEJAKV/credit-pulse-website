@@ -58,8 +58,7 @@ function handleSubmit(e) {
     alert('Please confirm that you understand Credit Pulse is an education-based membership platform before proceeding.');
     return;
   }
-  // Placeholder — integrate real payment/CRM system here
-  alert('Thank you for your membership application. A Credit Pulse representative will be in touch shortly to guide you through the next steps.');
+  window.location.href = 'https://signup.creditpulse.ca/';
 }
 
 function toggleMenu() {
