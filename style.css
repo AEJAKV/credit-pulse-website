@@ -1045,9 +1045,11 @@ img{max-width:100%;display:block;}
   .nav-links,.nav-cta{display:none;}
   .hamburger{display:flex;}
   .mobile-menu{display:block;}
+  .navbar .container{gap:10px;}
   .nav-mobile-cta{
     display:flex;
-    margin-right:8px;
+    margin-left:auto;
+    margin-right:6px;
     flex-shrink:0;
   }
   .nav-mobile-cta.btn{
