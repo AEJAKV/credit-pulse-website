@@ -1118,7 +1118,7 @@ img{max-width:100%;display:block;}
 }
 /* 560px — narrow tablet */
 @media(max-width:560px){
-  .pkg-grid{grid-template-columns:1fr;}
+  .pkg-grid{grid-template-columns:1fr;gap:30px;}
   .sec-badges{grid-template-columns:1fr;}
   .co-pkg-grid{grid-template-columns:repeat(2,1fr);}
   .cmp-tbl{min-width:680px;}
