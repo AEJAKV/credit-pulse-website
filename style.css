@@ -85,8 +85,6 @@ img{max-width:100%;display:block;}
 .nav-phone:hover{color:#1A2B1A;border-color:rgba(100,165,73,.4);background:rgba(100,165,73,.12);transform:translateY(-1px);box-shadow:0 8px 18px rgba(100,165,73,.12);}
 .nav-cta .btn-accent{border:none;border-radius:999px;padding:10px 22px;font-size:.9rem;font-weight:700;letter-spacing:.02em;background:linear-gradient(90deg,#4a9e34 0%,#72c44a 55%,#87d454 100%);color:#fff;box-shadow:0 4px 16px rgba(80,170,50,.36),0 1px 4px rgba(0,0,0,.1);}
 .nav-cta .btn-accent:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(80,170,50,.48),0 3px 8px rgba(0,0,0,.12);filter:brightness(1.06);}
-.nav-mobile-phone{display:none;align-items:center;gap:7px;font-size:.78rem;font-weight:700;color:#4A6644;padding:9px 12px;border-radius:999px;border:1px solid rgba(100,165,73,.22);background:rgba(100,165,73,.06);white-space:nowrap;flex-shrink:0;}
-.nav-mobile-phone svg{color:var(--green-d);flex-shrink:0;}
 .nav-mobile-cta{display:none;}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;}
 .hamburger span{display:block;width:22px;height:2px;background:#1A2B1A;border-radius:2px;transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .25s ease;}
@@ -97,6 +95,8 @@ img{max-width:100%;display:block;}
 .mobile-menu.open{max-height:500px;opacity:1;}
 .mobile-menu a{display:block;padding:14px 24px;font-size:.95rem;font-weight:500;color:#4A6644;border-bottom:1px solid rgba(0,0,0,.06);cursor:pointer;transition:color var(--tr),background var(--tr);}
 .mobile-menu a:hover{color:#1A2B1A;background:rgba(100,165,73,.06);}
+.mobile-menu-phone{display:flex;align-items:center;gap:10px;font-weight:700;}
+.mobile-menu-phone svg{color:var(--green-d);flex-shrink:0;}
 .mobile-cta{padding:16px 24px;}
 
 /* ===== INNER PAGE HEADER ===== */
@@ -1050,11 +1050,6 @@ img{max-width:100%;display:block;}
     margin-right:8px;
     flex-shrink:0;
   }
-  .nav-mobile-phone{
-    display:inline-flex;
-    margin-left:auto;
-    margin-right:8px;
-  }
   .nav-mobile-cta.btn{
     font-size:.68rem;
     padding:8px 12px;
@@ -1069,8 +1064,6 @@ img{max-width:100%;display:block;}
     transition:box-shadow .25s,transform .25s,filter .25s;
   }
   .nav-mobile-cta.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(80,170,50,.46);filter:brightness(1.06);}
-  .nav-mobile-phone{padding:8px 10px;gap:6px;font-size:.66rem;}
-  .nav-mobile-phone span{display:inline;}
   /* Hero: single column, center-aligned */
   .hero-inner{grid-template-columns:1fr;gap:clamp(24px,4vw,36px);}
   .hero-left{
