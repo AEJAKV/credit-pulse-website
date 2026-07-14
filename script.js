@@ -1,12 +1,12 @@
 var pkgData = {
   starter:  { name:'Starter Package',  cash:'$250',   pay:'4 biweekly payments of $111.56',  total:'$446.25',  features:['Full Access to Starter Course','Secure online sign-up','$5,000-valued savings book','Budgeting tools'] },
-  bronze:   { name:'Silver Package',   cash:'$500',   pay:'6 biweekly payments of $148.75',  total:'$892.50',  features:['Full Access to Silver Courses','Secure online sign-up','$10,000-valued savings book','Side Hustle','Budgeting tools','Debt tools'] },
-  silver:   { name:'Bronze Package',   cash:'$750',   pay:'8 biweekly payments of $167.34',  total:'$1,338.75',features:['Full Access to Bronze Courses','Secure online sign-up','$15,000-valued savings book','Side Hustle','Budgeting tools','Debt tools'] },
-  gold:     { name:'Gold Package',     cash:'$1,000', pay:'9 biweekly payments of $198.33',  total:'$1,785.00',features:['Full Access to Gold Courses','Secure online sign-up','$20,000-valued savings book','Side Hustle','Budgeting tools','Debt tools'] },
-  platinum: { name:'Platinum Package', cash:'$1,250', pay:'10 biweekly payments of $223.13', total:'$2,231.25',features:['Full Access to Platinum Courses','Secure online sign-up','$25,000-valued savings book','Side Hustle','Budgeting tools','Debt tools','Priority support','Premium resources'] },
-  elite:    { name:'Elite Package',    cash:'$1,500', pay:'11 biweekly payments of $243.41', total:'$2,677.50',features:['Full Access to Elite Courses','Secure online sign-up','$30,000-valued savings book','Side Hustle','Budgeting tools','Debt tools','Priority support','Premium resources'] }
+  silver:   { name:'Silver Package',   cash:'$500',   pay:'6 biweekly payments of $148.75',  total:'$892.50',  features:['Full Access to Silver Courses','Secure online sign-up','$10,000-valued savings book','Instant Cash Side Hustle','Budgeting tools','Debt tools'] },
+  gold:     { name:'Gold Package',     cash:'$750',   pay:'8 biweekly payments of $167.34',  total:'$1,338.75',features:['Full Access to Gold Courses','Secure online sign-up','$15,000-valued savings book','Instant Cash Side Hustle','Budgeting tools','Debt tools'] },
+  platinum: { name:'Platinum Package', cash:'$1,000', pay:'9 biweekly payments of $198.33',  total:'$1,785.00',features:['Full Access to Platinum Courses','Secure online sign-up','$20,000-valued savings book','Instant Cash Side Hustle','Budgeting tools','Debt tools'] },
+  diamond:  { name:'Diamond Package',  cash:'$1,250', pay:'10 biweekly payments of $223.13', total:'$2,231.25',features:['Full Access to Diamond Courses','Secure online sign-up','$25,000-valued savings book','Instant Cash Side Hustle','Budgeting tools','Debt tools','Priority support','Premium resources'] },
+  elite:    { name:'Elite Package',    cash:'$1,500', pay:'11 biweekly payments of $243.41', total:'$2,677.50',features:['Full Access to Elite Courses','Secure online sign-up','$30,000-valued savings book','Instant Cash Side Hustle','Budgeting tools','Debt tools','Priority support','Premium resources'] }
 };
-var selectedPkg = 'gold';
+var selectedPkg = 'silver';
 
 function navigate(page, pkg) {
   document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
@@ -33,6 +33,10 @@ function navigateToPackagesGrid() {
       window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
     });
   });
+}
+
+function navigateToSignup() {
+  window.location.href = 'https://signup.creditpulse.ca/';
 }
 
 function selectPackage(pkg) {

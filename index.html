@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -32,8 +32,16 @@
       <li><a href="blog/" id="nl-blog">Blog</a></li>
     </ul>
     <div class="nav-cta">
+      <a class="nav-phone" href="tel:18886888785" aria-label="Call Credit Pulse at plus one eight eight eight six eight eight eight seven eight five">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+1 (888) 688-8785</span>
+      </a>
       <button class="btn btn-accent" onclick="navigate('checkout')" style="display:inline-flex;align-items:center;gap:7px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Get Benefits Now &rarr;</button>
     </div>
+    <a class="nav-mobile-phone" href="tel:18886888785" aria-label="Call Credit Pulse at plus one eight eight eight six eight eight eight seven eight five">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg>
+      <span>+1 (888) 688-8785</span>
+    </a>
     <button class="nav-mobile-cta btn" onclick="navigate('checkout')">GET BENEFITS NOW</button>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -66,8 +74,7 @@
           <h1 class="hero-headline">Build Financial Confidence<br><span class="hl-accent">Get Rewarded</span></h1>
           <p class="hero-sub">Choose a Credit Pulse membership package, access practical financial education tools, and receive eligible cashback based on your selected tier.</p>
           <div class="hero-ctas">
-            <button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-right:4px"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Get Benefits Now &#8594;</button>
-            <button class="btn btn-outline btn-lg hero-hiw-btn" onclick="navigate('packages')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-right:4px"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>View Packages &#8594;</button>
+            <button class="btn btn-outline btn-lg" onclick="navigate('packages')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0;margin-right:4px"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Compare Packages &#8594;</button>
           </div>
           <div class="trust-bar">
             <div class="trust-bar-item">
@@ -94,27 +101,27 @@
             <div class="hc-label">Maximum Cashback Available</div>
             <div class="hc-amount">$1,500</div>
             <div class="hc-desc">Earned upon signing up for the <strong>Elite Package</strong></div>
-            <div class="hc-choose-lbl">Choose Your Package</div>
+            <div class="hc-choose-lbl">Choose From These Popular Packages</div>
             <div class="hc-pkg-grid">
-              <div class="hc-pkg-tile" onclick="navigateToPackagesGrid()">
+              <div class="hc-pkg-tile" onclick="navigateToSignup()">
                   <div class="hc-pkg-icon hc-pkg-icon--starter"><img class="starter-badge-img" src="img-assets/badge icons/starter-badge.webp" alt="Starter"></div>
                 <div class="hc-pkg-name">Starter</div>
                 <div class="hc-pkg-amt">$250</div>
                 <div class="hc-pkg-sub">Cashback</div>
               </div>
-              <div class="hc-pkg-tile" onclick="navigateToPackagesGrid()">
+              <div class="hc-pkg-tile" onclick="navigateToSignup()">
                 <div class="hc-pkg-icon hc-pkg-icon--silver"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
                 <div class="hc-pkg-name">Silver</div>
                 <div class="hc-pkg-amt">$500</div>
                 <div class="hc-pkg-sub">Cashback</div>
               </div>
-              <div class="hc-pkg-tile" onclick="navigateToPackagesGrid()">
+              <div class="hc-pkg-tile" onclick="navigateToSignup()">
                 <div class="hc-pkg-icon hc-pkg-icon--gold"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
                 <div class="hc-pkg-name">Gold</div>
-                <div class="hc-pkg-amt">$1,000</div>
+                <div class="hc-pkg-amt">$750</div>
                 <div class="hc-pkg-sub">Cashback</div>
               </div>
-              <div class="hc-pkg-tile hc-pkg-tile--active" onclick="navigateToPackagesGrid()">
+              <div class="hc-pkg-tile hc-pkg-tile--active" onclick="navigateToSignup()">
                 <div class="hc-pkg-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
                 <div class="hc-pkg-icon hc-pkg-icon--elite"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M5 20h14"/></svg></div>
                 <div class="hc-pkg-name">Elite</div>
@@ -125,9 +132,9 @@
             <ul class="hc-perks">
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Cashback earned as a member reward</span></li>
               <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Expert insights and educational content</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>$6,000-valued coupon book</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>$30,000-valued coupon book</span></li>
             </ul>
-            <button class="btn hc-cta-btn btn-full" onclick="navigate('packages')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg>Compare Packages &rarr;</button>
+            <button class="btn hc-cta-btn btn-full" onclick="navigateToSignup()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Get Benefits Now &rarr;</button>
             <div class="hc-secure"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>100% Secure &bull; No impact to your credit score</span></div>
           </div>
         </div>
@@ -270,8 +277,9 @@
           <div class="pkg-spacer"></div>
           <button class="btn btn-outline btn-full" onclick="navigate('checkout','starter')">Choose Starter</button>
         </div>
-        <!-- BRONZE -->
+        <!-- SILVER -->
         <div class="pkg pkg--bronze reveal">
+          <span class="pkg-badge pkg-badge--best-value"><svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>BEST VALUE</span>
           <div class="pkg-header-row">
             <div class="pkg-icon-wrap pkg-icon--silver">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polygon points="12 8 13.09 11.26 16.5 11.27 13.8 13.14 14.83 16.4 12 14.58 9.17 16.4 10.2 13.14 7.5 11.27 10.91 11.26"/></svg>
@@ -288,7 +296,7 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Silver Courses</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$10,000-valued savings book</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Side Hustle</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Instant Cash Side Hustle</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
           </ul>
@@ -303,16 +311,16 @@
             </div>
           </details>
           <div class="pkg-spacer"></div>
-          <button class="btn btn-outline btn-full" onclick="navigate('checkout','bronze')">Choose Silver</button>
+          <button class="btn btn-outline btn-full" onclick="navigate('checkout','silver')">Choose Silver</button>
         </div>
-        <!-- SILVER -->
-        <div class="pkg pkg--silver reveal">
+        <!-- GOLD -->
+        <div class="pkg pkg--gold reveal">
           <div class="pkg-header-row">
-            <div class="pkg-icon-wrap pkg-icon--bronze">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polygon points="12 8 13.09 11.26 16.5 11.27 13.8 13.14 14.83 16.4 12 14.58 9.17 16.4 10.2 13.14 7.5 11.27 10.91 11.26"/></svg>
+            <div class="pkg-icon-wrap pkg-icon--gold">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
           </div>
             <div class="pkg-header-info">
-              <div class="pkg-name">Bronze</div>
+              <div class="pkg-name">Gold</div>
               <div class="pkg-cash">$750</div>
               <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
             </div>
@@ -320,10 +328,10 @@
           <div class="pkg-divider"></div>
           <ul class="pkg-features">
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>8 payments of $167.34 biweekly</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Bronze Courses</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Gold Courses</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$15,000-valued savings book</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Side Hustle</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Instant Cash Side Hustle</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
           </ul>
@@ -335,42 +343,6 @@
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$11.16</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4 months</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div>
-            </div>
-          </details>
-          <div class="pkg-spacer"></div>
-          <button class="btn btn-outline btn-full" onclick="navigate('checkout','silver')">Choose Bronze</button>
-        </div>
-        <!-- GOLD -->
-        <div class="pkg pkg--gold reveal">
-          <span class="pkg-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>BEST VALUE</span>
-          <div class="pkg-header-row">
-            <div class="pkg-icon-wrap pkg-icon--gold">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-          </div>
-            <div class="pkg-header-info">
-              <div class="pkg-name">Gold</div>
-              <div class="pkg-cash">$1,000</div>
-              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
-            </div>
-          </div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>9 payments of $198.33 biweekly</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Gold Courses</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
-            <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$20,000-valued savings book</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Side Hustle</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
-          </ul>
-          <div class="pkg-total">Total Price with GST: $1,785.00</div>
-          <details class="pkg-details">
-            <summary>Payment details</summary>
-            <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$198.33</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$13.22</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4.5 months</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">9</span></div>
             </div>
           </details>
           <div class="pkg-spacer"></div>
@@ -388,6 +360,45 @@
             </div>
             <div class="pkg-header-info">
               <div class="pkg-name">Platinum</div>
+              <div class="pkg-cash">$1,000</div>
+              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
+            </div>
+          </div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>9 payments of $198.33 biweekly</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Platinum Courses</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
+            <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$20,000-valued savings book</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Instant Cash Side Hustle</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
+          </ul>
+          <div class="pkg-total">Total Price with GST: $1,785.00</div>
+          <details class="pkg-details">
+            <summary>Payment details</summary>
+            <div class="pkg-details-inner">
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$198.33</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$13.22</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4.5 months</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">9</span></div>
+            </div>
+          </details>
+          <div class="pkg-spacer"></div>
+          <button class="btn btn-outline btn-full" onclick="navigate('checkout','platinum')">Choose Platinum</button>
+        </div>
+        <!-- DIAMOND -->
+        <div class="pkg pkg--diamond reveal">
+          <div class="pkg-header-row">
+            <div class="pkg-icon-col">
+            <div class="pkg-icon-wrap pkg-icon--diamond">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 9l7 12 7-12-7-6z"/><path d="M5 9h14"/><path d="m9 9 3 12 3-12"/></svg>
+
+          </div>
+            <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            </div>
+            <div class="pkg-header-info">
+              <div class="pkg-name">Diamond</div>
               <div class="pkg-cash">$1,250</div>
               <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
             </div>
@@ -395,10 +406,10 @@
           <div class="pkg-divider"></div>
           <ul class="pkg-features">
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>10 payments of $223.13 biweekly</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Platinum Courses</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Diamond Courses</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$25,000-valued savings book</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Side Hustle</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Instant Cash Side Hustle</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Priority support</span></li>
@@ -415,11 +426,11 @@
             </div>
           </details>
           <div class="pkg-spacer"></div>
-          <button class="btn btn-outline btn-full" onclick="navigate('checkout','platinum')">Choose Platinum</button>
+          <button class="btn btn-diamond btn-full" onclick="navigate('checkout','diamond')">Choose Diamond</button>
         </div>
         <!-- ELITE -->
         <div class="pkg pkg--elite reveal">
-          <span class="pkg-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><path d="M2 17L5 6l5 5 2-8 2 8 5-5 3 11z"/><path d="M2 17h20"/></svg>MAXIMUM CASHBACK</span>
+          <span class="pkg-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><path d="M2 17L5 6l5 5 2-8 2 8 5-5 3 11z"/><path d="M2 17h20"/></svg>MAXIMUM REWARDS</span>
           <div class="pkg-header-row">
             <div class="pkg-icon-wrap pkg-icon--elite">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17L5 6l5 5 2-8 2 8 5-5 3 11z"/><path d="M2 17h20"/></svg>
@@ -436,7 +447,7 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Elite Courses</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$30,000-valued savings book</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Side Hustle</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Instant Cash Side Hustle</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Priority support</span></li>
@@ -602,14 +613,14 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg>
               <span>+1 (888) 688-8785</span>
             </a>
-            <a class="ft-contact-item" href="mailto:support@creditpulseca.zendesk.com">
+            <a class="ft-contact-item" href="mailto:support@creditpulse.zendesk.com">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-              <span>support@creditpulseca.zendesk.com</span>
+              <span>support@creditpulse.zendesk.com</span>
             </a>
           </div>
         </div>
         <div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div>
-        <div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','bronze')">Bronze &ndash; $500</a><a onclick="navigate('checkout','silver')">Silver &ndash; $750</a><a onclick="navigate('checkout','gold')">Gold &ndash; $1,000</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div>
+        <div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','silver')">Silver &ndash; $500</a><a onclick="navigate('checkout','gold')">Gold &ndash; $750</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,000</a><a onclick="navigate('checkout','diamond')">Diamond &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div>
         <div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div>
       </div>
       <div class="ft-bot">
@@ -901,9 +912,9 @@
   <footer class="footer">
     <div class="container">
       <div class="ft-top">
-        <div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulseca.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulseca.zendesk.com</span></a></div></div>
+        <div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulse.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulse.zendesk.com</span></a></div></div>
         <div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div>
-        <div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','bronze')">Bronze &ndash; $500</a><a onclick="navigate('checkout','silver')">Silver &ndash; $750</a><a onclick="navigate('checkout','gold')">Gold &ndash; $1,000</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div>
+        <div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','silver')">Silver &ndash; $500</a><a onclick="navigate('checkout','gold')">Gold &ndash; $750</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,000</a><a onclick="navigate('checkout','diamond')">Diamond &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div>
         <div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div>
       </div>
       <div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div>
@@ -977,8 +988,9 @@
           <div class="pkg-spacer"></div>
           <button class="btn btn-outline btn-full" onclick="navigate('checkout','starter')">Choose Starter</button>
         </div>
-        <!-- BRONZE -->
+        <!-- SILVER -->
         <div class="pkg pkg--bronze reveal">
+          <span class="pkg-badge pkg-badge--best-value"><svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>BEST VALUE</span>
           <div class="pkg-header-row">
               <div class="pkg-icon-wrap pkg-icon--silver">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polygon points="12 8 13.09 11.26 16.5 11.27 13.8 13.14 14.83 16.4 12 14.58 9.17 16.4 10.2 13.14 7.5 11.27 10.91 11.26"/></svg>
@@ -995,7 +1007,7 @@
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Silver Courses</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$10,000-valued savings book</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Side Hustle</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Instant Cash Side Hustle</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
           </ul>
@@ -1010,16 +1022,16 @@
             </div>
           </details>
           <div class="pkg-spacer"></div>
-          <button class="btn btn-outline btn-full" onclick="navigate('checkout','bronze')">Choose Silver</button>
+          <button class="btn btn-outline btn-full" onclick="navigate('checkout','silver')">Choose Silver</button>
         </div>
-        <!-- SILVER -->
-        <div class="pkg pkg--silver reveal">
+        <!-- GOLD -->
+        <div class="pkg pkg--gold reveal">
           <div class="pkg-header-row">
-              <div class="pkg-icon-wrap pkg-icon--bronze">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polygon points="12 8 13.09 11.26 16.5 11.27 13.8 13.14 14.83 16.4 12 14.58 9.17 16.4 10.2 13.14 7.5 11.27 10.91 11.26"/></svg>
+              <div class="pkg-icon-wrap pkg-icon--gold">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
           </div>
             <div class="pkg-header-info">
-                <div class="pkg-name">Bronze</div>
+                <div class="pkg-name">Gold</div>
               <div class="pkg-cash">$750</div>
               <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
             </div>
@@ -1027,10 +1039,10 @@
           <div class="pkg-divider"></div>
           <ul class="pkg-features">
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>8 payments of $167.34 biweekly</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Bronze Courses</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Gold Courses</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$15,000-valued savings book</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Side Hustle</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Instant Cash Side Hustle</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
           </ul>
@@ -1042,42 +1054,6 @@
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$11.16</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4 months</span></div>
               <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div>
-            </div>
-          </details>
-          <div class="pkg-spacer"></div>
-          <button class="btn btn-outline btn-full" onclick="navigate('checkout','silver')">Choose Bronze</button>
-        </div>
-        <!-- GOLD -->
-        <div class="pkg pkg--gold reveal">
-          <span class="pkg-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>BEST VALUE</span>
-          <div class="pkg-header-row">
-            <div class="pkg-icon-wrap pkg-icon--gold">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-          </div>
-            <div class="pkg-header-info">
-              <div class="pkg-name">Gold</div>
-              <div class="pkg-cash">$1,000</div>
-              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
-            </div>
-          </div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>9 payments of $198.33 biweekly</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Gold Courses</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
-            <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$20,000-valued savings book</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Side Hustle</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
-          </ul>
-          <div class="pkg-total">Total Price with GST: $1,785.00</div>
-          <details class="pkg-details">
-            <summary>Payment details</summary>
-            <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$198.33</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$13.22</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4.5 months</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">9</span></div>
             </div>
           </details>
           <div class="pkg-spacer"></div>
@@ -1095,6 +1071,45 @@
             </div>
             <div class="pkg-header-info">
               <div class="pkg-name">Platinum</div>
+              <div class="pkg-cash">$1,000</div>
+              <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
+            </div>
+          </div>
+          <div class="pkg-divider"></div>
+          <ul class="pkg-features">
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>9 payments of $198.33 biweekly</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Platinum Courses</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
+            <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$20,000-valued savings book</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Instant Cash Side Hustle</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
+          </ul>
+          <div class="pkg-total">Total Price with GST: $1,785.00</div>
+          <details class="pkg-details">
+            <summary>Payment details</summary>
+            <div class="pkg-details-inner">
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly</span><span class="pkg-detail-val">$198.33</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$13.22</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Term</span><span class="pkg-detail-val">4.5 months</span></div>
+              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">9</span></div>
+            </div>
+          </details>
+          <div class="pkg-spacer"></div>
+          <button class="btn btn-outline btn-full" onclick="navigate('checkout','platinum')">Choose Platinum</button>
+        </div>
+        <!-- DIAMOND -->
+        <div class="pkg pkg--diamond reveal">
+          <div class="pkg-header-row">
+            <div class="pkg-icon-col">
+            <div class="pkg-icon-wrap pkg-icon--diamond">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 9l7 12 7-12-7-6z"/><path d="M5 9h14"/><path d="m9 9 3 12 3-12"/></svg>
+
+          </div>
+            <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            </div>
+            <div class="pkg-header-info">
+              <div class="pkg-name">Diamond</div>
               <div class="pkg-cash">$1,250</div>
               <div class="pkg-cash-lbl">Cashback earned upon sign-up</div>
             </div>
@@ -1102,10 +1117,10 @@
           <div class="pkg-divider"></div>
           <ul class="pkg-features">
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>10 payments of $223.13 biweekly</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Platinum Courses</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Diamond Courses</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
             <li class="pkg-feature-savings"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>$25,000-valued savings book</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Side Hustle</span></li>
+            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Instant Cash Side Hustle</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
             <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Priority support</span></li>
@@ -1122,11 +1137,11 @@
             </div>
           </details>
           <div class="pkg-spacer"></div>
-          <button class="btn btn-outline btn-full" onclick="navigate('checkout','platinum')">Choose Platinum</button>
+          <button class="btn btn-diamond btn-full" onclick="navigate('checkout','diamond')">Choose Diamond</button>
         </div>
         <!-- ELITE -->
         <div class="pkg pkg--elite reveal">
-          <span class="pkg-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><path d="M2 17L5 6l5 5 2-8 2 8 5-5 3 11z"/><path d="M2 17h20"/></svg>MAXIMUM CASHBACK</span>
+          <span class="pkg-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><path d="M2 17L5 6l5 5 2-8 2 8 5-5 3 11z"/><path d="M2 17h20"/></svg>MAXIMUM REWARDS</span>
           <div class="pkg-header-row">
             <div class="pkg-icon-wrap pkg-icon--elite">
             <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17L5 6l5 5 2-8 2 8 5-5 3 11z"/><path d="M2 17h20"/></svg>
@@ -1194,20 +1209,20 @@
       <div class="sec-hd reveal"><span class="sec-label">Side by Side</span><h2>Compare Credit Pulse Packages</h2></div>
       <div class="cmp-wrap">
         <table class="cmp-tbl">
-          <thead><tr><th style="min-width:160px;"></th><th>Starter</th><th>Silver</th><th>Bronze</th><th class="fc has-badge"><span class="cmp-badge cmp-badge--gold">Best Value</span>Gold &#9733;</th><th>Platinum</th><th class="has-badge"><span class="cmp-badge cmp-badge--elite">Max Cashback</span>Elite</th></tr></thead>
+          <thead><tr><th style="min-width:160px;"></th><th>Starter</th><th class="has-badge"><span class="cmp-badge cmp-badge--gold">Best Value</span>Silver</th><th class="fc">Gold</th><th>Platinum</th><th>Diamond</th><th class="has-badge"><span class="cmp-badge cmp-badge--elite">Max Cashback</span>Elite</th></tr></thead>
           <tbody>
-            <tr><td>Cashback amount</td><td>$250</td><td>$500</td><td>$750</td><td class="fc hv">$1,000</td><td class="hv">$1,250</td><td class="hv">$1,500</td></tr>
-            <tr><td>Total with GST</td><td>$446.25</td><td>$892.50</td><td>$1,338.75</td><td class="fc">$1,785.00</td><td>$2,231.25</td><td>$2,677.50</td></tr>
-            <tr><td>Biweekly payment</td><td>$111.56</td><td>$148.75</td><td>$167.34</td><td class="fc">$198.33</td><td>$223.13</td><td>$243.41</td></tr>
-            <tr><td>Number of payments</td><td>4</td><td>6</td><td>8</td><td class="fc">9</td><td>10</td><td>11</td></tr>
-            <tr><td>Term</td><td>2 mo</td><td>3 mo</td><td>4 mo</td><td class="fc">4.5 mo</td><td>5 mo</td><td>5.5 mo</td></tr>
+            <tr><td>Cashback amount</td><td>$250</td><td>$500</td><td class="fc hv">$750</td><td>$1,000</td><td class="hv">$1,250</td><td class="hv">$1,500</td></tr>
+            <tr><td>Total with GST</td><td>$446.25</td><td>$892.50</td><td class="fc">$1,338.75</td><td>$1,785.00</td><td>$2,231.25</td><td>$2,677.50</td></tr>
+            <tr><td>Biweekly payment</td><td>$111.56</td><td>$148.75</td><td class="fc">$167.34</td><td>$198.33</td><td>$223.13</td><td>$243.41</td></tr>
+            <tr><td>Number of payments</td><td>4</td><td>6</td><td class="fc">8</td><td>9</td><td>10</td><td>11</td></tr>
+            <tr><td>Term</td><td>2 mo</td><td>3 mo</td><td class="fc">4 mo</td><td>4.5 mo</td><td>5 mo</td><td>5.5 mo</td></tr>
             <tr><td>Education resources</td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td class="fc"><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
-            <tr><td>Side Hustle</td><td><span class="da">&#8212;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td class="fc"><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
+            <tr><td>Instant Cash Side Hustle</td><td><span class="da">&#8212;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td class="fc"><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
             <tr><td>Budgeting tools</td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td class="fc"><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
             <tr><td>Debt tools</td><td><span class="da">&#8212;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td class="fc"><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
             <tr><td>Priority support</td><td><span class="da">&#8212;</span></td><td><span class="da">&#8212;</span></td><td><span class="da">&#8212;</span></td><td class="fc"><span class="da">&#8212;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
             <tr><td>Premium resources</td><td><span class="da">&#8212;</span></td><td><span class="da">&#8212;</span></td><td><span class="da">&#8212;</span></td><td class="fc"><span class="da">&#8212;</span></td><td><span class="ck">&#10003;</span></td><td><span class="ck">&#10003;</span></td></tr>
-            <tr><td></td><td><button class="btn btn-green-gradient btn-sm btn-full" onclick="navigate('checkout','starter')">Subscribe</button></td><td><button class="btn btn-green-gradient btn-sm btn-full" onclick="navigate('checkout','bronze')">Subscribe</button></td><td><button class="btn btn-green-gradient btn-sm btn-full" onclick="navigate('checkout','silver')">Subscribe</button></td><td class="fc"><button class="btn btn-gold btn-sm btn-full" onclick="navigate('checkout','gold')">Subscribe</button></td><td><button class="btn btn-platinum btn-sm btn-full" onclick="navigate('checkout','platinum')">Subscribe</button></td><td><button class="btn btn-elite btn-sm btn-full" onclick="navigate('checkout','elite')">Subscribe</button></td></tr>
+            <tr><td></td><td><button class="btn btn-green-gradient btn-sm btn-full" onclick="navigate('checkout','starter')">Subscribe</button></td><td><button class="btn btn-green-gradient btn-sm btn-full" onclick="navigate('checkout','silver')">Subscribe</button></td><td class="fc"><button class="btn btn-gold btn-sm btn-full" onclick="navigate('checkout','gold')">Subscribe</button></td><td><button class="btn btn-platinum btn-sm btn-full" onclick="navigate('checkout','platinum')">Subscribe</button></td><td><button class="btn btn-diamond btn-sm btn-full" onclick="navigate('checkout','diamond')">Subscribe</button></td><td><button class="btn btn-elite btn-sm btn-full" onclick="navigate('checkout','elite')">Subscribe</button></td></tr>
           </tbody>
         </table>
       </div>
@@ -1254,7 +1269,7 @@
     </div>
   </section>
 
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulseca.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulseca.zendesk.com</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','bronze')">Bronze</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulse.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulse.zendesk.com</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','diamond')">Diamond</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-packages -->
 
 <!-- ==================== PAGE: FAQ ==================== -->
@@ -1324,7 +1339,7 @@
       </div>
     </div>
   </section>
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulseca.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulseca.zendesk.com</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','bronze')">Bronze</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulse.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulse.zendesk.com</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','diamond')">Diamond</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-faq -->
 
 <!-- ==================== PAGE: CONTACT ==================== -->
@@ -1365,13 +1380,13 @@
             </div>
           </div>
           <div class="contact-options">
-            <a class="contact-option" href="mailto:support@creditpulseca.zendesk.com">
+            <a class="contact-option" href="mailto:support@creditpulse.zendesk.com">
               <div class="contact-opt-icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
               </div>
               <div class="contact-opt-text">
                 <span class="contact-opt-label">Email Support</span>
-                <span class="contact-opt-val">support@creditpulseca.zendesk.com</span>
+                <span class="contact-opt-val">support@creditpulse.zendesk.com</span>
               </div>
               <div class="contact-opt-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></div>
             </a>
@@ -1438,7 +1453,7 @@
 
     </div>
   </section>
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulseca.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulseca.zendesk.com</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','bronze')">Bronze</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulse.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulse.zendesk.com</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','diamond')">Diamond</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-contact -->
 
 <!-- ==================== PAGE: CHECKOUT ==================== -->
@@ -1461,20 +1476,20 @@
             <div class="co-pkg-lbl">Starter</div>
             <div class="co-pkg-amt">$250</div>
           </div>
-          <div class="co-pkg-card co-pkg-card--silver" id="co-pkg-bronze" onclick="selectPackage('bronze')">
+          <div class="co-pkg-card co-pkg-card--silver selected" id="co-pkg-silver" onclick="selectPackage('silver')">
             <div class="co-pkg-lbl">Silver</div>
             <div class="co-pkg-amt">$500</div>
           </div>
-          <div class="co-pkg-card co-pkg-card--bronze" id="co-pkg-silver" onclick="selectPackage('silver')">
-            <div class="co-pkg-lbl">Bronze</div>
+          <div class="co-pkg-card co-pkg-card--gold" id="co-pkg-gold" onclick="selectPackage('gold')">
+            <div class="co-pkg-lbl">Gold</div>
             <div class="co-pkg-amt">$750</div>
-          </div>
-          <div class="co-pkg-card co-pkg-card--gold selected" id="co-pkg-gold" onclick="selectPackage('gold')">
-            <div class="co-pkg-lbl">Gold &#9733; Best Value</div>
-            <div class="co-pkg-amt">$1,000</div>
           </div>
           <div class="co-pkg-card co-pkg-card--platinum" id="co-pkg-platinum" onclick="selectPackage('platinum')">
             <div class="co-pkg-lbl">Platinum</div>
+            <div class="co-pkg-amt">$1,000</div>
+          </div>
+          <div class="co-pkg-card co-pkg-card--diamond" id="co-pkg-diamond" onclick="selectPackage('diamond')">
+            <div class="co-pkg-lbl">Diamond</div>
             <div class="co-pkg-amt">$1,250</div>
           </div>
           <div class="co-pkg-card co-pkg-card--elite" id="co-pkg-elite" onclick="selectPackage('elite')">
@@ -1493,18 +1508,18 @@
           <div class="checkout-summary-card">
             <div class="co-sum-title">Your Selected Package</div>
             <div id="co-sum-inner">
-              <div class="co-sum-pkg">Gold Package</div>
-              <div class="co-sum-cash">$1,000</div>
+              <div class="co-sum-pkg">Silver Package</div>
+              <div class="co-sum-cash">$500</div>
               <ul class="co-sum-features">
-                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Full Access to Gold Courses</span></li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Full Access to Silver Courses</span></li>
                 <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Secure online sign-up</span></li>
-                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>$20,000-valued savings book</span></li>
-                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Side Hustle</span></li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>$10,000-valued savings book</span></li>
+                <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Instant Cash Side Hustle</span></li>
                 <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Budgeting tools</span></li>
                 <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Debt tools</span></li>
               </ul>
-              <div class="co-sum-pay">9 biweekly payments of $198.33</div>
-              <div class="co-sum-total">Total Price with GST: $1,785.00</div>
+              <div class="co-sum-pay">6 biweekly payments of $148.75</div>
+              <div class="co-sum-total">Total Price with GST: $892.50</div>
             </div>
             <div class="co-agree">
               <input type="checkbox" id="co-agree-check">
@@ -1519,7 +1534,7 @@
       </div>
     </div>
   </section>
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulseca.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulseca.zendesk.com</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','bronze')">Bronze</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulse.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulse.zendesk.com</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','diamond')">Diamond</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-checkout -->
 
 <!-- ==================== PAGE: PRIVACY POLICY ==================== -->
@@ -1696,7 +1711,7 @@
       <button class="btn btn-outline" onclick="navigate('home')">&larr; Back to Home</button>
     </div>
   </div>
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulseca.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulseca.zendesk.com</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','bronze')">Bronze &ndash; $500</a><a onclick="navigate('checkout','silver')">Silver &ndash; $750</a><a onclick="navigate('checkout','gold')">Gold &ndash; $1,000</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulse.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulse.zendesk.com</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','silver')">Silver &ndash; $500</a><a onclick="navigate('checkout','gold')">Gold &ndash; $750</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,000</a><a onclick="navigate('checkout','diamond')">Diamond &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-privacy -->
 
 <!-- ==================== PAGE: TERMS OF SERVICE ==================== -->
@@ -1761,10 +1776,10 @@
       <p>Credit Pulse offers tiered membership packages, each with a defined membership fee and an associated cashback benefit. Packages available as of the date of these terms include:</p>
       <ul>
         <li><strong>Starter Package:</strong> Membership fee of $425.00 | Cashback benefit of $250</li>
-        <li><strong>Bronze Package:</strong> Membership fee of $850.00 | Cashback benefit of $500</li>
-        <li><strong>Silver Package:</strong> Membership fee of $1,275.00 | Cashback benefit of $750</li>
-        <li><strong>Gold Package:</strong> Membership fee of $1,700.00 | Cashback benefit of $1,000</li>
-        <li><strong>Platinum Package:</strong> Membership fee of $2,125.00 | Cashback benefit of $1,250</li>
+        <li><strong>Silver Package:</strong> Membership fee of $850.00 | Cashback benefit of $500</li>
+        <li><strong>Gold Package:</strong> Membership fee of $1,275.00 | Cashback benefit of $750</li>
+        <li><strong>Platinum Package:</strong> Membership fee of $1,700.00 | Cashback benefit of $1,000</li>
+        <li><strong>Diamond Package:</strong> Membership fee of $2,125.00 | Cashback benefit of $1,250</li>
         <li><strong>Elite Package:</strong> Membership fee of $2,550.00 | Cashback benefit of $1,500</li>
       </ul>
       <p>Package pricing and cashback amounts are subject to change. The terms applicable to your purchase are those in effect at the time of your transaction. Membership benefits are personal and non-transferable.</p>
@@ -1877,9 +1892,12 @@
       <button class="btn btn-outline" onclick="navigate('home')">&larr; Back to Home</button>
     </div>
   </div>
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulseca.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulseca.zendesk.com</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','bronze')">Bronze &ndash; $500</a><a onclick="navigate('checkout','silver')">Silver &ndash; $750</a><a onclick="navigate('checkout','gold')">Gold &ndash; $1,000</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulse.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulse.zendesk.com</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','silver')">Silver &ndash; $500</a><a onclick="navigate('checkout','gold')">Gold &ndash; $750</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,000</a><a onclick="navigate('checkout','diamond')">Diamond &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-tos -->
 
 <script src="script.js"></script>
+<!-- Start of creditpulse Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=efc1321b-fb25-4612-85bc-f0870a6563d1"></script>
+<!-- End of creditpulse Zendesk Widget script -->
 </body>
 </html>
