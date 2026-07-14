@@ -325,6 +325,8 @@ img{max-width:100%;display:block;}
 .hc-pkg-icon--bronze{background:#fde8d0;color:#b45309;}
 .hc-pkg-icon--gold{background:#fef3c0;color:#b45309;}
 .hc-pkg-icon--elite{background:rgba(100,165,73,.18);color:var(--green-d);}
+.starter-badge-img{display:block;object-fit:contain;}
+.hc-pkg-icon .starter-badge-img{width:29px;height:29px;}
 .hc-pkg-name{font-size:.72rem;font-weight:700;color:var(--t);line-height:1.2;}
 .hc-pkg-amt{font-size:.78rem;font-weight:800;color:var(--green-d);line-height:1.2;}
 .hc-pkg-sub{font-size:.6rem;color:var(--tm);line-height:1.2;}
@@ -589,6 +591,7 @@ img{max-width:100%;display:block;}
 .pkg-icon-wrap{width:clamp(50px,5vw,58px);height:clamp(50px,5vw,58px);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .pkg-header-row{display:flex;align-items:center;gap:14px;margin-bottom:clamp(10px,1.4vw,14px);}
 .pkg-header-info{display:flex;flex-direction:column;}
+.pkg-icon-wrap .starter-badge-img{width:44px;height:44px;}
 .pkg-icon--starter{background:rgba(100,165,73,.13);color:#4D8A37;}
 .pkg-icon--bronze{background:rgba(217,119,6,.13);color:#B45309;}
 .pkg-icon--silver{background:rgba(107,114,128,.12);color:#6B7280;}
@@ -603,6 +606,8 @@ img{max-width:100%;display:block;}
 .pkg--silver .pkg-name{color:#B45309;}
 .pkg--gold .pkg-name{color:#B45309;}
 .pkg--platinum .pkg-name{color:#64748B;}
+.pkg--starter .btn-outline,.pkg--bronze .btn-outline,.pkg--silver .btn-outline{border:none;border-radius:999px;background:linear-gradient(90deg,#4a9e34 0%,#72c44a 55%,#87d454 100%);color:#fff;box-shadow:0 4px 16px rgba(80,170,50,.36),0 1px 4px rgba(0,0,0,.1);font-weight:700;}
+.pkg--starter .btn-outline:hover,.pkg--bronze .btn-outline:hover,.pkg--silver .btn-outline:hover{transform:translateY(-2px);border:none;color:#fff;background:linear-gradient(90deg,#4a9e34 0%,#72c44a 55%,#87d454 100%);box-shadow:0 8px 24px rgba(80,170,50,.48),0 3px 8px rgba(0,0,0,.12);filter:brightness(1.06);}
 /* Pkg feature list */
 .pkg-features{list-style:none;padding:0;margin:0 0 clamp(14px,2vw,20px);display:flex;flex-direction:column;gap:9px;}
 .pkg-features li{display:flex;align-items:center;gap:9px;font-size:clamp(.8rem,.95vw,.88rem);color:var(--t);font-weight:500;line-height:1.35;}
