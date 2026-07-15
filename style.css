@@ -451,6 +451,19 @@ img{max-width:100%;display:block;}
 .legal-section strong{color:var(--t);}
 .legal-back{text-align:center;padding:clamp(28px,4vw,48px) clamp(20px,4vw,48px);border-top:1px solid var(--card-b);margin-top:clamp(12px,2vw,24px);}
 .legal-back p{font-size:clamp(.84rem,1vw,.92rem);color:var(--tm);margin-bottom:clamp(14px,2vw,20px);}
+.legal-section h3{font-size:clamp(.9rem,1.2vw,1.02rem);font-weight:700;color:var(--green-d);margin:clamp(14px,2vw,20px) 0 8px;}
+.legal-callout{background:var(--bg2);border-left:3px solid var(--green);border-radius:0 var(--r) var(--r) 0;padding:clamp(12px,1.8vw,18px);margin-bottom:clamp(14px,2vw,20px);}
+.legal-callout strong{font-size:clamp(.76rem,.92vw,.84rem);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--green-d);display:block;margin-bottom:6px;}
+.legal-callout p{font-size:clamp(.86rem,1.1vw,.96rem);color:var(--tm);line-height:1.84;margin:0;}
+.legal-pkg-tbl{width:100%;border-collapse:collapse;margin-top:clamp(12px,1.8vw,18px);}
+.legal-pkg-tbl th{padding:clamp(8px,1.2vw,12px) clamp(12px,1.8vw,18px);text-align:left;font-size:clamp(.72rem,.9vw,.8rem);font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--tm);background:var(--bg2);border-bottom:2px solid var(--card-b);}
+.legal-pkg-tbl td{padding:clamp(8px,1.2vw,12px) clamp(12px,1.8vw,18px);font-size:clamp(.84rem,1vw,.93rem);color:var(--tm);border-bottom:1px solid rgba(0,0,0,.05);}
+.legal-pkg-tbl tr:last-child td{border-bottom:none;}
+.legal-pkg-tbl tr:hover td{background:rgba(100,165,73,.04);}
+.legal-contact-tbl{width:100%;border-collapse:collapse;margin:clamp(12px,1.8vw,18px) 0;}
+.legal-contact-tbl td{padding:clamp(8px,1.2vw,12px) clamp(12px,1.8vw,18px);font-size:clamp(.84rem,1vw,.93rem);color:var(--tm);border-bottom:1px solid rgba(0,0,0,.05);}
+.legal-contact-tbl td:first-child{font-weight:700;color:var(--t);white-space:nowrap;}
+.legal-contact-tbl tr:last-child td{border-bottom:none;}
 
 /* ===== BANK CAROUSEL ===== */
 .bank-section{padding:clamp(22px,3vw,36px) 0;background:var(--bg2);border-top:1px solid rgba(100,165,73,.1);border-bottom:1px solid rgba(100,165,73,.1);overflow:hidden;}
