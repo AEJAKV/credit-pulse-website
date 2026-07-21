@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,8 +14,142 @@
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts: non-blocking. display=swap already in URL for font-display:swap -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"></noscript>
+  <!-- Critical CSS: navbar + hero rendered instantly; full stylesheet loads async below -->
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --green:#64A549;--green-l:#7EC959;--green-d:#4D8A37;
+  --bg:#FFFFFF;--bg2:#F4F9F2;--card:#FFFFFF;--card-b:#D5E8CE;
+  --t:#1A2B1A;--tm:#3D5E38;--td:#374F34;
+  --accent:#CCFF00;
+  --gg:linear-gradient(135deg,#64A549,#7EC959);
+  --sg:0 4px 24px rgba(100,165,73,.28);
+  --r:14px;--rl:22px;
+  --tr:.3s cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Roboto',sans-serif;background:#fff;color:#1A2B1A;line-height:1.65;font-size:clamp(15px,1.1vw,16px);overflow-x:hidden}
+h1,h2,h3,h4,h5{font-family:'Roboto',sans-serif;line-height:1.18;letter-spacing:-.015em}
+h1{font-size:clamp(1.85rem,4.5vw,3.6rem);font-weight:900}
+p{line-height:1.72}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 clamp(16px,4vw,32px)}
+.page{display:none}
+.page.active{display:block}
+/* Buttons (hero-critical) */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:clamp(12px,1.6vw,15px) clamp(20px,3vw,30px);border-radius:var(--r);font-family:'Roboto',sans-serif;font-weight:700;font-size:clamp(.85rem,1.1vw,.96rem);letter-spacing:.025em;cursor:pointer;border:none;transition:all var(--tr);text-decoration:none;white-space:nowrap;position:relative;overflow:hidden}
+.btn-accent{background:#CCFF00;color:#1A2B1A;box-shadow:0 4px 20px rgba(204,255,0,.32)}
+.btn-lg{padding:clamp(14px,2vw,17px) clamp(28px,4vw,40px);font-size:clamp(.92rem,1.2vw,1.01rem)}
+.btn-full{width:100%;justify-content:center}
+/* Navbar */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;height:68px;background:rgba(255,255,255,.95);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(0,0,0,.08);display:flex;align-items:center;transition:box-shadow var(--tr),background var(--tr)}
+.navbar .container{display:flex;align-items:center;justify-content:space-between;width:100%;gap:clamp(12px,2vw,24px)}
+.nav-logo{display:flex;align-items:center;cursor:pointer;flex-shrink:0}
+.nav-logo img{height:clamp(48px,5.5vw,64px);width:auto}
+.nav-links{display:flex;align-items:center;gap:clamp(24px,3.2vw,44px);list-style:none}
+.nav-links a{font-size:clamp(.82rem,1vw,.9rem);font-weight:500;color:#4A6644;cursor:pointer;padding:4px 0}
+.nav-cta{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.nav-phone{display:inline-flex;align-items:center;gap:8px;font-size:.88rem;font-weight:700;color:#4A6644;padding:8px 14px;border-radius:999px;border:1px solid rgba(100,165,73,.22);background:rgba(100,165,73,.06);white-space:nowrap}
+.nav-phone svg{color:#4D8A37;flex-shrink:0}
+.nav-cta .btn-accent{border:none;border-radius:999px;padding:10px 22px;font-size:.9rem;font-weight:700;background:linear-gradient(135deg,#6f2cff 0%,#8a46ff 42%,#b067ff 100%);color:#fff;box-shadow:0 4px 16px rgba(111,44,255,.36)}
+.nav-mobile-cta{display:none}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:#1A2B1A;border-radius:2px;transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .25s ease}
+.mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(0,0,0,.08);max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1),opacity .3s ease;opacity:0;z-index:999;box-shadow:0 12px 32px rgba(0,0,0,.1)}
+.mobile-menu.open{max-height:500px;opacity:1}
+.mobile-menu a{display:block;padding:14px 24px;font-size:.95rem;font-weight:500;color:#4A6644;border-bottom:1px solid rgba(0,0,0,.06)}
+.mobile-menu-phone{display:flex;align-items:center;gap:10px;font-weight:700}
+/* Hero */
+.hero{padding:clamp(110px,15vw,152px) 0 clamp(36px,4vw,52px);background:radial-gradient(ellipse at 76% 16%,rgba(120,255,185,.2) 0%,transparent 38%),radial-gradient(ellipse at 16% 84%,rgba(190,255,0,.12) 0%,transparent 32%),radial-gradient(ellipse at 50% 108%,rgba(0,160,80,.26) 0%,transparent 52%),linear-gradient(148deg,#0d3320 0%,#174d34 32%,#1f6b49 60%,#246e4a 100%);position:relative;overflow:hidden}
+.hero-bg-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.09;mix-blend-mode:luminosity;pointer-events:none;z-index:0}
+.hero-inner{display:grid;grid-template-columns:1fr minmax(300px,42%);gap:clamp(32px,5vw,72px);align-items:center;position:relative;z-index:1}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;font-size:clamp(.67rem,.87vw,.74rem);font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#c8ffb8;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:6px 15px 6px 10px;border-radius:100px;margin-bottom:clamp(16px,2.2vw,24px)}
+.hero-headline{font-size:clamp(1.9rem,4.6vw,3.7rem);font-weight:900;line-height:1.1;letter-spacing:-.028em;color:#fff;margin-bottom:clamp(14px,2.2vw,22px)}
+.hl-accent{display:inline;background:linear-gradient(90deg,#d7ff00 0%,#aaffb0 18%,#fff 42%,#d7ff5a 64%,#d7ff00 86%,#aaffb0 100%);background-size:220% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:hlShimmer 5s ease-in-out infinite}
+@keyframes hlShimmer{0%,100%{background-position:0% center}50%{background-position:100% center}}
+.hero-sub{font-size:clamp(.9rem,1.4vw,1.07rem);color:rgba(255,255,255,.92);line-height:1.8;max-width:490px;margin-bottom:clamp(24px,3.8vw,36px)}
+.hero-ctas{display:flex;gap:clamp(10px,1.4vw,14px);align-items:center;margin-bottom:clamp(22px,3.5vw,32px)}
+.hero-cta-main{position:relative;min-width:min(100%,320px);justify-content:flex-start;gap:12px;padding:16px 24px;border-radius:20px;border:1px solid rgba(255,255,255,.34);background:linear-gradient(135deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,.08) 38%,rgba(125,255,170,.12) 100%),rgba(255,255,255,.08);color:#fff;box-shadow:0 18px 34px rgba(5,28,18,.18),inset 0 1px 0 rgba(255,255,255,.2);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);overflow:hidden}
+.hero-cta-main svg{color:#d7ff7d}
+.hero-cta-main span{position:relative;z-index:1}
+.hero-cta-main .hero-cta-arrow{margin-left:auto;font-size:1.08em}
+.trust-bar{display:inline-flex;align-items:center;padding:0;margin-bottom:clamp(16px,2.2vw,22px)}
+.trust-bar-item{display:flex;align-items:center;gap:10px;padding:4px 20px}
+.trust-bar-sep{width:1px;height:38px;background:rgba(255,255,255,.15);flex-shrink:0}
+.trust-bar-icon{width:40px;height:40px;background:rgba(0,0,0,.32);border:1px solid rgba(255,255,255,.12);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trust-bar-icon svg{color:#CCFF00;display:block}
+.trust-bar-text{display:flex;flex-direction:column;gap:2px}
+.trust-bar-l1{font-size:clamp(.75rem,.92vw,.82rem);font-weight:700;color:#fff;line-height:1.2;white-space:nowrap}
+.trust-bar-l2{font-size:clamp(.65rem,.8vw,.72rem);font-weight:500;color:rgba(255,255,255,.75);line-height:1.2;white-space:nowrap}
+/* Hero card */
+.hero-right{position:relative}
+.hero-right::before{content:'';position:absolute;inset:-68px -44px;background:radial-gradient(ellipse at 52% 48%,rgba(190,255,0,.3) 0%,rgba(100,220,120,.22) 36%,transparent 66%);filter:blur(42px);pointer-events:none;border-radius:50%;z-index:0}
+.hero-card{position:relative;z-index:1;border-radius:clamp(18px,2.5vw,26px);padding:clamp(28px,4.5vw,42px) clamp(24px,3.5vw,36px);background:rgba(255,255,255,.97);border:1px solid rgba(190,255,140,.3);box-shadow:0 4px 8px rgba(0,0,0,.1),0 18px 48px rgba(0,0,0,.28),0 38px 90px rgba(0,0,0,.22);animation:heroFloat 5.5s ease-in-out infinite}
+@keyframes heroFloat{0%,100%{transform:translateY(0) rotate(0deg)}33%{transform:translateY(-11px) rotate(-.22deg)}66%{transform:translateY(-5px) rotate(.18deg)}}
+.hc-label{font-size:clamp(.64rem,.8vw,.71rem);font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#4D8A37;margin-bottom:5px;opacity:.78;text-align:center}
+.hc-amount{font-size:clamp(3.2rem,6.5vw,5rem);font-weight:900;line-height:1;margin-bottom:6px;background:linear-gradient(130deg,#236815,#4ea02a,#7DC956);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-align:center}
+.hc-desc{font-size:clamp(.68rem,.82vw,.74rem);color:#3D5E38;opacity:.62;margin-bottom:clamp(14px,2vw,20px);line-height:1.5;text-align:center}
+.hc-desc strong{color:#4D8A37;font-weight:600;opacity:1}
+.hc-choose-lbl{font-size:.63rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#3D5E38;text-align:center;margin-bottom:9px}
+.hc-pkg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin-bottom:clamp(14px,2vw,18px)}
+.hc-pkg-tile{display:flex;flex-direction:column;align-items:center;gap:3px;padding:10px 6px 8px;border-radius:12px;border:1.5px solid rgba(100,165,73,.2);background:#f8fef5;cursor:pointer;position:relative;text-align:center}
+.hc-pkg-tile--active{border:2px solid #64A549;background:rgba(100,165,73,.1);box-shadow:0 0 0 3px rgba(100,165,73,.14)}
+.hc-pkg-check{position:absolute;top:-7px;right:-7px;width:18px;height:18px;border-radius:50%;background:#64A549;display:flex;align-items:center;justify-content:center}
+.hc-pkg-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:3px}
+.hc-pkg-icon--starter{background:#e8e8ea;color:#6b7280}
+.starter-badge-img{display:block;object-fit:contain}
+.hc-pkg-icon .starter-badge-img{width:29px;height:29px}
+.hc-pkg-icon--elite{background:rgba(100,165,73,.18);color:#4D8A37}
+.hc-pkg-name{font-size:.72rem;font-weight:700;color:#1A2B1A;line-height:1.2}
+.hc-pkg-amt{font-size:.78rem;font-weight:800;color:#4D8A37;line-height:1.2}
+.hc-pkg-sub{font-size:.6rem;color:#3D5E38;line-height:1.2}
+.hc-perks{list-style:none;padding:0;margin:0 0 clamp(14px,2vw,18px);display:flex;flex-direction:column;gap:7px}
+.hc-perks li{display:flex;align-items:center;gap:8px;font-size:clamp(.78rem,.92vw,.84rem);font-weight:500;color:#1A2B1A}
+.hc-perks li svg{flex-shrink:0;color:#64A549}
+.hc-cta-btn{background:linear-gradient(135deg,#1c4a1a,#2e6b2a);color:#fff;border-radius:12px;font-size:.9rem;font-weight:700;gap:8px}
+.hc-secure{display:flex;align-items:center;justify-content:center;gap:6px;font-size:.7rem;color:#3D5E38;margin-top:10px}
+/* Responsive - critical breakpoints */
+@media(max-width:1100px){.nav-phone span{display:none}.nav-phone{padding:10px;gap:0}}
+@media(max-width:900px){.nav-phone{display:none}}
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none}
+  .hamburger{display:flex}
+  .mobile-menu{display:block}
+  .nav-mobile-cta{display:flex;margin-left:auto;margin-right:6px;flex-shrink:0}
+  .nav-mobile-cta.btn{font-size:.68rem;padding:8px 12px;font-weight:700;background:linear-gradient(135deg,#6f2cff 0%,#8a46ff 42%,#b067ff 100%);color:#fff;box-shadow:0 4px 16px rgba(111,44,255,.36);border-radius:999px;border:none}
+  .hero-inner{grid-template-columns:1fr;gap:clamp(24px,4vw,36px)}
+  .hero-left{display:flex;flex-direction:column;align-items:center;text-align:center}
+  .hero-headline{text-align:center;font-size:clamp(2rem,9vw,3rem);line-height:1.08;letter-spacing:-.035em}
+  .hero-sub{text-align:center;max-width:100%;font-size:clamp(.88rem,3.8vw,.98rem)}
+  .hero-ctas{flex-direction:column;align-items:center;width:100%}
+  .hero-ctas .btn{width:100%;max-width:340px;justify-content:center}
+  .hero-cta-main{min-width:0;width:100%;padding:15px 20px;gap:10px}
+  .hero-cta-main .hero-cta-arrow{margin-left:0}
+  .trust-bar{align-self:center;flex-wrap:nowrap;justify-content:center}
+  .trust-bar-item{padding:3px 8px;gap:6px}
+  .trust-bar-icon{width:22px;height:22px;border-radius:6px}
+  .trust-bar-icon svg{width:12px;height:12px}
+  .trust-bar-l1{font-size:.68rem}
+  .trust-bar-l2{display:none}
+  .trust-bar-sep{height:22px}
+  .hero-right{width:100%}
+  .hero-card{margin-top:8px;width:100%}
+}
+@media(max-width:420px){.hc-pkg-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
+@media(prefers-reduced-motion:reduce){.hero-card,.hl-accent{animation:none}}
+  </style>
+  <!-- Hero image: preloaded at top of <head> -->
+  <link rel="preload" as="image" href="img-assets/credit-pulse-bg-img-1024.webp"
+        imagesrcset="img-assets/credit-pulse-bg-img-640.webp 640w, img-assets/credit-pulse-bg-img-1024.webp 1024w"
+        imagesizes="100vw"
+        fetchpriority="high">
+  <!-- Full stylesheet: loads async, non-blocking -->
+  <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
   <script src="https://fast.wistia.com/player.js" async></script>
   <script src="https://fast.wistia.com/embed/177xc8cbm9.js" async type="module"></script>
 </head>
@@ -65,7 +199,14 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg-photo"></div>
+    <img class="hero-bg-photo"
+         src="img-assets/credit-pulse-bg-img-1024.webp"
+         srcset="img-assets/credit-pulse-bg-img-640.webp 640w, img-assets/credit-pulse-bg-img-1024.webp 1024w"
+         sizes="100vw"
+         alt=""
+         fetchpriority="high"
+         loading="eager"
+         decoding="async">
     <div class="container">
       <div class="hero-inner">
 
@@ -2327,7 +2468,7 @@
   <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:support@creditpulse.zendesk.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>support@creditpulse.zendesk.com</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','silver')">Silver &ndash; $500</a><a onclick="navigate('checkout','gold')">Gold &ndash; $750</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,000</a><a onclick="navigate('checkout','diamond')">Diamond &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div><div class="ft-col"><h5>Legal</h5><a onclick="navigate('privacy')">Privacy Policy</a><a onclick="navigate('tos')">Terms of Service</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-tos -->
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 <!-- Start of creditpulse Zendesk Widget script -->
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=efc1321b-fb25-4612-85bc-f0870a6563d1"></script>
 <!-- End of creditpulse Zendesk Widget script -->

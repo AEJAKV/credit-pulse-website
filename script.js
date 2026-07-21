@@ -93,23 +93,43 @@ function filterFaq(cat, tabEl) {
   });
 }
 
+// Single IntersectionObserver instance – disconnect before reuse to prevent observer accumulation
+var _revealObs = null;
 function initReveal() {
+  if (_revealObs) { _revealObs.disconnect(); _revealObs = null; }
   var els = document.querySelectorAll('.page.active .reveal:not(.visible)');
-  var obs = new IntersectionObserver(function(entries) {
+  if (!els.length) return;
+  _revealObs = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry, i) {
       if (entry.isIntersecting) {
         setTimeout(function(){ entry.target.classList.add('visible'); }, i * 70);
-        obs.unobserve(entry.target);
+        _revealObs.unobserve(entry.target);
       }
     });
   }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-  els.forEach(function(el){ obs.observe(el); });
+  els.forEach(function(el){ _revealObs.observe(el); });
 }
 
+// Scroll handler: cache the navbar element, gate writes behind rAF, and skip
+// identical writes to avoid forcing layout recalculation on every scroll tick.
+var _navEl = null;
+var _scrollTicking = false;
+var _lastShadow = null;
 window.addEventListener('scroll', function() {
-  var nav = document.getElementById('navbar');
-  nav.style.boxShadow = window.scrollY > 40 ? '0 2px 20px rgba(0,0,0,.12)' : 'none';
-});
+  if (_scrollTicking) return;
+  _scrollTicking = true;
+  window.requestAnimationFrame(function() {
+    // Read scroll position (no layout trigger; scrollY is a cached compositor value)
+    var wantShadow = window.scrollY > 40 ? '0 2px 20px rgba(0,0,0,.12)' : 'none';
+    // Write only when the value actually changes to avoid unnecessary style invalidation
+    if (wantShadow !== _lastShadow) {
+      if (!_navEl) _navEl = document.getElementById('navbar');
+      _navEl.style.boxShadow = wantShadow;
+      _lastShadow = wantShadow;
+    }
+    _scrollTicking = false;
+  });
+}, { passive: true }); // passive:true lets the browser composite immediately without waiting for JS
 
 // Boot
 navigate('home');
