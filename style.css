@@ -1089,15 +1089,15 @@ img{max-width:100%;display:block;}
     padding:8px 12px;
     letter-spacing:.02em;
     font-weight:700;
-    background:linear-gradient(90deg,#4a9e34 0%,#72c44a 55%,#87d454 100%);
+    background:linear-gradient(135deg,#6f2cff 0%,#8a46ff 42%,#b067ff 100%);
     color:#fff;
-    box-shadow:0 4px 14px rgba(80,170,50,.34),0 1px 4px rgba(0,0,0,.1);
+    box-shadow:0 4px 16px rgba(111,44,255,.36),0 1px 4px rgba(0,0,0,.1);
     border-radius:999px;
     border:none;
     animation:none;
     transition:box-shadow .25s,transform .25s,filter .25s;
   }
-  .nav-mobile-cta.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(80,170,50,.46);filter:brightness(1.06);}
+  .nav-mobile-cta.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(111,44,255,.48),0 3px 8px rgba(0,0,0,.12);filter:brightness(1.05);}
   /* Hero: single column, center-aligned */
   .hero-inner{grid-template-columns:1fr;gap:clamp(24px,4vw,36px);}
   .hero-left{
