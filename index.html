@@ -57,6 +57,8 @@ img{max-width:100%;display:block}
 .nav-phone svg{color:#4D8A37;flex-shrink:0}
 .nav-cta .btn-accent{border:none;border-radius:999px;padding:10px 22px;font-size:.9rem;font-weight:700;background:linear-gradient(135deg,#6f2cff 0%,#8a46ff 42%,#b067ff 100%);color:#fff;box-shadow:0 4px 16px rgba(111,44,255,.36)}
 .nav-mobile-cta{display:none}
+.nav-mobile-cta svg{flex-shrink:0}
+@keyframes navMobilePulse{0%{box-shadow:0 8px 20px rgba(111,44,255,.28),0 0 0 0 rgba(138,70,255,.32)}70%{box-shadow:0 10px 26px rgba(111,44,255,.38),0 0 0 12px rgba(138,70,255,0)}100%{box-shadow:0 8px 20px rgba(111,44,255,.28),0 0 0 0 rgba(138,70,255,0)}}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
 .hamburger span{display:block;width:22px;height:2px;background:#1A2B1A;border-radius:2px;transition:transform .35s cubic-bezier(.4,0,.2,1),opacity .25s ease}
 .mobile-menu{display:none;position:fixed;top:68px;left:0;right:0;background:#fff;border-bottom:1px solid rgba(0,0,0,.08);max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1),opacity .3s ease;opacity:0;z-index:999;box-shadow:0 12px 32px rgba(0,0,0,.1)}
@@ -119,8 +121,12 @@ img{max-width:100%;display:block}
   .nav-links,.nav-cta{display:none}
   .hamburger{display:flex}
   .mobile-menu{display:block}
-  .nav-mobile-cta{display:flex;margin-left:auto;margin-right:6px;flex-shrink:0}
-  .nav-mobile-cta.btn{font-size:.68rem;padding:8px 12px;font-weight:700;background:linear-gradient(135deg,#6f2cff 0%,#8a46ff 42%,#b067ff 100%);color:#fff;box-shadow:0 4px 16px rgba(111,44,255,.36);border-radius:999px;border:none}
+  .navbar .container{gap:10px}
+  .nav-mobile-cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-left:auto;margin-right:4px;flex-shrink:0;white-space:nowrap}
+  .nav-mobile-cta.btn{font-size:.78rem;padding:11px 16px;font-weight:800;letter-spacing:.01em;background:linear-gradient(135deg,#6f2cff 0%,#8a46ff 42%,#b067ff 100%);color:#fff;box-shadow:0 8px 20px rgba(111,44,255,.28);border-radius:999px;border:none;position:relative;overflow:visible;animation:navMobilePulse 2.2s ease-out infinite}
+  .nav-mobile-cta.btn::after{content:'';position:absolute;inset:-4px;border-radius:inherit;border:1px solid rgba(176,103,255,.36);opacity:.85;animation:navMobilePulse 2.2s ease-out infinite}
+  .nav-mobile-cta.btn span{position:relative;z-index:1}
+  .nav-mobile-cta.btn svg{position:relative;z-index:1;width:15px;height:15px}
   .hero-inner{grid-template-columns:1fr;gap:clamp(24px,4vw,36px)}
   .hero-left{display:flex;flex-direction:column;align-items:center;text-align:center}
   .hero-headline{text-align:center;font-size:clamp(2rem,9vw,3rem);line-height:1.08;letter-spacing:-.035em}
@@ -176,7 +182,10 @@ img{max-width:100%;display:block}
       </a>
       <button class="btn btn-accent" onclick="navigate('checkout')" style="display:inline-flex;align-items:center;gap:7px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Pick Benefits Now &rarr;</button>
     </div>
-    <button class="nav-mobile-cta btn" onclick="navigate('checkout')">Pick Benefits Now</button>
+    <button class="nav-mobile-cta btn" onclick="navigate('checkout')" aria-label="Pick Benefits Now">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+      <span>Pick Benefits Now</span>
+    </button>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -1608,7 +1617,7 @@ img{max-width:100%;display:block}
           </div>
           <div class="faq-item" data-cat="about">
             <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><span>Is Credit Pulse a credit repair company or financial adviser?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">No. Credit Pulse provides general financial education and wellness resources. It does not provide individualized legal, tax, investment, insolvency, debt-management, or credit-repair advice.</div></div>
+            <div class="faq-a"><div class="faq-a-in"><p>No. Credit Pulse is not a credit repair company, credit counselling agency, lender, or licensed financial adviser. We provide financial education, budgeting tools, informational resources, membership benefits, and general guidance designed to help members better understand and manage their finances.</p><p>The information provided through Credit Pulse is for general educational and informational purposes only. It should not be considered professional financial, legal, tax, credit, or investment advice. Your financial situation is unique, and you should consult a qualified professional before making significant financial decisions.</p><p>Credit Pulse does not guarantee that your credit score, credit report, financial position, or eligibility for credit will improve as a result of using our services.</p></div></div>
           </div>
           <div class="faq-item" data-cat="about">
             <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><span>Will joining Credit Pulse improve my credit score?</span></div><span class="faq-icon">+</span></button>
