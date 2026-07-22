@@ -1,0 +1,15 @@
+# Apache SPA fallback — serves index.html for all clean-URL routes
+# so the JS router can read window.location.pathname and show the correct page.
+# Real directories (blog/, budget-tool/, debt-tool/) pass through untouched.
+
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# Pass through real files and real directories (blog, budget-tool, debt-tool, etc.)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Rewrite all other single-level paths to index.html (SPA catch-all)
+RewriteRule ^ /index.html [L]

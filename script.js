@@ -8,6 +8,23 @@ var pkgData = {
 };
 var selectedPkg = 'silver';
 
+// Page-id ↔ URL-path routing tables
+var PAGE_URLS = {
+  home:     '/',
+  hiw:      '/how-it-works',
+  packages: '/packages',
+  faq:      '/faq',
+  contact:  '/contact-us',
+  checkout: '/checkout',
+  privacy:  '/privacy-policy',
+  tos:      '/terms-of-service'
+};
+var URL_PAGES = (function() {
+  var m = {};
+  Object.keys(PAGE_URLS).forEach(function(k) { m[PAGE_URLS[k]] = k; });
+  return m;
+}());
+
 function navigate(page, pkg) {
   document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
   var el = document.getElementById('page-' + page);
@@ -21,6 +38,14 @@ function navigate(page, pkg) {
   if (nl) nl.classList.add('active');
   // Re-run reveal for new page
   initReveal();
+  // Keep the browser URL in sync — enables direct linking and back/forward
+  var _newPath = PAGE_URLS[page] || '/';
+  if (window.location.pathname !== _newPath) {
+    history.pushState({ page: page, pkg: pkg || null }, '', _newPath);
+  } else {
+    // Attach state to the initial history entry on first load
+    history.replaceState({ page: page, pkg: pkg || null }, '', _newPath);
+  }
 }
 
 function navigateToPackagesGrid() {
@@ -131,5 +156,17 @@ window.addEventListener('scroll', function() {
   });
 }, { passive: true }); // passive:true lets the browser composite immediately without waiting for JS
 
-// Boot
-navigate('home');
+// Back / forward button support
+window.addEventListener('popstate', function(e) {
+  var page = (e.state && e.state.page)
+    ? e.state.page
+    : (URL_PAGES[window.location.pathname.replace(/\/$/, '') || '/'] || 'home');
+  var pkg  = e.state && e.state.pkg ? e.state.pkg : undefined;
+  navigate(page, pkg);
+});
+
+// Boot: navigate to the page that matches the current URL so direct links work
+(function() {
+  var initPath = window.location.pathname.replace(/\/$/, '') || '/';
+  navigate(URL_PAGES[initPath] || 'home');
+}());

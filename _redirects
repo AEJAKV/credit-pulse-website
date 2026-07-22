@@ -1,0 +1,13 @@
+# Netlify SPA fallback rules
+# These rewrite clean URLs to index.html (200 = serve index.html, not redirect)
+# so the JS router can read window.location.pathname and show the correct page.
+# The blog/, budget-tool/, and debt-tool/ directories are real folders and
+# must NOT be caught here (Netlify checks real files/dirs first by default).
+
+/how-it-works      /index.html    200
+/packages          /index.html    200
+/faq               /index.html    200
+/contact-us        /index.html    200
+/checkout          /index.html    200
+/privacy-policy    /index.html    200
+/terms-of-service  /index.html    200
