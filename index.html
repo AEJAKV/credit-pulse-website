@@ -151,7 +151,7 @@ img{max-width:100%;display:block}
   <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="style.css"></noscript>
   <script src="https://fast.wistia.com/player.js" async></script>
-  <script src="https://fast.wistia.com/embed/177xc8cbm9.js" async type="module"></script>
+  <script src="https://fast.wistia.com/embed/waxd1v7eu4.js" async type="module"></script>
 </head>
 <body>
 
@@ -214,7 +214,7 @@ img{max-width:100%;display:block}
         <div class="hero-left">
           <div class="hero-badge">Financial Knowledge Cashback Program</div>
           <h1 class="hero-headline">Subscribe to Programs,<br><span class="hl-accent">Get Instant Cashback</span></h1>
-          <p class="hero-sub">Choose a Credit Pulse membership package, access practical financial education tools, and receive eligible cashback based on your selected tier.</p>
+          <p class="hero-sub">Choose a Credit Pulse membership package, Get VIP savings up to $30,000.00, cashback, and life enhancing courses + tools</p>
           <div class="hero-ctas">
             <button class="btn btn-lg hero-cta-main" onclick="navigate('hiw')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg><span>See How it Works</span><span class="hero-cta-arrow">&#8594;</span></button>
           </div>
@@ -615,6 +615,149 @@ img{max-width:100%;display:block}
     </div>
   </section>
 
+  <!-- WHAT'S INCLUDED -->
+  <section class="section wni-section">
+    <style>
+    .wni-section{background:var(--bg2,#F4F9F2);padding-top:clamp(24px,3vw,36px);padding-bottom:clamp(24px,3vw,36px);}
+    .wni-inner{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(28px,4vw,52px);align-items:start;}
+    /* ---- video column ---- */
+    .wni-video-col{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+      justify-content:flex-start;
+      gap:clamp(18px,2.4vw,24px);
+    }
+    .wni-copy{max-width:560px;}
+    .wni-video-wrap{
+      width:min(100%,620px);
+      border-radius:clamp(16px,2vw,22px);
+      overflow:hidden;
+      border:2px solid rgba(100,165,73,.38);
+      box-shadow:0 8px 40px rgba(100,165,73,.14),0 2px 16px rgba(0,0,0,.08);
+      position:relative;
+      background:#0f3320;
+    }
+    .wni-video-wrap wistia-player{display:block;width:100%;}
+    .wni-fine-print{
+      display:flex;
+      align-items:flex-start;
+      gap:10px;
+      width:min(100%,620px);
+      margin:2px 0 0;
+      padding:12px 14px;
+      border-radius:14px;
+      background:rgba(244,249,242,.92);
+      border:1px solid rgba(100,165,73,.18);
+      color:var(--tm,#3D5E38);
+      font-size:clamp(.78rem,.95vw,.86rem);
+      line-height:1.55;
+    }
+    .wni-fine-print svg{
+      flex-shrink:0;
+      color:#76a363;
+      margin-top:1px;
+    }
+    /* ---- features column ---- */
+    .wni-features-col{display:flex;flex-direction:column;justify-content:center;min-width:0;padding-top:clamp(8px,1.4vw,18px);}
+    .wni-features-col .sec-label{display:inline-flex;align-items:center;gap:6px;}
+    .wni-col-hd{font-size:clamp(1.5rem,3vw,2.4rem);font-weight:800;color:var(--t,#1A2B1A);line-height:1.18;margin:clamp(8px,1.2vw,12px) 0 clamp(6px,.9vw,9px);}
+    .wni-col-sub{font-size:clamp(.86rem,1.1vw,.94rem);color:var(--tm,#3D5E38);line-height:1.72;margin-bottom:clamp(20px,2.8vw,28px);}
+    .wni-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;}
+    .wni-list li{
+      display:flex;align-items:center;gap:13px;
+      padding:11px 16px;
+      border-radius:12px;
+      background:#fff;
+      border:1px solid rgba(100,165,73,.16);
+      font-size:clamp(.82rem,1vw,.9rem);color:var(--t,#1A2B1A);font-weight:500;line-height:1.35;
+      transition:border-color .22s,box-shadow .22s,transform .22s;
+    }
+    .wni-list li:hover{border-color:rgba(100,165,73,.4);box-shadow:0 4px 18px rgba(100,165,73,.1);transform:translateX(3px);}
+    .wni-icon{
+      width:32px;height:32px;flex-shrink:0;
+      border-radius:50%;
+      background:rgba(100,165,73,.1);border:1.5px solid rgba(100,165,73,.26);
+      display:flex;align-items:center;justify-content:center;color:#4D8A37;
+    }
+    .wni-list li strong{color:var(--green-d,#4D8A37);}
+    .wni-card{
+      background:#fff;
+      border:1px solid rgba(100,165,73,.16);
+      border-radius:clamp(20px,2.5vw,28px);
+      padding:clamp(26px,3.8vw,44px) clamp(24px,3.4vw,44px);
+      box-shadow:0 4px 32px rgba(100,165,73,.08),0 1px 8px rgba(0,0,0,.04);
+      max-width:1140px;
+      margin:0 auto;
+    }
+    @media(prefers-reduced-motion:reduce){.wni-play-btn{transition:none;}.wni-list li{transition:none;}}
+    @media(max-width:980px){.wni-inner{grid-template-columns:1fr;gap:clamp(24px,4vw,36px);}.wni-copy,.wni-features-col{max-width:700px;margin:0 auto;width:100%;}.wni-video-col{align-items:center;}.wni-video-wrap{width:min(100%,680px);margin:0 auto;}.wni-features-col{padding-top:0;}}
+    @media(max-width:820px){.wni-card{padding:24px 18px;}.wni-video-wrap{width:100%;}}
+    </style>
+    <div class="container">
+      <div class="wni-card">
+      <div class="wni-inner">
+
+        <!-- LEFT: 16:9 video placeholder -->
+        <div class="wni-video-col reveal">
+          <div class="wni-copy">
+            <span class="sec-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:inline-block;vertical-align:middle;margin-right:4px;margin-top:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>What You Get</span>
+            <h2 class="wni-col-hd">Every Membership Includes</h2>
+            <p class="wni-col-sub">Unlock real value from day one — cashback, savings, education, and tools all bundled into one membership.</p>
+          </div>
+          <div class="wni-video-wrap">
+            <style>wistia-player[media-id='waxd1v7eu4']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/waxd1v7eu4/swatch');display:block;filter:blur(5px);padding-top:56.25%;}</style>
+            <wistia-player media-id="waxd1v7eu4" seo="false" aspect="1.7777777777777777" style="display:block;width:100%;"></wistia-player>
+          </div>
+          <div class="wni-fine-print">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span>A short walkthrough of how Credit Pulse membership and cashback works, from package selection to confirmed cashback.</span>
+          </div>
+        </div>
+
+        <!-- RIGHT: membership offer pills -->
+        <div class="wni-features-col reveal">
+          <ul class="wni-list">
+            <li>
+              <div class="wni-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+              <span><strong>Up to $1,500 Cashback</strong> earned upon membership activation</span>
+            </li>
+            <li>
+              <div class="wni-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
+              <span><strong>VIP Savings Book</strong> — up to $30,000 in partner offers &amp; discounts</span>
+            </li>
+            <li>
+              <div class="wni-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+              <span><strong>Instant Cash Side Hustle</strong> — proven ways to earn money fast</span>
+            </li>
+            <li>
+              <div class="wni-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+              <span><strong>Budgeting Tools</strong> &amp; financial planning templates</span>
+            </li>
+            <li>
+              <div class="wni-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              <span><strong>Debt Organization Worksheets</strong> to manage &amp; reduce debt</span>
+            </li>
+            <li>
+              <div class="wni-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+              <span><strong>Financial Education Courses</strong> — expert content for every tier</span>
+            </li>
+            <li>
+              <div class="wni-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+              <span><strong>Secure Online Process</strong> — no credit check, 100% encrypted</span>
+            </li>
+            <li>
+              <div class="wni-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+              <span><strong>Priority Support &amp; Premium Resources</strong> — Diamond &amp; Elite tiers</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      </div>
+    </div>
+  </section>
+
   <!-- BENEFITS -->
   <section class="section hiw-bg" style="padding-top:clamp(36px,5vw,60px);padding-bottom:clamp(36px,5vw,60px);">
     <div class="container">
@@ -805,8 +948,8 @@ img{max-width:100%;display:block}
           <span class="hiw-vid-glow hiw-vid-glow-b" aria-hidden="true"></span>
           <svg class="hiw-vid-ekg-accent" viewBox="0 0 160 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="0,14 46,14 58,14 66,3 76,25 84,14 100,14 160,14" stroke="rgba(100,165,73,.55)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div class="hiw-vid-player-wrap">
-            <style>wistia-player[media-id='177xc8cbm9']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/177xc8cbm9/swatch');display:block;filter:blur(5px);padding-top:56.25%;}</style>
-            <wistia-player media-id="177xc8cbm9" seo="false" aspect="1.7777777777777777"></wistia-player>
+            <style>wistia-player[media-id='waxd1v7eu4']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/waxd1v7eu4/swatch');display:block;filter:blur(5px);padding-top:56.25%;}</style>
+            <wistia-player media-id="waxd1v7eu4" seo="false" aspect="1.7777777777777777"></wistia-player>
           </div>
         </div>
         <div class="hiw-vid-caption">
