@@ -456,6 +456,8 @@ img{max-width:100%;display:block;}
 .legal-section ul{padding-left:1.5em;margin:10px 0;}
 .legal-section li{font-size:clamp(.86rem,1.1vw,.96rem);color:var(--tm);line-height:1.8;margin-bottom:6px;}
 .legal-section strong{color:var(--t);}
+.legal-section a{color:var(--green);text-decoration:underline;text-underline-offset:3px;transition:color var(--tr);}
+.legal-section a:hover{color:var(--green-d);}
 .legal-back{text-align:center;padding:clamp(28px,4vw,48px) clamp(20px,4vw,48px);border-top:1px solid var(--card-b);margin-top:clamp(12px,2vw,24px);}
 .legal-back p{font-size:clamp(.84rem,1vw,.92rem);color:var(--tm);margin-bottom:clamp(14px,2vw,20px);}
 .legal-section h3{font-size:clamp(.9rem,1.2vw,1.02rem);font-weight:700;color:var(--green-d);margin:clamp(14px,2vw,20px) 0 8px;}
