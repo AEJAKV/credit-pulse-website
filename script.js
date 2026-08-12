@@ -66,21 +66,52 @@ function navigateToSignup() {
 
 function selectPackage(pkg) {
   selectedPkg = pkg;
-  document.querySelectorAll('.co-pkg-card').forEach(function(c){ c.classList.remove('selected'); });
+  document.querySelectorAll('.co-pkg-card').forEach(function(c){
+    c.classList.remove('selected');
+    c.setAttribute('aria-pressed', 'false');
+  });
   var card = document.getElementById('co-pkg-' + pkg);
-  if (card) card.classList.add('selected');
+  if (card) {
+    card.classList.add('selected');
+    card.setAttribute('aria-pressed', 'true');
+  }
   var d = pkgData[pkg];
   if (!d) return;
+  renderPackagePreview(pkg);
   var el = document.getElementById('co-sum-inner');
   if (el) {
     var chk = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
     var featuresHtml = '<ul class="co-sum-features">' + d.features.map(function(f){ return '<li>' + chk + '<span>' + f + '</span></li>'; }).join('') + '</ul>';
     el.innerHTML = '<div class="co-sum-pkg">' + d.name + '</div>' +
-      '<div class="co-sum-cash">' + d.cash + '</div>' +
+      '<div class="co-sum-cash-row"><div class="co-sum-cash">' + d.cash + '</div>' +
+      '<div class="co-sum-cash-note">Cashback earned upon membership activation</div></div>' +
       featuresHtml +
       '<div class="co-sum-pay">' + d.pay + '</div>' +
       '<div class="co-sum-total">Total Price with GST: ' + d.total + '</div>';
   }
+}
+
+function previewPackage(pkg) {
+  renderPackagePreview(pkg);
+}
+
+function restorePackagePreview() {
+  renderPackagePreview(selectedPkg);
+}
+
+function renderPackagePreview(pkg) {
+  var d = pkgData[pkg];
+  var preview = document.getElementById('co-pkg-preview');
+  var name = document.getElementById('co-preview-name');
+  var cash = document.getElementById('co-preview-cash');
+  var features = document.getElementById('co-preview-features');
+  if (!d || !preview || !name || !cash || !features) return;
+  name.textContent = d.name;
+  cash.textContent = d.cash + ' Cashback';
+  features.innerHTML = d.features.map(function(feature) {
+    return '<li>' + feature + '</li>';
+  }).join('');
+  preview.setAttribute('data-package', pkg);
 }
 
 function handleSubmit(e) {

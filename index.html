@@ -2029,30 +2029,56 @@ img{max-width:100%;display:block}
       <div class="co-pkg-section reveal">
         <h3><span>1</span> Choose Your Package</h3>
         <div class="co-pkg-grid">
-          <div class="co-pkg-card co-pkg-card--starter" id="co-pkg-starter" onclick="selectPackage('starter')">
+          <button type="button" class="co-pkg-card co-pkg-card--starter" id="co-pkg-starter" onclick="selectPackage('starter')" onmouseenter="previewPackage('starter')" onmouseleave="restorePackagePreview()" onfocus="previewPackage('starter')" onblur="restorePackagePreview()" aria-pressed="false">
             <div class="co-pkg-lbl">Starter</div>
             <div class="co-pkg-amt">$250</div>
-          </div>
-          <div class="co-pkg-card co-pkg-card--silver selected" id="co-pkg-silver" onclick="selectPackage('silver')">
+            <div class="co-pkg-kind">Cashback</div>
+          </button>
+          <button type="button" class="co-pkg-card co-pkg-card--silver selected" id="co-pkg-silver" onclick="selectPackage('silver')" onmouseenter="previewPackage('silver')" onmouseleave="restorePackagePreview()" onfocus="previewPackage('silver')" onblur="restorePackagePreview()" aria-pressed="true">
             <div class="co-pkg-lbl">Silver</div>
             <div class="co-pkg-amt">$500</div>
-          </div>
-          <div class="co-pkg-card co-pkg-card--gold" id="co-pkg-gold" onclick="selectPackage('gold')">
+            <div class="co-pkg-kind">Cashback</div>
+          </button>
+          <button type="button" class="co-pkg-card co-pkg-card--gold" id="co-pkg-gold" onclick="selectPackage('gold')" onmouseenter="previewPackage('gold')" onmouseleave="restorePackagePreview()" onfocus="previewPackage('gold')" onblur="restorePackagePreview()" aria-pressed="false">
             <div class="co-pkg-lbl">Gold</div>
             <div class="co-pkg-amt">$750</div>
-          </div>
-          <div class="co-pkg-card co-pkg-card--platinum" id="co-pkg-platinum" onclick="selectPackage('platinum')">
+            <div class="co-pkg-kind">Cashback</div>
+          </button>
+          <button type="button" class="co-pkg-card co-pkg-card--platinum" id="co-pkg-platinum" onclick="selectPackage('platinum')" onmouseenter="previewPackage('platinum')" onmouseleave="restorePackagePreview()" onfocus="previewPackage('platinum')" onblur="restorePackagePreview()" aria-pressed="false">
             <div class="co-pkg-lbl">Platinum</div>
             <div class="co-pkg-amt">$1,000</div>
-          </div>
-          <div class="co-pkg-card co-pkg-card--diamond" id="co-pkg-diamond" onclick="selectPackage('diamond')">
+            <div class="co-pkg-kind">Cashback</div>
+          </button>
+          <button type="button" class="co-pkg-card co-pkg-card--diamond" id="co-pkg-diamond" onclick="selectPackage('diamond')" onmouseenter="previewPackage('diamond')" onmouseleave="restorePackagePreview()" onfocus="previewPackage('diamond')" onblur="restorePackagePreview()" aria-pressed="false">
             <div class="co-pkg-lbl">Diamond</div>
             <div class="co-pkg-amt">$1,250</div>
-          </div>
-          <div class="co-pkg-card co-pkg-card--elite" id="co-pkg-elite" onclick="selectPackage('elite')">
+            <div class="co-pkg-kind">Cashback</div>
+          </button>
+          <button type="button" class="co-pkg-card co-pkg-card--elite" id="co-pkg-elite" onclick="selectPackage('elite')" onmouseenter="previewPackage('elite')" onmouseleave="restorePackagePreview()" onfocus="previewPackage('elite')" onblur="restorePackagePreview()" aria-pressed="false">
             <div class="co-pkg-lbl">Elite</div>
             <div class="co-pkg-amt">$1,500</div>
+            <div class="co-pkg-kind">Cashback</div>
+          </button>
+        </div>
+        <div class="co-pkg-preview" id="co-pkg-preview" aria-live="polite">
+          <div class="co-preview-head">
+            <div class="co-preview-heading">
+              <span class="co-preview-eyebrow">Included with your membership</span>
+              <h4 id="co-preview-name">Silver Package</h4>
+            </div>
+            <div class="co-preview-cash">
+              <strong id="co-preview-cash">$500 Cashback</strong>
+              <span>Earned upon membership activation</span>
+            </div>
           </div>
+          <ul class="co-preview-features" id="co-preview-features">
+            <li>Full Access to Silver Courses</li>
+            <li>Secure online sign-up</li>
+            <li>$10,000-valued savings book</li>
+            <li>Instant Cash Side Hustle</li>
+            <li>Budgeting tools</li>
+            <li>Debt tools</li>
+          </ul>
         </div>
       </div>
 
@@ -2066,7 +2092,10 @@ img{max-width:100%;display:block}
             <div class="co-sum-title">Your Selected Package</div>
             <div id="co-sum-inner">
               <div class="co-sum-pkg">Silver Package</div>
-              <div class="co-sum-cash">$500</div>
+              <div class="co-sum-cash-row">
+                <div class="co-sum-cash">$500</div>
+                <div class="co-sum-cash-note">Cashback earned upon membership activation</div>
+              </div>
               <ul class="co-sum-features">
                 <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Full Access to Silver Courses</span></li>
                 <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Secure online sign-up</span></li>
