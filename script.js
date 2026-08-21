@@ -233,10 +233,15 @@ function initScratchCards() {
         ctx.stroke();
       }
       ctx.fillStyle = 'rgba(255,255,255,.92)';
-      ctx.font = '700 12px Arial, sans-serif';
+      var label = '🎁 SCRATCH TO REVEAL VIP MEMBERSHIP PERKS';
+      var fontSize = 12;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
-      ctx.fillText('🎁 SCRATCH TO REVEAL YOUR BONUS', w / 2, h / 2);
+      do {
+        ctx.font = '700 ' + fontSize + 'px Arial, sans-serif';
+        fontSize -= 0.5;
+      } while (ctx.measureText(label).width > w - 24 && fontSize > 8);
+      ctx.fillText(label, w / 2, h / 2);
     }
 
     function size() {
