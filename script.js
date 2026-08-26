@@ -85,7 +85,7 @@ function selectHeroPkg(pkg) {
 
   var savingsFeature = d.features.filter(function(f) { return /VIP Membership Perks/i.test(f); })[0] || '';
   var savingsAmt = (savingsFeature.match(/\$[\d,]+/) || [])[0];
-  var savingsLabel = savingsAmt ? savingsAmt + '+ VIP Membership Perks' : '';
+  var savingsLabel = savingsAmt ? 'Up to ' + savingsAmt + ' VIP Membership Perks' : '';
 
   var perk1 = document.getElementById('hc-perk-1');
   var perk2 = document.getElementById('hc-perk-2');
