@@ -14,6 +14,8 @@ RewriteRule ^ - [L]
 # Standalone static pages (must come BEFORE the SPA catch-all below)
 RewriteRule ^how-it-works/?$     /how-it-works.html      [L]
 RewriteRule ^faq/?$              /faq.html               [L]
+RewriteRule ^packages/?$         /packages.html          [L]
+RewriteRule ^contact-us/?$       /contact-us.html        [L]
 RewriteRule ^privacy-policy/?$    /privacy-policy.html    [L]
 RewriteRule ^terms-of-service/?$  /terms-of-service.html  [L]
 
