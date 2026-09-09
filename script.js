@@ -11,11 +11,10 @@ var selectedPkg = 'silver';
 // Page-id ↔ URL-path routing tables
 var PAGE_URLS = {
   home:     '/',
-  packages: '/packages',
-  contact:  '/contact-us',
   checkout: '/checkout'
-  // NOTE: how-it-works, faq, privacy-policy and terms-of-service are real
-  // static pages now and are deliberately NOT routed by the SPA.
+  // NOTE: every other route is a real static page now (how-it-works, packages,
+  // faq, contact-us, privacy-policy, terms-of-service) and is deliberately NOT
+  // routed by the SPA. index.html serves only the homepage and checkout.
 };
 var URL_PAGES = (function() {
   var m = {};
