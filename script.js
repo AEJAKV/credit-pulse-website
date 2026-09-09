@@ -11,13 +11,11 @@ var selectedPkg = 'silver';
 // Page-id ↔ URL-path routing tables
 var PAGE_URLS = {
   home:     '/',
-  hiw:      '/how-it-works',
   packages: '/packages',
-  faq:      '/faq',
   contact:  '/contact-us',
   checkout: '/checkout'
-  // NOTE: privacy + tos are real static pages now (privacy-policy.html,
-  // terms-of-service.html) and are deliberately NOT routed by the SPA.
+  // NOTE: how-it-works, faq, privacy-policy and terms-of-service are real
+  // static pages now and are deliberately NOT routed by the SPA.
 };
 var URL_PAGES = (function() {
   var m = {};
@@ -365,12 +363,19 @@ window.addEventListener('popstate', function(e) {
 
 // Boot: navigate to the page that matches the current URL so direct links work
 (function() {
-  // Standalone static pages (privacy-policy.html, terms-of-service.html) ship no
-  // .page sections - the SPA router must not boot there.
-  if (!document.querySelector('.page')) { return; }
   var initPath = window.location.pathname.replace(/\/$/, '') || '/';
-  var initPage = URL_PAGES[initPath] || 'home';
-  // Carry the package tier across a real page load: /checkout?pkg=elite
-  var qp = new URLSearchParams(window.location.search).get('pkg');
-  navigate(initPage, (initPage === 'checkout' && qp && pkgData[qp]) ? qp : undefined);
+  var initPage = URL_PAGES[initPath];
+  // index.html still serves several routes; anything unmapped falls back to home.
+  if (!initPage && document.getElementById('page-home')) { initPage = 'home'; }
+  if (initPage) {
+    // Carry the package tier across a real page load: /checkout?pkg=elite
+    var qp = new URLSearchParams(window.location.search).get('pkg');
+    navigate(initPage, (initPage === 'checkout' && qp && pkgData[qp]) ? qp : undefined);
+  } else {
+    // Standalone static page (how-it-works.html, faq.html, privacy-policy.html,
+    // terms-of-service.html): nothing to route, but the section still needs its
+    // scroll-reveal observer and scratch cards initialised.
+    initReveal();
+    initScratchCards();
+  }
 }());

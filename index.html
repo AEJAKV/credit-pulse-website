@@ -176,9 +176,9 @@ img{max-width:100%;display:block}
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a id="nl-home" href="/" onclick="event.preventDefault();navigate('home')">Home</a></li>
-      <li><a id="nl-hiw" href="/how-it-works" onclick="event.preventDefault();navigate('hiw')">How It Works</a></li>
+      <li><a id="nl-hiw" href="/how-it-works">How It Works</a></li>
       <li><a id="nl-packages" href="/packages" onclick="event.preventDefault();navigate('packages')">Packages</a></li>
-      <li><a id="nl-faq" href="/faq" onclick="event.preventDefault();navigate('faq')">FAQ</a></li>
+      <li><a id="nl-faq" href="/faq">FAQ</a></li>
       <li><a id="nl-contact" href="/contact-us" onclick="event.preventDefault();navigate('contact')">Contact</a></li>
       <li><a href="blog/" id="nl-blog">Blog</a></li>
     </ul>
@@ -202,9 +202,9 @@ img{max-width:100%;display:block}
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="/" onclick="event.preventDefault();navigate('home');closeMenu()">Home</a>
-  <a href="/how-it-works" onclick="event.preventDefault();navigate('hiw');closeMenu()">How It Works</a>
+  <a href="/how-it-works">How It Works</a>
   <a href="/packages" onclick="event.preventDefault();navigate('packages');closeMenu()">Packages</a>
-  <a href="/faq" onclick="event.preventDefault();navigate('faq');closeMenu()">FAQ</a>
+  <a href="/faq">FAQ</a>
   <a href="/contact-us" onclick="event.preventDefault();navigate('contact');closeMenu()">Contact</a>
   <a class="mobile-menu-phone" href="tel:18886888785" onclick="closeMenu()" aria-label="Call Credit Pulse at plus one eight eight eight six eight eight eight seven eight five"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a>
   <a href="blog/">Blog</a>
@@ -231,7 +231,7 @@ img{max-width:100%;display:block}
           <h1 class="hero-headline">Subscribe now and<br>Get $250 - $1,500<br><span class="hl-accent">Cashback Today</span></h1>
           <p class="hero-sub">Pick your package, get instant cashback today plus these bonuses: VIP Membership Perks worth $5,000+, self-guided financial help courses and tools</p>
           <div class="hero-ctas">
-            <button class="btn btn-lg hero-cta-main" onclick="navigate('hiw')"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg><span>See How it Works</span><span class="hero-cta-arrow">&#8594;</span></button>
+            <button class="btn btn-lg hero-cta-main" onclick="location.href='/how-it-works'"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg><span>See How it Works</span><span class="hero-cta-arrow">&#8594;</span></button>
           </div>
           <div class="trust-bar">
             <div class="trust-bar-item">
@@ -780,7 +780,7 @@ img{max-width:100%;display:block}
         </div>
       </div>
       <div style="text-align:center;margin-top:clamp(20px,3vw,28px);" class="reveal">
-        <button class="btn btn-outline" onclick="navigate('hiw')">Learn More About How It Works &#8594;</button>
+        <button class="btn btn-outline" onclick="location.href='/how-it-works'">Learn More About How It Works &#8594;</button>
       </div>
       </div>
     </div>
@@ -1028,7 +1028,7 @@ img{max-width:100%;display:block}
         </div>
       </div>
       <div style="text-align:center;margin-top:18px;" class="reveal">
-        <button class="btn btn-outline" onclick="navigate('faq')">See All FAQs &#8594;</button>
+        <button class="btn btn-outline" onclick="location.href='/faq'">See All FAQs &#8594;</button>
         <p style="margin-top:14px;font-size:clamp(.8rem,.95vw,.88rem);color:var(--green-d);display:flex;align-items:center;justify-content:center;gap:7px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10" fill="none" stroke="#fff" stroke-width="2"/></svg>Still have questions? Our support team is <a href="mailto:support@creditpulse.ca" style="color:var(--green-d);font-weight:700;text-decoration:underline;text-underline-offset:3px;">here to help.</a></p>
       </div>
     </div>
@@ -1043,7 +1043,7 @@ img{max-width:100%;display:block}
             <p>Our members already building stronger financial futures with Credit Pulse. Join Now!</p>
             <div class="pkg-cta-btns">
               <button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg> Pick Benefits Now &rarr;</button>
-              <button class="btn-ghost-white" onclick="navigate('hiw')"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg> How It Works</button>
+              <button class="btn-ghost-white" onclick="location.href='/how-it-works'"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg> How It Works</button>
             </div>
             <div class="pkg-cta-trust">
               <span class="pkg-cta-trust-line"></span>
@@ -1075,9 +1075,9 @@ img{max-width:100%;display:block}
             </a>
           </div>
         </div>
-        <div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div>
+        <div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a href="/how-it-works">How It Works</a><a onclick="navigate('packages')">Packages</a><a href="/faq">FAQ</a><a onclick="navigate('contact')">Contact</a></div>
         <div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','silver')">Silver &ndash; $500</a><a onclick="navigate('checkout','gold')">Gold &ndash; $750</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,000</a><a onclick="navigate('checkout','diamond')">Diamond &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div>
-        <div class="ft-col"><h5>Legal</h5><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a><a href="/faq" onclick="event.preventDefault();navigate('faq')">FAQ</a><a href="/contact-us" onclick="event.preventDefault();navigate('contact')">Contact Us</a></div>
+        <div class="ft-col"><h5>Legal</h5><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a><a href="/faq">FAQ</a><a href="/contact-us" onclick="event.preventDefault();navigate('contact')">Contact Us</a></div>
       </div>
       <div class="ft-bot">
         <p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary based on package selection, user eligibility, and completion of required steps.</p>
@@ -1087,267 +1087,6 @@ img{max-width:100%;display:block}
   </footer>
 </div><!-- end page-home -->
 
-<!-- ==================== PAGE: HOW IT WORKS ==================== -->
-<div id="page-hiw" class="page">
-  <div class="page-hdr">
-    <div class="container">
-      <span class="sec-label">The Process</span>
-      <h1>How Credit Pulse Cashback Works</h1>
-      <p>A simple, transparent process. Here is exactly what to expect from the moment you select a package to when your eligible cashback may be processed.</p>
-    </div>
-  </div>
-
-  <!-- STEP OVERVIEW -->
-  <section class="section hiw-bg hiw-overview-sec">
-    <div class="container">
-      <!-- Eyebrow -->
-      <div class="hiw-eyebrow reveal">
-        <span class="sec-label hiw-eyebrow-lbl"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Education-Based Cashback Program</span>
-      </div>
-      <!-- Heading with EKG lines -->
-      <div class="hiw-heading-row reveal">
-        <svg class="hiw-ekg" viewBox="0 0 130 32" fill="none" xmlns="http://www.w3.org/2000/svg"><polyline points="0,16 38,16 50,16 56,3 63,29 70,16 84,16 130,16" stroke="#64A549" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h2 class="hiw-main-hd">HOW IT WORKS</h2>
-        <svg class="hiw-ekg" viewBox="0 0 130 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform:scaleX(-1)"><polyline points="0,16 38,16 50,16 56,3 63,29 70,16 84,16 130,16" stroke="#64A549" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </div>
-      <!-- Subtitle -->
-      <p class="hiw-sub reveal">Getting your cashback with Credit Pulse is <strong>simple, secure,</strong> and <strong>rewarding.</strong></p>
-      <!-- Video -->
-      <div class="hiw-video-outer reveal">
-        <div class="hiw-video-ratio">
-          <span class="hiw-vid-glow hiw-vid-glow-a" aria-hidden="true"></span>
-          <span class="hiw-vid-glow hiw-vid-glow-b" aria-hidden="true"></span>
-          <svg class="hiw-vid-ekg-accent" viewBox="0 0 160 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="0,14 46,14 58,14 66,3 76,25 84,14 100,14 160,14" stroke="rgba(100,165,73,.55)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <div class="hiw-vid-player-wrap">
-            <style>wistia-player[media-id='eco3up621c']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/eco3up621c/swatch');display:block;filter:blur(5px);padding-top:56.25%;}</style>
-            <wistia-player media-id="eco3up621c" seo="false" aspect="1.7777777777777777"></wistia-player>
-          </div>
-        </div>
-        <div class="hiw-vid-caption">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          A short walkthrough of how Credit Pulse membership and cashback works, from package selection to confirmed cashback.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DETAILED STEPS -->
-  <section class="section">
-    <div class="container">
-      <div class="sec-hd reveal">
-        <span class="sec-label">Step by Step</span>
-        <h2>What Happens at Each Stage</h2>
-        <p class="sec-sub">Every step is designed to be clear, transparent, and easy to follow. There are no surprises.</p>
-      </div>
-      <div class="step-detail-grid">
-
-        <!-- Step 1 -->
-        <div class="sd-row reveal">
-          <div class="sd-num-col"><div class="sd-badge">1</div></div>
-          <div class="sd-card">
-            <div class="sd-card-top">
-              <div class="sd-icon">
-                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
-                <svg class="sd-icon-over" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-              </div>
-              <div class="sd-content">
-                <h3>Complete Your Membership Form</h3>
-                <p>Start by choosing the Credit Pulse package that fits your goals. You will see the cashback amount, total package price, and biweekly payment breakdown clearly before submitting.</p>
-                <p>Fill in your basic membership details including your name, email address, phone number, and province. This step takes less than five minutes to complete.</p>
-              </div>
-            </div>
-            <div class="sd-note">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
-              <p>No credit check is required to complete the membership application form. Credit Pulse is not a lender and does not issue credit products.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="sd-row reveal">
-          <div class="sd-num-col"><div class="sd-badge">2</div></div>
-          <div class="sd-card">
-            <div class="sd-card-top">
-              <div class="sd-icon">
-                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <svg class="sd-icon-over" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              </div>
-              <div class="sd-content">
-                <h3>Secure Verification</h3>
-                <p>After submitting your membership form, you will be guided through the required secure verification process. This step confirms your membership details and allows your cashback eligibility to be reviewed.</p>
-                <p>The verification process uses encrypted technology to protect your personal information. You will receive instructions on what is needed to complete this step.</p>
-              </div>
-            </div>
-            <div class="sd-note">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              <p>Verification is required before cashback eligibility can be confirmed. The exact information required will be communicated clearly during this step.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="sd-row reveal">
-          <div class="sd-num-col"><div class="sd-badge">3</div></div>
-          <div class="sd-card">
-            <div class="sd-card-top">
-              <div class="sd-icon">
-                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16l3-1.5 3 1.5 3-1.5 3 1.5V4a2 2 0 0 0-2-2z"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/></svg>
-                <svg class="sd-icon-over" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-              </div>
-              <div class="sd-content">
-                <h3>Cashback Confirmation</h3>
-                <p>Once your verification is reviewed and preapproved, you will receive a cashback confirmation that shows the eligible cashback amount connected to your selected package, along with the payment schedule and next steps.</p>
-                <p>This step gives you a clear picture of your cashback eligibility before any payments are processed. You can review and confirm the details at your own pace.</p>
-              </div>
-            </div>
-            <div class="sd-note">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <p>The cashback confirmation is connected to the package you selected. Amounts vary by tier and are shown clearly before you proceed.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="sd-row reveal">
-          <div class="sd-num-col"><div class="sd-badge">4</div></div>
-          <div class="sd-card">
-            <div class="sd-card-top">
-              <div class="sd-icon">
-                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><line x1="12" y1="6" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="18"/></svg>
-              </div>
-              <div class="sd-content">
-                <h3>Receive Eligible Cashback</h3>
-                <p>After completing all required steps, membership form, verification, preapproval and cashback confirmation, eligible cashback may be processed based on your selected tier and payment schedule.</p>
-                <p>Processing times may vary depending on your verification status, package selection, and payment provider. Credit Pulse will keep you informed throughout the process.</p>
-              </div>
-            </div>
-            <div class="sd-note">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <p>Cashback eligibility, timing, and results may vary. Credit Pulse will communicate processing status to members throughout the membership process.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Trust feature bar -->
-      <div class="sd-feat-bar reveal">
-        <div class="sd-feat-items">
-          <div class="sd-feat-item">
-            <div class="sd-feat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-            <div class="sd-feat-text"><h4 class="sd-feat-title">Clear Steps</h4><p class="sd-feat-desc">Simple, easy-to-follow process from start to finish.</p></div>
-          </div>
-          <div class="sd-feat-sep"></div>
-          <div class="sd-feat-item">
-            <div class="sd-feat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-            <div class="sd-feat-text"><h4 class="sd-feat-title">Secure Process</h4><p class="sd-feat-desc">Your information is protected with advanced security.</p></div>
-          </div>
-          <div class="sd-feat-sep"></div>
-          <div class="sd-feat-item">
-            <div class="sd-feat-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg></div>
-            <div class="sd-feat-text"><h4 class="sd-feat-title">Transparent Pricing</h4><p class="sd-feat-desc">See amounts, pricing, and payment schedules upfront.</p></div>
-          </div>
-        </div>
-        <div class="sd-feat-actions">
-          <button class="btn sd-feat-btn-main" onclick="navigate('packages')">View Packages &rsaquo;</button>
-          <button class="btn sd-feat-btn-sec" onclick="navigate('faq')">See FAQ</button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- SECURITY -->
-  <section class="section sec-section">
-    <div class="container">
-      <div class="sec-inner">
-        <div class="reveal">
-          <span class="sec-label">Security &amp; Transparency</span>
-          <h2>Secure Verification. Clear Membership. No Guesswork.</h2>
-          <p style="color:var(--tm);margin-top:16px;line-height:1.75;">Credit Pulse uses a secure process to confirm membership details and cashback eligibility. Every step is designed to be transparent and easy to follow.</p>
-          <div style="margin-top:28px;"><button class="btn sec-cta-btn" onclick="navigate('checkout')">Start My Membership &nbsp;&#8594;</button></div>
-        </div>
-        <div class="sec-badges reveal">
-          <div class="sec-badge">
-            <div class="sec-badge-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="sec-badge-icon-wrap"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-            <span class="sec-badge-t">Secure Checkout</span>
-          </div>
-          <div class="sec-badge">
-            <div class="sec-badge-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="sec-badge-icon-wrap"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-            <span class="sec-badge-t">Encrypted Verification</span>
-          </div>
-          <div class="sec-badge">
-            <div class="sec-badge-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="sec-badge-icon-wrap"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-            <span class="sec-badge-t">No Hidden Fees</span>
-          </div>
-          <div class="sec-badge">
-            <div class="sec-badge-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="sec-badge-icon-wrap"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
-            <span class="sec-badge-t">Education Platform Only</span>
-          </div>
-          <div class="sec-badge">
-            <div class="sec-badge-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="sec-badge-icon-wrap"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-            <span class="sec-badge-t">Designed for Canadians</span>
-          </div>
-          <div class="sec-badge">
-            <div class="sec-badge-check"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div class="sec-badge-icon-wrap"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-            <span class="sec-badge-t">Clear Terms Before Joining</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TIMING -->
-  <section class="section timing-section">
-    <div class="container">
-      <div class="timing-hd reveal">
-        <div class="timing-eyebrow">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <span>CASHBACK TIMELINE</span>
-        </div>
-        <h2>When Can You Receive Cashback?</h2>
-        <div class="timing-divider"><span></span><span class="timing-divider-dot"></span><span></span></div>
-      </div>
-      <div class="timing-card reveal">
-        <div class="timing-card-body">
-          <div class="timing-icon-wrap">
-            <span class="timing-side-dot"></span>
-            <div class="timing-icon">
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <span class="timing-side-dot"></span>
-          </div>
-          <p class="timing-body">Eligible cashback may be processed after your membership and required verification steps are completed. Processing times may vary depending on verification status, package selection, and payment provider. Credit Pulse will keep you informed throughout the process.</p>
-        </div>
-        <div class="timing-note">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          <span>Clear updates. Real-time progress. Complete transparency.</span>
-        </div>
-      </div>
-      <div class="timing-cta reveal">
-        <button class="btn sec-cta-btn" onclick="navigate('checkout')">Start My Membership &nbsp;&#8594;</button>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container">
-      <div class="ft-top">
-        <div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:info@creditpulse.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>info@creditpulse.ca</span></a></div></div>
-        <div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div>
-        <div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter &ndash; $250</a><a onclick="navigate('checkout','silver')">Silver &ndash; $500</a><a onclick="navigate('checkout','gold')">Gold &ndash; $750</a><a onclick="navigate('checkout','platinum')">Platinum &ndash; $1,000</a><a onclick="navigate('checkout','diamond')">Diamond &ndash; $1,250</a><a onclick="navigate('checkout','elite')">Elite &ndash; $1,500</a></div>
-        <div class="ft-col"><h5>Legal</h5><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a><a href="/faq" onclick="event.preventDefault();navigate('faq')">FAQ</a><a href="/contact-us" onclick="event.preventDefault();navigate('contact')">Contact Us</a></div>
-      </div>
-      <div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div>
-    </div>
-  </footer>
-</div><!-- end page-hiw -->
 
 <!-- ==================== PAGE: PACKAGES ==================== -->
 <div id="page-packages" class="page">
@@ -1768,7 +1507,7 @@ img{max-width:100%;display:block}
             <p>Our members are already building stronger financial futures with Credit Pulse. Join today and take the next step.</p>
             <div class="pkg-cta-btns">
               <button class="btn btn-accent btn-lg btn-throb" onclick="navigate('checkout')">Go to Checkout &rarr;</button>
-              <button class="btn-ghost-white" onclick="navigate('hiw')">How It Works</button>
+              <button class="btn-ghost-white" onclick="location.href='/how-it-works'">How It Works</button>
             </div>
           </div>
           <!-- RIGHT: trust items -->
@@ -1791,322 +1530,9 @@ img{max-width:100%;display:block}
     </div>
   </section>
 
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:info@creditpulse.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>info@creditpulse.ca</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','diamond')">Diamond</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a><a href="/faq" onclick="event.preventDefault();navigate('faq')">FAQ</a><a href="/contact-us" onclick="event.preventDefault();navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:info@creditpulse.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>info@creditpulse.ca</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a href="/how-it-works">How It Works</a><a onclick="navigate('packages')">Packages</a><a href="/faq">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','diamond')">Diamond</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a><a href="/faq">FAQ</a><a href="/contact-us" onclick="event.preventDefault();navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-packages -->
 
-<!-- ==================== PAGE: FAQ ==================== -->
-<div id="page-faq" class="page">
-  <div class="page-hdr">
-    <div class="container"><span class="sec-label">Questions Answered</span><h1>Frequently Asked Questions</h1><p>Everything you need to know about Credit Pulse, cashback eligibility, and how the membership works.</p></div>
-  </div>
-  <section class="section faq-bg">
-    <div class="container">
-      <!-- CATEGORY TABS -->
-      <div class="faq-tabs reveal">
-        <button class="faq-tab active" onclick="filterFaq('all',this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg> All</button>
-        <button class="faq-tab" onclick="filterFaq('about',this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> About</button>
-        <button class="faq-tab" onclick="filterFaq('application',this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg> Application</button>
-        <button class="faq-tab" onclick="filterFaq('verification',this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Verification</button>
-        <button class="faq-tab" onclick="filterFaq('approval',this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Approval</button>
-        <button class="faq-tab" onclick="filterFaq('packages',this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg> Packages</button>
-        <button class="faq-tab" onclick="filterFaq('cashback',this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg> Cashback</button>
-        <button class="faq-tab" onclick="filterFaq('payments',this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Payments</button>
-        <button class="faq-tab" onclick="filterFaq('cancellation',this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> Cancellation</button>
-        <button class="faq-tab" onclick="filterFaq('privacy',this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Privacy</button>
-      </div>
-      <!-- FAQ CARD -->
-      <div class="faq-card reveal">
-        <div class="faq-list">
-
-          <!-- 1. About Credit Pulse -->
-          <div class="faq-item" data-cat="about">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><span>What is Credit Pulse?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Credit Pulse is an application-based financial education membership platform for eligible Canadian residents. Approved members receive access to educational content, budgeting and debt-organization tools, savings resources, support features, and the cashback reward connected to their approved membership package.</div></div>
-          </div>
-          <div class="faq-item" data-cat="about">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><span>Is Credit Pulse a loan, credit card, or line of credit?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">No. Credit Pulse does not lend money, extend credit, issue credit cards, or provide a borrowing product. Membership fees are the price of the services and benefits included in the approved package.</div></div>
-          </div>
-          <div class="faq-item" data-cat="about">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><span>Is Credit Pulse a credit repair company or financial adviser?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in"><p>No. Credit Pulse is not a credit repair company, credit counselling agency, lender, or licensed financial adviser. We provide financial education, budgeting tools, informational resources, membership benefits, and general guidance designed to help members better understand and manage their finances.</p><p>The information provided through Credit Pulse is for general educational and informational purposes only. It should not be considered professional financial, legal, tax, credit, or investment advice. Your financial situation is unique, and you should consult a qualified professional before making significant financial decisions.</p><p>Credit Pulse does not guarantee that your credit score, credit report, financial position, or eligibility for credit will improve as a result of using our services.</p></div></div>
-          </div>
-          <div class="faq-item" data-cat="about">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><span>Will joining Credit Pulse improve my credit score?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Credit Pulse does not guarantee a credit-score increase, debt reduction, approval for another financial product, or any specific financial result. The materials are intended to help members improve their knowledge and financial habits.</div></div>
-          </div>
-          <div class="faq-item" data-cat="about">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><span>Who can apply?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Applicants must be residents of a Canadian province or territory where Credit Pulse accepts applications, be at least the age of majority where they live, have legal capacity to enter into an agreement, and provide accurate information and all required consents.</div></div>
-          </div>
-          <div class="faq-item" data-cat="about">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div><span>Do I keep access to the education platform?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Platform access duration is based on your selected package. Please review the terms associated with your package for specific access details. Contact Credit Pulse directly for questions about your membership access period.</div></div>
-          </div>
-
-          <!-- 2. Application and Underwriting -->
-          <div class="faq-item" data-cat="application">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span>Is my membership automatically approved when I apply?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">No. Submitting an application does not create an active membership and does not earn cashback. Every application is subject to underwriting and verification before a final decision is made.</div></div>
-          </div>
-          <div class="faq-item" data-cat="application">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span>What does Credit Pulse review during underwriting?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Credit Pulse underwriters may review your identity, residency, income deposits, employment, account ownership, banking activity, recurring obligations, returned or failed payments, affordability of the proposed payment schedule, inconsistencies, fraud indicators, and prior dealings with Credit Pulse.</div></div>
-          </div>
-          <div class="faq-item" data-cat="application">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span>What decisions can Credit Pulse make after reviewing my application?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Credit Pulse may approve the requested package, offer a different package or payment schedule, request more information, place the application on hold, or decline it. A different offer will not be activated unless you accept it.</div></div>
-          </div>
-          <div class="faq-item" data-cat="application">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span>Can my application be declined?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Yes. An application may be declined or closed if eligibility requirements are not met, required information cannot be verified, the application is incomplete, information is materially inaccurate or misleading, or a security or fraud concern is identified.</div></div>
-          </div>
-          <div class="faq-item" data-cat="application">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span>Can I withdraw my application?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Yes. You may withdraw before membership activation by contacting Credit Pulse. If you withdraw before activation, no membership is created, no future membership instalments are due, and no cashback is earned.</div></div>
-          </div>
-          <div class="faq-item" data-cat="application">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span>What happens if my application is declined?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">No membership is created, no future membership instalments are due, and no cashback is earned. Any temporary payment authorization that was not captured should be released according to the payment provider's procedures.</div></div>
-          </div>
-
-          <!-- 3. Verification -->
-          <div class="faq-item" data-cat="verification">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>Why does Credit Pulse verify my information?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Verification helps Credit Pulse assess membership eligibility, confirm the information in your application, administer the approved payment schedule, process cashback, prevent fraud, and comply with applicable law.</div></div>
-          </div>
-          <div class="faq-item" data-cat="verification">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>What information may be requested?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Credit Pulse may request personal and contact information, government-issued identification, employment and income information, banking information, payment details, references, and supporting documents reasonably required to review the application.</div></div>
-          </div>
-          <div class="faq-item" data-cat="verification">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>What is instant bank verification?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Instant bank verification is a secure process that allows an authorized provider to make relevant account information available to Credit Pulse. This may include account ownership, account type, balances, income deposits, transaction history, recurring obligations, returned items, overdrafts, and other activity relevant to the review.</div></div>
-          </div>
-          <div class="faq-item" data-cat="verification">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>Will Credit Pulse receive my online banking password?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Credit Pulse will not ask you to send your online banking password directly to Credit Pulse. When authentication is required, it is completed through the bank-verification provider's interface and is handled under that provider's security and privacy practices.</div></div>
-          </div>
-          <div class="faq-item" data-cat="verification">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>Does instant bank verification affect my credit score?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">No. Instant bank verification is not a credit bureau inquiry and does not, by itself, affect your credit score.</div></div>
-          </div>
-          <div class="faq-item" data-cat="verification">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>Does Credit Pulse perform a credit check?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Credit Pulse does not conduct a credit bureau inquiry as part of its standard membership review. If a credit report or bureau inquiry is proposed in the future, Credit Pulse will provide a separate disclosure and obtain any consent required by law.</div></div>
-          </div>
-          <div class="faq-item" data-cat="verification">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>Will Credit Pulse contact my employer?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Credit Pulse may contact your employer, payroll department, or income source to verify employment status, position, length of employment, income amount, pay frequency, expected pay dates, and related information provided in your application.</div></div>
-          </div>
-          <div class="faq-item" data-cat="verification">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>What will Credit Pulse tell my employer?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Credit Pulse limits its questions and disclosures to what is reasonably necessary for verification. It will not intentionally disclose your detailed banking activity, selected cashback amount, or unrelated financial information to your employer.</div></div>
-          </div>
-          <div class="faq-item" data-cat="verification">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>Will Credit Pulse contact my references?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Credit Pulse may contact personal or professional references you provide to confirm your identity, contact information, relationship to the reference, or other information relevant to the application.</div></div>
-          </div>
-          <div class="faq-item" data-cat="verification">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>Is my reference responsible for my membership payments?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">No. A reference is not a guarantor and is not responsible for your membership fees unless that person separately signs a written agreement that expressly creates that obligation.</div></div>
-          </div>
-          <div class="faq-item" data-cat="verification">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><span>What happens if I do not complete a required verification?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Credit Pulse may be unable to complete the review and may close, hold, or decline the application. After activation, withdrawing a consent that is necessary to administer the membership may affect access, cashback processing, or payment administration.</div></div>
-          </div>
-
-          <!-- 4. Approval and Membership Application -->
-          <div class="faq-item" data-cat="approval">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>What is a Successful Signup?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">A Successful Signup occurs only after you submit a complete application, Credit Pulse completes its underwriting and verification review, a package and payment schedule are approved, you accept the final Membership Summary and legal terms, you provide valid payment and payout information, any amount due at activation is accepted, and Credit Pulse confirms that the membership is active.</div></div>
-          </div>
-          <div class="faq-item" data-cat="approval">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>Is a preliminary approval the same as final approval?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">No. An indication that you may qualify, a preliminary approval, package selection, or request for payment information is not final approval. Approval is final only when Credit Pulse provides the final Membership Summary and confirms activation.</div></div>
-          </div>
-          <div class="faq-item" data-cat="approval">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>What is the Membership Summary?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">The Membership Summary is the final disclosure provided before activation. It shows the approved package, total membership price, taxes, installment schedule, term, access period, cashback amount, payment method, and other material terms.</div></div>
-          </div>
-          <div class="faq-item" data-cat="approval">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>When does my membership access begin?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Access generally begins on the Activation Date, unless your Membership Summary states a later supply date.</div></div>
-          </div>
-          <div class="faq-item" data-cat="approval">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><span>Can I be approved for a different package than the one I selected?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Yes. Based on the underwriting review, Credit Pulse may offer a different package or payment schedule. You must review and accept the revised Membership Summary before the membership can be activated.</div></div>
-          </div>
-
-          <!-- 5. Membership Packages -->
-          <div class="faq-item" data-cat="packages">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><span>What packages are currently offered?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Credit Pulse currently references Starter, Silver, Gold, Platinum, Diamond, and Elite packages. Your final approved package, exact price, taxes, instalment schedule, term, access period, and cashback amount will be shown in the Membership Summary before activation. For more details, please check the packages section in our website https://creditpulse.ca</div></div>
-          </div>
-          <div class="faq-item" data-cat="packages">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><span>What is included with a membership?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Benefits may include financial education, budgeting tools, debt-organization resources, templates, worksheets, savings or coupon resources, partner offers, support features, and other benefits described in the Membership Summary.</div></div>
-          </div>
-          <div class="faq-item" data-cat="packages">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><span>Is the membership a subscription?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Unless your Membership Summary expressly states otherwise, the membership is a fixed-term purchase paid either in full or by instalments. Instalment billing does not make it an automatically renewing subscription.</div></div>
-          </div>
-          <div class="faq-item" data-cat="packages">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><span>Why does the package show biweekly payments?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">The total package price may be divided into biweekly payments to make your membership more manageable. We can also align your payment dates with your regular pay schedule. Before joining, you will clearly see the full package price, payment amount, and payment schedule?so there are no surprises.</div></div>
-          </div>
-          <div class="faq-item" data-cat="packages">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><span>Will my membership renew automatically?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">No, unless automatic renewal is separately and clearly disclosed and you expressly agree to it.</div></div>
-          </div>
-          <div class="faq-item" data-cat="packages">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><span>Can I transfer my membership to someone else?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">No. Membership access, accounts, and cashback entitlements are personal and non-transferable.</div></div>
-          </div>
-          <div class="faq-item" data-cat="packages">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><span>Are there hidden fees?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">The package price and payment breakdown are shown clearly before you join. Please review all terms during the membership process to ensure you understand what is included in your selected package.</div></div>
-          </div>
-
-          <!-- 6. Cashback -->
-          <div class="faq-item" data-cat="cashback">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div><span>How does the cashback work?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Cashback is connected to the membership package you select. After completing the required membership and verification steps, eligible cashback may be processed based on your selected tier. Cashback amounts vary by package and are shown clearly before joining.</div></div>
-          </div>
-          <div class="faq-item" data-cat="cashback">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div><span>When do I earn cashback?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Cashback is earned on the Activation Date when a Successful Signup is completed. Submitting an application, completing bank verification, receiving a preliminary approval, or selecting a package does not by itself earn cashback.</div></div>
-          </div>
-          <div class="faq-item" data-cat="cashback">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div><span>Do I have to complete the courses before earning cashback?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">No. Course, lesson, quiz, worksheet, or other educational completion is encouraged but is not a condition for earning cashback.</div></div>
-          </div>
-          <div class="faq-item" data-cat="cashback">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div><span>Do I have to pay all future installments before earning cashback?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">No. A future installment that has not yet become due is not a condition for earning cashback. The cashback is earned at Successful Signup, although the membership payment obligations remain separate and continue according to the approved schedule.</div></div>
-          </div>
-          <div class="faq-item" data-cat="cashback">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div><span>Is cashback paid immediately after activation?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Yes. Eligible cashback timing depends on package selection, completed verification, and processing. Timing may vary and is not guaranteed. Credit Pulse will communicate processing status to members throughout the membership process.</div></div>
-          </div>
-          <div class="faq-item" data-cat="cashback">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div><span>How will I receive my cashback?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">We will deposit the cashback to your registered bank on file. The approved amount and available processing information will be communicated to you.</div></div>
-          </div>
-          <div class="faq-item" data-cat="cashback">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div><span>Can cashback processing be delayed?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Yes, the reason for the delay may differ. Commonly, there may be delays in your financial institution.</div></div>
-          </div>
-          <div class="faq-item" data-cat="cashback">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div><span>Can Credit Pulse withhold or recover cashback?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Only in limited circumstances permitted by law, such as fraud, a materially misleading or duplicate application, unauthorized use of another person's identity or account, reversal of an amount required at activation, inability to verify the member or payout destination, lawful rescission of the membership transaction, or material abuse of the cashback program.</div></div>
-          </div>
-          <div class="faq-item" data-cat="cashback">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div><span>Will I lose earned cashback if a later installment is missed?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">A later missed or failed payment does not retroactively cancel cashback that was validly earned at Successful Signup. However, the membership price and amounts due remain payable, and Credit Pulse may take separate steps such as retrying payment, requesting another payment method, suspending access, terminating services, or taking reasonable collection action as permitted by law.</div></div>
-          </div>
-          <div class="faq-item" data-cat="cashback">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div><span>Is cashback a loan, investment return, or guaranteed income?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">No. Cashback is a promotional membership reward. It is not borrowed money, interest, a loan advance, a deposit, an investment return, wages, credit, or guaranteed income.</div></div>
-          </div>
-
-          <!-- 7. Payments and Billing -->
-          <div class="faq-item" data-cat="payments">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span>When will I see the full membership price and payment schedule?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Before activation, the Membership Summary will disclose the total membership price, applicable taxes, mandatory charges, each installment amount and due date, payment method, term, and services supplied.</div></div>
-          </div>
-          <div class="faq-item" data-cat="payments">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span>What currency is used?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">All amounts are in Canadian dollars.</div></div>
-          </div>
-          <div class="faq-item" data-cat="payments">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span>How are payments processed?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Payments are handled by an authorized third-party payment provider software. Credit Pulse generally receives transaction details such as payment status, amount, date, token, and limited account information rather than complete card credentials.</div></div>
-          </div>
-          <div class="faq-item" data-cat="payments">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span>What happens if a payment fails?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Credit Pulse may retry the payment, request another payment method, suspend access, terminate services, or take reasonable collection action, subject to applicable law. Any returned-payment fee must have been clearly disclosed and legally permitted.</div></div>
-          </div>
-          <div class="faq-item" data-cat="payments">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span>Do I still owe future installments after cashback is paid?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Yes. Cashback is a separate membership reward and does not reduce the membership price unless the Membership Summary expressly states that it will be applied as a credit.</div></div>
-          </div>
-          <div class="faq-item" data-cat="payments">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span>Do I need to keep my payment details current?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Yes. You must maintain current contact and payment information and promptly report an unauthorized transaction, account closure, or other change that may affect payment processing.</div></div>
-          </div>
-
-          <!-- 8. Cancellation and Refunds -->
-          <div class="faq-item" data-cat="cancellation">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div><span>Can I cancel before my membership is activated?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Yes. You may withdraw your application before activation. No membership is created, no future membership installments are due, and no cashback is earned.</div></div>
-          </div>
-          <div class="faq-item" data-cat="cancellation">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div><span>Can I cancel after activation?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">You may ask Credit Pulse to cancel your access. However, unless your Membership Summary, a separate written offer, or applicable law says otherwise, the membership is a fixed-term purchase rather than a cancel-anytime monthly subscription so you will still have to pay any outstanding balance of the subscription cost.</div></div>
-          </div>
-          <div class="faq-item" data-cat="cancellation">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div><span>Does cancelling access erase the remaining membership price?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Not automatically. Voluntary cancellation of access does not by itself cancel amounts already due or the remaining fixed membership price. Credit Pulse may agree to a written accommodation, settlement, or payment arrangement in a specific case.</div></div>
-          </div>
-          <div class="faq-item" data-cat="cancellation">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div><span>Are membership payments refundable?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Except where required by law or expressly stated in the Membership Summary, amounts paid are non-refundable after activation and supply of digital access. This does not limit rights relating to non-delivery, misrepresentation, unauthorized charges, defective service, missing required contract information, or another non-waivable legal right.</div></div>
-          </div>
-          <div class="faq-item" data-cat="cancellation">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div><span>What happens to cashback if the membership transaction is lawfully cancelled or rescinded?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">If a statutory cancellation or rescission unwinds the membership transaction, the associated cashback may also be unwound to the extent permitted by law. Credit Pulse will not impose a cashback repayment that applicable law prohibits.</div></div>
-          </div>
-          <div class="faq-item" data-cat="cancellation">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg></div><span>How do I submit a cancellation request?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Send a clear request to Credit Pulse at info@creditpulse.ca. Include your name, account email, phone number, the date, and the membership concerned. Keep a copy and proof of delivery.</div></div>
-          </div>
-
-          <!-- 9. Privacy, Accounts, and Support -->
-          <div class="faq-item" data-cat="privacy">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><span>How does Credit Pulse use my personal information?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Credit Pulse uses personal information to review applications, verify identity, income, employment, references, and banking information, administer payments and cashback, provide membership services, prevent fraud, maintain security, communicate with you, and comply with law. Details are provided in the Privacy Policy.</div></div>
-          </div>
-          <div class="faq-item" data-cat="privacy">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><span>Does Credit Pulse sell personal information?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">No. Credit Pulse's Terms state that it does not sell personal information. Relevant information may be shared with authorized service providers for verification, payment, payout, communications, hosting, analytics, security, fraud prevention, support, legal compliance, and professional advice.</div></div>
-          </div>
-          <div class="faq-item" data-cat="privacy">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><span>Can I access or correct my personal information?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">You may request access or correction and ask privacy questions by contacting privacy@creditpulse.ca. Some records may need to be retained for legal, regulatory, accounting, fraud-prevention, complaint, or dispute purposes.</div></div>
-          </div>
-          <div class="faq-item" data-cat="privacy">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><span>What communications will I receive?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">You may receive transactional communications needed to process and administer the application and membership, including verification requests, approval or decline notices, membership documents, payment notices, security alerts, service updates, support messages, and cashback status updates.</div></div>
-          </div>
-          <div class="faq-item" data-cat="privacy">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><span>Can I unsubscribe from marketing?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Yes. Marketing communications may be unsubscribed from without cancelling necessary transactional communications related to your application or active membership.</div></div>
-          </div>
-          <div class="faq-item" data-cat="privacy">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><span>What should I do if my account information changes?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">Update Credit Pulse promptly if your email address, phone number, employment information, banking details, payment method, or payout destination changes. Re-verification may be required for sensitive changes. Email us at info@creditpulse.ca.</div></div>
-          </div>
-          <div class="faq-item" data-cat="privacy">
-            <button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><div class="faq-q-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><span>How do I contact Credit Pulse?</span></div><span class="faq-icon">+</span></button>
-            <div class="faq-a"><div class="faq-a-in">For customer support, email info@creditpulse.ca or call +1 (888) 688-8785. For privacy questions, email privacy@creditpulse.ca. For legal or Terms questions, email legal@creditpulse.ca.</div></div>
-          </div>
-
-        </div>
-      </div>
-      <!-- SUPPORT CARD -->
-      <div class="faq-support-card reveal">
-        <div class="faq-support-icon-wrap"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg></div>
-        <div class="faq-support-text"><h4>Still have questions?</h4><p>Review the <a href="/terms-of-service" style="color:var(--green);cursor:pointer;text-decoration:underline;">Terms of Service</a> and <a href="/privacy-policy" style="color:var(--green);cursor:pointer;text-decoration:underline;">Privacy Policy</a> at <a href="https://creditpulse.ca" target="_blank" rel="noopener noreferrer" style="color:var(--green);text-decoration:underline;">creditpulse.ca</a> or contact Credit Pulse before accepting your Membership Summary.</p></div>
-        <div class="faq-support-btns">
-          <button class="btn btn-accent faq-support-btn-main" onclick="navigate('packages')">View Packages &nbsp;&#8594;</button>
-          <button class="faq-support-btn-contact" onclick="navigate('contact')">Contact Support <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:info@creditpulse.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>info@creditpulse.ca</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','diamond')">Diamond</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a><a href="/faq" onclick="event.preventDefault();navigate('faq')">FAQ</a><a href="/contact-us" onclick="event.preventDefault();navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
-</div><!-- end page-faq -->
 
 <!-- ==================== PAGE: CONTACT ==================== -->
 <div id="page-contact" class="page">
@@ -2176,7 +1602,7 @@ img{max-width:100%;display:block}
               </div>
               <div class="contact-opt-chevron"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></div>
             </div>
-            <button class="contact-option" onclick="navigate('faq')">
+            <button class="contact-option" onclick="location.href='/faq'">
               <div class="contact-opt-icon">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
               </div>
@@ -2219,7 +1645,7 @@ img{max-width:100%;display:block}
 
     </div>
   </section>
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:info@creditpulse.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>info@creditpulse.ca</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','diamond')">Diamond</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a><a href="/faq" onclick="event.preventDefault();navigate('faq')">FAQ</a><a href="/contact-us" onclick="event.preventDefault();navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:info@creditpulse.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>info@creditpulse.ca</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a href="/how-it-works">How It Works</a><a onclick="navigate('packages')">Packages</a><a href="/faq">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','diamond')">Diamond</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a><a href="/faq">FAQ</a><a href="/contact-us" onclick="event.preventDefault();navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-contact -->
 
 <!-- ==================== PAGE: CHECKOUT ==================== -->
@@ -2328,7 +1754,7 @@ img{max-width:100%;display:block}
       </div>
     </div>
   </section>
-  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:info@creditpulse.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>info@creditpulse.ca</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a onclick="navigate('hiw')">How It Works</a><a onclick="navigate('packages')">Packages</a><a onclick="navigate('faq')">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','diamond')">Diamond</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a><a href="/faq" onclick="event.preventDefault();navigate('faq')">FAQ</a><a href="/contact-us" onclick="event.preventDefault();navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
+  <footer class="footer"><div class="container"><div class="ft-top"><div class="ft-brand"><a class="nav-logo" onclick="navigate('home')" style="display:inline-block;margin-bottom:14px;"><img src="img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse"></a><p class="ft-brand-desc">An education-based cashback membership platform designed for Canadians.</p><div class="ft-contact-list"><a class="ft-contact-item" href="tel:18886888785"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a><a class="ft-contact-item" href="mailto:info@creditpulse.ca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>info@creditpulse.ca</span></a></div></div><div class="ft-col"><h5>Navigation</h5><a onclick="navigate('home')">Home</a><a href="/how-it-works">How It Works</a><a onclick="navigate('packages')">Packages</a><a href="/faq">FAQ</a><a onclick="navigate('contact')">Contact</a></div><div class="ft-col"><h5>Packages</h5><a onclick="navigate('checkout','starter')">Starter</a><a onclick="navigate('checkout','silver')">Silver</a><a onclick="navigate('checkout','gold')">Gold</a><a onclick="navigate('checkout','platinum')">Platinum</a><a onclick="navigate('checkout','diamond')">Diamond</a><a onclick="navigate('checkout','elite')">Elite</a></div><div class="ft-col"><h5>Legal</h5><a href="/privacy-policy">Privacy Policy</a><a href="/terms-of-service">Terms of Service</a><a href="/faq">FAQ</a><a href="/contact-us" onclick="event.preventDefault();navigate('contact')">Contact Us</a></div></div><div class="ft-bot"><p class="ft-disc">Credit Pulse is an education-based membership platform. We do not provide loans, credit cards, credit repair, legal advice, financial advice, or financial products. Cashback eligibility, timing, and results may vary.</p><p class="ft-copy">&copy; 2026 Credit Pulse. All rights reserved.</p></div></div></footer>
 </div><!-- end page-checkout -->
 
 <script src="script.js" defer></script>
