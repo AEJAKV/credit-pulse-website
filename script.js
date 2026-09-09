@@ -15,9 +15,9 @@ var PAGE_URLS = {
   packages: '/packages',
   faq:      '/faq',
   contact:  '/contact-us',
-  checkout: '/checkout',
-  privacy:  '/privacy-policy',
-  tos:      '/terms-of-service'
+  checkout: '/checkout'
+  // NOTE: privacy + tos are real static pages now (privacy-policy.html,
+  // terms-of-service.html) and are deliberately NOT routed by the SPA.
 };
 var URL_PAGES = (function() {
   var m = {};
@@ -26,9 +26,13 @@ var URL_PAGES = (function() {
 }());
 
 function navigate(page, pkg) {
-  document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
   var el = document.getElementById('page-' + page);
-  if (el) { el.classList.add('active'); }
+  // Target section is not in THIS document (e.g. a link to an SPA route from a
+  // standalone static page). Bail out so the browser performs a real navigation
+  // instead of silently changing the URL without rendering anything.
+  if (!el) { return; }
+  document.querySelectorAll('.page').forEach(function(p){ p.classList.remove('active'); });
+  el.classList.add('active');
   if (page === 'checkout' && pkg) { selectPackage(pkg); }
   window.scrollTo(0, 0);
   closeMenu();
@@ -361,6 +365,12 @@ window.addEventListener('popstate', function(e) {
 
 // Boot: navigate to the page that matches the current URL so direct links work
 (function() {
+  // Standalone static pages (privacy-policy.html, terms-of-service.html) ship no
+  // .page sections - the SPA router must not boot there.
+  if (!document.querySelector('.page')) { return; }
   var initPath = window.location.pathname.replace(/\/$/, '') || '/';
-  navigate(URL_PAGES[initPath] || 'home');
+  var initPage = URL_PAGES[initPath] || 'home';
+  // Carry the package tier across a real page load: /checkout?pkg=elite
+  var qp = new URLSearchParams(window.location.search).get('pkg');
+  navigate(initPage, (initPage === 'checkout' && qp && pkgData[qp]) ? qp : undefined);
 }());
