@@ -3,11 +3,14 @@
 # so the JS router can read window.location.pathname and show the correct page.
 # The blog/, budget-tool/, and debt-tool/ directories are real folders and
 # must NOT be caught here (Netlify checks real files/dirs first by default).
+#
+# privacy-policy and terms-of-service are now REAL standalone pages and are
+# served from their own files rather than falling through to the SPA.
 
 /how-it-works      /index.html    200
 /packages          /index.html    200
 /faq               /index.html    200
 /contact-us        /index.html    200
 /checkout          /index.html    200
-/privacy-policy    /index.html    200
-/terms-of-service  /index.html    200
+/privacy-policy    /privacy-policy.html      200
+/terms-of-service  /terms-of-service.html    200
