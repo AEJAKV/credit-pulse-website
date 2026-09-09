@@ -8,9 +8,9 @@
 # served from their own files rather than falling through to the SPA.
 
 /how-it-works      /how-it-works.html        200
-/packages          /index.html    200
+/packages          /packages.html            200
 /faq               /faq.html                 200
-/contact-us        /index.html    200
+/contact-us        /contact-us.html          200
 /checkout          /index.html    200
 /privacy-policy    /privacy-policy.html      200
 /terms-of-service  /terms-of-service.html    200
