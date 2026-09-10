@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://creditpulse.ca/sitemap.xml
+Sitemap: https://www.creditpulse.ca/sitemap.xml

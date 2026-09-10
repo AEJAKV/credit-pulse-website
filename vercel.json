@@ -1,11 +1,6 @@
 {
+  "cleanUrls": true,
   "rewrites": [
-    { "source": "/how-it-works", "destination": "/how-it-works.html" },
-    { "source": "/packages",     "destination": "/packages.html" },
-    { "source": "/faq",          "destination": "/faq.html" },
-    { "source": "/contact-us",   "destination": "/contact-us.html" },
-    { "source": "/checkout",     "destination": "/index.html" },
-    { "source": "/privacy-policy",   "destination": "/privacy-policy.html" },
-    { "source": "/terms-of-service", "destination": "/terms-of-service.html" }
+    { "source": "/checkout", "destination": "/" }
   ]
 }
