@@ -49,6 +49,13 @@
   <!-- ADD A NEW <url> BLOCK HERE FOR EVERY NEW POST -->
 
   <url>
+    <loc>https://www.creditpulse.ca/blog/posts/budgeting-tools-for-canadians-manage-debt-effectively</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://www.creditpulse.ca/blog/posts/understanding-cashback-memberships</loc>
     <lastmod>2026-07-10</lastmod>
     <changefreq>monthly</changefreq>
