@@ -158,24 +158,28 @@
      ─────────────────────────────────────────────────── -->
 <nav class="navbar" id="navbar">
   <div class="container">
-    <a class="nav-logo" href="../../">
-      <img src="../../img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse">
+    <a class="nav-logo" href="/">
+      <img src="/img-assets/Credit_Pulse_Logo_Main.svg" alt="Credit Pulse">
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="../../">Home</a></li>
-      <li><a href="../../#hiw">How It Works</a></li>
-      <li><a href="../../#packages">Packages</a></li>
-      <li><a href="../../#faq">FAQ</a></li>
-      <li><a href="../../#contact">Contact</a></li>
-      <li><a href="../" class="active">Blog</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/how-it-works">How It Works</a></li>
+      <li><a href="/packages">Packages</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <li><a href="/contact-us">Contact</a></li>
+      <li><a href="/blog/" class="active">Blog</a></li>
     </ul>
     <div class="nav-cta">
-      <a class="btn btn-accent" href="../../#checkout" style="display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:10px 22px;font-size:.9rem;font-weight:700;background:linear-gradient(90deg,#4a9e34 0%,#72c44a 55%,#87d454 100%);color:#fff;box-shadow:0 4px 16px rgba(80,170,50,.36);">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
-        Pick Benefits Now &rarr;
+      <a class="nav-phone" href="tel:18886888785" aria-label="Call Credit Pulse at plus one eight eight eight six eight eight eight seven eight five">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+1 (888) 688-8785</span>
       </a>
+      <a class="btn btn-accent" href="/checkout" style="display:inline-flex;align-items:center;gap:7px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Pick Benefits Now &rarr;</a>
     </div>
-    <a class="nav-mobile-cta btn" href="../../#checkout">Pick Benefits Now</a>
+    <a class="nav-mobile-cta btn" href="/checkout" aria-label="Pick Benefits Now">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+      <span>Pick Benefits Now</span>
+    </a>
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -184,15 +188,13 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="../../">Home</a>
-  <a href="../../#hiw">How It Works</a>
-  <a href="../../#packages">Packages</a>
-  <a href="../../#faq">FAQ</a>
-  <a href="../../#contact">Contact</a>
-  <a href="../" style="color:var(--green-d);font-weight:700;">Blog</a>
-  <div class="mobile-cta">
-    <button class="btn btn-primary btn-full" onclick="window.location.href='../../#checkout'">Claim Cashback</button>
-  </div>
+  <a href="/" onclick="closeMenu()">Home</a>
+  <a href="/how-it-works" onclick="closeMenu()">How It Works</a>
+  <a href="/packages" onclick="closeMenu()">Packages</a>
+  <a href="/faq" onclick="closeMenu()">FAQ</a>
+  <a href="/contact-us" onclick="closeMenu()">Contact</a>
+  <a class="mobile-menu-phone" href="tel:18886888785" onclick="closeMenu()" aria-label="Call Credit Pulse at plus one eight eight eight six eight eight eight seven eight five"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a>
+  <a href="/blog/" onclick="closeMenu()" style="color:var(--green-d);font-weight:700;">Blog</a>
 </div>
 
 <!-- ═══════════════════════════════════════════════════
@@ -284,7 +286,7 @@
                 <p style="font-weight:700;color:var(--t);margin-bottom:6px;">Ready to put your financial knowledge to work?</p>
                 <p style="margin-bottom:0;">Choose a Credit Pulse membership package and start earning up to $1,500 in cashback while building real financial skills.</p>
               </div>
-              <a class="btn btn-primary" href="../../#checkout" style="flex-shrink:0;align-self:center;">
+              <a class="btn btn-primary" href="/checkout" style="flex-shrink:0;align-self:center;">
                 View Packages &rarr;
               </a>
             </div>
@@ -299,7 +301,7 @@
           <div class="sidebar-card sidebar-cta">
             <h4>Earn Up to $1,500 Cashback</h4>
             <p>Join Credit Pulse today and start earning member rewards while building practical financial knowledge.</p>
-            <a class="btn btn-primary btn-full btn-sm" href="../../#checkout">Pick Benefits Now &rarr;</a>
+            <a class="btn btn-primary btn-full btn-sm" href="/checkout">Pick Benefits Now &rarr;</a>
           </div>
 
           <!-- Related posts — update hrefs when cloning -->
@@ -347,35 +349,35 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg>
             <span>+1 (888) 688-8785</span>
           </a>
-          <a class="ft-contact-item" href="mailto:support@creditpulse.zendesk.com">
+          <a class="ft-contact-item" href="mailto:info@creditpulse.ca">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-            <span>support@creditpulse.zendesk.com</span>
+            <span>info@creditpulse.ca</span>
           </a>
         </div>
       </div>
       <div class="ft-col">
         <h5>Navigation</h5>
         <a href="../../">Home</a>
-        <a href="../../#hiw">How It Works</a>
-        <a href="../../#packages">Packages</a>
-        <a href="../../#faq">FAQ</a>
-        <a href="../../#contact">Contact</a>
+        <a href="/how-it-works">How It Works</a>
+        <a href="/packages">Packages</a>
+        <a href="/faq">FAQ</a>
+        <a href="/contact-us">Contact</a>
         <a href="../" style="color:#94A3B8;">Blog</a>
       </div>
       <div class="ft-col">
         <h5>Packages</h5>
-        <a href="../../#checkout">Starter</a>
-        <a href="../../#checkout">Bronze</a>
-        <a href="../../#checkout">Silver</a>
-        <a href="../../#checkout">Gold</a>
-        <a href="../../#checkout">Platinum</a>
-        <a href="../../#checkout">Elite</a>
+        <a href="/checkout">Starter</a>
+        <a href="/checkout">Bronze</a>
+        <a href="/checkout">Silver</a>
+        <a href="/checkout">Gold</a>
+        <a href="/checkout">Platinum</a>
+        <a href="/checkout">Elite</a>
       </div>
       <div class="ft-col">
         <h5>Legal</h5>
-        <a href="../../#privacy">Privacy Policy</a>
-        <a href="../../#tos">Terms of Service</a>
-        <a href="../../#disclaimer">Disclaimer</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/terms-of-service">Terms of Service</a>
+        <a href="/terms-of-service">Disclaimer</a>
       </div>
     </div>
     <div class="ft-bot">
@@ -391,6 +393,16 @@
     var nav = document.getElementById('navbar');
     nav.style.boxShadow = window.scrollY > 40 ? '0 2px 20px rgba(0,0,0,.12)' : 'none';
   });
+
+  function closeMenu() {
+
+    document.getElementById('hamburger').classList.remove('open');
+
+    document.getElementById('mobileMenu').classList.remove('open');
+
+  }
+
+  
 
   function toggleMenu() {
     document.getElementById('hamburger').classList.toggle('open');
