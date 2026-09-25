@@ -97,7 +97,7 @@ function selectHeroPkg(pkg) {
 }
 
 function pickHeroBenefits() {
-  navigate('checkout', selectedHeroPkg);
+  navigateToSignup();
 }
 
 function selectPackage(pkg) {
