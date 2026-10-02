@@ -11,6 +11,11 @@ RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
+# Blog post clean URLs: /blog/posts/<slug> -> /blog/posts/<slug>.html
+# Must come BEFORE the SPA catch-all, otherwise a post URL falls through to
+# index.html and the visitor lands on the homepage instead of the article.
+RewriteRule ^blog/posts/([A-Za-z0-9_-]+)/?$ /blog/posts/$1.html [L]
+
 # Standalone static pages (must come BEFORE the SPA catch-all below)
 RewriteRule ^how-it-works/?$     /how-it-works.html      [L]
 RewriteRule ^faq/?$              /faq.html               [L]
