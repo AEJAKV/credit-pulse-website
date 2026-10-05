@@ -266,28 +266,28 @@ img{max-width:100%;display:block}
             <div class="hc-pkg-grid">
               <div class="hc-pkg-tile" id="hc-pkg-tile-starter" onclick="selectHeroPkg('starter')">
                 <div class="hc-pkg-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                  <div class="hc-pkg-icon hc-pkg-icon--starter"><img class="starter-badge-img" src="img-assets/badge icons/starter-badge.webp" alt="Starter"></div>
+                  <div class="hc-pkg-icon hc-pkg-icon--starter"><img class="pkg-tier-img" src="img-assets/icons/01-starter.png" alt="Starter" width="36" height="36"></div>
                 <div class="hc-pkg-name">Starter</div>
                 <div class="hc-pkg-amt">$250</div>
                 <div class="hc-pkg-sub">Cashback</div>
               </div>
               <div class="hc-pkg-tile" id="hc-pkg-tile-silver" onclick="selectHeroPkg('silver')">
                 <div class="hc-pkg-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                <div class="hc-pkg-icon hc-pkg-icon--silver"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <div class="hc-pkg-icon hc-pkg-icon--silver"><img class="pkg-tier-img" src="img-assets/icons/02-silver.png" alt="Silver" width="36" height="36"></div>
                 <div class="hc-pkg-name">Silver</div>
                 <div class="hc-pkg-amt">$500</div>
                 <div class="hc-pkg-sub">Cashback</div>
               </div>
               <div class="hc-pkg-tile" id="hc-pkg-tile-gold" onclick="selectHeroPkg('gold')">
                 <div class="hc-pkg-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                <div class="hc-pkg-icon hc-pkg-icon--gold"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <div class="hc-pkg-icon hc-pkg-icon--gold"><img class="pkg-tier-img" src="img-assets/icons/03-gold.png" alt="Gold" width="36" height="36"></div>
                 <div class="hc-pkg-name">Gold</div>
                 <div class="hc-pkg-amt">$750</div>
                 <div class="hc-pkg-sub">Cashback</div>
               </div>
               <div class="hc-pkg-tile hc-pkg-tile--active" id="hc-pkg-tile-elite" onclick="selectHeroPkg('elite')">
                 <div class="hc-pkg-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                <div class="hc-pkg-icon hc-pkg-icon--elite"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7z"/><path d="M5 20h14"/></svg></div>
+                <div class="hc-pkg-icon hc-pkg-icon--elite"><img class="pkg-tier-img" src="img-assets/icons/06-elite.png" alt="Elite" width="36" height="36"></div>
                 <div class="hc-pkg-name">Elite</div>
                 <div class="hc-pkg-amt">$1,500</div>
                 <div class="hc-pkg-sub">Cashback</div>
@@ -415,9 +415,7 @@ img{max-width:100%;display:block}
         <!-- STARTER -->
         <div class="pkg pkg--starter reveal">
           <div class="pkg-header-row">
-            <div class="pkg-icon-wrap pkg-icon--starter">
-            <img class="starter-badge-img" src="img-assets/badge icons/starter-badge.webp" alt="Starter">
-          </div>
+            <div class="pkg-icon-wrap pkg-icon--starter"><img class="pkg-tier-img" src="img-assets/icons/01-starter.png" alt="Starter" width="64" height="64"></div>
             <div class="pkg-header-info">
               <div class="pkg-name">Starter</div>
               <div class="pkg-cash">$250</div>
@@ -459,9 +457,7 @@ img{max-width:100%;display:block}
         <div class="pkg pkg--bronze reveal">
           <span class="pkg-badge pkg-badge--best-value"><svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>BEST VALUE</span>
           <div class="pkg-header-row">
-            <div class="pkg-icon-wrap pkg-icon--silver">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polygon points="12 8 13.09 11.26 16.5 11.27 13.8 13.14 14.83 16.4 12 14.58 9.17 16.4 10.2 13.14 7.5 11.27 10.91 11.26"/></svg>
-          </div>
+            <div class="pkg-icon-wrap pkg-icon--silver"><img class="pkg-tier-img" src="img-assets/icons/02-silver.png" alt="Silver" width="64" height="64"></div>
             <div class="pkg-header-info">
               <div class="pkg-name">Silver</div>
               <div class="pkg-cash">$500</div>
@@ -510,9 +506,7 @@ img{max-width:100%;display:block}
         <div class="pkg pkg--gold reveal">
           <div class="pkg-header-row">
             <div class="pkg-icon-col">
-            <div class="pkg-icon-wrap pkg-icon--gold">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-          </div>
+            <div class="pkg-icon-wrap pkg-icon--gold"><img class="pkg-tier-img" src="img-assets/icons/03-gold.png" alt="Gold" width="64" height="64"></div>
             <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
             </div>
             <div class="pkg-header-info">
@@ -563,10 +557,7 @@ img{max-width:100%;display:block}
         <div class="pkg pkg--platinum reveal">
           <div class="pkg-header-row">
             <div class="pkg-icon-col">
-            <div class="pkg-icon-wrap pkg-icon--platinum">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9 6 3z"/><path d="M11 3l-3 6 4 13M13 3l3 6-4 13M2 9h20"/></svg>
-
-          </div>
+            <div class="pkg-icon-wrap pkg-icon--platinum"><img class="pkg-tier-img" src="img-assets/icons/04-platinum.png" alt="Platinum" width="64" height="64"></div>
             <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
             </div>
             <div class="pkg-header-info">
@@ -617,10 +608,7 @@ img{max-width:100%;display:block}
         <div class="pkg pkg--diamond reveal">
           <div class="pkg-header-row">
             <div class="pkg-icon-col">
-            <div class="pkg-icon-wrap pkg-icon--diamond">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 9l7 12 7-12-7-6z"/><path d="M5 9h14"/><path d="m9 9 3 12 3-12"/></svg>
-
-          </div>
+            <div class="pkg-icon-wrap pkg-icon--diamond"><img class="pkg-tier-img" src="img-assets/icons/05-diamond.png" alt="Diamond" width="64" height="64"></div>
             <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
             </div>
             <div class="pkg-header-info">
@@ -674,9 +662,7 @@ img{max-width:100%;display:block}
           <span class="pkg-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><path d="M2 17L5 6l5 5 2-8 2 8 5-5 3 11z"/><path d="M2 17h20"/></svg>MAXIMUM REWARDS</span>
           <div class="pkg-header-row">
             <div class="pkg-icon-col">
-            <div class="pkg-icon-wrap pkg-icon--elite">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17L5 6l5 5 2-8 2 8 5-5 3 11z"/><path d="M2 17h20"/></svg>
-          </div>
+            <div class="pkg-icon-wrap pkg-icon--elite"><img class="pkg-tier-img" src="img-assets/icons/06-elite.png" alt="Elite" width="64" height="64"></div>
             <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
             </div>
             <div class="pkg-header-info">
