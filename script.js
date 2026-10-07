@@ -1,10 +1,10 @@
 var pkgData = {
-  starter:  { name:'Starter Package',  cash:'$250',   pay:'4 biweekly payments of $111.56',  total:'$446.25',  features:['Full Access to Starter Course','Secure online sign-up','Up to $5,000+ VIP Membership Perks','Budgeting tools'] },
-  silver:   { name:'Silver Package',   cash:'$500',   pay:'6 biweekly payments of $148.75',  total:'$892.50',  features:['Full Access to Silver Courses','Secure online sign-up','Up to $10,000+ VIP Membership Perks','Side Hustle of the Month','Budgeting tools','Debt tools'] },
-  gold:     { name:'Gold Package',     cash:'$750',   pay:'8 biweekly payments of $167.34',  total:'$1,338.75',features:['Full Access to Gold Courses','Secure online sign-up','Up to $15,000+ VIP Membership Perks','Side Hustle of the Month','Budgeting tools','Debt tools'] },
-  platinum: { name:'Platinum Package', cash:'$1,000', pay:'9 biweekly payments of $198.33',  total:'$1,785.00',features:['Full Access to Platinum Courses','Secure online sign-up','Up to $20,000+ VIP Membership Perks','Side Hustle of the Month','Budgeting tools','Debt tools'] },
-  diamond:  { name:'Diamond Package',  cash:'$1,250', pay:'10 biweekly payments of $223.13', total:'$2,231.25',features:['Full Access to Diamond Courses','Secure online sign-up','Up to $25,000+ VIP Membership Perks','Side Hustle of the Month','Budgeting tools','Debt tools','Priority support','Premium resources'] },
-  elite:    { name:'Elite Package',    cash:'$1,500', pay:'11 biweekly payments of $243.41', total:'$2,677.50',features:['Full Access to Elite Courses','Secure online sign-up','Up to $30,000+ VIP Membership Perks','Side Hustle of the Month','Budgeting tools','Debt tools','Priority support','Premium resources'] }
+  starter:  { name:'Starter Package',  cash:'$250',   pay:'4 biweekly payments of $111.56',  total:'$446.25',  features:['Full Access to Starter Course','Secure online sign-up','Up to $5,000+ VIP Savings Collection','Budgeting tools'] },
+  silver:   { name:'Silver Package',   cash:'$500',   pay:'6 biweekly payments of $148.75',  total:'$892.50',  features:['Full Access to Silver Courses','Secure online sign-up','Up to $10,000+ VIP Savings Collection','Side Hustle of the Month','Budgeting tools','Debt tools'] },
+  gold:     { name:'Gold Package',     cash:'$750',   pay:'8 biweekly payments of $167.34',  total:'$1,338.75',features:['Full Access to Gold Courses','Secure online sign-up','Up to $15,000+ VIP Savings Collection','Side Hustle of the Month','Budgeting tools','Debt tools'] },
+  platinum: { name:'Platinum Package', cash:'$1,000', pay:'9 biweekly payments of $198.33',  total:'$1,785.00',features:['Full Access to Platinum Courses','Secure online sign-up','Up to $20,000+ VIP Savings Collection','Side Hustle of the Month','Budgeting tools','Debt tools'] },
+  diamond:  { name:'Diamond Package',  cash:'$1,250', pay:'10 biweekly payments of $223.13', total:'$2,231.25',features:['Full Access to Diamond Courses','Secure online sign-up','Up to $25,000+ VIP Savings Collection','Side Hustle of the Month','Budgeting tools','Debt tools','Priority support','Premium resources'] },
+  elite:    { name:'Elite Package',    cash:'$1,500', pay:'11 biweekly payments of $243.41', total:'$2,677.50',features:['Full Access to Elite Courses','Secure online sign-up','Up to $30,000+ VIP Savings Collection','Side Hustle of the Month','Budgeting tools','Debt tools','Priority support','Premium resources'] }
 };
 var selectedPkg = 'silver';
 
@@ -84,9 +84,9 @@ function selectHeroPkg(pkg) {
   if (amountEl) amountEl.textContent = d.cash;
   if (descPkgEl) descPkgEl.textContent = d.name;
 
-  var savingsFeature = d.features.filter(function(f) { return /VIP Membership Perks/i.test(f); })[0] || '';
+  var savingsFeature = d.features.filter(function(f) { return /VIP Savings Collection/i.test(f); })[0] || '';
   var savingsAmt = (savingsFeature.match(/\$[\d,]+/) || [])[0];
-  var savingsLabel = savingsAmt ? 'Up to ' + savingsAmt + ' VIP Membership Perks' : '';
+  var savingsLabel = savingsAmt ? 'Up to ' + savingsAmt + ' VIP Savings Collection' : '';
 
   var perk1 = document.getElementById('hc-perk-1');
   var perk2 = document.getElementById('hc-perk-2');
@@ -234,7 +234,7 @@ function initScratchCards() {
         ctx.stroke();
       }
       ctx.fillStyle = 'rgba(255,255,255,.92)';
-      var label = '🎁 SCRATCH TO REVEAL VIP MEMBERSHIP PERKS';
+      var label = '🎁 SCRATCH TO REVEAL VIP SAVINGS COLLECTION';
       var fontSize = 12;
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
