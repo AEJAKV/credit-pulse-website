@@ -27,13 +27,37 @@
     var total = needs + wants + savings;
     var surplus = income - total;
     var pct = function (v) { return income > 0 ? (v / income) * 100 : 0; };
+    var p = { needs: pct(needs), wants: pct(wants), savings: pct(savings), left: surplus > 0 ? pct(surplus) : 0, total: pct(total) };
+    var keys = ['needs', 'wants', 'savings', 'left'];
+    var rounded = roundToTotal(keys.map(function (k) { return p[k]; }));
+    var shown = {};
+    keys.forEach(function (k, i) { shown[k] = rounded.values[i]; });
+    shown.total = rounded.total;
     return {
       income: income, needs: needs, wants: wants, savings: savings, total: total, surplus: surplus,
-      pct: { needs: pct(needs), wants: pct(wants), savings: pct(savings), left: surplus > 0 ? pct(surplus) : 0, total: pct(total) }
+      pct: p,
+      shown: shown // one-decimal percentages whose rows add up exactly to shown.total
     };
   }
 
-  var api = { summarize: summarize, GUIDE: GUIDE, DEFAULTS: DEFAULTS };
+  /**
+   * Round percentages to one decimal so the rounded rows add up exactly to the
+   * rounded total (largest-remainder method): round each row down to a tenth,
+   * then give the leftover tenths to the rows that lost the most in rounding.
+   */
+  function roundToTotal(values) {
+    var tenths = values.map(function (v) { return v * 10; });
+    var target = Math.round(tenths.reduce(function (s, v) { return s + v; }, 0) + 1e-9);
+    var floors = tenths.map(function (v) { return Math.floor(v + 1e-9); });
+    var short = target - floors.reduce(function (s, v) { return s + v; }, 0);
+    tenths.map(function (v, i) { return { i: i, rem: v - floors[i] }; })
+      .sort(function (a, b) { return (b.rem - a.rem) || (a.i - b.i); })
+      .slice(0, Math.max(0, short))
+      .forEach(function (x) { floors[x.i] += 1; });
+    return { values: floors.map(function (t) { return t / 10; }), total: target / 10 };
+  }
+
+  var api = { summarize: summarize, roundToTotal: roundToTotal, GUIDE: GUIDE, DEFAULTS: DEFAULTS };
   if (typeof module !== 'undefined' && module.exports) { module.exports = api; }
   root.CPBudget = api;
 
@@ -48,6 +72,7 @@
   function num(v) { var n = parseFloat(String(v).replace(/[^0-9.\-]/g, '')); return isFinite(n) ? n : 0; }
   function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
   function fmtPct(p) { return (Math.round(p * 10) / 10).toFixed(1) + '%'; }
+  // Display percentages come from r.shown (already rounded so rows add up to the total).
 
   function addRow(group, label, amount) {
     rowSeq++;
@@ -107,29 +132,29 @@
       var label = fits(w, text) ? text : (fits(w, pctOnly) ? pctOnly : '');
       return '<span class="' + cls + '" style="width:' + w.toFixed(3) + '%" title="' + text + '">' + label + '</span>';
     };
-    html += '<p class="bc-bar-label">Your split (share of take-home income)</p><div class="bc-bar" role="img" aria-label="Needs ' + fmtPct(r.pct.needs) +
-      ', Wants ' + fmtPct(r.pct.wants) + ', Savings and Debt ' + fmtPct(r.pct.savings) + (r.pct.left > 0 ? ', Not yet assigned ' + fmtPct(r.pct.left) : '') + ' of income">' +
-      seg('bc-seg-needs', r.needs, 'Needs ' + fmtPct(r.pct.needs)) +
-      seg('bc-seg-wants', r.wants, 'Wants ' + fmtPct(r.pct.wants)) +
-      seg('bc-seg-save', r.savings, 'Savings ' + fmtPct(r.pct.savings)) +
-      seg('bc-seg-left', r.surplus > 0 ? r.surplus : 0, 'Left ' + fmtPct(r.pct.left)) + '</div>';
+    html += '<p class="bc-bar-label">Your split (share of take-home income)</p><div class="bc-bar" role="img" aria-label="Needs ' + fmtPct(r.shown.needs) +
+      ', Wants ' + fmtPct(r.shown.wants) + ', Savings and Debt ' + fmtPct(r.shown.savings) + (r.pct.left > 0 ? ', Not yet assigned ' + fmtPct(r.shown.left) : '') + ' of income">' +
+      seg('bc-seg-needs', r.needs, 'Needs ' + fmtPct(r.shown.needs)) +
+      seg('bc-seg-wants', r.wants, 'Wants ' + fmtPct(r.shown.wants)) +
+      seg('bc-seg-save', r.savings, 'Savings ' + fmtPct(r.shown.savings)) +
+      seg('bc-seg-left', r.surplus > 0 ? r.surplus : 0, 'Left ' + fmtPct(r.shown.left)) + '</div>';
     html += '<p class="bc-bar-label">50/30/20 guideline</p><div class="bc-bar" role="img" aria-label="Guideline: Needs 50%, Wants 30%, Savings and Debt 20%">' +
       seg('bc-seg-needs', 0, 'Needs 50%', 50) + seg('bc-seg-wants', 0, 'Wants 30%', 30) + seg('bc-seg-save', 0, 'Savings 20%', 20) + '</div>';
     html += '<div class="bc-legend"><span><i class="bc-seg-needs"></i>Needs</span><span><i class="bc-seg-wants"></i>Wants</span><span><i class="bc-seg-save"></i>Savings &amp; Debt</span>' +
       (r.surplus > 0 ? '<span><i class="bc-seg-left"></i>Not yet assigned</span>' : '') + '</div>';
 
     var rows = ['needs', 'wants', 'savings'].map(function (g) {
-      var d = r.pct[g] - GUIDE[g];
+      var d = r.shown[g] - GUIDE[g];
       var cls = Math.abs(d) <= 5 ? 'bc-diff-ok' : 'bc-diff-off';
       var txt = Math.abs(d) < 0.05 ? 'On target' : (d > 0 ? '+' : '&minus;') + fmtPct(Math.abs(d)).replace('%', ' pts');
-      return '<tr><td>' + LABELS[g] + '</td><td>' + money.format(r[g]) + '</td><td>' + fmtPct(r.pct[g]) + '</td><td>' + GUIDE[g] + '%</td><td class="' + cls + '">' + txt + '</td></tr>';
+      return '<tr><td>' + LABELS[g] + '</td><td>' + money.format(r[g]) + '</td><td>' + fmtPct(r.shown[g]) + '</td><td>' + GUIDE[g] + '%</td><td class="' + cls + '">' + txt + '</td></tr>';
     }).join('');
     if (r.surplus > 0) {
-      rows += '<tr><td>Not yet assigned</td><td>' + money.format(r.surplus) + '</td><td>' + fmtPct(r.pct.left) + '</td><td>&mdash;</td><td>&mdash;</td></tr>';
+      rows += '<tr><td>Not yet assigned</td><td>' + money.format(r.surplus) + '</td><td>' + fmtPct(r.shown.left) + '</td><td>&mdash;</td><td>&mdash;</td></tr>';
     }
     html += '<div style="overflow-x:auto"><table class="bc-table"><thead><tr><th scope="col">Category</th><th scope="col">Amount</th><th scope="col">Your %</th><th scope="col">Guideline</th><th scope="col">Difference</th></tr></thead><tbody>' +
       rows + '</tbody><tfoot><tr><td>Total</td><td>' + money.format(r.surplus > 0 ? income : r.total) + '</td><td>' +
-      fmtPct(r.pct.needs + r.pct.wants + r.pct.savings + r.pct.left) + '</td><td>100%</td><td></td></tr></tfoot></table></div>';
+      fmtPct(r.shown.total) + '</td><td>100%</td><td></td></tr></tfoot></table></div>';
 
     out.innerHTML = html;
   }
