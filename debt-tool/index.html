@@ -4,10 +4,11 @@
   <script>(() => { const otto_not_present = !window.parent.document.querySelector('#sa-dynamic-optimization'); if (otto_not_present) { var script = document.createElement("script"); script.src = "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js"; script.dataset.uuid = "110f85b6-6cd9-41a6-b7c8-33d3166ab8ea"; script.id = "sa-dynamic-optimization"; window.parent.document.head.appendChild(script); } })();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Download the free Canadian Debt Payoff Tool. Compare debt snowball and debt avalanche strategies, estimate payoff dates, and build a clear repayment plan in Excel." />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="description" content="The Canadian Debt Payoff Tool is included with every Credit Pulse membership. Compare debt snowball and debt avalanche strategies, estimate payoff dates, and build a clear repayment plan in Excel." />
   <meta name="theme-color" content="#1a7a3c" />
   <link rel="icon" type="image/png" href="cp-logo/favicon-cp.png" />
-  <title>Canadian Debt Payoff Tool | Free Excel Download</title>
+  <title>Canadian Debt Payoff Tool | Included with Credit Pulse Membership</title>
   <link rel="canonical" href="https://www.creditpulse.ca/debt-tool/" />
   <meta property="og:url" content="https://www.creditpulse.ca/debt-tool/" />
   <meta property="og:site_name" content="Credit Pulse" />
@@ -102,6 +103,12 @@
       width: 220px;
       height: 80px;
       object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
     }
 
     .nav-link {
@@ -631,7 +638,15 @@
         padding: 15px 0;
       }
 
+      .nav-links {
+        gap: 14px;
+      }
+
       .nav-link {
+        font-size: 0.85rem;
+      }
+
+      .nav-link-hide-sm {
         display: none;
       }
 
@@ -676,6 +691,20 @@
         text-align: left;
       }
     }
+    .tool-calc-link {
+      margin-top: 0;
+      margin-bottom: 22px;
+    }
+
+    .tool-calc-link a,
+    .footer-links a {
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    .footer-links {
+      margin-top: 8px;
+    }
   </style>
 <!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com -->
 <script>(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.account=ac;d.getElementsByTagName('head')[0].appendChild(s);})(document,115842,127869);</script>
@@ -685,26 +714,32 @@
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
-  <div class="announcement">Free Excel download • Built for Canadian debt planning • No sign-up required</div>
+  <div class="announcement">Included with every Credit Pulse membership • Built for Canadian debt planning • Excel download</div>
 
   <header class="container">
     <nav aria-label="Primary navigation">
       <a class="brand" href="#" aria-label="Canadian Debt Tool home">
         <span class="brand-mark" aria-hidden="true"><img src="cp-logo/cp-logo.png" alt="Credit Pulse logo" /></span>
       </a>
-      <a class="nav-link" href="#features">What’s included</a>
+      <div class="nav-links">
+        <a class="nav-link nav-link-hide-sm" href="#features">What’s included</a>
+        <a class="nav-link" href="/calculators/">Calculators</a>
+        <a class="nav-link" href="/blog/">Blog</a>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="hero container">
       <div>
-        <span class="eyebrow">Free Excel debt planner</span>
+        <span class="eyebrow">Members’ Excel debt planner</span>
         <h1>Turn your debt into a clear payoff plan.</h1>
         <p class="hero-copy">
           Organize your balances, compare debt avalanche and debt snowball strategies,
           estimate your payoff date, and see how extra payments can reduce interest.
         </p>
+
+        <p class="fine-print tool-calc-link">Want a quick estimate first? Try our free <a href="/calculators/debt-payoff-calculator/">Debt Payoff Calculator</a>.</p>
 
         <div class="cta-row">
           <a class="button button-primary"
@@ -717,10 +752,10 @@
           <a class="button button-secondary" href="#features">See what’s included</a>
         </div>
 
-        <p class="fine-print">Microsoft Excel-compatible .xlsx file • Canadian dollars • Editable and reusable</p>
+        <p class="fine-print">Included with your Credit Pulse membership • Microsoft Excel-compatible .xlsx file • Canadian dollars • Editable and reusable</p>
 
         <div class="trust-row" aria-label="Download benefits">
-          <span class="trust-item"><span class="check">✓</span>No account needed</span>
+          <span class="trust-item"><span class="check">✓</span>Included with membership</span>
           <span class="trust-item"><span class="check">✓</span>Works offline</span>
           <span class="trust-item"><span class="check">✓</span>Your data stays with you</span>
         </div>
@@ -857,7 +892,7 @@
              href="Canadian_Debt_Payoff_Tool.xlsx"
              download
              data-download-button>
-            Download Free Tool
+            Download the Excel Tool
           </a>
         </div>
       </div>
@@ -872,8 +907,8 @@
 
         <div class="faq">
           <details>
-            <summary>Do I need to provide an email address?</summary>
-            <p>No. The download button links directly to the Excel workbook.</p>
+            <summary>How do I get the Debt Payoff Tool?</summary>
+            <p>The Excel tool is included with every Credit Pulse membership, and members download it from this page. If you just want a quick estimate, try our free <a href="/calculators/debt-payoff-calculator/">Debt Payoff Calculator</a>.</p>
           </details>
           <details>
             <summary>Can I use the tool more than once?</summary>
@@ -896,7 +931,8 @@
     <div class="container footer-grid">
       <div>
         <div class="footer-brand">Canadian Debt Tool</div>
-        <div>Free Excel debt-payoff planning resource.</div>
+        <div>Excel debt-payoff planning tool, included with every Credit Pulse membership.</div>
+        <div class="footer-links"><a href="/calculators/">Calculators</a> • <a href="/blog/">Blog</a></div>
       </div>
       <div class="disclaimer">
         Educational use only. This tool is not financial, legal, tax, credit, or insolvency advice.

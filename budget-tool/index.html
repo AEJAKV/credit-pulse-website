@@ -4,9 +4,10 @@
   <script>(() => { const otto_not_present = !window.parent.document.querySelector('#sa-dynamic-optimization'); if (otto_not_present) { var script = document.createElement("script"); script.src = "https://dashboard.searchatlas.com/scripts/dynamic_optimization.js"; script.dataset.uuid = "110f85b6-6cd9-41a6-b7c8-33d3166ab8ea"; script.id = "sa-dynamic-optimization"; window.parent.document.head.appendChild(script); } })();</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Download the free CreditPulse Budget Tool. Plan monthly spending, track annual expenses, review Canadian budgeting guidelines, and see whether your cash flow is short or ahead." />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="description" content="The CreditPulse Budget Tool is included with every Credit Pulse membership. Plan monthly spending, track annual expenses, review Canadian budgeting guidelines, and see whether your cash flow is short or ahead." />
   <meta name="theme-color" content="#53ad2f" />
-  <title>CreditPulse Budget Tool | Free Excel Download</title>
+  <title>CreditPulse Budget Tool | Included with Credit Pulse Membership</title>
   <link rel="canonical" href="https://www.creditpulse.ca/budget-tool/" />
   <meta property="og:url" content="https://www.creditpulse.ca/budget-tool/" />
   <meta property="og:site_name" content="Credit Pulse" />
@@ -91,6 +92,12 @@
       height: 64px;
       width: auto;
       display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
     }
 
     .nav-link {
@@ -671,7 +678,15 @@
         padding: 15px 0;
       }
 
+      .nav-links {
+        gap: 14px;
+      }
+
       .nav-link {
+        font-size: 0.85rem;
+      }
+
+      .nav-link-hide-sm {
         display: none;
       }
 
@@ -737,6 +752,20 @@
         text-align: left;
       }
     }
+    .tool-calc-link {
+      margin-top: 0;
+      margin-bottom: 22px;
+    }
+
+    .tool-calc-link a,
+    .footer-links a {
+      color: var(--green-dark);
+      font-weight: 800;
+    }
+
+    .footer-links {
+      margin-top: 8px;
+    }
   </style>
 <!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com -->
 <script>(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.account=ac;d.getElementsByTagName('head')[0].appendChild(s);})(document,115842,127869);</script>
@@ -747,26 +776,32 @@
 </head>
 
 <body>
-  <div class="top-strip">Free Canadian budget workbook • Excel download • No sign-up required</div>
+  <div class="top-strip">Included with every Credit Pulse membership • Canadian budget workbook • Excel download</div>
 
   <header class="container">
     <nav aria-label="Primary navigation">
       <a class="brand" href="#" aria-label="CreditPulse Budget Tool home">
         <img src="cp-logo.png" alt="CreditPulse logo" class="brand-logo" />
       </a>
-      <a class="nav-link" href="#included">What’s included</a>
+      <div class="nav-links">
+        <a class="nav-link nav-link-hide-sm" href="#included">What’s included</a>
+        <a class="nav-link" href="/calculators/">Calculators</a>
+        <a class="nav-link" href="/blog/">Blog</a>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="hero container">
       <div>
-        <span class="eyebrow"><span class="eyebrow-dot"></span>Free Excel budgeting tool</span>
+        <span class="eyebrow"><span class="eyebrow-dot"></span>Members’ Excel budgeting tool</span>
         <h1>Give every dollar a <span>clear purpose.</span></h1>
         <p class="hero-copy">
           Plan your monthly spending, organize irregular expenses, track your full year,
           and see whether your budget leaves you short or with money to spare.
         </p>
+
+        <p class="fine-print tool-calc-link">Want a quick estimate first? Try our free <a href="/calculators/budget-calculator/">Budget Calculator</a>.</p>
 
         <div class="cta-row">
           <a class="button button-primary"
@@ -779,10 +814,10 @@
           <a class="button button-secondary" href="#included">Explore the workbook</a>
         </div>
 
-        <p class="fine-print">Microsoft Excel-compatible .xlsx file • Canadian dollars • Editable and reusable</p>
+        <p class="fine-print">Included with your Credit Pulse membership • Microsoft Excel-compatible .xlsx file • Canadian dollars • Editable and reusable</p>
 
         <div class="benefit-row" aria-label="Download benefits">
-          <span class="benefit"><span class="check">✓</span>No account required</span>
+          <span class="benefit"><span class="check">✓</span>Included with membership</span>
           <span class="benefit"><span class="check">✓</span>Works offline</span>
           <span class="benefit"><span class="check">✓</span>Your information stays on your device</span>
         </div>
@@ -942,7 +977,7 @@
              href="Credit-Pulse-Budget-Tool.xlsx"
              download
              data-download>
-            Download Free Workbook
+            Download the Excel Tool
           </a>
         </div>
       </div>
@@ -957,8 +992,8 @@
 
         <div class="faq">
           <details>
-            <summary>Do I need to enter an email address?</summary>
-            <p>No. The page provides a direct download of the Excel workbook.</p>
+            <summary>How do I get the Budget Tool?</summary>
+            <p>The Excel workbook is included with every Credit Pulse membership, and members download it from this page. If you just want a quick estimate, try our free <a href="/calculators/budget-calculator/">Budget Calculator</a>.</p>
           </details>
 
           <details>
@@ -992,7 +1027,8 @@
     <div class="container footer-grid">
       <div>
         <div class="footer-brand"><img src="cp-logo.png" alt="CreditPulse logo" class="footer-logo" /></div>
-        <div>Canadian budgeting and financial-education resource.</div>
+        <div>Canadian budgeting workbook, included with every Credit Pulse membership.</div>
+        <div class="footer-links"><a href="/calculators/">Calculators</a> • <a href="/blog/">Blog</a></div>
       </div>
 
       <div class="disclaimer">

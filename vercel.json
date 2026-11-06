@@ -2,5 +2,13 @@
   "cleanUrls": true,
   "rewrites": [
     { "source": "/checkout", "destination": "/" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.xlsx",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex" }
+      ]
+    }
   ]
 }
