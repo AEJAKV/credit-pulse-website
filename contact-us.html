@@ -150,13 +150,13 @@ img{max-width:100%;display:block}
   .hero-card{margin-top:8px;width:100%}
 }
 @media(max-width:420px){.hc-pkg-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
-@media(prefers-reduced-motion:reduce){.hero-card,.hl-accent{animation:none}}
+@media(prefers-reduced-motion:reduce){.hero-card,.hl-accent,.nav-mobile-cta.btn,.nav-mobile-cta.btn::after{animation:none}}
   </style>
   <!-- Full stylesheet: loads async, non-blocking -->
   <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="style.css"></noscript>
 <!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com -->
-<script>(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.account=ac;d.getElementsByTagName('head')[0].appendChild(s);})(document,115842,127869);</script>
+<script>/* OptinMonster: deferred until first scroll/touch or 3s after load */(function(w,d){var done=false;function run(){if(done)return;done=true;w.removeEventListener('scroll',run);w.removeEventListener('touchstart',run);(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.account=ac;d.getElementsByTagName('head')[0].appendChild(s);})(d,115842,127869);}w.addEventListener('scroll',run,{passive:true});w.addEventListener('touchstart',run,{passive:true});function arm(){setTimeout(run,3000);}if(d.readyState==='complete')arm();else w.addEventListener('load',arm);})(window,document);</script>
 <!-- / https://optinmonster.com -->
   <link rel="canonical" href="https://www.creditpulse.ca/contact-us">
   <meta name="robots" content="index,follow">
@@ -327,7 +327,7 @@ img{max-width:100%;display:block}
 
 <script src="script.js" defer></script>
 <!-- Start of creditpulse Zendesk Widget script -->
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=efc1321b-fb25-4612-85bc-f0870a6563d1"></script>
+<script>/* Zendesk: deferred until first scroll/touch or 3s after load */(function(w,d){var done=false;function run(){if(done)return;done=true;w.removeEventListener('scroll',run);w.removeEventListener('touchstart',run);var s=d.createElement('script');s.id='ze-snippet';s.async=true;s.src='https://static.zdassets.com/ekr/snippet.js?key=efc1321b-fb25-4612-85bc-f0870a6563d1';d.body.appendChild(s);}w.addEventListener('scroll',run,{passive:true});w.addEventListener('touchstart',run,{passive:true});function arm(){setTimeout(run,3000);}if(d.readyState==='complete')arm();else w.addEventListener('load',arm);})(window,document);</script>
 <!-- End of creditpulse Zendesk Widget script -->
 </body>
 </html>

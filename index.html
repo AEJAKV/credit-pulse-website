@@ -151,7 +151,7 @@ img{max-width:100%;display:block}
   .hero-card{margin-top:8px;width:100%}
 }
 @media(max-width:420px){.hc-pkg-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}}
-@media(prefers-reduced-motion:reduce){.hero-card,.hl-accent{animation:none}}
+@media(prefers-reduced-motion:reduce){.hero-card,.hl-accent,.nav-mobile-cta.btn,.nav-mobile-cta.btn::after{animation:none}}
   </style>
   <!-- Hero image: preloaded at top of <head> -->
   <link rel="preload" as="image" href="img-assets/credit-pulse-bg-img-1024.webp"
@@ -161,10 +161,8 @@ img{max-width:100%;display:block}
   <!-- Full stylesheet: loads async, non-blocking -->
   <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="style.css"></noscript>
-  <script src="https://fast.wistia.com/player.js" async></script>
-  <script src="https://fast.wistia.com/embed/eco3up621c.js" async type="module"></script>
 <!-- This site is converting visitors into subscribers and customers with OptinMonster - https://optinmonster.com -->
-<script>(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.account=ac;d.getElementsByTagName('head')[0].appendChild(s);})(document,115842,127869);</script>
+<script>/* OptinMonster: deferred until first scroll/touch or 3s after load */(function(w,d){var done=false;function run(){if(done)return;done=true;w.removeEventListener('scroll',run);w.removeEventListener('touchstart',run);(function(d,u,ac){var s=d.createElement('script');s.type='text/javascript';s.src='https://a.omappapi.com/app/js/api.min.js';s.async=true;s.dataset.user=u;s.dataset.account=ac;d.getElementsByTagName('head')[0].appendChild(s);})(d,115842,127869);}w.addEventListener('scroll',run,{passive:true});w.addEventListener('touchstart',run,{passive:true});function arm(){setTimeout(run,3000);}if(d.readyState==='complete')arm();else w.addEventListener('load',arm);})(window,document);</script>
 <!-- / https://optinmonster.com -->
   <!-- Vercel Web Analytics -->
   <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
@@ -268,28 +266,28 @@ img{max-width:100%;display:block}
             <div class="hc-pkg-grid">
               <div class="hc-pkg-tile" id="hc-pkg-tile-starter" onclick="selectHeroPkg('starter')">
                 <div class="hc-pkg-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                  <div class="hc-pkg-icon hc-pkg-icon--starter"><img class="pkg-tier-img" src="img-assets/icons/01-starter.png" alt="Starter" width="36" height="36"></div>
+                  <div class="hc-pkg-icon hc-pkg-icon--starter"><img class="pkg-tier-img" src="img-assets/icons/01-starter.webp" alt="Starter" width="36" height="36"></div>
                 <div class="hc-pkg-name">Starter</div>
                 <div class="hc-pkg-amt">$250</div>
                 <div class="hc-pkg-sub">Cashback</div>
               </div>
               <div class="hc-pkg-tile" id="hc-pkg-tile-silver" onclick="selectHeroPkg('silver')">
                 <div class="hc-pkg-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                <div class="hc-pkg-icon hc-pkg-icon--silver"><img class="pkg-tier-img" src="img-assets/icons/02-silver.png" alt="Silver" width="36" height="36"></div>
+                <div class="hc-pkg-icon hc-pkg-icon--silver"><img class="pkg-tier-img" src="img-assets/icons/02-silver.webp" alt="Silver" width="36" height="36"></div>
                 <div class="hc-pkg-name">Silver</div>
                 <div class="hc-pkg-amt">$500</div>
                 <div class="hc-pkg-sub">Cashback</div>
               </div>
               <div class="hc-pkg-tile" id="hc-pkg-tile-gold" onclick="selectHeroPkg('gold')">
                 <div class="hc-pkg-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                <div class="hc-pkg-icon hc-pkg-icon--gold"><img class="pkg-tier-img" src="img-assets/icons/03-gold.png" alt="Gold" width="36" height="36"></div>
+                <div class="hc-pkg-icon hc-pkg-icon--gold"><img class="pkg-tier-img" src="img-assets/icons/03-gold.webp" alt="Gold" width="36" height="36"></div>
                 <div class="hc-pkg-name">Gold</div>
                 <div class="hc-pkg-amt">$750</div>
                 <div class="hc-pkg-sub">Cashback</div>
               </div>
               <div class="hc-pkg-tile hc-pkg-tile--active" id="hc-pkg-tile-elite" onclick="selectHeroPkg('elite')">
                 <div class="hc-pkg-check"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-                <div class="hc-pkg-icon hc-pkg-icon--elite"><img class="pkg-tier-img" src="img-assets/icons/06-elite.png" alt="Elite" width="36" height="36"></div>
+                <div class="hc-pkg-icon hc-pkg-icon--elite"><img class="pkg-tier-img" src="img-assets/icons/06-elite.webp" alt="Elite" width="36" height="36"></div>
                 <div class="hc-pkg-name">Elite</div>
                 <div class="hc-pkg-amt">$1,500</div>
                 <div class="hc-pkg-sub">Cashback</div>
@@ -319,41 +317,41 @@ img{max-width:100%;display:block}
     <div class="bank-marquee">
       <div class="bank-track">
         <!-- Set 1 -->
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/TD-bank-logo.svg" alt="TD Bank" loading="lazy"><span class="bank-name">TD Bank</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/RBC-logo.svg" alt="RBC" loading="lazy"><span class="bank-name">RBC Royal Bank</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/scotiabank-logo.svg" alt="Scotiabank" loading="lazy"><span class="bank-name">Scotiabank</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/bmo-bank-logo.svg" alt="BMO" loading="lazy"><span class="bank-name">BMO</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/cibc-bank-logo.svg" alt="CIBC" loading="lazy"><span class="bank-name">CIBC</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/national-bank-logo.svg" alt="National Bank" loading="lazy"><span class="bank-name">National Bank</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/meridian-bank-logo.svg" alt="Meridian" loading="lazy"><span class="bank-name">Meridian</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/tangerine-bank-logo.svg" alt="Tangerine" loading="lazy"><span class="bank-name">Tangerine</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/simplii-financial-bank-logo.svg" alt="Simplii Financial" loading="lazy"><span class="bank-name">Simplii Financial</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/eq-bank-logo.svg" alt="EQ Bank" loading="lazy"><span class="bank-name">EQ Bank</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/vancity-bank-logo.svg" alt="Vancity" loading="lazy"><span class="bank-name">Vancity</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/manulife-bank-logo.svg" alt="Manulife Bank" loading="lazy"><span class="bank-name">Manulife Bank</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/coast-capital-logo.svg" alt="Coast Capital" loading="lazy"><span class="bank-name">Coast Capital</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/ATB-logo.svg" alt="ATB Financial" loading="lazy"><span class="bank-name">ATB Financial</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/canadian-western-bank.svg" alt="Canadian Western Bank" loading="lazy"><span class="bank-name">Canadian Western Bank</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/hsbc-bank-logo.svg" alt="HSBC" loading="lazy"><span class="bank-name">HSBC</span></div>
-        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/pc-financial.svg" alt="PC Financial" loading="lazy"><span class="bank-name">PC Financial</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/TD-bank-logo.svg" alt="TD Bank" width="31" height="28" loading="lazy"><span class="bank-name">TD Bank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/RBC-logo.svg" alt="RBC" width="50" height="28" loading="lazy"><span class="bank-name">RBC Royal Bank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/scotiabank-logo.svg" alt="Scotiabank" width="28" height="28" loading="lazy"><span class="bank-name">Scotiabank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/bmo-bank-logo.svg" alt="BMO" width="51" height="28" loading="lazy"><span class="bank-name">BMO</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/cibc-bank-logo.webp" alt="CIBC" width="56" height="28" loading="lazy"><span class="bank-name">CIBC</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/national-bank-logo.svg" alt="National Bank" width="28" height="28" loading="lazy"><span class="bank-name">National Bank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/meridian-bank-logo.svg" alt="Meridian" width="84" height="28" loading="lazy"><span class="bank-name">Meridian</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/tangerine-bank-logo.svg" alt="Tangerine" width="28" height="28" loading="lazy"><span class="bank-name">Tangerine</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/simplii-financial-bank-logo.svg" alt="Simplii Financial" width="36" height="28" loading="lazy"><span class="bank-name">Simplii Financial</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/eq-bank-logo.svg" alt="EQ Bank" width="28" height="28" loading="lazy"><span class="bank-name">EQ Bank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/vancity-bank-logo.svg" alt="Vancity" width="91" height="28" loading="lazy"><span class="bank-name">Vancity</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/manulife-bank-logo.svg" alt="Manulife Bank" width="28" height="28" loading="lazy"><span class="bank-name">Manulife Bank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/coast-capital-logo.webp" alt="Coast Capital" width="26" height="28" loading="lazy"><span class="bank-name">Coast Capital</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/ATB-logo.svg" alt="ATB Financial" width="40" height="28" loading="lazy"><span class="bank-name">ATB Financial</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/canadian-western-bank.svg" alt="Canadian Western Bank" width="28" height="28" loading="lazy"><span class="bank-name">Canadian Western Bank</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/hsbc-bank-logo.svg" alt="HSBC" width="33" height="28" loading="lazy"><span class="bank-name">HSBC</span></div>
+        <div class="bank-card"><img class="bank-logo" src="img-assets/bank%20logos/pc-financial.svg" alt="PC Financial" width="28" height="28" loading="lazy"><span class="bank-name">PC Financial</span></div>
         <!-- Set 2 ? duplicate for seamless loop -->
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/TD-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">TD Bank</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/RBC-logo.svg" alt="" loading="lazy"><span class="bank-name">RBC Royal Bank</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/scotiabank-logo.svg" alt="" loading="lazy"><span class="bank-name">Scotiabank</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/bmo-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">BMO</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/cibc-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">CIBC</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/national-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">National Bank</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/meridian-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">Meridian</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/tangerine-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">Tangerine</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/simplii-financial-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">Simplii Financial</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/eq-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">EQ Bank</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/vancity-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">Vancity</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/manulife-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">Manulife Bank</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/coast-capital-logo.svg" alt="" loading="lazy"><span class="bank-name">Coast Capital</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/ATB-logo.svg" alt="" loading="lazy"><span class="bank-name">ATB Financial</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/canadian-western-bank.svg" alt="" loading="lazy"><span class="bank-name">Canadian Western Bank</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/hsbc-bank-logo.svg" alt="" loading="lazy"><span class="bank-name">HSBC</span></div>
-        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/pc-financial.svg" alt="" loading="lazy"><span class="bank-name">PC Financial</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/TD-bank-logo.svg" alt="" width="31" height="28" loading="lazy"><span class="bank-name">TD Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/RBC-logo.svg" alt="" width="50" height="28" loading="lazy"><span class="bank-name">RBC Royal Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/scotiabank-logo.svg" alt="" width="28" height="28" loading="lazy"><span class="bank-name">Scotiabank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/bmo-bank-logo.svg" alt="" width="51" height="28" loading="lazy"><span class="bank-name">BMO</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/cibc-bank-logo.webp" alt="" width="56" height="28" loading="lazy"><span class="bank-name">CIBC</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/national-bank-logo.svg" alt="" width="28" height="28" loading="lazy"><span class="bank-name">National Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/meridian-bank-logo.svg" alt="" width="84" height="28" loading="lazy"><span class="bank-name">Meridian</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/tangerine-bank-logo.svg" alt="" width="28" height="28" loading="lazy"><span class="bank-name">Tangerine</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/simplii-financial-bank-logo.svg" alt="" width="36" height="28" loading="lazy"><span class="bank-name">Simplii Financial</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/eq-bank-logo.svg" alt="" width="28" height="28" loading="lazy"><span class="bank-name">EQ Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/vancity-bank-logo.svg" alt="" width="91" height="28" loading="lazy"><span class="bank-name">Vancity</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/manulife-bank-logo.svg" alt="" width="28" height="28" loading="lazy"><span class="bank-name">Manulife Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/coast-capital-logo.webp" alt="" width="26" height="28" loading="lazy"><span class="bank-name">Coast Capital</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/ATB-logo.svg" alt="" width="40" height="28" loading="lazy"><span class="bank-name">ATB Financial</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/canadian-western-bank.svg" alt="" width="28" height="28" loading="lazy"><span class="bank-name">Canadian Western Bank</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/hsbc-bank-logo.svg" alt="" width="33" height="28" loading="lazy"><span class="bank-name">HSBC</span></div>
+        <div class="bank-card" aria-hidden="true"><img class="bank-logo" src="img-assets/bank%20logos/pc-financial.svg" alt="" width="28" height="28" loading="lazy"><span class="bank-name">PC Financial</span></div>
       </div>
     </div>
     <div class="bank-trust-bar">
@@ -417,7 +415,7 @@ img{max-width:100%;display:block}
         <!-- STARTER -->
         <div class="pkg pkg--starter reveal">
           <div class="pkg-header-row">
-            <div class="pkg-icon-wrap pkg-icon--starter"><img class="pkg-tier-img" src="img-assets/icons/01-starter.png" alt="Starter" width="64" height="64"></div>
+            <div class="pkg-icon-wrap pkg-icon--starter"><img class="pkg-tier-img" src="img-assets/icons/01-starter.webp" alt="Starter" width="64" height="64"></div>
             <div class="pkg-header-info">
               <div class="pkg-name">Starter</div>
               <div class="pkg-cash">$250</div>
@@ -459,7 +457,7 @@ img{max-width:100%;display:block}
         <div class="pkg pkg--bronze reveal">
           <span class="pkg-badge pkg-badge--best-value"><svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>BEST VALUE</span>
           <div class="pkg-header-row">
-            <div class="pkg-icon-wrap pkg-icon--silver"><img class="pkg-tier-img" src="img-assets/icons/02-silver.png" alt="Silver" width="64" height="64"></div>
+            <div class="pkg-icon-wrap pkg-icon--silver"><img class="pkg-tier-img" src="img-assets/icons/02-silver.webp" alt="Silver" width="64" height="64"></div>
             <div class="pkg-header-info">
               <div class="pkg-name">Silver</div>
               <div class="pkg-cash">$500</div>
@@ -508,7 +506,7 @@ img{max-width:100%;display:block}
         <div class="pkg pkg--gold reveal">
           <div class="pkg-header-row">
             <div class="pkg-icon-col">
-            <div class="pkg-icon-wrap pkg-icon--gold"><img class="pkg-tier-img" src="img-assets/icons/03-gold.png" alt="Gold" width="64" height="64"></div>
+            <div class="pkg-icon-wrap pkg-icon--gold"><img class="pkg-tier-img" src="img-assets/icons/03-gold.webp" alt="Gold" width="64" height="64"></div>
             <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
             </div>
             <div class="pkg-header-info">
@@ -559,7 +557,7 @@ img{max-width:100%;display:block}
         <div class="pkg pkg--platinum reveal">
           <div class="pkg-header-row">
             <div class="pkg-icon-col">
-            <div class="pkg-icon-wrap pkg-icon--platinum"><img class="pkg-tier-img" src="img-assets/icons/04-platinum.png" alt="Platinum" width="64" height="64"></div>
+            <div class="pkg-icon-wrap pkg-icon--platinum"><img class="pkg-tier-img" src="img-assets/icons/04-platinum.webp" alt="Platinum" width="64" height="64"></div>
             <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
             </div>
             <div class="pkg-header-info">
@@ -610,7 +608,7 @@ img{max-width:100%;display:block}
         <div class="pkg pkg--diamond reveal">
           <div class="pkg-header-row">
             <div class="pkg-icon-col">
-            <div class="pkg-icon-wrap pkg-icon--diamond"><img class="pkg-tier-img" src="img-assets/icons/05-diamond.png" alt="Diamond" width="64" height="64"></div>
+            <div class="pkg-icon-wrap pkg-icon--diamond"><img class="pkg-tier-img" src="img-assets/icons/05-diamond.webp" alt="Diamond" width="64" height="64"></div>
             <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
             </div>
             <div class="pkg-header-info">
@@ -664,7 +662,7 @@ img{max-width:100%;display:block}
           <span class="pkg-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><path d="M2 17L5 6l5 5 2-8 2 8 5-5 3 11z"/><path d="M2 17h20"/></svg>MAXIMUM REWARDS</span>
           <div class="pkg-header-row">
             <div class="pkg-icon-col">
-            <div class="pkg-icon-wrap pkg-icon--elite"><img class="pkg-tier-img" src="img-assets/icons/06-elite.png" alt="Elite" width="64" height="64"></div>
+            <div class="pkg-icon-wrap pkg-icon--elite"><img class="pkg-tier-img" src="img-assets/icons/06-elite.webp" alt="Elite" width="64" height="64"></div>
             <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
             </div>
             <div class="pkg-header-info">
@@ -872,6 +870,25 @@ img{max-width:100%;display:block}
             <style>wistia-player[media-id='eco3up621c']:not(:defined){background:center/contain no-repeat url('https://fast.wistia.com/embed/medias/eco3up621c/swatch');display:block;filter:blur(5px);padding-top:56.25%;}</style>
             <wistia-player media-id="eco3up621c" seo="false" aspect="1.7777777777777777" style="display:block;width:100%;"></wistia-player>
           </div>
+          <script>
+          /* Lazy-load Wistia: inject player scripts only when the video is within 300px of the viewport.
+             The :not(:defined) swatch rule above holds the 16:9 space until the player upgrades. */
+          (function(){
+            var wrap=document.querySelector('.wni-video-wrap');
+            if(!wrap)return;
+            var loaded=false;
+            function loadWistia(){
+              if(loaded)return;loaded=true;
+              var a=document.createElement('script');a.src='https://fast.wistia.com/player.js';a.async=true;document.head.appendChild(a);
+              var b=document.createElement('script');b.src='https://fast.wistia.com/embed/eco3up621c.js';b.type='module';b.async=true;document.head.appendChild(b);
+            }
+            if(!('IntersectionObserver' in window)){loadWistia();return;}
+            var io=new IntersectionObserver(function(entries){
+              for(var i=0;i<entries.length;i++){if(entries[i].isIntersecting){io.disconnect();loadWistia();return;}}
+            },{rootMargin:'300px'});
+            io.observe(wrap);
+          })();
+          </script>
           <div class="wni-fine-print">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
             <span>A short walkthrough of how Credit Pulse membership and cashback works, from package selection to confirmed cashback.</span>
@@ -1256,7 +1273,7 @@ img{max-width:100%;display:block}
 
 <script src="script.js" defer></script>
 <!-- Start of creditpulse Zendesk Widget script -->
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=efc1321b-fb25-4612-85bc-f0870a6563d1"></script>
+<script>/* Zendesk: deferred until first scroll/touch or 3s after load */(function(w,d){var done=false;function run(){if(done)return;done=true;w.removeEventListener('scroll',run);w.removeEventListener('touchstart',run);var s=d.createElement('script');s.id='ze-snippet';s.async=true;s.src='https://static.zdassets.com/ekr/snippet.js?key=efc1321b-fb25-4612-85bc-f0870a6563d1';d.body.appendChild(s);}w.addEventListener('scroll',run,{passive:true});w.addEventListener('touchstart',run,{passive:true});function arm(){setTimeout(run,3000);}if(d.readyState==='complete')arm();else w.addEventListener('load',arm);})(window,document);</script>
 <!-- End of creditpulse Zendesk Widget script -->
 </body>
 </html>
