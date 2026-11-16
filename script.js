@@ -8,6 +8,14 @@ var pkgData = {
 };
 var selectedPkg = 'silver';
 
+// A/B test homepage variants (PageSense split URL): keep these paths in the URL
+var VARIANT_PATHS = ['/home-b', '/home-c'];
+// Remembered on first load so 'home' keeps the visitor on their variant (null on index.html)
+var VARIANT_HOME = (function() {
+  var p = window.location.pathname.replace(/\/$/, '');
+  return VARIANT_PATHS.indexOf(p) !== -1 ? p : null;
+}());
+
 // Page-id ↔ URL-path routing tables
 var PAGE_URLS = {
   home:     '/',
@@ -42,6 +50,7 @@ function navigate(page, pkg) {
   initScratchCards();
   // Keep the browser URL in sync — enables direct linking and back/forward
   var _newPath = PAGE_URLS[page] || '/';
+  if (page === 'home' && VARIANT_HOME) { _newPath = VARIANT_HOME; }
   if (window.location.pathname !== _newPath) {
     history.pushState({ page: page, pkg: pkg || null }, '', _newPath);
   } else {
@@ -353,9 +362,10 @@ window.addEventListener('scroll', function() {
 
 // Back / forward button support
 window.addEventListener('popstate', function(e) {
+  var _popPath = window.location.pathname.replace(/\/$/, '') || '/';
   var page = (e.state && e.state.page)
     ? e.state.page
-    : (URL_PAGES[window.location.pathname.replace(/\/$/, '') || '/'] || 'home');
+    : (VARIANT_PATHS.indexOf(_popPath) !== -1 ? 'home' : (URL_PAGES[_popPath] || 'home'));
   var pkg  = e.state && e.state.pkg ? e.state.pkg : undefined;
   navigate(page, pkg);
 });
