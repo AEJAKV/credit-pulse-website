@@ -211,6 +211,17 @@ img{max-width:100%;display:block}
 @keyframes cpTick{0%,90%,100%{transform:rotate(0)}93%{transform:rotate(-14deg)}96%{transform:rotate(12deg)}}
 @media(max-width:600px){.cp-ticket{--stub:116px;max-width:100%}.cp-ticket-amount{font-size:25px}.cp-ticket-body{padding:14px}.cp-ticket-text{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.cp-ticket,.cp-ticket-arrow{transition:none}.cp-ticket,.cp-ticket-clock{animation:none}}
+.cp-ticket--card{--stub:100px;--notch:9px;max-width:none;margin:0 0 clamp(14px,2vw,18px);background:#174d34;border:1.5px solid #CCFF00;box-shadow:0 10px 24px rgba(23,77,52,.22);animation:none}
+.cp-ticket--card:hover,.cp-ticket--card:focus-visible{transform:translateY(-2px)}
+.cp-ticket--card .cp-ticket-stub{padding:14px 0}
+.cp-ticket--card .cp-ticket-amount{font-size:22px}
+.cp-ticket--card .cp-ticket-upto,.cp-ticket--card .cp-ticket-unit{font-size:9px}
+.cp-ticket--card .cp-ticket-body{padding:12px 14px}
+.cp-ticket--card .cp-ticket-pill{font-size:11px;padding:4px 10px 4px 8px;gap:6px}
+.cp-ticket--card .cp-ticket-pill svg{width:13px;height:13px}
+.cp-ticket--card .cp-ticket-text{font-size:12.5px;margin-top:7px;line-height:1.45}
+.cp-ticket--card .cp-ticket-cta{font-size:12.5px;margin-top:6px}
+@media(max-width:600px){.cp-ticket--card{--stub:92px}.cp-ticket--card .cp-ticket-amount{font-size:20px}.cp-ticket--card .cp-ticket-body{padding:11px 12px}}
 .cp-ticket--top{margin:0 0 clamp(18px,2.6vw,24px)}
 @media(max-width:600px){.cp-ticket--top{margin:4px auto 18px}}
   </style>
@@ -281,23 +292,6 @@ img{max-width:100%;display:block}
         <div class="hero-left">
           <h1 class="hero-headline">Get <span class="hl-accent">$250–$1,500 cashback</span> when you start learning with Credit Pulse</h1>
           <p class="hero-sub">Pick a package and get practical money courses, budgeting tools and a VIP Savings Collection worth $5,000+.</p>
-          <a class="cp-ticket cp-ticket--top" href="#home-pkgs" onclick="event.preventDefault();document.getElementById('home-pkgs').scrollIntoView({behavior:'smooth'})" aria-label="Limited-time offer: get $250 to $1,500 cashback. See packages">
-            <div class="cp-ticket-stub">
-              <span class="cp-ticket-upto">UP TO</span>
-              <span class="cp-ticket-amount">$1,500</span>
-              <span class="cp-ticket-unit">CASHBACK</span>
-            </div>
-            <div class="cp-ticket-body">
-              <span class="cp-ticket-pill">
-                <svg class="cp-ticket-clock" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-                LIMITED-TIME OFFER
-              </span>
-              <p class="cp-ticket-text">Get $250–$1,500 back when you're approved. Pick your package and claim it today.</p>
-              <span class="cp-ticket-cta">Claim my cashback
-                <svg class="cp-ticket-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </span>
-            </div>
-          </a>
           <div class="hero-ctas">
             <button class="btn btn-lg hero-cta-main" onclick="document.getElementById('home-pkgs').scrollIntoView({behavior:'smooth'})"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg><span>See my cashback amount</span><span class="hero-cta-arrow">&#8594;</span></button>
             <button class="btn btn-lg hero-cta-alt" onclick="location.href='/how-it-works'"><span>How it works</span></button>
@@ -359,11 +353,23 @@ img{max-width:100%;display:block}
                 <div class="hc-pkg-sub">Cashback</div>
               </div>
             </div>
-            <ul class="hc-perks" id="hc-perks">
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span id="hc-perk-1">$1,500 Cashback Subscriber Reward</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span id="hc-perk-2">Expert insights and educational content</span></li>
-              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span id="hc-perk-3">Up to $30,000 VIP Savings Collection</span></li>
-            </ul>
+              <a class="cp-ticket cp-ticket--card" href="#home-pkgs" onclick="event.preventDefault();document.getElementById('home-pkgs').scrollIntoView({behavior:'smooth'})" aria-label="Limited-time offer: get $250 to $1,500 cashback. See packages">
+                <div class="cp-ticket-stub">
+                  <span class="cp-ticket-upto">UP TO</span>
+                  <span class="cp-ticket-amount">$1,500</span>
+                  <span class="cp-ticket-unit">CASHBACK</span>
+                </div>
+                <div class="cp-ticket-body">
+                  <span class="cp-ticket-pill">
+                    <svg class="cp-ticket-clock" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                    LIMITED-TIME OFFER
+                  </span>
+                  <p class="cp-ticket-text">Get $250–$1,500 back when you're approved.</p>
+                  <span class="cp-ticket-cta">Claim my cashback
+                    <svg class="cp-ticket-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                  </span>
+                </div>
+              </a>
             <button class="btn hc-cta-btn btn-full" onclick="pickHeroBenefits()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Pick Benefits Now &rarr;</button>
             <div class="hc-secure"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>100% Secure &bull; No impact to your credit score</span></div>
           </div>
