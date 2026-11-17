@@ -226,7 +226,8 @@ img{max-width:100%;display:block}
 .cpx-ls{font-size:.7rem;color:rgba(255,255,255,.58);margin-top:3px;line-height:1.25}
 .cpx-c.cpx-r0{background:#0d3320;padding:20px 6px 16px;border-bottom:0}
 .cpx-lbl.cpx-r0 .cpx-lt{color:#CCFF00;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase}
-.cpx-tn{display:block;width:88%;font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#0d3320;background:#CCFF00;border-radius:100px;padding:8px 0}
+.cpx-ti{width:22px;height:22px;border-radius:50%;object-fit:cover;flex:0 0 22px;box-shadow:0 0 0 2px rgba(13,51,32,.15)}
+.cpx-tn{display:flex;align-items:center;justify-content:center;gap:7px;width:88%;font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#0d3320;background:#CCFF00;border-radius:100px;padding:8px 0}
 .cpx-tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0d3320;background:#fff;border:1px solid #CCFF00;padding:3px 9px;border-radius:100px}
 .cpx-c.cpx-r1{background:#0d3320;padding:24px 4px;border-bottom:0}
 .cpx-tb .cpx-c.cpx-lbl{padding:14px 18px;background:#174d34}
@@ -253,6 +254,7 @@ img{max-width:100%;display:block}
   .cpx-tb{grid-template-columns:104px repeat(6,96px);width:max-content;max-width:none}
   .cpx-tb .cpx-c.cpx-lbl{padding:12px 10px;box-shadow:inset -1px 0 0 rgba(204,255,0,.25),8px 0 12px -6px rgba(13,51,32,.35)}
   .cpx-tb .cpx-c.cpx-lbl.cpx-r1{box-shadow:inset 3px 0 0 #CCFF00,8px 0 12px -6px rgba(13,51,32,.35)}
+  .cpx-ti{width:18px;height:18px;flex-basis:18px}.cpx-tn{gap:5px;font-size:.66rem;letter-spacing:.08em;padding:7px 0}
   .cpx-lt{font-size:.75rem}.cpx-ls{font-size:.62rem}.cpx-amt{font-size:1.45rem}
   .cpx-swipe{display:block}
 }
@@ -509,12 +511,12 @@ img{max-width:100%;display:block}
       <div class="cpx-wrap reveal" role="region" aria-label="Package comparison" tabindex="0">
         <div class="cpx-tb" id="cpx-tb">
           <div class="cpx-c cpx-lbl cpx-r0 cpx-first"><span class="cpx-lt">Compare</span></div>
-          <div class="cpx-c cpx-r0" data-col="0"><span class="cpx-tn">Starter</span></div>
-          <div class="cpx-c cpx-r0" data-col="1"><span class="cpx-tag">Best value</span><span class="cpx-tn">Silver</span></div>
-          <div class="cpx-c cpx-r0" data-col="2"><span class="cpx-tn">Gold</span></div>
-          <div class="cpx-c cpx-r0" data-col="3"><span class="cpx-tn">Platinum</span></div>
-          <div class="cpx-c cpx-r0" data-col="4"><span class="cpx-tn">Diamond</span></div>
-          <div class="cpx-c cpx-r0" data-col="5"><span class="cpx-tag">Max rewards</span><span class="cpx-tn">Elite</span></div>
+          <div class="cpx-c cpx-r0" data-col="0"><span class="cpx-tn"><img class="cpx-ti" src="img-assets/icons/01-starter.webp" alt="" width="22" height="22" loading="lazy">Starter</span></div>
+          <div class="cpx-c cpx-r0" data-col="1"><span class="cpx-tag">Best value</span><span class="cpx-tn"><img class="cpx-ti" src="img-assets/icons/02-silver.webp" alt="" width="22" height="22" loading="lazy">Silver</span></div>
+          <div class="cpx-c cpx-r0" data-col="2"><span class="cpx-tn"><img class="cpx-ti" src="img-assets/icons/03-gold.webp" alt="" width="22" height="22" loading="lazy">Gold</span></div>
+          <div class="cpx-c cpx-r0" data-col="3"><span class="cpx-tn"><img class="cpx-ti" src="img-assets/icons/04-platinum.webp" alt="" width="22" height="22" loading="lazy">Platinum</span></div>
+          <div class="cpx-c cpx-r0" data-col="4"><span class="cpx-tn"><img class="cpx-ti" src="img-assets/icons/05-diamond.webp" alt="" width="22" height="22" loading="lazy">Diamond</span></div>
+          <div class="cpx-c cpx-r0" data-col="5"><span class="cpx-tag">Max rewards</span><span class="cpx-tn"><img class="cpx-ti" src="img-assets/icons/06-elite.webp" alt="" width="22" height="22" loading="lazy">Elite</span></div>
           <div class="cpx-c cpx-lbl cpx-r1"><span class="cpx-lt">Cashback</span><span class="cpx-ls">Upon approval</span></div>
           <div class="cpx-c cpx-r1" data-col="0"><span class="cpx-amt">$250</span><span class="cpx-ac">Cashback</span></div>
           <div class="cpx-c cpx-r1" data-col="1"><span class="cpx-amt">$500</span><span class="cpx-ac">Cashback</span></div>
