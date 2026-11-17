@@ -212,6 +212,46 @@ img{max-width:100%;display:block}
 @media(max-width:600px){.cp-ticket{--stub:116px;max-width:100%}.cp-ticket-amount{font-size:25px}.cp-ticket-body{padding:14px}.cp-ticket-text{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.cp-ticket,.cp-ticket-arrow{transition:none}.cp-ticket,.cp-ticket-clock{animation:none}}
   </style>
+<style id="cpx-styles">
+#home-pkgs .cpx-hd{text-align:center;margin-bottom:clamp(18px,2.6vw,26px)}
+.cpx-ey{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#1A2B1A;background:#CCFF00;padding:5px 12px;border-radius:100px}
+.cpx-h{font-size:clamp(1.35rem,3vw,2.1rem);font-weight:800;color:#1A2B1A;line-height:1.2;margin:10px auto 0;max-width:760px}
+.cpx-h span{color:#4D8A37}
+.cpx-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;padding:16px 2px 8px;outline:none}
+.cpx-tb{display:grid;grid-template-columns:150px repeat(6,minmax(0,1fr));background:#fff;border-radius:20px;border:1px solid #d5e8ce;box-shadow:0 18px 44px rgba(23,77,52,.1);max-width:1100px;margin:0 auto}
+.cpx-c{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:14px 6px;border-bottom:1px solid #f0f5ed;scroll-snap-align:start;transition:background .25s}
+.cpx-lbl{position:sticky;left:0;z-index:3;align-items:flex-start;text-align:left;padding:14px 16px;background:#174d34;border-bottom:1px solid rgba(255,255,255,.07);box-shadow:inset -1px 0 0 rgba(204,255,0,.25)}
+.cpx-first{border-top-left-radius:19px}.cpx-lastl{border-bottom-left-radius:19px}
+.cpx-lt{font-size:.85rem;font-weight:700;color:#fff;line-height:1.2}
+.cpx-ls{font-size:.7rem;color:rgba(255,255,255,.58);margin-top:3px;line-height:1.25}
+.cpx-c.cpx-r0{background:#0d3320;padding:20px 6px 16px;border-bottom:0}
+.cpx-lbl.cpx-r0 .cpx-lt{color:#CCFF00;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase}
+.cpx-tn{display:block;width:88%;font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#0d3320;background:#CCFF00;border-radius:100px;padding:8px 0}
+.cpx-tag{position:absolute;top:-11px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:.6rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#0d3320;background:#fff;border:1px solid #CCFF00;padding:3px 9px;border-radius:100px}
+.cpx-c.cpx-r1{background:#0d3320;padding:24px 4px;border-bottom:0}
+.cpx-lbl.cpx-r1{background:#1f6b49;box-shadow:inset 3px 0 0 #CCFF00,inset -1px 0 0 rgba(204,255,0,.25)}
+.cpx-lbl.cpx-r1 .cpx-lt{color:#CCFF00;font-size:.95rem}
+.cpx-amt{font-size:clamp(1.5rem,2.4vw,1.95rem);font-weight:900;color:#CCFF00;letter-spacing:-.03em;line-height:1}
+.cpx-ac{font-size:.6rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.65);margin-top:7px}
+.cpx-ck{width:22px;height:22px;border-radius:50%;border:1px solid #c9dfc0;color:#7aa86a;display:flex;align-items:center;justify-content:center;font-size:.72rem}
+.cpx-py{font-size:.82rem;font-weight:700;color:#1A2B1A;line-height:1.15}
+.cpx-py small{display:block;font-size:.7rem;font-weight:400;color:#7b9176;margin-top:3px}
+.cpx-c.cpx-rl{border-bottom:0;padding:16px 8px 18px}
+.cpx-sb{display:block;width:100%;font-family:inherit;font-size:.82rem;font-weight:700;color:#1A2B1A;background:#CCFF00;border:1px solid #b8e600;border-radius:12px;padding:10px 0;cursor:pointer;box-shadow:0 6px 16px rgba(204,255,0,.45);transition:transform .25s,box-shadow .25s}
+.cpx-sb:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(204,255,0,.6)}
+.cpx-sb:focus-visible{outline:2px solid #174d34;outline-offset:2px}
+.cpx-c.cpx-hl{background:#f7fcf3}.cpx-c.cpx-r0.cpx-hl,.cpx-c.cpx-r1.cpx-hl{background:#174d34}
+.cpx-swipe{display:none;text-align:center;font-size:.78rem;color:#4D8A37;margin:8px 0 0}
+.cpx-note{text-align:center;font-size:.78rem;color:#5b7356;line-height:1.5;max-width:640px;margin:12px auto clamp(28px,4vw,44px)}
+@media(max-width:860px){
+  .cpx-tb{grid-template-columns:104px repeat(6,96px);width:max-content;max-width:none}
+  .cpx-lbl{padding:12px 10px;box-shadow:inset -1px 0 0 rgba(204,255,0,.25),8px 0 12px -6px rgba(13,51,32,.35)}
+  .cpx-lbl.cpx-r1{box-shadow:inset 3px 0 0 #CCFF00,8px 0 12px -6px rgba(13,51,32,.35)}
+  .cpx-lt{font-size:.75rem}.cpx-ls{font-size:.62rem}.cpx-amt{font-size:1.45rem}
+  .cpx-swipe{display:block}
+}
+@media(prefers-reduced-motion:reduce){.cpx-sb,.cpx-c{transition:none}.cpx-sb:hover{transform:none}}
+</style>
 </head>
 <body>
 
@@ -429,340 +469,71 @@ img{max-width:100%;display:block}
   <!-- PACKAGES PREVIEW -->
   <section class="section" id="home-pkgs">
     <div class="container">
-      <div class="sec-hd sec-hd--pkg reveal">
-        <span class="sec-label">Membership Tiers</span>
-        <h2>Choose the Membership That's Right for You</h2>
-        <p class="sec-sub">Get access to expert-created financial tools, insights, and resources.<br>See your member rewards and payment details before you join.</p>
-        <div class="pkg-cashback-callout pkg-cashback-callout--light">
-          <div class="pkg-cashback-callout-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-          <span>Same-day cashbacks</span>
-        </div>
-        <div class="pkg-hdr-badges pkg-hdr-badges--light">
-          <div class="pkg-hdr-badge">
-            <div class="pkg-hdr-badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><circle cx="9" cy="10" r="1.5"/><path d="M13 9h4M13 12h4"/></svg></div>
-            <span>Access expert tools and resources</span>
-          </div>
-          <div class="pkg-hdr-badge-sep"></div>
-          <div class="pkg-hdr-badge">
-            <div class="pkg-hdr-badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
-            <span>Educational content and guides</span>
-          </div>
-          <div class="pkg-hdr-badge-sep"></div>
-          <div class="pkg-hdr-badge">
-            <div class="pkg-hdr-badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-            <span>Valuable partner offers and savings</span>
-          </div>
-          <div class="pkg-hdr-badge-sep"></div>
-          <div class="pkg-hdr-badge">
-            <div class="pkg-hdr-badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-            <span>Secure online membership</span>
-          </div>
+      <div class="cpx-hd reveal">
+        <span class="cpx-ey">Compare packages</span>
+        <h2 class="cpx-h">Choose your learning package. <span>The cashback is a bonus.</span></h2>
+      </div>
+      <div class="cpx-wrap reveal" role="region" aria-label="Package comparison" tabindex="0">
+        <div class="cpx-tb" id="cpx-tb">
+          <div class="cpx-c cpx-lbl cpx-r0 cpx-first"><span class="cpx-lt">Compare</span></div>
+          <div class="cpx-c cpx-r0" data-col="0"><span class="cpx-tn">Starter</span></div>
+          <div class="cpx-c cpx-r0" data-col="1"><span class="cpx-tag">Best value</span><span class="cpx-tn">Silver</span></div>
+          <div class="cpx-c cpx-r0" data-col="2"><span class="cpx-tn">Gold</span></div>
+          <div class="cpx-c cpx-r0" data-col="3"><span class="cpx-tn">Platinum</span></div>
+          <div class="cpx-c cpx-r0" data-col="4"><span class="cpx-tn">Diamond</span></div>
+          <div class="cpx-c cpx-r0" data-col="5"><span class="cpx-tag">Max rewards</span><span class="cpx-tn">Elite</span></div>
+          <div class="cpx-c cpx-lbl cpx-r1"><span class="cpx-lt">Cashback</span><span class="cpx-ls">Upon approval</span></div>
+          <div class="cpx-c cpx-r1" data-col="0"><span class="cpx-amt">$250</span><span class="cpx-ac">Cashback</span></div>
+          <div class="cpx-c cpx-r1" data-col="1"><span class="cpx-amt">$500</span><span class="cpx-ac">Cashback</span></div>
+          <div class="cpx-c cpx-r1" data-col="2"><span class="cpx-amt">$750</span><span class="cpx-ac">Cashback</span></div>
+          <div class="cpx-c cpx-r1" data-col="3"><span class="cpx-amt">$1,000</span><span class="cpx-ac">Cashback</span></div>
+          <div class="cpx-c cpx-r1" data-col="4"><span class="cpx-amt">$1,250</span><span class="cpx-ac">Cashback</span></div>
+          <div class="cpx-c cpx-r1" data-col="5"><span class="cpx-amt">$1,500</span><span class="cpx-ac">Cashback</span></div>
+          <div class="cpx-c cpx-lbl"><span class="cpx-lt">Security</span><span class="cpx-ls">Secure and confidential</span></div>
+          <div class="cpx-c" data-col="0"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="1"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="2"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="3"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="4"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="5"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c cpx-lbl"><span class="cpx-lt">Benefits</span><span class="cpx-ls">Courses and money tools</span></div>
+          <div class="cpx-c" data-col="0"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="1"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="2"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="3"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="4"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="5"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c cpx-lbl"><span class="cpx-lt">Processing</span><span class="cpx-ls">Online sign-up</span></div>
+          <div class="cpx-c" data-col="0"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="1"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="2"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="3"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="4"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c" data-col="5"><span class="cpx-ck" aria-label="Included">&#10003;</span></div>
+          <div class="cpx-c cpx-lbl"><span class="cpx-lt">Payments</span><span class="cpx-ls">Package details</span></div>
+          <div class="cpx-c" data-col="0"><span class="cpx-py">4 payments<small>Every 2 weeks</small></span></div>
+          <div class="cpx-c" data-col="1"><span class="cpx-py">6 payments<small>Every 2 weeks</small></span></div>
+          <div class="cpx-c" data-col="2"><span class="cpx-py">8 payments<small>Every 2 weeks</small></span></div>
+          <div class="cpx-c" data-col="3"><span class="cpx-py">9 payments<small>Every 2 weeks</small></span></div>
+          <div class="cpx-c" data-col="4"><span class="cpx-py">10 payments<small>Every 2 weeks</small></span></div>
+          <div class="cpx-c" data-col="5"><span class="cpx-py">11 payments<small>Every 2 weeks</small></span></div>
+          <div class="cpx-c cpx-lbl cpx-rl cpx-lastl"><span class="cpx-lt">Subscription</span><span class="cpx-ls">Choose your package</span></div>
+          <div class="cpx-c cpx-rl" data-col="0"><button type="button" class="cpx-sb" onclick="navigateToSignup()" aria-label="Subscribe to Starter, get $250 cashback">Subscribe</button></div>
+          <div class="cpx-c cpx-rl" data-col="1"><button type="button" class="cpx-sb" onclick="navigateToSignup()" aria-label="Subscribe to Silver, get $500 cashback">Subscribe</button></div>
+          <div class="cpx-c cpx-rl" data-col="2"><button type="button" class="cpx-sb" onclick="navigateToSignup()" aria-label="Subscribe to Gold, get $750 cashback">Subscribe</button></div>
+          <div class="cpx-c cpx-rl" data-col="3"><button type="button" class="cpx-sb" onclick="navigateToSignup()" aria-label="Subscribe to Platinum, get $1,000 cashback">Subscribe</button></div>
+          <div class="cpx-c cpx-rl" data-col="4"><button type="button" class="cpx-sb" onclick="navigateToSignup()" aria-label="Subscribe to Diamond, get $1,250 cashback">Subscribe</button></div>
+          <div class="cpx-c cpx-rl" data-col="5"><button type="button" class="cpx-sb" onclick="navigateToSignup()" aria-label="Subscribe to Elite, get $1,500 cashback">Subscribe</button></div>
         </div>
       </div>
-      <div class="pkg-grid">
-        <!-- STARTER -->
-        <div class="pkg pkg--starter reveal">
-          <div class="pkg-header-row">
-            <div class="pkg-icon-wrap pkg-icon--starter"><img class="pkg-tier-img" src="img-assets/icons/01-starter.webp" alt="Starter" width="64" height="64"></div>
-            <div class="pkg-header-info">
-              <div class="pkg-name">Starter</div>
-              <div class="pkg-cash">$250</div>
-              <div class="pkg-cash-lbl">Cashback Today</div>
-            </div>
-          </div>
-          <div class="pkg-scratch">
-            <div class="pkg-scratch-prize">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
-              <span><strong>Up to $5,000 of VIP Savings Collection</strong></span>
-            </div>
-            <canvas class="pkg-scratch-canvas" aria-hidden="true"></canvas>
-          </div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Starter Course</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
-            <li class="pkg-feature-savings">
-              <details class="pkg-savings-toggle">
-                <summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>High-value VIP Savings Collection</span></summary>
-                <p class="pkg-savings-desc">Save on groceries, utilities, brand-name and better clothing, fuel and transportation, vacations, and in-city special events. Total perk value: up to and over $5,000 on the Starter package.</p>
-              </details>
-            </li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
-          </ul>
-          <details class="pkg-details">
-            <summary>Repayment details</summary>
-            <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly + GST</span><span class="pkg-detail-val">$106.25</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$7.44</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Program Duration</span><span class="pkg-detail-val">2 months</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">4</span></div>
-            </div>
-          </details>
-          <div class="pkg-spacer"></div>
-          <button class="btn btn-outline btn-full" onclick="navigateToSignup()">Choose Starter<br>Get $250 Instant Cash Reward</button>
-        </div>
-        <!-- SILVER -->
-        <div class="pkg pkg--bronze reveal">
-          <span class="pkg-badge pkg-badge--best-value"><svg width="9" height="9" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>BEST VALUE</span>
-          <div class="pkg-header-row">
-            <div class="pkg-icon-wrap pkg-icon--silver"><img class="pkg-tier-img" src="img-assets/icons/02-silver.webp" alt="Silver" width="64" height="64"></div>
-            <div class="pkg-header-info">
-              <div class="pkg-name">Silver</div>
-              <div class="pkg-cash">$500</div>
-              <div class="pkg-cash-lbl">Cashback Today</div>
-            </div>
-          </div>
-          <div class="pkg-scratch">
-            <div class="pkg-scratch-prize">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
-              <span><strong>Up to $10,000 of VIP Savings Collection</strong></span>
-            </div>
-            <canvas class="pkg-scratch-canvas" aria-hidden="true"></canvas>
-          </div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Silver Courses</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
-            <li class="pkg-feature-savings">
-              <details class="pkg-savings-toggle">
-                <summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>High-value VIP Savings Collection</span></summary>
-                <p class="pkg-savings-desc">Save on groceries, utilities, brand-name and better clothing, fuel and transportation, vacations, and in-city special events. Total perk value: up to and over $10,000 on the Silver package.</p>
-              </details>
-            </li>
-            <li class="pkg-feature-savings">
-              <details class="pkg-savings-toggle">
-                <summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Side Hustle of the Month</span></summary>
-                <p class="pkg-savings-desc">Real businesses explained to you that have almost $0 startup, that you can use to start earning additional funds this week.</p>
-              </details>
-            </li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
-          </ul>
-          <details class="pkg-details">
-            <summary>Repayment details</summary>
-            <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly + GST</span><span class="pkg-detail-val">$141.67</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$9.92</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Program Duration</span><span class="pkg-detail-val">3 months</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">6</span></div>
-            </div>
-          </details>
-          <div class="pkg-spacer"></div>
-          <button class="btn btn-outline btn-full" onclick="navigateToSignup()">Choose Silver<br>Get $500 Instant Cash Reward</button>
-        </div>
-        <!-- GOLD -->
-        <div class="pkg pkg--gold reveal">
-          <div class="pkg-header-row">
-            <div class="pkg-icon-col">
-            <div class="pkg-icon-wrap pkg-icon--gold"><img class="pkg-tier-img" src="img-assets/icons/03-gold.webp" alt="Gold" width="64" height="64"></div>
-            <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-            </div>
-            <div class="pkg-header-info">
-              <div class="pkg-name">Gold</div>
-              <div class="pkg-cash">$750</div>
-              <div class="pkg-cash-lbl">Cashback Today</div>
-            </div>
-          </div>
-          <div class="pkg-scratch">
-            <div class="pkg-scratch-prize">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
-              <span><strong>Up to $15,000 of VIP Savings Collection</strong></span>
-            </div>
-            <canvas class="pkg-scratch-canvas" aria-hidden="true"></canvas>
-          </div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Gold Courses</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
-            <li class="pkg-feature-savings">
-              <details class="pkg-savings-toggle">
-                <summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>High-value VIP Savings Collection</span></summary>
-                <p class="pkg-savings-desc">Save on groceries, utilities, brand-name and better clothing, fuel and transportation, vacations, and in-city special events. Total perk value: up to and over $15,000 on the Gold package.</p>
-              </details>
-            </li>
-            <li class="pkg-feature-savings">
-              <details class="pkg-savings-toggle">
-                <summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Side Hustle of the Month</span></summary>
-                <p class="pkg-savings-desc">Real businesses explained to you that have almost $0 startup, that you can use to start earning additional funds this week.</p>
-              </details>
-            </li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
-          </ul>
-          <details class="pkg-details">
-            <summary>Repayment details</summary>
-            <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly + GST</span><span class="pkg-detail-val">$159.38</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$11.16</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Program Duration</span><span class="pkg-detail-val">4 months</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">8</span></div>
-            </div>
-          </details>
-          <div class="pkg-spacer"></div>
-          <button class="btn btn-gold btn-full" onclick="navigateToSignup()">Choose Gold<br>Get $750 Instant Cash Reward</button>
-        </div>
-        <!-- PLATINUM -->
-        <div class="pkg pkg--platinum reveal">
-          <div class="pkg-header-row">
-            <div class="pkg-icon-col">
-            <div class="pkg-icon-wrap pkg-icon--platinum"><img class="pkg-tier-img" src="img-assets/icons/04-platinum.webp" alt="Platinum" width="64" height="64"></div>
-            <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-            </div>
-            <div class="pkg-header-info">
-              <div class="pkg-name">Platinum</div>
-              <div class="pkg-cash">$1,000</div>
-              <div class="pkg-cash-lbl">Cashback Today</div>
-            </div>
-          </div>
-          <div class="pkg-scratch">
-            <div class="pkg-scratch-prize">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
-              <span><strong>Up to $20,000 of VIP Savings Collection</strong></span>
-            </div>
-            <canvas class="pkg-scratch-canvas" aria-hidden="true"></canvas>
-          </div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Platinum Courses</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
-            <li class="pkg-feature-savings">
-              <details class="pkg-savings-toggle">
-                <summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>High-value VIP Savings Collection</span></summary>
-                <p class="pkg-savings-desc">Save on groceries, utilities, brand-name and better clothing, fuel and transportation, vacations, and in-city special events. Total perk value: up to and over $20,000 on the Platinum package.</p>
-              </details>
-            </li>
-            <li class="pkg-feature-savings">
-              <details class="pkg-savings-toggle">
-                <summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Side Hustle of the Month</span></summary>
-                <p class="pkg-savings-desc">Real businesses explained to you that have almost $0 startup, that you can use to start earning additional funds this week.</p>
-              </details>
-            </li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
-          </ul>
-          <details class="pkg-details">
-            <summary>Repayment details</summary>
-            <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly + GST</span><span class="pkg-detail-val">$188.89</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$13.22</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Program Duration</span><span class="pkg-detail-val">4.5 months</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">9</span></div>
-            </div>
-          </details>
-          <div class="pkg-spacer"></div>
-          <button class="btn btn-outline btn-full" onclick="navigateToSignup()">Choose Platinum<br>Get $1,000 Instant Cash Reward</button>
-        </div>
-        <!-- DIAMOND -->
-        <div class="pkg pkg--diamond reveal">
-          <div class="pkg-header-row">
-            <div class="pkg-icon-col">
-            <div class="pkg-icon-wrap pkg-icon--diamond"><img class="pkg-tier-img" src="img-assets/icons/05-diamond.webp" alt="Diamond" width="64" height="64"></div>
-            <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-            </div>
-            <div class="pkg-header-info">
-              <div class="pkg-name">Diamond</div>
-              <div class="pkg-cash">$1,250</div>
-              <div class="pkg-cash-lbl">Cashback Today</div>
-            </div>
-          </div>
-          <div class="pkg-scratch">
-            <div class="pkg-scratch-prize">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
-              <span><strong>Up to $25,000 of VIP Savings Collection</strong></span>
-            </div>
-            <canvas class="pkg-scratch-canvas" aria-hidden="true"></canvas>
-          </div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Diamond Courses</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
-            <li class="pkg-feature-savings">
-              <details class="pkg-savings-toggle">
-                <summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>High-value VIP Savings Collection</span></summary>
-                <p class="pkg-savings-desc">Save on groceries, utilities, brand-name and better clothing, fuel and transportation, vacations, and in-city special events. Total perk value: up to and over $25,000 on the Diamond package.</p>
-              </details>
-            </li>
-            <li class="pkg-feature-savings">
-              <details class="pkg-savings-toggle">
-                <summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Side Hustle of the Month</span></summary>
-                <p class="pkg-savings-desc">Real businesses explained to you that have almost $0 startup, that you can use to start earning additional funds this week.</p>
-              </details>
-            </li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Priority support</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Premium resources</span></li>
-          </ul>
-          <details class="pkg-details">
-            <summary>Repayment details</summary>
-            <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly + GST</span><span class="pkg-detail-val">$212.50</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$14.88</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Program Duration</span><span class="pkg-detail-val">5 months</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">10</span></div>
-            </div>
-          </details>
-          <div class="pkg-spacer"></div>
-          <button class="btn btn-diamond btn-full" onclick="navigateToSignup()">Choose Diamond<br>Get $1,250 Instant Cash Reward</button>
-        </div>
-        <!-- ELITE -->
-        <div class="pkg pkg--elite reveal">
-          <span class="pkg-badge"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:3px;margin-top:-1px"><path d="M2 17L5 6l5 5 2-8 2 8 5-5 3 11z"/><path d="M2 17h20"/></svg>MAXIMUM REWARDS</span>
-          <div class="pkg-header-row">
-            <div class="pkg-icon-col">
-            <div class="pkg-icon-wrap pkg-icon--elite"><img class="pkg-tier-img" src="img-assets/icons/06-elite.webp" alt="Elite" width="64" height="64"></div>
-            <div class="pkg-icon-stars"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-            </div>
-            <div class="pkg-header-info">
-              <div class="pkg-name">Elite</div>
-              <div class="pkg-cash">$1,500</div>
-              <div class="pkg-cash-lbl">Cashback Today</div>
-            </div>
-          </div>
-          <div class="pkg-scratch">
-            <div class="pkg-scratch-prize">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
-              <span><strong>Up to $30,000 of VIP Savings Collection</strong></span>
-            </div>
-            <canvas class="pkg-scratch-canvas" aria-hidden="true"></canvas>
-          </div>
-          <div class="pkg-divider"></div>
-          <ul class="pkg-features">
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Full Access to Elite Courses</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Secure online sign-up</span></li>
-            <li class="pkg-feature-savings">
-              <details class="pkg-savings-toggle">
-                <summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span>High-value VIP Savings Collection</span></summary>
-                <p class="pkg-savings-desc">Save on groceries, utilities, brand-name and better clothing, fuel and transportation, vacations, and in-city special events. Total perk value: up to and over $30,000 on the Elite package.</p>
-              </details>
-            </li>
-            <li class="pkg-feature-savings">
-              <details class="pkg-savings-toggle">
-                <summary><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Side Hustle of the Month</span></summary>
-                <p class="pkg-savings-desc">Real businesses explained to you that have almost $0 startup, that you can use to start earning additional funds this week.</p>
-              </details>
-            </li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Budgeting tools</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Debt tools</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Priority support</span></li>
-            <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg><span>Premium resources</span></li>
-          </ul>
-          <details class="pkg-details">
-            <summary>Repayment details</summary>
-            <div class="pkg-details-inner">
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Biweekly + GST</span><span class="pkg-detail-val">$231.82</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Daily</span><span class="pkg-detail-val">$16.23</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Program Duration</span><span class="pkg-detail-val">5.5 months</span></div>
-              <div class="pkg-detail-item"><span class="pkg-detail-lbl">Payments</span><span class="pkg-detail-val">11</span></div>
-            </div>
-          </details>
-          <div class="pkg-spacer"></div>
-          <button class="btn btn-accent btn-full btn-throb" onclick="navigateToSignup()">Choose Elite<br>Get $1,500 Instant Cash Reward</button>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:clamp(24px,3.5vw,36px);" class="reveal">
-        <button class="btn btn-outline" onclick="location.href='/packages'">Compare All Packages &#8594;</button>
-      </div>
+      <p class="cpx-swipe" aria-hidden="true">&#8596; Swipe to compare all 6 packages</p>
+      <p class="cpx-note">Cashback amounts apply to approved packages. Review included content, taxes, total cost and terms during sign-up.</p>
+      <script>
+      (function(){var tb=document.getElementById('cpx-tb');if(!tb)return;
+        function clr(){tb.querySelectorAll('.cpx-hl').forEach(function(x){x.classList.remove('cpx-hl')})}
+        tb.addEventListener('mouseover',function(e){var c=e.target.closest('[data-col]');clr();if(c)tb.querySelectorAll('[data-col="'+c.getAttribute('data-col')+'"]').forEach(function(x){x.classList.add('cpx-hl')})});
+        tb.addEventListener('mouseleave',clr);})();
+      </script>
 
       <!-- HOW IT WORKS: QUICK STEPS -->
       <div class="hiw-home-steps">
