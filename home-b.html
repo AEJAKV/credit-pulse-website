@@ -213,7 +213,7 @@ img{max-width:100%;display:block}
 @media(prefers-reduced-motion:reduce){.cp-ticket,.cp-ticket-arrow{transition:none}.cp-ticket,.cp-ticket-clock{animation:none}}
   </style>
 <style id="cpx-styles">
-#home-pkgs .cpx-hd{text-align:center;margin-bottom:clamp(18px,2.6vw,26px)}
+.cpx-gap{height:clamp(8px,1.6vw,18px)}
 .cpx-ey{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#1A2B1A;background:#CCFF00;padding:5px 12px;border-radius:100px}
 .cpx-h{font-size:clamp(1.35rem,3vw,2.1rem);font-weight:800;color:#1A2B1A;line-height:1.2;margin:10px auto 0;max-width:760px}
 .cpx-h span{color:#4D8A37}
@@ -469,10 +469,37 @@ img{max-width:100%;display:block}
   <!-- PACKAGES PREVIEW -->
   <section class="section" id="home-pkgs">
     <div class="container">
-      <div class="cpx-hd reveal">
-        <span class="cpx-ey">Compare packages</span>
-        <h2 class="cpx-h">Choose your learning package. <span>The cashback is a bonus.</span></h2>
+      <div class="sec-hd sec-hd--pkg reveal">
+        <span class="sec-label">Membership Tiers</span>
+        <h2>Choose the Membership That's Right for You</h2>
+        <p class="sec-sub">Get access to expert-created financial tools, insights, and resources.<br>See your member rewards and payment details before you join.</p>
+        <div class="pkg-cashback-callout pkg-cashback-callout--light">
+          <div class="pkg-cashback-callout-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <span>Same-day cashbacks</span>
+        </div>
+        <div class="pkg-hdr-badges pkg-hdr-badges--light">
+          <div class="pkg-hdr-badge">
+            <div class="pkg-hdr-badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><circle cx="9" cy="10" r="1.5"/><path d="M13 9h4M13 12h4"/></svg></div>
+            <span>Access expert tools and resources</span>
+          </div>
+          <div class="pkg-hdr-badge-sep"></div>
+          <div class="pkg-hdr-badge">
+            <div class="pkg-hdr-badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+            <span>Educational content and guides</span>
+          </div>
+          <div class="pkg-hdr-badge-sep"></div>
+          <div class="pkg-hdr-badge">
+            <div class="pkg-hdr-badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <span>Valuable partner offers and savings</span>
+          </div>
+          <div class="pkg-hdr-badge-sep"></div>
+          <div class="pkg-hdr-badge">
+            <div class="pkg-hdr-badge-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+            <span>Secure online membership</span>
+          </div>
+        </div>
       </div>
+      <div class="cpx-gap"></div>
       <div class="cpx-wrap reveal" role="region" aria-label="Package comparison" tabindex="0">
         <div class="cpx-tb" id="cpx-tb">
           <div class="cpx-c cpx-lbl cpx-r0 cpx-first"><span class="cpx-lt">Compare</span></div>
