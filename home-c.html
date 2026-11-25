@@ -122,6 +122,16 @@ img{max-width:100%;display:block}
 .hc-perks li svg{flex-shrink:0;color:#64A549}
 .hc-cta-btn{background:linear-gradient(135deg,#1c4a1a,#2e6b2a);color:#fff;border-radius:12px;font-size:.9rem;font-weight:700;gap:8px}
 .hc-secure{display:flex;align-items:center;justify-content:center;gap:6px;font-size:.7rem;color:#3D5E38;margin-top:10px}
+/* Member Login CTA (scoped to body.has-member-login) */
+.has-member-login .nav-login{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:999px;border:1.5px solid rgba(111,44,255,.32);background:#fff;color:#5a22d6;font-size:.88rem;font-weight:700;white-space:nowrap;transition:background .25s,border-color .25s,transform .25s,box-shadow .25s}
+.has-member-login .nav-login svg{flex-shrink:0}
+.has-member-login .nav-login:hover{background:rgba(111,44,255,.06);border-color:rgba(111,44,255,.55);transform:translateY(-1px);box-shadow:0 6px 16px rgba(111,44,255,.14)}
+.nav-substrip{display:none}
+@media(min-width:769px){.has-member-login .navbar .container{max-width:1360px}.has-member-login .navbar .nav-links{gap:clamp(18px,1.8vw,26px)}.has-member-login .navbar .nav-cta{gap:10px}}
+@media(max-width:1360px){.has-member-login .nav-phone span{display:none}.has-member-login .nav-phone{padding:10px;gap:0}}
+@media(max-width:1100px){.has-member-login .nav-login>span{display:none}.has-member-login .nav-login{width:40px;height:40px;padding:0;justify-content:center;border-radius:50%}.has-member-login .nav-login svg{width:18px;height:18px}.has-member-login .navbar .nav-links{gap:18px}.has-member-login .nav-cta-arrow{display:none}}
+@media(max-width:960px){.has-member-login .navbar .nav-links{gap:12px}.has-member-login .nav-cta .btn-accent>svg{display:none}.has-member-login .navbar .nav-cta .btn-accent{padding:10px 18px}}
+@media(max-width:768px){.has-member-login .navbar{height:auto;flex-direction:column;align-items:stretch}.has-member-login .navbar>.container{height:68px}.has-member-login .nav-substrip{display:block;border-top:1px solid rgba(0,0,0,.06)}.has-member-login .navbar .nav-substrip .container{justify-content:flex-start;gap:10px;height:34px}.ns-link{display:inline-flex;align-items:center;gap:6px;font-size:.84rem;font-weight:700;color:#4A6644;white-space:nowrap}.ns-link svg{color:#4D8A37;flex-shrink:0}.ns-link:hover{color:#1A2B1A}.ns-sep{width:1px;height:14px;background:rgba(74,102,68,.3)}.has-member-login .mobile-menu{top:103px}.has-member-login .hero{padding-top:calc(clamp(110px,15vw,152px) + 34px)}}
 /* Responsive - critical breakpoints */
 @media(max-width:1100px){.nav-phone span{display:none}.nav-phone{padding:10px;gap:0}}
 @media(max-width:900px){.nav-phone{display:none}}
@@ -248,7 +258,7 @@ img{max-width:100%;display:block}
 @media(prefers-reduced-motion:reduce){.cpc-card,.cpc-btn{transition:none}.cpc-card:hover,.cpc-btn:hover{transform:none}}
 </style>
 </head>
-<body>
+<body class="has-member-login">
 
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
@@ -270,7 +280,8 @@ img{max-width:100%;display:block}
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg>
         <span>+1 (888) 688-8785</span>
       </a>
-      <button class="btn btn-accent" onclick="location.href='https://signup.creditpulse.ca/'" style="display:inline-flex;align-items:center;gap:7px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Get Cashback Now &rarr;</button>
+      <a class="nav-login" href="https://portal.creditpulse.ca/login" aria-label="Member Login" title="Member Login"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span><span class="nav-login-member">Member </span>Login</span></a>
+      <button class="btn btn-accent" onclick="location.href='https://signup.creditpulse.ca/'" style="display:inline-flex;align-items:center;gap:7px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Get Cashback Now<span class="nav-cta-arrow">&nbsp;&rarr;</span></button>
     </div>
     <button class="nav-mobile-cta btn" onclick="location.href='https://signup.creditpulse.ca/'" aria-label="Get Cashback Now">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
@@ -279,6 +290,13 @@ img{max-width:100%;display:block}
     <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
+  </div>
+  <div class="nav-substrip">
+    <div class="container">
+      <a class="ns-link" href="tel:18886888785" aria-label="Call Credit Pulse at plus one eight eight eight six eight eight eight seven eight five"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.35 1.79.68 2.63a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.45-1.25a2 2 0 0 1 2.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0 1 22 16.92z"/></svg><span>+1 (888) 688-8785</span></a>
+      <span class="ns-sep" aria-hidden="true"></span>
+      <a class="ns-link" href="https://portal.creditpulse.ca/login"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Member Login</span></a>
+    </div>
   </div>
 </nav>
 

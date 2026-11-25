@@ -1132,6 +1132,16 @@ img{max-width:100%;display:block;}
 .reveal.visible{opacity:1;transform:none;}
 
 /* ===== RESPONSIVE ===== */
+/* Member Login CTA (scoped to body.has-member-login) */
+.has-member-login .nav-login{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:999px;border:1.5px solid rgba(111,44,255,.32);background:#fff;color:#5a22d6;font-size:.88rem;font-weight:700;white-space:nowrap;transition:background .25s,border-color .25s,transform .25s,box-shadow .25s}
+.has-member-login .nav-login svg{flex-shrink:0}
+.has-member-login .nav-login:hover{background:rgba(111,44,255,.06);border-color:rgba(111,44,255,.55);transform:translateY(-1px);box-shadow:0 6px 16px rgba(111,44,255,.14)}
+.nav-substrip{display:none}
+@media(min-width:769px){.has-member-login .navbar .container{max-width:1360px}.has-member-login .navbar .nav-links{gap:clamp(18px,1.8vw,26px)}.has-member-login .navbar .nav-cta{gap:10px}}
+@media(max-width:1360px){.has-member-login .nav-phone span{display:none}.has-member-login .nav-phone{padding:10px;gap:0}}
+@media(max-width:1100px){.has-member-login .nav-login>span{display:none}.has-member-login .nav-login{width:40px;height:40px;padding:0;justify-content:center;border-radius:50%}.has-member-login .nav-login svg{width:18px;height:18px}.has-member-login .navbar .nav-links{gap:18px}.has-member-login .nav-cta-arrow{display:none}}
+@media(max-width:960px){.has-member-login .navbar .nav-links{gap:12px}.has-member-login .nav-cta .btn-accent>svg{display:none}.has-member-login .navbar .nav-cta .btn-accent{padding:10px 18px}}
+@media(max-width:768px){.has-member-login .navbar{height:auto;flex-direction:column;align-items:stretch}.has-member-login .navbar>.container{height:68px}.has-member-login .nav-substrip{display:block;border-top:1px solid rgba(0,0,0,.06)}.has-member-login .navbar .nav-substrip .container{justify-content:flex-start;gap:10px;height:34px}.ns-link{display:inline-flex;align-items:center;gap:6px;font-size:.84rem;font-weight:700;color:#4A6644;white-space:nowrap}.ns-link svg{color:#4D8A37;flex-shrink:0}.ns-link:hover{color:#1A2B1A}.ns-sep{width:1px;height:14px;background:rgba(74,102,68,.3)}.has-member-login .mobile-menu{top:103px}.has-member-login .hero{padding-top:calc(clamp(110px,15vw,152px) + 34px)}}
 /* 1100px — start compressing nav */
 @media(max-width:1100px){
   .nav-links{gap:clamp(18px,2.4vw,32px);}
